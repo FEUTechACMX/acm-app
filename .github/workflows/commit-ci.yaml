@@ -13,7 +13,7 @@ jobs:
       - name: Install required dependencies
         run: |
           sudo apt --only-upgrade install nodejs yarn
-          
+
       - name: Print versions
         run: |
           node --version
