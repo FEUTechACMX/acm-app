@@ -7,7 +7,6 @@
 	"root": true,
 	"extends": [
 		"eslint:recommended",
-		"plugin:react/recommended",
 		"plugin:prettier/recommended",
 		"plugin:@next/next/recommended",
 		"prettier",
@@ -19,5 +18,8 @@
 		"sourceType": "module",
 		"project": "./tsconfig.json"
 	},
-	"plugins": ["react", "import", "@typescript-eslint", "prettier"]
+	"rules": {
+		"no-undef": "off"
+	},
+	"plugins": ["react", "prettier"]
 }
