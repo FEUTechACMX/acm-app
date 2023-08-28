@@ -28,10 +28,13 @@
   "author": "Alpha Romer Coma <400829150120@r3-1.deped.gov.ph>",
   "license": "Apache-2.0",
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "@types/eslint-config-prettier": "^6.11.0",
     "@types/next-pwa": "^5.6.4",
     "@types/sharp": "^0.32.0",
     "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.3",
     "prettier": "^3.0.2"
   }
 }
