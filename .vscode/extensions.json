@@ -1,0 +1,20 @@
+{
+	"recommendations": [
+		"maptz.camelcasenavigation",
+		"streetsidesoftware.code-spell-checker",
+		"davidanson.vscode-markdownlint",
+		"redhat.vscode-yaml",
+		"dbaeumer.vscode-eslint",
+		"stylelint.vscode-stylelint",
+		"formulahendry.auto-rename-tag",
+		"deque-systems.vscode-axe-linter",
+		"clinyong.vscode-css-modules",
+		"phoenisx.cssvar",
+		"usernamehw.errorlens",
+		"github.copilot",
+		"eamodio.gitlens",
+		"wix.vscode-import-cost",
+		"ms-vscode.vscode-typescript-next",
+		"znck.grammarly"
+	]
+}
