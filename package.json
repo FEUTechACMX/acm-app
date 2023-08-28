@@ -4,7 +4,8 @@
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
+		"build": "yarn run partytown && next build",
+		"partytown": "partytown copylib public/~partytown",
 		"start": "next start",
 		"lint": "next lint && stylelint '**/*module.css'",
 		"prepare": "husky install"
