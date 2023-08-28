@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FEU Tech ACM App
 
-## Getting Started
+## Tech Stack
 
-First, run the development server:
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- CSS Modules
+- [PostgreSQL](https://www.postgresql.org/)
+- [Prisma](https://www.prisma.io/)
+- [Redis](https://redis.io/)
+- [Vercel](https://vercel.com/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## Development
+
+### Pre-requisites
+
+- [Node.js](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/)
+- [Git](https://git-scm.com/)
+- [Visual Studio Code](https://code.visualstudio.com/)
+
+### Workflow
+
+For this project, we will use the [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
+
+### Project Standards
+
+We adopt the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specifications aligned with [Semantic Versioning](https://semver.org/) with a few modifications.
+
+#### Commit Message Format
+
+```text
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Commit Message Example
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **fix:** a bug fix
+2. **feat:** a new feature
+3. **refactor:** a code change that neither fixes a bug nor adds a feature
+4. **chore:** changes to the build process or auxiliary tools and libraries such as documentation generation
+5. **style:** changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+6. **docs:** documentation only changes
+7. **test:** adding missing tests or correcting existing tests
+8. **perf:** a code change that improves performance
+9. **ci:** changes to our CI configuration files and scripts
+10. **build:** changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+11. **revert:** revert to a commit
+12. **BREAKING CHANGE:** introduces a breaking API change (correlating with [Semantic Versioning](https://semver.org/))
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Contributors
 
-## Learn More
+1. [Sir Abraham Magpantay](https://www.linkedin.com/in/aber-magpantay/) - Adviser
+2. [Guennevere Rito](https://www.linkedin.com/in/guennevere-rito-990256255/) - Project Manager
+3. [Alpha Romer Coma](https://www.linkedin.com/in/alpha-coma/) - Developer
+4. Emily Tan Sanchez - UI/UX Designer
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Copyright (c) FEU Tech ACM Student Chapter . All rights reserved.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Licensed under the [Apache-2.0](./LICENSE) license.
