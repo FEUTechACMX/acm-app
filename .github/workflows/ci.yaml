@@ -58,8 +58,8 @@ jobs:
         with:
           branch: master
           tag_prefix: "v"
-          major_pattern: "BREAKING CHANGE:"
-          minor_pattern: "feat:"
+          major_pattern: "BREAKING CHANGE"
+          minor_pattern: "feat"
           format: "v${major}.${minor}.${patch}-prerelease${increment}"
           # fix is the default pattern so we don't need to specify it
 
