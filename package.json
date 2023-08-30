@@ -7,7 +7,7 @@
 		"build": "yarn run partytown && next build",
 		"partytown": "partytown copylib public/~partytown",
 		"start": "next start",
-		"lint": "next lint && stylelint '**/*module.css'",
+		"lint": "next lint && stylelint \"**/*.css\"",
 		"prepare": "husky install"
 	},
 	"lint-staged": {
@@ -47,5 +47,27 @@
 		"stylelint-config-prettier": "^9.0.5",
 		"stylelint-config-recommended": "^13.0.0",
 		"stylelint-order": "^6.0.3"
+	},
+	"stylelint": {
+		"extends": [
+			"stylelint-config-recommended",
+			"stylelint-config-prettier"
+		],
+		"rules": {
+			"at-rule-no-unknown": [
+				true,
+				{
+					"ignoreAtRules": [
+						"tailwind",
+						"apply",
+						"variants",
+						"responsive",
+						"screen"
+					]
+				}
+			],
+			"declaration-block-trailing-semicolon": null,
+			"no-descending-specificity": null
+		}
 	}
 }
