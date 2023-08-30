@@ -1,0 +1,4 @@
+Sitemap: https://feutech.acm.org/sitemap.xml
+User-agent: *
+Allow: /*
+Disallow: /api/*
