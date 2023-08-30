@@ -51,7 +51,8 @@ export const metadata: Metadata = {
 			url: "",
 		},
 	},
-	assets: "",
+	// NOTE: Do not enable this. It will display a white screen.
+	// assets: "",
 	authors: [
 		{
 			name: "Abraham Magpantay",
