@@ -1,7 +1,7 @@
+import { Providers } from "@/utils/redux/provider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -109,14 +109,17 @@ export const metadata: Metadata = {
 		width: "device-width",
 	},
 };
-export default function RootLayout({
-	children,
-}: {
+interface Props {
 	children: React.ReactNode;
-}) {
+}
+const RootLayout: React.FC<Props> = ({ children }) => {
 	return (
 		<html lang="en">
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				<Providers>{children}</Providers>
+			</body>
 		</html>
 	);
-}
+};
+
+export default RootLayout;
