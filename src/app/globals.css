@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	--bg: #0b001a;
+	--panel-bg: #1f004a;
+	--assets: #833fe0;
+	--accents: #6661ff;
+	--text: #ffffff;
+}
