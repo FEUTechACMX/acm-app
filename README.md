@@ -3,6 +3,7 @@
 ## Tech Stack
 
 - [Next.js](https://nextjs.org/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [PostgreSQL](https://www.postgresql.org/)
