@@ -1,8 +1,36 @@
 import { Providers } from "@/utils/redux/provider";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-const inter = Inter({ subsets: ["latin"] });
+
+const f_f1s = localFont({
+	src: [
+		{
+			path: "../../public/fonts/f1-secuencia-quad-ffp/font.ttf",
+			style: "normal",
+		},
+	],
+	variable: "--font-f1s",
+});
+const f_hae = localFont({
+	src: [
+		{
+			path: "../../public/fonts/human-alter-ego/font.ttf",
+			style: "normal",
+		},
+	],
+	variable: "--font-hae",
+});
+
+const f_ot = localFont({
+	src: [
+		{
+			path: "../../public/fonts/over-there/font.ttf",
+			style: "normal",
+		},
+	],
+	variable: "--font-ot",
+});
 
 export const metadata: Metadata = {
 	appleWebApp: {
@@ -115,7 +143,9 @@ interface Props {
 const RootLayout: React.FC<Props> = ({ children }) => {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body
+				className={`${f_f1s.className} ${f_hae.className} ${f_ot.className}`}
+			>
 				<Providers>{children}</Providers>
 			</body>
 		</html>
