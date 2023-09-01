@@ -143,9 +143,7 @@ interface Props {
 const RootLayout: React.FC<Props> = ({ children }) => {
 	return (
 		<html lang="en">
-			<body
-				className={`${f_f1s.className} ${f_hae.className} ${f_ot.className}`}
-			>
+			<body className={`${f_f1s.variable} ${f_hae.variable} ${f_ot.variable}`}>
 				<Providers>{children}</Providers>
 			</body>
 		</html>
