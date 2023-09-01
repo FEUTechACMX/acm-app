@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const { i18n } = require('./next-i18next.config');
 const runtimeCaching = require('next-pwa/cache');
 const nextDataIndex = runtimeCaching.findIndex(
   (entry) => entry.options.cacheName === 'next-data'
@@ -51,9 +52,11 @@ const securityHeaders = [
     value: 'nosniff'
   }
 ];
+
 module.exports = withPWA({
   // reactStrictMode: true,
   swcMinify: true,
+  i18n,
   images: {
     domains: [
       'lh3.googleusercontent.com',
