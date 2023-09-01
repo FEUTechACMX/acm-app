@@ -56,5 +56,4 @@ body {
 	background: var(--bg);
 	caret-color: var(--accents);
 	line-height: 1.6rem;
-	height: 200vh;
 }
