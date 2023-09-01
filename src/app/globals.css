@@ -9,3 +9,52 @@
 	--accents: #6661ff;
 	--text: #ffffff;
 }
+
+::-moz-selection {
+	background: var(--accents);
+	color: var(--text);
+}
+
+::selection {
+	background: var(--accents);
+	color: var(--text);
+}
+
+::-webkit-scrollbar-track {
+	background: 0;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--accents);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--accents);
+}
+
+::-webkit-scrollbar {
+	width: 0.2rem;
+}
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+
+*,
+html {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scrollbar-color: var(--accents) transparent;
+}
+
+body {
+	background: var(--bg);
+	caret-color: var(--accents);
+	line-height: 1.6rem;
+	height: 200vh;
+}

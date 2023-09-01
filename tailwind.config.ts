@@ -9,7 +9,9 @@ const config: Config = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["var(--font-f1s)", "var(--font-hae)", "--font-ot"],
+				sans: ["var(--font-f1s)"],
+				serif: ["var(--font-hae)"],
+				mono: ["var(--font-ot)"],
 			},
 		},
 	},
