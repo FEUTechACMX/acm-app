@@ -1,0 +1,192 @@
+.icon-link {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xe800;&nbsp;"
+	);
+}
+.icon-home {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xe801;&nbsp;"
+	);
+}
+.icon-location {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xe802;&nbsp;"
+	);
+}
+.icon-globe {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xe803;&nbsp;"
+	);
+}
+.icon-star {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xe804;&nbsp;"
+	);
+}
+.icon-heart {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xe805;&nbsp;"
+	);
+}
+.icon-briefcase {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xe806;&nbsp;"
+	);
+}
+.icon-download {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xe807;&nbsp;"
+	);
+}
+.icon-award {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xe808;&nbsp;"
+	);
+}
+.icon-spin2 {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xe831;&nbsp;"
+	);
+}
+.icon-spin4 {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xe834;&nbsp;"
+	);
+}
+.icon-certificate {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf0a3;&nbsp;"
+	);
+}
+.icon-mail-alt {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf0e0;&nbsp;"
+	);
+}
+.icon-sitemap {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf0e8;&nbsp;"
+	);
+}
+.icon-shield {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf132;&nbsp;"
+	);
+}
+.icon-rocket {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf135;&nbsp;"
+	);
+}
+.icon-link-ext-alt {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf14c;&nbsp;"
+	);
+}
+.icon-youtube-play {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf16a;&nbsp;"
+	);
+}
+.icon-instagram {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf16d;&nbsp;"
+	);
+}
+.icon-windows {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf17a;&nbsp;"
+	);
+}
+.icon-android {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf17b;&nbsp;"
+	);
+}
+.icon-bank {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf19c;&nbsp;"
+	);
+}
+.icon-graduation-cap {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf19d;&nbsp;"
+	);
+}
+.icon-language {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf1ab;&nbsp;"
+	);
+}
+.icon-empire {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf1d1;&nbsp;"
+	);
+}
+.icon-share-squared {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf1e1;&nbsp;"
+	);
+}
+.icon-diamond {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf219;&nbsp;"
+	);
+}
+.icon-user-circle {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf2bd;&nbsp;"
+	);
+}
+.icon-github-squared {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf300;&nbsp;"
+	);
+}
+.icon-twitter-squared {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf304;&nbsp;"
+	);
+}
+.icon-facebook-squared {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf308;&nbsp;"
+	);
+}
+.icon-linkedin-squared {
+	*zoom: expression(
+		this.runtimeStyle[ "zoom"] = "1",
+		this.innerHTML = "&#xf30c;&nbsp;"
+	);
+}

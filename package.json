@@ -8,7 +8,9 @@
 		"partytown": "partytown copylib public/~partytown",
 		"start": "next start",
 		"lint": "next lint && stylelint \"**/*.css\"",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"fontello": "cd public/media/icons && fontello-cli --config fontello-84cd01f8/config.json open",
+		"fontello-update": "cd public/media/icons && fontello-cli --config fontello-84cd01f8/config.json install"
 	},
 	"lint-staged": {
 		"**/*": "prettier --write --ignore-unknown"
@@ -21,6 +23,7 @@
 		"@types/react-dom": "18.2.7",
 		"eslint": "8.48.0",
 		"eslint-config-next": "13.4.19",
+		"fontello-cli": "^0.6.2",
 		"next": "13.4.19",
 		"next-pwa": "^5.6.0",
 		"next-redux-wrapper": "^8.1.0",
@@ -74,6 +77,9 @@
 			],
 			"declaration-block-trailing-semicolon": null,
 			"no-descending-specificity": null
-		}
+		},
+		"ignoreFiles": [
+			"public/media/icons/**/*"
+		]
 	}
 }

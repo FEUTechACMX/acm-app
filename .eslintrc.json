@@ -12,7 +12,7 @@
 		"prettier",
 		"next/core-web-vitals"
 	],
-	"ignorePatterns": ["**/styles/*.css", "public/fontello/fontello-*/css/*.*"],
+	"ignorePatterns": ["public/media/icons/**/*"],
 	"parserOptions": {
 		"ecmaVersion": "latest",
 		"sourceType": "module",
