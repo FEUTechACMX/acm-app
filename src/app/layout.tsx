@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import NextNProgressClient from "@/components/progress";
 import localFont from "next/font/local";
 import "./globals.css";
-
+import "public/media/icons/fontello-84cd01f8/css/fontello.css";
 const f_f1s = localFont({
 	src: [
 		{
