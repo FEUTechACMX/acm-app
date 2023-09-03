@@ -56,5 +56,6 @@ body {
 	background: var(--bg);
 	caret-color: var(--accents);
 	font-family: var(--font-f1s);
+	font-size: 1.25rem;
 	line-height: 1.6rem;
 }
