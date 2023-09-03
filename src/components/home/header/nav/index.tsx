@@ -50,9 +50,9 @@ const Nav: React.FC = () => {
 					delay: 2,
 				},
 			}}
-			className="w-screen fixed p-2 border-t-2 border-panelBg border-solid z-20 flex justify-between font-bold"
+			className="w-screen fixed p-2 border-t-2 border-panelBg border-solid z-20 flex justify-between font-bold backdrop-blur"
 		>
-			<div className="flex justify-center items-center">
+			<Link href="/" className="flex justify-center items-center">
 				<div className="relative h-8 w-16">
 					<Image
 						src="/media/img/logo/FIT_ACM.png"
@@ -63,12 +63,12 @@ const Nav: React.FC = () => {
 					></Image>
 				</div>
 				<h2>FEU&nbsp;Tech&nbsp;ACM</h2>
-			</div>
+			</Link>
 			<div className="flex text-lg">
 				{links.map((link, index) => {
 					return (
 						<Link href={link.href} key={index}>
-							<p className="p-3 rounded-lg hover:text-accents active:text-accents focus:text-accents transition-colors">
+							<p className="p-2 rounded-lg hover:text-accents active:text-accents focus:text-accents transition-colors">
 								{link.name}
 							</p>
 						</Link>

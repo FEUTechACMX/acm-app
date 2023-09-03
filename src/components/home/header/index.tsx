@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Music from "./music";
 import Nav from "./nav";
 import ParticlesGen from "./particles";
 import Share from "./share";
@@ -11,6 +12,7 @@ const Header: React.FC = () => {
 				<div className="relative">
 					<Nav />
 				</div>
+				<Music />
 				<Share />
 				<div className="flex justify-center items-center h-full relative">
 					<div className="w-9/12 flex gap-4 flex-col justify-center items-center">
@@ -54,7 +56,7 @@ const Header: React.FC = () => {
 							}}
 							className="font-hae text-4xl text-assets"
 						>
-							Coding Chaos In Digital Dystopia
+							&lt;Coding Chaos In Digital Dystopia /&gt;
 						</motion.h2>
 					</div>
 				</div>
