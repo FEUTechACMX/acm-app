@@ -3,14 +3,16 @@ const Header: React.FC = () => {
 	return (
 		<header id="header">
 			<div className="flex justify-center items-center h-screen w-screen">
-				<div className="w-6/12 flex gap-4 flex-col">
-					<Image
-						src="/media/img/logo/FIT_ACM.png"
-						alt="FEU Tech Logo"
-						width={100}
-						height={100}
-						className="m-auto"
-					></Image>
+				<div className="w-9/12 flex gap-4 flex-col">
+					<div className="h-32 w-64 relative flex justify-center items-center m-auto [text-wrap:balance]">
+						<Image
+							src="/media/img/logo/FIT_ACM.png"
+							alt="FEU Tech Logo"
+							layout={"fill"}
+							objectFit={"contain"}
+							className="m-auto"
+						></Image>
+					</div>
 					<h1 className="font-mono text-center">FEU Institute of technology</h1>
 					<p className="font-sans">
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis
