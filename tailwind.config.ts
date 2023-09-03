@@ -9,9 +9,19 @@ const config: Config = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["var(--font-f1s)"],
-				serif: ["var(--font-hae)"],
-				mono: ["var(--font-ot)"],
+				f1s: ["var(--font-f1s)"],
+				hae: ["var(--font-hae)"],
+				ot: ["var(--font-ot)"],
+			},
+			colors: {
+				bg: "var(--bg)",
+				panelBg: "var(--panel-bg)",
+				assets: "var(--assets)",
+				accents: "var(--accents)",
+				text: "var(--text)",
+			},
+			borderColor: {
+				panelBg: "var(--panel-bg)",
 			},
 		},
 	},

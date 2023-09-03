@@ -7,6 +7,11 @@ const About: React.FC = () => {
 				perspiciatis aspernatur in excepturi, laboriosam beatae, magnam eius
 				dolore. Voluptate, explicabo?
 			</h2>
+			<p>
+				FEU Tech ACM Student Chapter is a top-performing academic organization
+				founded in 2007 acting as the mother organization for FEU Institute of
+				Technology Computer Science students.
+			</p>
 		</section>
 	);
 };

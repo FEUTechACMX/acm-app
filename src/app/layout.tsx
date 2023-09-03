@@ -1,5 +1,6 @@
 import { Providers } from "@/utils/redux/provider";
 import type { Metadata } from "next";
+import NextNProgressClient from "@/components/progress";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -144,6 +145,7 @@ const RootLayout: React.FC<Props> = ({ children }) => {
 	return (
 		<html lang="en">
 			<body className={`${f_f1s.variable} ${f_hae.variable} ${f_ot.variable}`}>
+				<NextNProgressClient />
 				<Providers>{children}</Providers>
 			</body>
 		</html>

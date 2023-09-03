@@ -7,16 +7,20 @@ import Footer from "@/components/home/footer";
 import Header from "@/components/home/header";
 import Merch from "@/components/home/merch";
 import type { NextPage } from "next";
+import { Suspense } from "react";
+import Loading from "./loading";
 const Home: NextPage = () => {
 	return (
 		<main>
-			<Header />
-			<About />
-			<Featured />
-			<Merch />
-			<Committee />
-			<Events />
-			<Footer />
+			<Suspense fallback={<Loading />}>
+				<Header />
+				<About />
+				<Featured />
+				<Merch />
+				<Committee />
+				<Events />
+				<Footer />
+			</Suspense>
 		</main>
 	);
 };
