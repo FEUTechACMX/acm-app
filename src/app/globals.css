@@ -55,5 +55,6 @@ html {
 body {
 	background: var(--bg);
 	caret-color: var(--accents);
+	font-family: var(--font-f1s);
 	line-height: 1.6rem;
 }
