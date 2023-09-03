@@ -1,6 +1,9 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+yarn run killport
+yarn run removeNext
 npx lint-staged
 yarn run lint
 yarn run build
+yarn run removeNext
