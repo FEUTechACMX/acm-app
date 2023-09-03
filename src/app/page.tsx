@@ -6,6 +6,7 @@ import Featured from "@/components/home/featured";
 import Footer from "@/components/home/footer";
 import Header from "@/components/home/header";
 import Merch from "@/components/home/merch";
+// import Prompt from "@/components/home/prompt";
 import type { NextPage } from "next";
 import { Suspense } from "react";
 import Loading from "./loading";
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
 	return (
 		<main>
 			<Suspense fallback={<Loading />}>
+				{/* <Prompt /> */}
 				<Header />
 				<About />
 				<Featured />
