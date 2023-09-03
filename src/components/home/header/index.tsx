@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
-import ParticlesGen from "./particles";
 import Nav from "./nav";
+import ParticlesGen from "./particles";
 const Header: React.FC = () => {
 	return (
 		<header id="header">
@@ -13,7 +13,13 @@ const Header: React.FC = () => {
 				<div className="flex justify-center items-center h-full relative">
 					<div className="w-9/12 flex gap-4 flex-col">
 						<motion.div
-							animate={{}}
+							animate={{
+								opacity: [0, 1],
+								transition: {
+									duration: 1,
+									delay: 0.5,
+								},
+							}}
 							className="h-28 w-64 relative flex justify-center items-center m-auto"
 						>
 							<Image
@@ -36,9 +42,18 @@ const Header: React.FC = () => {
 						>
 							FEU Institute of Technology ACM
 						</motion.h1>
-						<h2 className="font-f1s text-center text-xl">
+						<motion.h2
+							animate={{
+								opacity: [0, 1],
+								transition: {
+									duration: 1,
+									delay: 1.5,
+								},
+							}}
+							className="font-f1s text-center text-xl"
+						>
 							Coding Chaos in Digital Dystopia
-						</h2>
+						</motion.h2>
 					</div>
 				</div>
 			</div>

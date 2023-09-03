@@ -1,5 +1,5 @@
 "use client";
-import About from "@/components/home/about";
+import About from "@/components/home/about/";
 import Committee from "@/components/home/committee";
 import Events from "@/components/home/events";
 import Featured from "@/components/home/featured";
