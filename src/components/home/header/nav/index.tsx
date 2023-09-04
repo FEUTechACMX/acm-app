@@ -59,9 +59,9 @@ const Nav: React.FC = () => {
 						className="m-auto"
 					></Image>
 				</div>
-				<h2 className="hover:text-accents transition-colors">
+				<p className=" font-bold hover:text-accents transition-colors">
 					FEU&nbsp;Tech&nbsp;ACM
-				</h2>
+				</p>
 			</Link>
 			<div className="flex text-lg">
 				{links.map((link, index) => {

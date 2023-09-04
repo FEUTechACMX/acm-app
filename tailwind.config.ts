@@ -21,6 +21,9 @@ const config: Config = {
 				text: "var(--text)",
 				panelColor: "var(--panel-color)",
 			},
+			boxShadowColor: {
+				panelColor: "var(--panel-color)",
+			},
 			borderColor: {
 				panelBg: "var(--panel-bg)",
 			},

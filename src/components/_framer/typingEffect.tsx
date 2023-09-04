@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
-const TypingEffect: React.FC = () => {
-	const line1 = "FEU Tech ACM Student Chapter";
-	const line2 = "<Coding Chaos In Digital Dystopia />";
-
+interface Props {
+	props: {
+		str: string;
+	};
+}
+const TypingEffect: React.FC<Props> = ({ props: { str } }) => {
+	const strArr = str.split("");
 	const sentence = {
 		hidden: { opacity: 1 },
 		visible: {
@@ -22,40 +25,16 @@ const TypingEffect: React.FC = () => {
 		},
 	};
 
-	const line1Array = line1.split("");
-	const line2Array = line2.split("");
-
 	return (
-		<div className="flex flex-col justify-center items-center">
-			<motion.h1
-				variants={sentence}
-				initial="hidden"
-				animate="visible"
-				className="font-ot [text-wrap:balance] text-center text-panelColor"
-			>
-				{line1Array.map((char, index) => {
-					return (
-						<motion.span key={index} variants={letter}>
-							{char}
-						</motion.span>
-					);
-				})}
-			</motion.h1>
-			<motion.h2
-				variants={sentence}
-				initial="hidden"
-				animate="visible"
-				className="font-hae text-4xl"
-			>
-				{line2Array.map((char, index) => {
-					return (
-						<motion.span key={index} variants={letter}>
-							{char}
-						</motion.span>
-					);
-				})}
-			</motion.h2>
-		</div>
+		<motion.span variants={sentence} initial="hidden" animate="visible">
+			{strArr.map((char, index) => {
+				return (
+					<motion.span key={index} variants={letter}>
+						{char}
+					</motion.span>
+				);
+			})}
+		</motion.span>
 	);
 };
 

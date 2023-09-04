@@ -18,11 +18,11 @@ const About: React.FC = () => {
 				</FadeInWhenVisible>
 				<FadeInWhenVisible props={{ delay: 1.5 }}>
 					<p>
-						We are an organization operating exclusively for educational and
-						scientific purposes in order to promote to increased knowledge and
-						greater interest in science, design, development, construction,
-						languages, management and applications; and as a means of
-						communication between persons having an interest in computing.
+						Our organization operates exclusively for educational and scientific
+						purposes in order to promote to increased knowledge and greater
+						interest in science, design, development, construction, languages,
+						management and applications; and as a means of communication between
+						persons having an interest in computing.
 					</p>
 				</FadeInWhenVisible>
 				<FadeInWhenVisible props={{ delay: 2 }}>
