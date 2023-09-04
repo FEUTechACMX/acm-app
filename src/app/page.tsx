@@ -1,6 +1,6 @@
 "use client";
 import About from "@/components/home/about/";
-import Committee from "@/components/home/committee";
+import Committees from "@/components/home/committees";
 import Events from "@/components/home/events";
 import Featured from "@/components/home/featured";
 import Footer from "@/components/home/footer";
@@ -18,9 +18,9 @@ const Home: NextPage = () => {
 				<Header />
 				<About />
 				<Featured />
-				<Merch />
-				<Committee />
 				<Events />
+				<Merch />
+				<Committees />
 				<Footer />
 			</Suspense>
 		</main>

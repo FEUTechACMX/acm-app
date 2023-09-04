@@ -2,6 +2,7 @@ const Merch: React.FC = () => {
 	return (
 		<section id="merch" className="h-screen">
 			<h2>Merch</h2>
+			<q>Style your FIT as we eclipse 🌒 the digital realm!</q>
 			<p>
 				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
 				quibusdam fugiat, ipsum voluptatem odit saepe hic, temporibus doloribus

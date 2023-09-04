@@ -10,11 +10,7 @@ const Music: React.FC = () => {
 		if (audioRef.current?.paused) audioRef.current?.play();
 		else audioRef.current?.pause();
 	};
-	return (
-		<div className="absolute bottom-2/4 right-0 z-10">
-			<button onClick={play}>Music</button>
-		</div>
-	);
+	return <button onClick={play}>Music</button>;
 };
 
 export default Music;

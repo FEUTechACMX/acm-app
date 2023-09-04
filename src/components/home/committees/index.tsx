@@ -1,9 +1,9 @@
 import Image from "next/image";
 const officers = ["1. JAE.png"];
-const Committee: React.FC = () => {
+const Committees: React.FC = () => {
 	return (
-		<section id="committee" className="h-screen">
-			<h2 className="">Committee</h2>
+		<section id="committees" className="h-screen">
+			<h2 className="">Committees</h2>
 			<h3>Executives</h3>
 			{officers.map((officer, index) => {
 				return (
@@ -23,7 +23,7 @@ const Committee: React.FC = () => {
 	);
 };
 
-export default Committee;
+export default Committees;
 
 // https://stackoverflow.com/questions/64922587/import-multiple-images-on-react/64922680#64922680
 // const imageNames = ["img1.jpg", "img2.jpg", "img3.jpg"];

@@ -32,7 +32,7 @@ import Image from "next/image";
 // ];
 const Footer: React.FC = () => {
 	return (
-		<footer id="footer" className="w-screen p-8">
+		<footer id="contact" className="w-screen p-8">
 			<div className="grid lg:grid-cols-2 gap-3">
 				<div className="">
 					<div className="relative h-16 w-32">
