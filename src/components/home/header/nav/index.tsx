@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-interface LinkProps {
-	name: string;
-	href: string;
-}
+import { LinkProps } from "types/link";
 const links: LinkProps[] = [
 	{
 		name: "News",
@@ -62,7 +59,9 @@ const Nav: React.FC = () => {
 						className="m-auto"
 					></Image>
 				</div>
-				<h2>FEU&nbsp;Tech&nbsp;ACM</h2>
+				<h2 className="hover:text-accents transition-colors">
+					FEU&nbsp;Tech&nbsp;ACM
+				</h2>
 			</Link>
 			<div className="flex text-lg">
 				{links.map((link, index) => {

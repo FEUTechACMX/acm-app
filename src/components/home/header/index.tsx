@@ -1,3 +1,4 @@
+import TypingEffect from "@/components/_framer/typingEffect";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Music from "./music";
@@ -34,30 +35,7 @@ const Header: React.FC = () => {
 								className="m-auto"
 							></Image>
 						</motion.div>
-						<motion.h1
-							animate={{
-								opacity: [0, 1],
-								transition: {
-									duration: 1,
-									delay: 1,
-								},
-							}}
-							className="font-ot [text-wrap:balance] text-center"
-						>
-							FEU Tech ACM Student Chapter
-						</motion.h1>
-						<motion.h2
-							animate={{
-								opacity: [0, 1],
-								transition: {
-									duration: 1,
-									delay: 1.5,
-								},
-							}}
-							className="font-hae text-4xl text-assets"
-						>
-							&lt;Coding Chaos In Digital Dystopia /&gt;
-						</motion.h2>
+						{<TypingEffect />}
 					</div>
 				</div>
 			</div>

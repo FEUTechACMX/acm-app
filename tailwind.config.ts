@@ -19,6 +19,7 @@ const config: Config = {
 				assets: "var(--assets)",
 				accents: "var(--accents)",
 				text: "var(--text)",
+				panelColor: "var(--panel-color)",
 			},
 			borderColor: {
 				panelBg: "var(--panel-bg)",
