@@ -103,7 +103,8 @@ export const metadata: Metadata = {
 	classification: "Technology",
 	colorScheme: "dark",
 	creator: "FEU Tech ACM Student Chapter",
-	description: "",
+	description:
+		"FEU Tech ACM Student Chapter is a top-performing academic organization founded in 2007 acting as the mother organization for FEU Institute of Technology Computer Science students.",
 	formatDetection: {
 		telephone: false,
 	},
@@ -120,13 +121,13 @@ export const metadata: Metadata = {
 			},
 		],
 		siteName: "FEU Tech ACM-X",
-		title: "FEU Tech ACM-X",
+		title: "FEU Tech ACM-X | Coding Chaos In Digital Dystopia",
 		type: "website",
 		url: "https://feutech.acm.org/",
 	},
 	robots: "index, follow",
 	themeColor: "#0b001a",
-	title: "FEU Tech ACM-X",
+	title: "FEU Tech ACM-X | Coding Chaos In Digital Dystopia",
 	twitter: {},
 	verification: {},
 	viewport: {
