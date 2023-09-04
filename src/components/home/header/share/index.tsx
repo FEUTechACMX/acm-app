@@ -30,7 +30,7 @@ const Share: React.FC = () => {
 			className="absolute right-0 bottom-0 z-10"
 		>
 			<div className="flex flex-col items-center justify-center">
-				<h2>Share</h2>
+				<p className="font-bold">Share</p>
 				{socials.map((social) => {
 					return (
 						<a

@@ -35,7 +35,16 @@ const Header: React.FC = () => {
 								className="m-auto"
 							></Image>
 						</motion.div>
-						{<TypingEffect />}
+						<h1>
+							{<TypingEffect props={{ str: "FEU Tech ACM Student Chapter" }} />}
+						</h1>
+						<p className="font-hae text-4xl">
+							{
+								<TypingEffect
+									props={{ str: "<Coding Chaos In Digital Dystopia />" }}
+								/>
+							}
+						</p>
 					</div>
 				</div>
 			</div>
