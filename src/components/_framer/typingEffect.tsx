@@ -7,11 +7,10 @@ interface Props {
 const TypingEffect: React.FC<Props> = ({ props: { str } }) => {
 	const strArr = str.split("");
 	const sentence = {
-		hidden: { opacity: 1 },
+		hidden: { opacity: 1, transition: {} },
 		visible: {
 			opacity: 1,
 			transition: {
-				delay: 0.5,
 				staggerChildren: 0.1,
 			},
 		},

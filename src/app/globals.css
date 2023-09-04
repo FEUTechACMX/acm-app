@@ -51,6 +51,7 @@ html {
 
 html {
 	scrollbar-color: var(--accents) transparent;
+	scroll-behavior: smooth;
 }
 
 body {

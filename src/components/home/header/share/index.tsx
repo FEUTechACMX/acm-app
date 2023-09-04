@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 interface Social {
 	name: string;
 	link: string;
@@ -19,16 +18,7 @@ const socials: Social[] = [
 ];
 const Share: React.FC = () => {
 	return (
-		<motion.section
-			animate={{
-				opacity: [0, 1],
-				transition: {
-					duration: 1,
-					delay: 2,
-				},
-			}}
-			className="absolute right-0 bottom-0 z-10"
-		>
+		<section className="p-2">
 			<div className="flex flex-col items-center justify-center">
 				<p className="font-bold">Share</p>
 				{socials.map((social) => {
@@ -38,12 +28,12 @@ const Share: React.FC = () => {
 							target="_blank"
 							rel="noreferrer"
 							key={social.name}
-							className={`icon-${social.name}-squared text-3xl hover:text-accents transition-colors`}
+							className={`icon-${social.name}-squared text-4xl hover:text-accents transition-colors`}
 						></a>
 					);
 				})}
 			</div>
-		</motion.section>
+		</section>
 	);
 };
 

@@ -4,32 +4,32 @@ import Link from "next/link";
 import { LinkProps } from "types/link";
 const links: LinkProps[] = [
 	{
-		name: "News",
-		href: "/news",
+		name: "Home",
+		href: "#home",
 	},
 	{
 		name: "About",
-		href: "/about",
+		href: "#about",
+	},
+	{
+		name: "Featured",
+		href: "#featured",
 	},
 	{
 		name: "Events",
-		href: "/events",
+		href: "#events",
 	},
 	{
 		name: "Merch",
-		href: "/merch",
+		href: "#merch",
 	},
 	{
 		name: "Committees",
-		href: "/committees",
+		href: "#committees",
 	},
 	{
 		name: "Contact",
-		href: "/contact",
-	},
-	{
-		name: "Membership",
-		href: "/membership",
+		href: "#contact",
 	},
 	{
 		name: "Signin",

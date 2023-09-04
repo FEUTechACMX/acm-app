@@ -49,7 +49,7 @@ const About: React.FC = () => {
 				<FadeInWhenVisible props={{ delay: 3 }}>
 					<h3 className="font-ot text-panelColor">Vision</h3>
 				</FadeInWhenVisible>
-				<FadeInWhenVisible props={{ delay: 4 }}>
+				<FadeInWhenVisible props={{ delay: 3.5 }}>
 					<p>
 						The officers envision the organization as being a{" "}
 						<span className="text-panelColor">
