@@ -1,7 +1,6 @@
 namespace NodeJS {
 	// eslint-disable-next-line no-unused-vars
 	interface ProcessEnv extends NodeJS.ProcessEnv {
-		MONGO_URI: string;
 		EMAIL_SERVER_HOST: string;
 		EMAIL_SERVER_PORT: string;
 		EMAIL_USER: string;

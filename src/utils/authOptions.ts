@@ -1,11 +1,6 @@
-// import db_projects, { mongooseId } from "@/db/projects/flat";
-// import clientPromise from "@/db/projects/mongo";
-// import Mailer, { serverDetails } from "@/utils/mailer";
-// import emailSignin from "@/utils/mailer/templates/signin";
-// import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { PrismaClient } from "@prisma/client";
-import NextAuth, { NextAuthOptions } from "next-auth";
+import { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
 const prisma = new PrismaClient();
@@ -34,9 +29,9 @@ export const authOptions: NextAuthOptions = {
 		// async signIn({}) {},
 	},
 	callbacks: {
-		// async signIn() {
-		// 	return true;
-		// },
+		async signIn({ profile }) {
+			return profile?.email?.endsWith("@fit.edu.ph") ?? false;
+		},
 		// async redirect({ baseUrl }) {
 		// 	return baseUrl;
 		// },
@@ -47,13 +42,13 @@ export const authOptions: NextAuthOptions = {
 	},
 	pages: {
 		signIn: "/auth/signin",
-		signOut: "/auth/signout",
+		// signOut: "/auth/signout",
 		// error: "/auth/error",
 		// verifyRequest: "/auth/verify-request",
 		// newUser: "/auth/new-user",
 	},
 	theme: {
-		colorScheme: "auto",
+		colorScheme: "dark",
 		brandColor: "#0b001ac",
 		logo: `${process.env.HOST_URL}/android-chrome-256x256.png`,
 		buttonText: "#6661ff",
@@ -61,4 +56,4 @@ export const authOptions: NextAuthOptions = {
 	debug: process.env.NODE_ENV === "development",
 };
 
-export default NextAuth(authOptions);
+export default authOptions;

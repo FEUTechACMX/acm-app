@@ -98,6 +98,6 @@
 	"screenshots": [],
 	"short_name": "FIT ACM-X",
 	"shortcuts": [],
-	"start_url": "https://feutech.acm.org",
+	"start_url": "http://localhost:3000/",
 	"theme_color": "#0b001a"
 }

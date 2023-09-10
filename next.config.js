@@ -23,7 +23,6 @@ const withPWA = require('next-pwa')({
   skipWaiting: true,
   scope: '/',
   dynamicStartUrl: true,
-  dynamicStartUrlRedirect: '/auth/signin',
   disable: process.env.NODE_ENV === 'development',
 });
 ;
@@ -52,7 +51,7 @@ const securityHeaders = [
   }
 ];
 module.exports = withPWA({
-  // reactStrictMode: true,
+  reactStrictMode: true,
   swcMinify: true,
   images: {
     domains: [

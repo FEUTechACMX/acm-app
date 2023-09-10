@@ -151,8 +151,8 @@ const RootLayout: React.FC<Props> = ({ children }) => {
 			<body
 				className={`${f_f1s.variable} ${f_hae.variable} ${f_ot.variable} text-base sm:text-lg lg:text-xl`}
 			>
-				<NextNProgressClient />
 				<Providers>
+					<NextNProgressClient />
 					<>
 						<Nav />
 						<Side />
