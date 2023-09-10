@@ -8,6 +8,9 @@ const initialState: NavState = {
 	isNavOpen: false,
 };
 
+// q: how do I get the state?
+// a: use the state parameter
+
 export const nav = createSlice({
 	name: "nav",
 	initialState,

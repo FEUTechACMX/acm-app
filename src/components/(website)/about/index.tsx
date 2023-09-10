@@ -1,7 +1,8 @@
+"use client";
 import FadeInWhenVisible from "@/components/_framer/fadeInWhenVisible";
 const About: React.FC = () => {
 	return (
-		<section id="about" className="w-screen h-auto p-8 md:p-24">
+		<div className="w-screen h-auto p-8 md:p-24">
 			<div className="flex justify-center items-center gap-6 flex-col h-full lg:w-9/12 m-auto">
 				<FadeInWhenVisible props={{ delay: 0.5 }}>
 					<h2 className="font-ot text-panelColor">Who Are We</h2>
@@ -70,7 +71,7 @@ const About: React.FC = () => {
 					</p>
 				</FadeInWhenVisible>
 			</div>
-		</section>
+		</div>
 	);
 };
 

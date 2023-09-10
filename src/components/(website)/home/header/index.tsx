@@ -90,7 +90,7 @@ const Header: React.FC = () => {
 									<Link
 										href={link.href}
 										key={link.name}
-										className="hover:text-accents transition-colors"
+										className="hover:text-accents transition-colors underline"
 									>
 										{link.name}
 									</Link>
