@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,11 +6,11 @@ import { LinkProps } from "types/link";
 const links: LinkProps[] = [
 	{
 		name: "Home",
-		href: "#home",
+		href: "/",
 	},
 	{
 		name: "About",
-		href: "#about",
+		href: "/about",
 	},
 	{
 		name: "Featured",
