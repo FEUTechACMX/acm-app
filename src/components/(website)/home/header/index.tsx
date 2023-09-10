@@ -59,7 +59,7 @@ const Header: React.FC = () => {
 									delay: 1,
 								},
 							}}
-							className="text-center"
+							className="text-center drop-shadow-[0_4px_2px_rgba(255,255,255,0.3)]"
 						>
 							FEU Tech ACM Student Chapter
 						</motion.h1>
@@ -90,7 +90,7 @@ const Header: React.FC = () => {
 									<Link
 										href={link.href}
 										key={link.name}
-										className="hover:text-accents transition-colors underline"
+										className="hover:bg-accents transition-colors p-2 border-2 border-accents rounded-md shadow-sm shadow-accents"
 									>
 										{link.name}
 									</Link>

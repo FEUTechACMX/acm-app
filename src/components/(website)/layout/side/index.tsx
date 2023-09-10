@@ -15,7 +15,18 @@ const Side: React.FC = () => {
 			}}
 			className="flex flex-col fixed bottom-1/4 right-0 z-10"
 		>
-			<Music />
+			<button className="text-lg text-center">
+				<Music
+					props={{
+						onClick: {
+							path: "/media/music/dynasty.mp3",
+							isLooped: true,
+						},
+					}}
+				>
+					-Music-
+				</Music>
+			</button>
 			<Share />
 		</motion.section>
 	);

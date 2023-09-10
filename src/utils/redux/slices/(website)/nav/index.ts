@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-
 type NavState = {
 	isNavOpen: boolean;
 };
@@ -7,9 +6,6 @@ type NavState = {
 const initialState: NavState = {
 	isNavOpen: false,
 };
-
-// q: how do I get the state?
-// a: use the state parameter
 
 export const nav = createSlice({
 	name: "nav",
