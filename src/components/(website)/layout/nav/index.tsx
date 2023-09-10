@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { LinkProps } from "types/link";
+import Music from "../side/music";
 const links: LinkProps[] = [
 	{
 		name: "Home",
@@ -42,6 +43,7 @@ const links: LinkProps[] = [
 const Nav: React.FC = () => {
 	const isOpen = useAppSelector((state) => state.navReducer.isNavOpen);
 	const dispatch = useAppDispatch();
+
 	return (
 		<motion.nav
 			id="home-nav"
@@ -64,22 +66,42 @@ const Nav: React.FC = () => {
 						className="m-auto"
 					></Image>
 				</div>
-				<p className=" font-bold hover:text-accents transition-colors">
+				<p className="font-bold text-xl hover:text-accents transition-colors">
 					FEU&nbsp;Tech&nbsp;ACM
 				</p>
 			</Link>
-			<div className="hidden md:flex text-lg">
-				{links.map((link, index) => {
+			<div
+				className={`${
+					isOpen
+						? "fixed w-screen h-screen justify-center flex-col flex items-center bg-panelBg top-0 left-0 z-10"
+						: "hidden"
+				} md:flex md:static md:w-auto md:h-auto md:bg-transparent md:flex-row md:items-center md:justify-between`}
+			>
+				{links.map((link) => {
 					return (
-						<Link href={link.href} key={index}>
-							<p className="p-2 rounded-lg hover:text-accents active:text-accents focus:text-accents transition-colors">
-								{link.name}
-							</p>
-						</Link>
+						<Music
+							key={link.name}
+							props={{
+								onClick: {
+									path: "/media/sfx/gun_shot.mp3",
+									isLooped: false,
+								},
+								onMouseOver: {
+									path: "/media/sfx/gun_cocking_short.mp3",
+									isLooped: false,
+								},
+							}}
+						>
+							<Link href={link.href} onClick={() => dispatch(toggleNav())}>
+								<p className="p-2 rounded-lg hover:text-accents active:text-accents focus:text-accents transition-colors">
+									{link.name}
+								</p>
+							</Link>
+						</Music>
 					);
 				})}
 			</div>
-			<div className="flex md:hidden">
+			<div className="flex md:hidden z-10">
 				<button onClick={() => dispatch(toggleNav())}>
 					{isOpen ? (
 						<>

@@ -1,17 +1,57 @@
 "use client";
 import { useEffect, useRef } from "react";
-const Music: React.FC = () => {
-	const audioRef = useRef<HTMLAudioElement | undefined>(
+
+type Path = `/media/music/${string}.mp3` | `/media/sfx${string}.mp3`;
+interface Props {
+	children: React.ReactNode;
+	props: {
+		onClick?: {
+			path: Path;
+			isLooped: boolean;
+		};
+		onMouseOver?: {
+			path: Path;
+			isLooped: boolean;
+		};
+	};
+}
+// TODO: Make factory function for audio elements
+
+type AudioRef = HTMLAudioElement | undefined;
+const Music: React.FC<Props> = ({ children, props }) => {
+	const { onClick, onMouseOver } = props;
+	const clickAudioRef = useRef<AudioRef>(
+		typeof Audio !== "undefined" ? new Audio("") : undefined,
+	);
+	const mouseOverAudioRef = useRef<AudioRef>(
 		typeof Audio !== "undefined" ? new Audio("") : undefined,
 	);
 	useEffect(() => {
-		audioRef.current = new Audio("/media/music/persona_5.mp3");
-	}, []);
-	const play = () => {
-		if (audioRef.current?.paused) audioRef.current?.play();
-		else audioRef.current?.pause();
+		if (onClick) {
+			clickAudioRef.current = new Audio(onClick.path);
+			clickAudioRef.current.loop = onClick.isLooped;
+			clickAudioRef.current.volume = 0.8;
+		}
+		if (onMouseOver) {
+			mouseOverAudioRef.current = new Audio(onMouseOver.path);
+			mouseOverAudioRef.current.loop = onMouseOver.isLooped;
+			mouseOverAudioRef.current.volume = 0.8;
+		}
+	}, [onClick, onMouseOver]);
+	const playOnClick = () => {
+		if (clickAudioRef.current?.paused) clickAudioRef.current?.play();
+		else clickAudioRef.current?.pause();
 	};
-	return <button onClick={play}>Music</button>;
+	const playOnMouseOver = () => {
+		if (!onMouseOver) return;
+		if (mouseOverAudioRef.current?.paused) mouseOverAudioRef.current?.play();
+		else mouseOverAudioRef.current?.pause();
+	};
+	return (
+		<span onClick={playOnClick} onMouseOver={playOnMouseOver}>
+			{children}
+		</span>
+	);
 };
 
 export default Music;
