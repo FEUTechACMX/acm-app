@@ -1,4 +1,6 @@
 "use client";
+import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
+import { toggleNav } from "@/utils/redux/slices/(website)/nav";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -38,6 +40,8 @@ const links: LinkProps[] = [
 	},
 ];
 const Nav: React.FC = () => {
+	const isOpen = useAppSelector((state) => state.navReducer.isNavOpen);
+	const dispatch = useAppDispatch();
 	return (
 		<motion.nav
 			id="home-nav"
@@ -48,7 +52,7 @@ const Nav: React.FC = () => {
 					delay: 2,
 				},
 			}}
-			className="w-screen fixed p-2 border-t-2 border-panelBg border-solid z-20 flex justify-between font-bold backdrop-blur"
+			className="w-screen fixed p-2 border-t-4 border-panelBg border-solid z-20 flex justify-between font-bold backdrop-blur"
 		>
 			<Link href="/" className="flex justify-center items-center">
 				<div className="relative h-8 w-16">
@@ -64,7 +68,7 @@ const Nav: React.FC = () => {
 					FEU&nbsp;Tech&nbsp;ACM
 				</p>
 			</Link>
-			<div className="flex text-lg">
+			<div className="hidden md:flex text-lg">
 				{links.map((link, index) => {
 					return (
 						<Link href={link.href} key={index}>
@@ -74,6 +78,45 @@ const Nav: React.FC = () => {
 						</Link>
 					);
 				})}
+			</div>
+			<div className="flex md:hidden">
+				<button onClick={() => dispatch(toggleNav())}>
+					{isOpen ? (
+						<>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								className="h-10 w-10 text-accents hover:text-accentsDark transition-colors"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="3"
+									d="M6 18L18 6M6 6l12 12"
+								/>
+							</svg>
+						</>
+					) : (
+						<>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								className="h-10 w-10 text-accents hover:text-accentsDark transition-colors"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="3"
+									d="M4 6h16M4 12h16M4 18h16"
+								/>
+							</svg>
+						</>
+					)}
+				</button>
 			</div>
 		</motion.nav>
 	);
