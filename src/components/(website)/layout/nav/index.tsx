@@ -37,7 +37,7 @@ const links: LinkProps[] = [
 	},
 	{
 		name: "Signin",
-		href: "/signin",
+		href: "/auth/signin",
 	},
 ];
 const Nav: React.FC = () => {
