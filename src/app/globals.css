@@ -70,3 +70,8 @@ h6 {
 	font-family: var(--font-ot);
 	color: var(--panel-color);
 }
+
+input,
+textarea {
+	background: var(--panel-bg);
+}
