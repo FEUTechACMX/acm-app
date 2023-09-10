@@ -1,13 +1,15 @@
+import NextNProgressClient from "@/components/progress";
+import Nav from "@/components/(website)/layout/nav";
+import Side from "@/components/(website)/layout/side";
 import { Providers } from "@/utils/redux/provider";
 import type { Metadata } from "next";
-import NextNProgressClient from "@/components/progress";
 import localFont from "next/font/local";
-import "./globals.css";
 import "public/media/icons/fontello-84cd01f8/css/fontello.css";
+import "../globals.css";
 const f_f1s = localFont({
 	src: [
 		{
-			path: "../../public/fonts/f1-secuencia-quad-ffp/font.ttf",
+			path: "../../../public/fonts/f1-secuencia-quad-ffp/font.ttf",
 			style: "normal",
 		},
 	],
@@ -16,7 +18,7 @@ const f_f1s = localFont({
 const f_hae = localFont({
 	src: [
 		{
-			path: "../../public/fonts/human-alter-ego/font.ttf",
+			path: "../../../public/fonts/human-alter-ego/font.ttf",
 			style: "normal",
 		},
 	],
@@ -26,7 +28,7 @@ const f_hae = localFont({
 const f_ot = localFont({
 	src: [
 		{
-			path: "../../public/fonts/over-there/font.ttf",
+			path: "../../../public/fonts/over-there/font.ttf",
 			style: "normal",
 		},
 	],
@@ -142,10 +144,13 @@ export const metadata: Metadata = {
 interface Props {
 	children: React.ReactNode;
 }
+
 const RootLayout: React.FC<Props> = ({ children }) => {
 	return (
 		<html lang="en">
 			<body className={`${f_f1s.variable} ${f_hae.variable} ${f_ot.variable}`}>
+				<Nav />
+				<Side />
 				<NextNProgressClient />
 				<Providers>{children}</Providers>
 			</body>

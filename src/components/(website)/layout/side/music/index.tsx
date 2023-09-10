@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useRef } from "react";
 const Music: React.FC = () => {
 	const audioRef = useRef<HTMLAudioElement | undefined>(

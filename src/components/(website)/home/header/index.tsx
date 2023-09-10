@@ -2,11 +2,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { LinkProps } from "types/link";
-import Music from "./music";
-import Nav from "./nav";
 import ParticlesGen from "./particles";
-import Scroll from "./scroll";
-import Share from "./share";
 const links: LinkProps[] = [
 	{
 		name: "Become a Member",
@@ -34,18 +30,7 @@ const Header: React.FC = () => {
 							delay: 2,
 						},
 					}}
-				>
-					<div className="relative">
-						<Nav />
-					</div>
-					<div className=" flex flex-col fixed bottom-1/4 right-0 z-10">
-						<Music />
-						<Share />
-					</div>
-					<div className="fixed bottom-4 right-4 z-10">
-						<Scroll />
-					</div>
-				</motion.div>
+				></motion.div>
 				<div className="flex justify-center items-center h-full relative">
 					<div className="w-11/12 flex gap-4 flex-col justify-center items-center">
 						<motion.div
