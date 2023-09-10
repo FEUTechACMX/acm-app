@@ -5,9 +5,12 @@ import { useState } from "react";
 const AuthForm: React.FC = () => {
 	const [email, setEmail] = useState("");
 	return (
-		<span>
-			<form action="/api/auth/signin/email" method="post">
-				<input name="csrfToken" type="hidden" />
+		<span className="w-full">
+			<form
+				action="/api/auth/signin/email"
+				method="post"
+				className="flex flex-col w-full justify-center"
+			>
 				<input
 					onChange={(e) => setEmail(e.target.value)}
 					value={email}
@@ -19,10 +22,12 @@ const AuthForm: React.FC = () => {
 					maxLength={21}
 					autoComplete="off"
 					spellCheck="false"
+					className="p-2 m-auto w-80"
 				/>
-				<button type="button">Sign in with Email</button>
-				<p>or sign in with</p>
-				<button onClick={() => signIn("google")}>Google</button>
+				<button className="p-2 w-6/12 m-auto">Sign in with Email</button>
+				<button className="p-2 w-6/12 m-auto" onClick={() => signIn("google")}>
+					Google
+				</button>
 			</form>
 		</span>
 	);
