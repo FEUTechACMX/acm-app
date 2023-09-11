@@ -30,12 +30,12 @@ const Music: React.FC<Props> = ({ children, props }) => {
 		if (onClick) {
 			clickAudioRef.current = new Audio(onClick.path);
 			clickAudioRef.current.loop = onClick.isLooped;
-			clickAudioRef.current.volume = 0.8;
+			clickAudioRef.current.volume = 0.4;
 		}
 		if (onMouseOver) {
 			mouseOverAudioRef.current = new Audio(onMouseOver.path);
 			mouseOverAudioRef.current.loop = onMouseOver.isLooped;
-			mouseOverAudioRef.current.volume = 0.8;
+			mouseOverAudioRef.current.volume = 0.4;
 		}
 	}, [onClick, onMouseOver]);
 	const playOnClick = () => {

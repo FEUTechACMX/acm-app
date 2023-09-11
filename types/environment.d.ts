@@ -12,5 +12,17 @@ namespace NodeJS {
 		NEXTAUTH_URL: string;
 		NEXTAUTH_SECRET: string;
 		AUTH_TRUST_HOST: boolean;
+
+		POSTGRES_HOST: string;
+		POSTGRES_PORT: string;
+		POSTGRES_USER: string;
+
+		POSTGRES_URL: string;
+		POSTGRES_PRISMA_URL: string;
+		POSTGRES_URL_NON_POOLING: string;
+		POSTGRES_USER: string;
+		POSTGRES_HOST: string;
+		POSTGRES_PASSWORD: string;
+		POSTGRES_DATABASE: string;
 	}
 }

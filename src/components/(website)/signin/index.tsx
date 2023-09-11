@@ -3,7 +3,7 @@ import { signIn } from "next-auth/react";
 import { useState } from "react";
 
 const AuthForm: React.FC = () => {
-	const [email, setEmail] = useState("");
+	const [email, setEmail] = useState<string>("20yyxxxxx@fit.edu.ph");
 	return (
 		<span className="w-full">
 			<form
@@ -16,17 +16,20 @@ const AuthForm: React.FC = () => {
 					value={email}
 					name="email"
 					type="email"
-					placeholder="email@fit.edu.ph"
+					placeholder="20yyxxxxx@fit.edu.ph"
 					required
-					minLength={21}
-					maxLength={21}
+					minLength={20}
+					maxLength={20}
 					autoComplete="off"
 					spellCheck="false"
 					className="p-2 m-auto w-80"
 				/>
 				<button className="p-2 w-6/12 m-auto">Sign in with Email</button>
-				<button className="p-2 w-6/12 m-auto" onClick={() => signIn("google")}>
-					Google
+				<button
+					className="p-2 w-6/12 m-auto"
+					onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+				>
+					Sign in with Google
 				</button>
 			</form>
 		</span>
