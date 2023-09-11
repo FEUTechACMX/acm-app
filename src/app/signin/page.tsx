@@ -1,11 +1,11 @@
 "use client";
-import Image from "next/image";
+import ParticlePolygon from "@/components/(app)/signin/particles";
 import AuthForm from "@/components/(website)/signin";
-import GenParticles from "@/components/(app)/signin/particles";
+import Image from "next/image";
 const Signin: React.FC = () => {
 	return (
 		<section>
-			<GenParticles />
+			<ParticlePolygon />
 			<div className="h-screen w-screen">
 				<div className="flex justify-center items-center h-full relative">
 					<div className="w-11/12 flex gap-4 flex-col justify-center items-center">

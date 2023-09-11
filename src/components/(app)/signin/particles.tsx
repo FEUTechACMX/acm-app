@@ -1,9 +1,9 @@
 import { useCallback } from "react";
-import type { Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
+import type { Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
 
-const GenParticles = () => {
+const ParticlePolygon = () => {
 	const particlesInit = useCallback(async (engine: Engine) => {
 		await loadSlim(engine);
 	}, []);
@@ -91,4 +91,4 @@ const GenParticles = () => {
 	);
 };
 
-export default GenParticles;
+export default ParticlePolygon;
