@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { LinkProps } from "types/link";
-import ParticlesGen from "./particles";
+import ParticleAmongUs from "./particles";
 const links: LinkProps[] = [
 	{
 		name: "Become a Member",
@@ -21,7 +21,7 @@ const Header: React.FC = () => {
 	return (
 		<header id="home">
 			<div className="h-screen w-screen">
-				<ParticlesGen />
+				<ParticleAmongUs />
 				<motion.div
 					animate={{
 						opacity: [0, 1],
