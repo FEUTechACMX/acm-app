@@ -14,7 +14,7 @@ const withPWA = require('next-pwa')({
   runtimeCaching,
   cacheOnFrontEndNav: process.env.NODE_ENV === 'production',
   fallbacks: {
-    // image: 'E/android-chrome-512x512.png',
+    // image: '/android-chrome-512x512.png',
     // document: '/pages/_offline.tsx',
     // font: '',
     // audio: '',
@@ -56,11 +56,6 @@ module.exports = withPWA({
   images: {
     domains: [
       'lh3.googleusercontent.com',
-      'avatars.githubusercontent.com',
-      'platform-lookaside.fbsbx.com',
-      'media-exp1.licdn.com',
-      'pbs.twimg.com',
-      'media.licdn.com',
     ]
   },
   env: {},

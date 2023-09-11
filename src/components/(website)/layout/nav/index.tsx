@@ -17,27 +17,27 @@ const links: LinkProps[] = [
 	},
 	{
 		name: "Featured",
-		href: "#featured",
+		href: "/featured",
 	},
 	{
 		name: "Events",
-		href: "#events",
+		href: "/events",
 	},
 	{
 		name: "Merch",
-		href: "#merch",
+		href: "/merch",
 	},
 	{
 		name: "Committees",
-		href: "#committees",
+		href: "/committees",
 	},
 	{
 		name: "Contact",
-		href: "#contact",
+		href: "/contact",
 	},
 	{
 		name: "Signin",
-		href: "signin",
+		href: "/signin",
 	},
 ];
 const Nav: React.FC = () => {
@@ -73,7 +73,7 @@ const Nav: React.FC = () => {
 			<div
 				className={`${
 					isOpen
-						? "fixed w-screen h-screen justify-center flex-col flex items-center bg-panelBg top-0 left-0 z-10"
+						? "fixed w-screen h-screen justify-center flex-col flex items-center bg-bg top-0 left-0 z-10"
 						: "hidden"
 				} md:flex md:static md:w-auto md:h-auto md:bg-transparent md:flex-row md:items-center md:justify-between`}
 			>
