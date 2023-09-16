@@ -2,53 +2,63 @@
 import { useEffect, useRef } from "react";
 
 type Path = `/media/music/${string}.mp3` | `/media/sfx${string}.mp3`;
+
+interface AudioProps {
+	path: Path;
+	isLooped: boolean;
+}
+
 interface Props {
+	className?: string;
 	children: React.ReactNode;
-	props: {
-		onClick?: {
-			path: Path;
-			isLooped: boolean;
-		};
-		onMouseOver?: {
-			path: Path;
-			isLooped: boolean;
-		};
+	events: {
+		// eslint-disable-next-line no-unused-vars
+		[K in keyof React.DOMAttributes<HTMLElement>]?: AudioProps;
 	};
 }
-// TODO: Make factory function for audio elements
 
 type AudioRef = HTMLAudioElement | undefined;
-const Music: React.FC<Props> = ({ children, props }) => {
-	const { onClick, onMouseOver } = props;
-	const clickAudioRef = useRef<AudioRef>(
-		typeof Audio !== "undefined" ? new Audio("") : undefined,
-	);
-	const mouseOverAudioRef = useRef<AudioRef>(
-		typeof Audio !== "undefined" ? new Audio("") : undefined,
-	);
+
+const createAudioElement = (audioProps?: AudioProps): AudioRef => {
+	if (!audioProps) return undefined;
+	const audio = new Audio(audioProps.path);
+	audio.loop = audioProps.isLooped;
+	audio.volume = 0.4;
+	return audio;
+};
+
+const Music: React.FC<Props> = ({ children, events, className }) => {
+	const refs = useRef<{
+		// eslint-disable-next-line no-unused-vars
+		[K in keyof typeof events]?: React.RefObject<AudioRef>;
+	}>({});
+
 	useEffect(() => {
-		if (onClick) {
-			clickAudioRef.current = new Audio(onClick.path);
-			clickAudioRef.current.loop = onClick.isLooped;
-			clickAudioRef.current.volume = 0.4;
+		for (const event in events) {
+			refs.current[event as keyof typeof events] = {
+				current: createAudioElement(events[event as keyof typeof events]),
+			};
 		}
-		if (onMouseOver) {
-			mouseOverAudioRef.current = new Audio(onMouseOver.path);
-			mouseOverAudioRef.current.loop = onMouseOver.isLooped;
-			mouseOverAudioRef.current.volume = 0.4;
-		}
-	}, [onClick, onMouseOver]);
-	const playOnClick = () => {
-		if (clickAudioRef.current?.paused) clickAudioRef.current?.play();
-		else clickAudioRef.current?.pause();
+	}, [events]);
+
+	const playAudio = (event: keyof typeof events) => {
+		const audioRef = refs.current[event];
+		if (audioRef?.current?.paused) audioRef.current?.play();
+		else audioRef?.current?.pause();
 	};
-	const playOnMouseOver = () => {
-		if (!onMouseOver) return;
-		if (mouseOverAudioRef.current?.paused) mouseOverAudioRef.current?.play();
-		else mouseOverAudioRef.current?.pause();
-	};
+
+	const eventHandlers = events
+		? Object.keys(events).reduce(
+				(acc, event) => ({
+					...acc,
+					[event]: () => playAudio(event as keyof typeof events),
+				}),
+				{},
+		  )
+		: {};
+
 	return (
-		<span onClick={playOnClick} onMouseOver={playOnMouseOver}>
+		<span {...eventHandlers} className={className}>
 			{children}
 		</span>
 	);

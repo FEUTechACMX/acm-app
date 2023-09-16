@@ -17,14 +17,14 @@ const Side: React.FC = () => {
 		>
 			<button className="text-lg text-center">
 				<Music
-					props={{
+					events={{
 						onClick: {
 							path: "/media/music/dynasty.mp3",
 							isLooped: true,
 						},
 					}}
 				>
-					-Music-
+					--Music--
 				</Music>
 			</button>
 			<Share />
