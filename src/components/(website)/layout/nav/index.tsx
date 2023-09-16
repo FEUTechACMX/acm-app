@@ -81,21 +81,23 @@ const Nav: React.FC = () => {
 					return (
 						<Music
 							key={link.name}
-							props={{
+							events={{
+								onMouseEnter: {
+									path: "/media/sfx/gun_cocking_short.mp3",
+									isLooped: false,
+								},
 								onClick: {
 									path: "/media/sfx/gun_shot.mp3",
 									isLooped: false,
 								},
-								onMouseOver: {
-									path: "/media/sfx/gun_cocking_short.mp3",
-									isLooped: false,
-								},
 							}}
 						>
-							<Link href={link.href} onClick={() => dispatch(toggleNav())}>
-								<p className="p-2 rounded-lg hover:text-accents active:text-accents focus:text-accents transition-colors">
-									{link.name}
-								</p>
+							<Link
+								href={link.href}
+								className="font-bold text-xl hover:text-accents transition-colors"
+								onClick={() => dispatch(toggleNav())}
+							>
+								{link.name}
 							</Link>
 						</Music>
 					);
