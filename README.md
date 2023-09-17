@@ -4,7 +4,7 @@
 
 Welcome to the **FEU Tech ACM** App repository!
 
-This repo contains the FEU Tech ACM Organization's official cross-platform application source code.
+This repository contains the FEU Tech ACM Organization's official cross-platform application source code.
 
 The app is being developed to serve as the central platform for communication, collaboration, and promotion of every ACM member and officer in education, opportunities, and beyond.
 
@@ -51,16 +51,16 @@ We adopt the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.
 
 #### Commit Message Example
 
-1. **fix:** a bug fix
+1. **fix:** a bugfix
 2. **feat:** a new feature
 3. **refactor:** a code change that neither fixes a bug nor adds a feature
 4. **chore:** changes to the build process or auxiliary tools and libraries such as documentation generation
-5. **style:** changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+5. **style:** changes that do not affect the meaning of the code (whitespace, formatting, missing semi-colons, etc)
 6. **docs:** documentation only changes
 7. **test:** adding missing tests or correcting existing tests
 8. **perf:** a code change that improves performance
 9. **ci:** changes to our CI configuration files and scripts
-10. **build:** changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+10. **build:** changes that affect the build tool or external dependencies (example scopes: gulp, broccoli, npm)
 11. **revert:** revert to a commit
 12. **BREAKING CHANGE:** introduces a breaking API change (correlating with [Semantic Versioning](https://semver.org/))
 
