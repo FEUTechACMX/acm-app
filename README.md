@@ -1,6 +1,14 @@
-# FEU Tech ACM App
+# 🚀 FEU Tech ACM App
 
-## Tech Stack
+![FEU Tech ACM Background](/public/media/img/dp_cover/cover.png)
+
+Welcome to the **FEU Tech ACM** App repository!
+
+This repo contains the FEU Tech ACM Organization's official cross-platform application source code.
+
+The app is being developed to serve as the central platform for communication, collaboration, and promotion of every ACM member and officer in education, opportunities, and beyond.
+
+## 💻 Tech Stack
 
 - [Next.js](https://nextjs.org/)
 - [Redux Toolkit](https://redux-toolkit.js.org/)
@@ -11,18 +19,19 @@
 - [Redis](https://redis.io/)
 - [Vercel](https://vercel.com/)
 
-## Development
+## 🛠️ Development
 
 ### Pre-requisites
 
 - [Node.js](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/)
+- [npm](https://www.npmjs.com/)
 - [Git](https://git-scm.com/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 ### Workflow
 
-For this project, we will use the [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
+For this project, we will use the [GitFlow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
 
 ### Project Standards
 
@@ -37,6 +46,8 @@ We adopt the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.
 
 [optional footer(s)]
 ```
+
+**Note**: An (\*) asterisk before the commit description indicates that there is more information written in the commit message description.
 
 #### Commit Message Example
 
@@ -53,14 +64,31 @@ We adopt the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.
 11. **revert:** revert to a commit
 12. **BREAKING CHANGE:** introduces a breaking API change (correlating with [Semantic Versioning](https://semver.org/))
 
-## Contributors
+#### Commit Rules
+
+1. **NEVER** rebase the `master` branch.
+2. Only rebase on your own branch.
+3. Make us of `git pull --rebase` instead of `git pull`.
+4. Use only `--force-with-lease` if in need to force push.
+5. Make use of `git commit --amend` if you need to edit your commit message.
+6. Make use of `git rebase -i` if you need to modify your commit history.
+
+## 🔗 App Links
+
+1. [FEU Tech ACM-X](https://acmx.vercel.app/)
+2. Google Play Store - Coming Soon
+3. Microsoft Store - Coming Soon
+
+## 👥 Contributors
 
 1. [Sir Abraham Magpantay](https://www.linkedin.com/in/aber-magpantay/) - Adviser
 2. [Guennevere Rito](https://www.linkedin.com/in/guennevere-rito-990256255/) - Project Manager
 3. [Alpha Romer Coma](https://www.linkedin.com/in/alpha-coma/) - Developer
 4. Emily Tan Sanchez - UI/UX Designer
 
-## License
+**Important**: Only authorized officers of the FEU Tech ACM Organization are allowed to view and contribute to this project repository.
+
+## 📄 License
 
 Copyright (c) FEU Tech ACM Student Chapter . All rights reserved.
 
