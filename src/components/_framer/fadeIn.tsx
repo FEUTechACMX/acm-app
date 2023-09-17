@@ -5,8 +5,9 @@ interface Props {
 		duration?: number;
 		delay?: number;
 	};
+	className?: string;
 }
-const FadeIn: React.FC<Props> = ({ children, props }) => {
+const FadeIn: React.FC<Props> = ({ children, props, className }) => {
 	const { duration, delay } = props || { duration: 1, delay: 0.5 };
 	return (
 		<motion.div
@@ -17,6 +18,7 @@ const FadeIn: React.FC<Props> = ({ children, props }) => {
 					delay,
 				},
 			}}
+			className={className}
 		>
 			{children}
 		</motion.div>

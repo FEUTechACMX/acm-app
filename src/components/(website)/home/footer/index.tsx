@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
 					<div className="relative h-16 w-32">
 						<Image
 							src="/media/img/logo/FIT_ACM.png"
-							alt="FEU Tech Logo"
+							alt="FEU Tech ACM Logo"
 							layout={"fill"}
 							objectFit={"contain"}
 						></Image>

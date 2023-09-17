@@ -1,6 +1,6 @@
 "use client";
+import { useAppSelector } from "@/utils/redux/hooks";
 import { useEffect, useRef } from "react";
-
 type Path = `/media/music/${string}.mp3` | `/media/sfx${string}.mp3`;
 
 interface AudioProps {
@@ -11,6 +11,7 @@ interface AudioProps {
 interface Props {
 	className?: string;
 	children: React.ReactNode;
+	autoPlay?: boolean;
 	events: {
 		// eslint-disable-next-line no-unused-vars
 		[K in keyof React.DOMAttributes<HTMLElement>]?: AudioProps;
@@ -27,7 +28,8 @@ const createAudioElement = (audioProps?: AudioProps): AudioRef => {
 	return audio;
 };
 
-const Music: React.FC<Props> = ({ children, events, className }) => {
+const Music: React.FC<Props> = ({ children, events, className, autoPlay }) => {
+	const { isSoundAllowed } = useAppSelector((state) => state.soundReducer);
 	const refs = useRef<{
 		// eslint-disable-next-line no-unused-vars
 		[K in keyof typeof events]?: React.RefObject<AudioRef>;
@@ -41,7 +43,15 @@ const Music: React.FC<Props> = ({ children, events, className }) => {
 		}
 	}, [events]);
 
+	useEffect(() => {
+		if (autoPlay) {
+			const audioRef = refs.current.onClick;
+			if (audioRef?.current?.paused) audioRef.current?.play();
+		}
+	}, [autoPlay]);
+
 	const playAudio = (event: keyof typeof events) => {
+		if (!isSoundAllowed) return;
 		const audioRef = refs.current[event];
 		if (audioRef?.current?.paused) audioRef.current?.play();
 		else audioRef?.current?.pause();
