@@ -93,11 +93,11 @@ const Nav: React.FC = () => {
 							}}
 							className={`${
 								isOpen && "w-full text-center"
-							} hover:text-accents transition-colors cursor-pointer p-2`}
+							} hover:text-accents transition-colors cursor-pointer flex`}
 						>
 							<Link
 								href={link.href}
-								className="font-bold text-xl "
+								className="font-bold text-xl w-full p-2"
 								onClick={() => dispatch(toggleNav())}
 							>
 								{link.name}

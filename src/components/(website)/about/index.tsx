@@ -1,13 +1,13 @@
 "use client";
-import FadeInWhenVisible from "@/components/_framer/fadeInWhenVisible";
+import FadeIn from "@/components/_framer/fadeIn";
 const About: React.FC = () => {
 	return (
 		<div className="w-screen h-auto p-8 pt-24 md:p-24">
 			<div className="flex justify-center items-center gap-6 flex-col h-full lg:w-9/12 m-auto">
-				<FadeInWhenVisible props={{ delay: 0.5 }}>
+				<FadeIn props={{ delay: 0.5 }}>
 					<h2 className="font-ot text-panelColor">Who Are We</h2>
-				</FadeInWhenVisible>
-				<FadeInWhenVisible props={{ delay: 1 }}>
+				</FadeIn>
+				<FadeIn props={{ delay: 1 }}>
 					<p>
 						<span className="font-bold text-panelColor">
 							FEU Tech ACM Student Chapter
@@ -16,8 +16,8 @@ const About: React.FC = () => {
 						the mother organization for FEU Institute of Technology Computer
 						Science students.
 					</p>
-				</FadeInWhenVisible>
-				<FadeInWhenVisible props={{ delay: 1.5 }}>
+				</FadeIn>
+				<FadeIn props={{ delay: 1.5 }}>
 					<p>
 						Our organization operates exclusively for educational and scientific
 						purposes in order to promote to increased knowledge and greater
@@ -25,11 +25,11 @@ const About: React.FC = () => {
 						management and applications; and as a means of communication between
 						persons having an interest in computing.
 					</p>
-				</FadeInWhenVisible>
-				<FadeInWhenVisible props={{ delay: 2 }}>
+				</FadeIn>
+				<FadeIn props={{ delay: 2 }}>
 					<h3 className="font-ot text-panelColor">Mission</h3>
-				</FadeInWhenVisible>
-				<FadeInWhenVisible props={{ delay: 2.5 }}>
+				</FadeIn>
+				<FadeIn props={{ delay: 2.5 }}>
 					<p>
 						Our <span className="text-panelColor">mission </span>for the
 						incoming school year is to become a better version of ourselves, to
@@ -46,11 +46,11 @@ const About: React.FC = () => {
 							CCS student and professional.
 						</span>
 					</p>
-				</FadeInWhenVisible>
-				<FadeInWhenVisible props={{ delay: 3 }}>
+				</FadeIn>
+				<FadeIn props={{ delay: 3 }}>
 					<h3 className="font-ot text-panelColor">Vision</h3>
-				</FadeInWhenVisible>
-				<FadeInWhenVisible props={{ delay: 3.5 }}>
+				</FadeIn>
+				<FadeIn props={{ delay: 3.5 }}>
 					<p>
 						The officers envision the organization as being a{" "}
 						<span className="text-panelColor">
@@ -69,7 +69,7 @@ const About: React.FC = () => {
 						community of hard-working, like-minded individuals that aims to
 						improve to become established CCS professionals.
 					</p>
-				</FadeInWhenVisible>
+				</FadeIn>
 			</div>
 		</div>
 	);
