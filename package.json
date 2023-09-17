@@ -47,7 +47,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^17.7.1",
 		"@commitlint/config-conventional": "^17.7.0",
-		"@next-auth/prisma-adapter": "^0.4.4-canary.81",
+		"@next-auth/prisma-adapter": "^1.0.7",
 		"@types/eslint-config-prettier": "^6.11.0",
 		"@types/next-pwa": "^5.6.4",
 		"@types/nodemailer": "^6.4.9",
