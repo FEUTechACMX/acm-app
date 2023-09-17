@@ -13,7 +13,7 @@ const Side: React.FC = () => {
 					delay: 2,
 				},
 			}}
-			className="flex flex-col fixed bottom-1/4 right-0 z-10"
+			className="flex flex-col fixed bottom-0 md:bottom-1/4 right-0 z-10"
 		>
 			<button className="text-lg text-center">
 				<Music
