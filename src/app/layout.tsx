@@ -1,7 +1,6 @@
 import NextAuthProvider from "@/components/(app)/provider";
 import Nav from "@/components/(website)/layout/nav";
 import Side from "@/components/(website)/layout/side";
-import NextNProgressClient from "@/components/progress";
 import { ReduxProviders } from "@/utils/redux/provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -154,7 +153,6 @@ const RootLayout: React.FC<Props> = ({ children }) => {
 					<body
 						className={`${f_f1s.variable} ${f_hae.variable} ${f_ot.variable} text-base sm:text-lg lg:text-xl`}
 					>
-						<NextNProgressClient />
 						<>
 							<Nav />
 							<Side />

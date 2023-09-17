@@ -91,10 +91,13 @@ const Nav: React.FC = () => {
 									isLooped: false,
 								},
 							}}
+							className={`${
+								isOpen && "w-full text-center"
+							} hover:text-accents transition-colors cursor-pointer p-2`}
 						>
 							<Link
 								href={link.href}
-								className="font-bold text-xl hover:text-accents transition-colors"
+								className="font-bold text-xl "
 								onClick={() => dispatch(toggleNav())}
 							>
 								{link.name}
