@@ -16,7 +16,7 @@
 		"social networking",
 		"utilities"
 	],
-	"description": "",
+	"description": "The FEU Tech ACM Organization's official cross-platform application developed to serve as the central platform for communication, collaboration, and promotion of every ACM member and officer in education, opportunities, and beyond.",
 	"dir": "ltr",
 	"display": "standalone",
 	"display_override": [
@@ -95,7 +95,13 @@
 	"scope_extensions": {
 		"origin": "https://acmx.vercel.app"
 	},
-	"screenshots": [],
+	"screenshots":  [
+		{
+			"src": "/media/img/screenshots/homepage.png",
+			"sizes": "1440x900",
+			"label": "ACM-X Homepage"
+		}
+	],
 	"short_name": "FIT ACM-X",
 	"shortcuts": [],
 	"start_url": "https://acmx.vercel.app",
