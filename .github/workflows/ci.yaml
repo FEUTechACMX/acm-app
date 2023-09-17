@@ -54,7 +54,7 @@ jobs:
 
       - name: Semantic Versioning
         id: versioning
-        uses: PaulHatch/semantic-version@v4.0.2
+        uses: PaulHatch/semantic-version@v5.2.1
         with:
           branch: master
           tag_prefix: "v"
