@@ -1,8 +1,8 @@
+"use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
-import { LinkProps } from "types/link";
 import ParticleAmongUs from "./particles";
+import { LinkProps } from "types/link";
+import Image from "next/image";
 const links: LinkProps[] = [
 	{
 		name: "Become a Member",
@@ -17,30 +17,37 @@ const links: LinkProps[] = [
 		href: "/collaborate",
 	},
 ];
+
+const animationVariants = {
+	hidden: { opacity: 0, scale: 0 },
+	visible: { opacity: 1, scale: 1 },
+};
+import Link from "next/link";
+import { useAppSelector } from "@/utils/redux/hooks";
 const Header: React.FC = () => {
+	const { isFeaturedShown } = useAppSelector(
+		(state) => state.initialPromptReducer,
+	);
+
+	function getAnimate() {
+		return isFeaturedShown ? "hidden" : "visible";
+	}
+
+	const getDelay = (index: number) => {
+		return index * 0.5;
+	};
+
 	return (
 		<header id="home">
 			<div className="h-screen w-screen">
 				<ParticleAmongUs />
-				<motion.div
-					animate={{
-						opacity: [0, 1],
-						transition: {
-							duration: 1,
-							delay: 2,
-						},
-					}}
-				></motion.div>
 				<div className="flex justify-center items-center h-full relative">
 					<div className="w-11/12 flex gap-4 flex-col justify-center items-center">
 						<motion.div
-							animate={{
-								opacity: [0, 1],
-								transition: {
-									duration: 1,
-									delay: 0.5,
-								},
-							}}
+							initial="hidden"
+							animate={getAnimate()}
+							variants={animationVariants}
+							transition={{ duration: 1 }}
 							className="h-28 w-64 relative"
 						>
 							<Image
@@ -52,51 +59,49 @@ const Header: React.FC = () => {
 							></Image>
 						</motion.div>
 						<motion.h1
-							animate={{
-								opacity: [0, 1],
-								transition: {
-									duration: 1,
-									delay: 1,
-								},
-							}}
+							initial="hidden"
+							animate={getAnimate()}
+							variants={animationVariants}
+							transition={{ duration: 1 }}
 							className="text-center drop-shadow-[0_4px_2px_rgba(255,255,255,0.3)]"
 						>
 							FEU Tech ACM Student Chapter
 						</motion.h1>
 						<motion.q
-							animate={{
-								opacity: [0, 1],
-								transition: {
-									duration: 1,
-									delay: 1.5,
-								},
-							}}
+							initial="hidden"
+							animate={getAnimate()}
+							variants={animationVariants}
+							transition={{ duration: 1 }}
 							className="font-hae text-4xl"
 						>
 							&lt;Coding Chaos In Digital Dystopia /&gt;
 						</motion.q>
-						<motion.div
-							animate={{
-								opacity: [0, 1],
-								transition: {
-									duration: 1,
-									delay: 2,
-								},
-							}}
+						<motion.p
+							initial="hidden"
+							animate={getAnimate()}
+							variants={animationVariants}
+							transition={{ duration: 1 }}
 							className="flex flex-col md:flex-row gap-4 justify-center items-center"
 						>
-							{links.map((link) => {
+							{links.map((link, index) => {
 								return (
-									<Link
-										href={link.href}
+									<motion.div
 										key={link.name}
-										className="hover:bg-accents transition-colors p-2 border-2 border-accents rounded-md shadow-sm shadow-accents"
+										initial="hidden"
+										animate={getAnimate()}
+										variants={animationVariants}
+										transition={{ duration: 1, delay: getDelay(index) }}
 									>
-										{link.name}
-									</Link>
+										<Link
+											href={link.href}
+											className="hover:bg-accents transition-colors p-2 border-2 border-accents rounded-md shadow-sm shadow-accents"
+										>
+											{link.name}
+										</Link>
+									</motion.div>
 								);
 							})}
-						</motion.div>
+						</motion.p>
 					</div>
 				</div>
 			</div>

@@ -12,7 +12,7 @@ const Signin: React.FC = () => {
 						<div className="h-28 w-64 relative">
 							<Image
 								src="/media/img/logo/FIT_ACM.png"
-								alt="FEU Tech Logo"
+								alt="FEU Tech ACM Logo"
 								layout={"fill"}
 								objectFit={"contain"}
 								className="m-auto"
