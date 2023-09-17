@@ -93,11 +93,11 @@
 	"orientation": "natural",
 	"scope": "/",
 	"scope_extensions": {
-		"origin": "feutech.acm.org"
+		"origin": "https://acmx.vercel.app"
 	},
 	"screenshots": [],
 	"short_name": "FIT ACM-X",
 	"shortcuts": [],
-	"start_url": "http://localhost:3000/",
+	"start_url": "https://acmx.vercel.app",
 	"theme_color": "#0b001a"
 }

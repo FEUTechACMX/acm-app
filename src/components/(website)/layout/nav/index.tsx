@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { LinkProps } from "types/link";
-import Music from "../side/music";
+import Sound from "../side/music";
 const links: LinkProps[] = [
 	{
 		name: "Home",
@@ -79,7 +79,7 @@ const Nav: React.FC = () => {
 			>
 				{links.map((link) => {
 					return (
-						<Music
+						<Sound
 							key={link.name}
 							events={{
 								onMouseEnter: {
@@ -102,7 +102,7 @@ const Nav: React.FC = () => {
 							>
 								{link.name}
 							</Link>
-						</Music>
+						</Sound>
 					);
 				})}
 			</div>
