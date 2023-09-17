@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import ParticleAmongUs from "./particles";
 import { LinkProps } from "types/link";
-import Image from "next/image";
+import ACMImage from "@/components/_gen/acm";
 const links: LinkProps[] = [
 	{
 		name: "Become a Member",
@@ -50,13 +50,7 @@ const Header: React.FC = () => {
 							transition={{ duration: 1 }}
 							className="h-28 w-64 relative"
 						>
-							<Image
-								src="/media/img/logo/FIT_ACM.png"
-								alt="FEU Tech Logo"
-								layout={"fill"}
-								objectFit={"contain"}
-								className="m-auto"
-							></Image>
+							<ACMImage />
 						</motion.div>
 						<motion.h1
 							initial="hidden"
