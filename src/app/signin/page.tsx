@@ -1,8 +1,9 @@
 "use client";
 import ParticlePolygon from "@/components/(app)/signin/particles";
 import AuthForm from "@/components/(website)/signin";
-import Image from "next/image";
-const Signin: React.FC = () => {
+import ACMImage from "@/components/_gen/acm";
+import { NextPage } from "next";
+const Signin: NextPage = () => {
 	return (
 		<section>
 			<ParticlePolygon />
@@ -10,13 +11,7 @@ const Signin: React.FC = () => {
 				<div className="flex justify-center items-center h-full relative">
 					<div className="w-11/12 flex gap-4 flex-col justify-center items-center">
 						<div className="h-28 w-64 relative">
-							<Image
-								src="/media/img/logo/FIT_ACM.png"
-								alt="FEU Tech ACM Logo"
-								layout={"fill"}
-								objectFit={"contain"}
-								className="m-auto"
-							></Image>
+							<ACMImage />
 						</div>
 						<h1 className="text-center drop-shadow-[0_4px_2px_rgba(255,255,255,0.3)]">
 							FEU Tech ACM-X Signin

@@ -5,6 +5,7 @@ import { ReduxProviders } from "@/utils/redux/provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "public/media/icons/fontello-84cd01f8/css/fontello.css";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 const f_f1s = localFont({
 	src: [
@@ -34,51 +35,59 @@ const f_ot = localFont({
 	],
 	variable: "--font-ot",
 });
-
+const mData = {
+	app_name: "FEU Tech ACM-X",
+	title: "FEU Tech ACM-X | Coding Chaos In Digital Dystopia",
+	url: process.env.NEXT_PUBLIC_VERCEL_URL,
+	description:
+		"The FEU Tech ACM Organization's official cross-platform application developed to serve as the central platform for communication, collaboration, and promotion of every ACM member and officer in education, opportunities, and beyond.",
+	iconURL: "https://acmx.vercel.app/android-chrome-512x512.png",
+};
+const { app_name, url, description, title, iconURL } = mData;
 export const metadata: Metadata = {
 	appleWebApp: {
 		capable: true,
 	},
-	applicationName: "FEU Tech ACM-X",
+	applicationName: app_name,
 	appLinks: {
 		android: {
-			app_name: "",
+			app_name,
 			class: "",
 			package: "",
 			url: "",
 		},
 		ios: {
-			app_name: "",
+			app_name,
 			app_store_id: "",
 			url: "",
 		},
 		ipad: {
-			app_name: "",
+			app_name,
 			app_store_id: "",
 			url: "",
 		},
 		iphone: {
-			app_name: "",
+			app_name,
 			app_store_id: "",
 			url: "",
 		},
 		web: {
 			should_fallback: false,
-			url: "",
+			url: "https://acmx.vercel.app",
 		},
 		windows: {
+			app_name,
 			app_id: "",
-			app_name: "",
 			url: "",
 		},
 		windows_phone: {
+			app_name,
 			app_id: "",
-			app_name: "",
 			url: "",
 		},
 		windows_universal: {
+			app_name,
 			app_id: "",
-			app_name: "",
 			url: "",
 		},
 	},
@@ -105,33 +114,42 @@ export const metadata: Metadata = {
 	classification: "Technology",
 	colorScheme: "dark",
 	creator: "FEU Tech ACM Student Chapter",
-	description:
-		"FEU Tech ACM Student Chapter is a top-performing academic organization founded in 2007 acting as the mother organization for FEU Institute of Technology Computer Science students.",
+	description,
 	formatDetection: {
 		telephone: false,
 	},
-	icons: [],
+	icons: [
+		{ rel: "icon", url: iconURL },
+		{ rel: "apple-touch-icon", url: iconURL },
+	],
 	keywords:
 		"FEU Tech, ACM, Student Chapter, FEU Tech ACM, FEU Tech ACM Student Chapter, Application, Web Application, FEU Tech ACM-X, FEU Tech ACM-X Application, FEU Tech ACM-X Web Application, FEU Tech ACM-X Web Application",
 	manifest: "/manifest.webmanifest",
-	// metadataBase: "https://feutech.acm.org/",
+	// metadataBase: "https://acmx.vercel.app",
 	openGraph: {
-		description: "My Website Description",
+		description,
 		images: [
 			{
-				url: "https://feutech.acm.org/",
+				url: "/media/img/dp_cover/cover.png",
 			},
 		],
-		siteName: "FEU Tech ACM-X",
-		title: "FEU Tech ACM-X | Coding Chaos In Digital Dystopia",
+		siteName: app_name,
+		title,
 		type: "website",
-		url: "https://feutech.acm.org/",
+		url,
 	},
 	robots: "index, follow",
 	themeColor: "#0b001a",
-	title: "FEU Tech ACM-X | Coding Chaos In Digital Dystopia",
-	twitter: {},
-	verification: {},
+	title,
+	twitter: {
+		card: "summary_large_image",
+		site: "@feutechacm",
+		creator: "@feutechACM",
+		images: "/media/img/dp_cover/cover.png",
+	},
+	verification: {
+		google: "c631ed2b9ed775b4",
+	},
 	viewport: {
 		initialScale: 1,
 		interactiveWidget: "resizes-visual",
@@ -157,6 +175,7 @@ const RootLayout: React.FC<Props> = ({ children }) => {
 							<Nav />
 							<Side />
 							{children}
+							<Analytics />
 						</>
 					</body>
 				</ReduxProviders>

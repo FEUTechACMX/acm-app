@@ -1,5 +1,6 @@
 import About from "@/components/(website)/about";
-const PageAbout: React.FC = () => {
+import { NextPage } from "next";
+const PageAbout: NextPage = () => {
 	return (
 		<section id="about">
 			<About />
