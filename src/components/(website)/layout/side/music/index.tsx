@@ -28,7 +28,7 @@ const createAudioElement = (audioProps?: AudioProps): AudioRef => {
 	return audio;
 };
 
-const Music: React.FC<Props> = ({ children, events, className, autoPlay }) => {
+const Sound: React.FC<Props> = ({ children, events, className, autoPlay }) => {
 	const { isSoundAllowed } = useAppSelector((state) => state.soundReducer);
 	const refs = useRef<{
 		// eslint-disable-next-line no-unused-vars
@@ -74,4 +74,4 @@ const Music: React.FC<Props> = ({ children, events, className, autoPlay }) => {
 	);
 };
 
-export default Music;
+export default Sound;

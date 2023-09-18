@@ -1,12 +1,12 @@
 import FadeIn from "@/components/_framer/fadeIn";
+import ACMImage from "@/components/_gen/acm";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
-import { toggleSound } from "@/utils/redux/slices/(website)/music";
 import {
 	toggleFeatured,
 	toggleSoundPrompt,
 } from "@/utils/redux/slices/(website)/prompt";
+import { toggleSound } from "@/components/_gen/sound";
 import { motion } from "framer-motion";
-import Image from "next/image";
 const Prompt: React.FC = () => {
 	const { isSoundPromptShown, isFeaturedShown } = useAppSelector(
 		(state) => state.initialPromptReducer,
@@ -28,13 +28,7 @@ const Prompt: React.FC = () => {
 						delay: 0.5,
 					}}
 				>
-					<Image
-						src="/media/img/logo/FIT_ACM.png"
-						alt="FEU Tech ACM Logo"
-						layout={"fill"}
-						objectFit={"contain"}
-						className="m-auto"
-					></Image>
+					<ACMImage />
 				</FadeIn>
 				<FadeIn
 					props={{
@@ -66,6 +60,7 @@ const Prompt: React.FC = () => {
 							className="bg-red-500 text-white p-2 rounded-md w-full"
 							onClick={() => {
 								dispatch(toggleSoundPrompt());
+								dispatch(toggleFeatured());
 							}}
 						>
 							Nope!
