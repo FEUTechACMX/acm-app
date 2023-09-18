@@ -1,4 +1,9 @@
-Sitemap: https://feutech.acm.org/sitemap.xml
+# *
 User-agent: *
-Allow: /*
-Disallow: /api/*
+Allow: /
+
+# Host
+Host: https://acmx.vercel.app
+
+# Sitemaps
+Sitemap: https://acmx.vercel.app/sitemap.xml

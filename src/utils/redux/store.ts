@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "./slices/counter";
 import navReducer from "./slices/(website)/nav";
-import soundReducer from "./slices/(website)/music";
 import initialPromptReducer from "./slices/(website)/prompt";
+import soundReducer from "../../components/_gen/sound";
+import counterReducer from "./slices/counter";
 
 export const store = configureStore({
 	reducer: {

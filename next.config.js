@@ -14,7 +14,7 @@ const withPWA = require('next-pwa')({
   runtimeCaching,
   cacheOnFrontEndNav: process.env.NODE_ENV === 'production',
   fallbacks: {
-    // image: '/android-chrome-512x512.png',
+    image: '/android-chrome-512x512.png',
     // document: '/pages/_offline.tsx',
     // font: '',
     // audio: '',
@@ -50,6 +50,7 @@ const securityHeaders = [
     value: 'nosniff'
   }
 ];
+
 module.exports = withPWA({
   // reactStrictMode: true,
   swcMinify: true,
