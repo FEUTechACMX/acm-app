@@ -29,9 +29,39 @@ The app is being developed to serve as the central platform for communication, c
 - [Git](https://git-scm.com/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
+### Getting Started
+
+1. Clone the repository.
+
+   ```bash
+    git clone git@github.com:FEUTechACM/acm-app.git .
+   ```
+
+2. Switch to/create the appropriate branch.
+
+   ```bash
+    git checkout <branch-name>
+    # or
+    git checkout -b <branch-name>
+   ```
+
+3. Install the dependencies.
+
+   ```bash
+    yarn install
+   ```
+
+4. Run the development server.
+
+   ```bash
+    yarn dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
 ### Workflow
 
-For this project, we will use the [GitFlow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
+For this project, we use the [GitFlow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
 
 ### Project Standards
 
@@ -68,28 +98,33 @@ We adopt the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.
 
 1. **NEVER** rebase the `master` branch.
 2. Only rebase on your own branch.
-3. Make us of `git pull --rebase` instead of `git pull`.
+3. Make use of `git pull --rebase` instead of `git pull`.
 4. Use only `--force-with-lease` if in need to force push.
 5. Make use of `git commit --amend` if you need to edit your commit message.
 6. Make use of `git rebase -i` if you need to modify your commit history.
 
 ## 🔗 App Links
 
-1. [FEU Tech ACM-X](https://acmx.vercel.app/)
+1. Web - [FEU Tech ACM-X](https://acmx.vercel.app/)
 2. Google Play Store - Coming Soon
 3. Microsoft Store - Coming Soon
+4. Apple App Store - Coming Soon
 
 ## 👥 Contributors
 
 1. [Sir Abraham Magpantay](https://www.linkedin.com/in/aber-magpantay/) - Adviser
 2. [Guennevere Rito](https://www.linkedin.com/in/guennevere-rito-990256255/) - Project Manager
-3. [Alpha Romer Coma](https://www.linkedin.com/in/alpha-coma/) - Developer
+3. [Alpha Romer Coma](https://www.linkedin.com/in/alpha-coma/) - Webmaster
 4. Emily Tan Sanchez - UI/UX Designer
 
 **Important**: Only authorized officers of the FEU Tech ACM Organization are allowed to view and contribute to this project repository.
 
+**Note**: For adding to the list of contributors, please compile the list of contributors and commit accordingly to develop branch.
+
+For more information, please contact the project manager or the webmaster.
+
 ## 📄 License
 
-Copyright (c) FEU Tech ACM Student Chapter . All rights reserved.
+Copyright (&#169;) FEU Tech ACM Student Chapter. All rights reserved.
 
 Licensed under the [Apache-2.0](./LICENSE) license.
