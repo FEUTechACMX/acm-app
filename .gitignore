@@ -55,3 +55,6 @@ next-env.d.ts
 
 #unlighthouse
 .unlighthouse
+
+# sitemap
+**/public/sitemap-0.xml
