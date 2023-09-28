@@ -1,5 +1,5 @@
 "use client";
-import FadeIn from "@/components/_framer/fadeIn";
+import FadeIn from "@/components/2023/(website)/(main)/_framer/fadeIn";
 const About: React.FC = () => {
 	return (
 		<div className="w-screen h-auto p-8 pt-24 md:p-24">

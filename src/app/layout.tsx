@@ -1,41 +1,9 @@
-import NextAuthProvider from "@/components/(app)/provider";
-import Nav from "@/components/(website)/layout/nav";
-import Side from "@/components/(website)/layout/side";
+import NextAuthProvider from "@/components/2023/(app)/provider";
 import { ReduxProviders } from "@/utils/redux/provider";
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "public/media/icons/fontello-84cd01f8/css/fontello.css";
 import { Analytics } from "@vercel/analytics/react";
+import type { Metadata } from "next";
 import "./globals.css";
-const f_f1s = localFont({
-	src: [
-		{
-			path: "../../public/fonts/f1-secuencia-quad-ffp/font.ttf",
-			style: "normal",
-		},
-	],
-	variable: "--font-f1s",
-});
-const f_hae = localFont({
-	src: [
-		{
-			path: "../../public/fonts/human-alter-ego/font.ttf",
-			style: "normal",
-		},
-	],
-	variable: "--font-hae",
-});
-
-const f_ot = localFont({
-	src: [
-		{
-			path: "../../public/fonts/over-there/font.ttf",
-			style: "normal",
-		},
-	],
-	variable: "--font-ot",
-});
-const mData = {
+const metaData = {
 	app_name: "FEU Tech ACM-X",
 	title: "FEU Tech ACM-X | Coding Chaos In Digital Dystopia",
 	url: process.env.NEXT_PUBLIC_VERCEL_URL,
@@ -43,7 +11,7 @@ const mData = {
 		"The FEU Tech ACM Organization's official cross-platform application developed to serve as the central platform for communication, collaboration, and promotion of every ACM member and officer in education, opportunities, and beyond.",
 	iconURL: "https://acmx.vercel.app/android-chrome-512x512.png",
 };
-const { app_name, url, description, title, iconURL } = mData;
+const { app_name, url, description, title, iconURL } = metaData;
 export const metadata: Metadata = {
 	appleWebApp: {
 		capable: true,
@@ -168,16 +136,8 @@ const RootLayout: React.FC<Props> = ({ children }) => {
 		<html lang="en">
 			<NextAuthProvider>
 				<ReduxProviders>
-					<body
-						className={`${f_f1s.variable} ${f_hae.variable} ${f_ot.variable} text-base sm:text-lg lg:text-xl`}
-					>
-						<>
-							<Nav />
-							<Side />
-							{children}
-							<Analytics />
-						</>
-					</body>
+					{children}
+					<Analytics />
 				</ReduxProviders>
 			</NextAuthProvider>
 		</html>

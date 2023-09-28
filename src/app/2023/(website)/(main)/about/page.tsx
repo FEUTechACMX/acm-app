@@ -1,4 +1,4 @@
-import About from "@/components/(website)/about";
+import About from "@/components/2023/(website)/(main)/about";
 import { NextPage } from "next";
 const PageAbout: NextPage = () => {
 	return (

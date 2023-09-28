@@ -1,12 +1,12 @@
-import FadeIn from "@/components/_framer/fadeIn";
-import ACMImage from "@/components/_gen/acm";
+import FadeIn from "@/components/2023/(website)/(main)/_framer/fadeIn";
+import { toggleSound } from "@/components/2023/(website)/(main)/_gen/sound";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
 import {
 	toggleFeatured,
 	toggleSoundPrompt,
 } from "@/utils/redux/slices/(website)/prompt";
-import { toggleSound } from "@/components/_gen/sound";
 import { motion } from "framer-motion";
+import ACMImage from "../../_gen/image/acm";
 const Prompt: React.FC = () => {
 	const { isSoundPromptShown, isFeaturedShown } = useAppSelector(
 		(state) => state.initialPromptReducer,
