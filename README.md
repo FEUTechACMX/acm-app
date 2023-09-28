@@ -34,36 +34,65 @@ The app is being developed to serve as the central platform for communication, c
 1. Clone the repository.
 
    ```bash
-    git clone git@github.com:FEUTechACM/acm-app.git .
+    git clone https://github.com/FEUTechACM/acm-app.git acm-app
+    # or
+    git clone git@github.com:FEUTechACM/acm-app.git acm-app
    ```
 
-2. Switch to/create the appropriate branch.
+2. Switch to the `develop` branch or target branch.
 
    ```bash
-    git checkout <branch-name>
+    git checkout develop
     # or
+    git checkout <branch-name>
+   ```
+
+3. Branch out from `develop` if not on target branch.
+
+   ```bash
     git checkout -b <branch-name>
    ```
 
-3. Install the dependencies.
+4. Install the dependencies.
 
    ```bash
     yarn install
    ```
 
-4. Run the development server.
+5. Run the development server.
 
    ```bash
     yarn dev
    ```
 
-5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Workflow
+### Project Standards
+
+#### Workflow
+
+![GitFlow Workflow](https://iamchuka.com/content/images/2018/05/gitflowimage.png)
 
 For this project, we use the [GitFlow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow).
 
-### Project Standards
+#### GitFlow Rules
+
+1. Do not commit directly to `master` and `develop` branch.
+2. Feature branch should be **MERGED** to `develop` branch.
+3. Hotfix and release branch should be **MERGED** to `master` branch and `develop` branch.
+4. Do not nest branch names e.g. `feature/parent/child`.
+
+#### Git Guidelines
+
+1. **NEVER** rebase the `master` and `develop` branch.
+2. Make use of `git pull --rebase` instead of `git pull`.
+3. Frequently rebase your feature branch against develop.
+4. Always branch out from `develop` or `feature` branch.
+5. Use only `--force-with-lease` if in need to force push.
+6. Make use of `git commit --amend` if you need to edit your commit message.
+7. Make use of `git rebase -i` if you need to modify your commit history.
+
+#### Commit Rules
 
 We adopt the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specifications aligned with [Semantic Versioning](https://semver.org/) with a few modifications.
 
@@ -94,15 +123,6 @@ We adopt the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.
 11. **revert:** revert to a commit
 12. **BREAKING CHANGE:** introduces a breaking API change (correlating with [Semantic Versioning](https://semver.org/))
 
-#### Commit Rules
-
-1. **NEVER** rebase the `master` branch.
-2. Only rebase on your own branch.
-3. Make use of `git pull --rebase` instead of `git pull`.
-4. Use only `--force-with-lease` if in need to force push.
-5. Make use of `git commit --amend` if you need to edit your commit message.
-6. Make use of `git rebase -i` if you need to modify your commit history.
-
 ## 🔗 App Links
 
 1. Web - [FEU Tech ACM-X](https://acmx.vercel.app/)
@@ -119,7 +139,7 @@ We adopt the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.
 
 **Important**: Only authorized officers of the FEU Tech ACM Organization are allowed to view and contribute to this project repository.
 
-**Note**: For adding to the list of contributors, please compile the list of contributors and commit accordingly to develop branch.
+**Note**: Contributors/collaborators will be added accordingly.
 
 For more information, please contact the project manager or the webmaster.
 
