@@ -1,7 +1,7 @@
 "use client";
-import ParticlePolygon from "@/components/(app)/signin/particles";
-import AuthForm from "@/components/(website)/signin";
-import ACMImage from "@/components/_gen/acm";
+import AuthForm from "@/components/2023/(website)/(main)/signin";
+import ACMImage from "@/components/2023/(website)/(main)/_gen/image/acm";
+import ParticlePolygon from "@/components/2023/(website)/(main)/signin/particles";
 import { NextPage } from "next";
 const Signin: NextPage = () => {
 	return (

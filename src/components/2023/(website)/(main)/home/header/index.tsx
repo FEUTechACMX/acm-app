@@ -1,8 +1,10 @@
 "use client";
+import { useAppSelector } from "@/utils/redux/hooks";
 import { motion } from "framer-motion";
-import ParticleAmongUs from "./particles";
+import Link from "next/link";
 import { LinkProps } from "types/link";
-import ACMImage from "@/components/_gen/acm";
+import ACMImage from "../../_gen/image/acm";
+import ParticleAmongUs from "./particles";
 const links: LinkProps[] = [
 	{
 		name: "Become a Member",
@@ -22,8 +24,6 @@ const animationVariants = {
 	hidden: { opacity: 0, scale: 0 },
 	visible: { opacity: 1, scale: 1 },
 };
-import Link from "next/link";
-import { useAppSelector } from "@/utils/redux/hooks";
 const Header: React.FC = () => {
 	const { isFeaturedShown } = useAppSelector(
 		(state) => state.initialPromptReducer,

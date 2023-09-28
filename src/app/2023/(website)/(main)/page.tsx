@@ -1,6 +1,6 @@
 "use client";
-import Header from "@/components/(website)/home/header";
-import Prompt from "@/components/(website)/home/prompt";
+import Header from "@/components/2023/(website)/(main)/home/header";
+import Prompt from "@/components/2023/(website)/(main)/home/prompt";
 import type { NextPage } from "next";
 import { Suspense } from "react";
 import Loading from "./loading";

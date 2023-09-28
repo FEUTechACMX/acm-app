@@ -96,7 +96,7 @@ const Nav: React.FC = () => {
 							} hover:text-accents transition-colors cursor-pointer flex`}
 						>
 							<Link
-								href={link.href}
+								href={`/2023${link.href}`}
 								className="font-bold text-xl w-full p-2"
 								onClick={() => dispatch(toggleNav())}
 							>
