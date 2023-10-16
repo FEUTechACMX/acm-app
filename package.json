@@ -48,7 +48,7 @@
 	"author": "Alpha Romer Coma <400829150120@r3-1.deped.gov.ph>",
 	"license": "Apache-2.0",
 	"devDependencies": {
-		"@commitlint/cli": "^17.7.2",
+		"@commitlint/cli": "^17.8.0",
 		"@commitlint/config-conventional": "^17.7.0",
 		"@next-auth/prisma-adapter": "^1.0.7",
 		"@types/eslint-config-prettier": "^6.11.1",
