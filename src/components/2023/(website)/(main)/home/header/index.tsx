@@ -11,8 +11,8 @@ const links: LinkProps[] = [
 		href: "/register",
 	},
 	{
-		name: "ACM-X Dashboard",
-		href: "/dashboard",
+		name: "--CS EXPO 2023--",
+		href: "/cs-expo-2023",
 	},
 	{
 		name: "Collaborate with us",
