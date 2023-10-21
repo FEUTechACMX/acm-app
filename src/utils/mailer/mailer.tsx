@@ -16,10 +16,10 @@ export const serverDetails = {
 	// https://nodemailer.com/smtp/ on secure: false,
 	// secure: false,
 	auth: {
-		user: process.env.EMAIL_USER,
-		pass: process.env.EMAIL_PASSWORD,
+		user: process.env.EMAIL_SERVER_USER,
+		pass: process.env.EMAIL_SERVER_PASSWORD,
 	},
-	from: `FEU Tech ACM-X Team <${process.env.EMAIL_USER}>`,
+	from: `FEU Tech ACM-X Team <${process.env.EMAIL_SERVER_USER}>`,
 	opportunisticTLS: true,
 	priority: "high",
 	connectionTimeout: 10 * 60 * 1000, // 10 minutes
