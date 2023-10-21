@@ -6,7 +6,7 @@ import "./globals.css";
 const metaData = {
 	app_name: "FEU Tech ACM-X",
 	title: "FEU Tech ACM-X | Coding Chaos In Digital Dystopia",
-	url: process.env.NEXT_PUBLIC_VERCEL_URL,
+	url: process.env.HOST_URL,
 	description:
 		"The FEU Tech ACM Organization's official cross-platform application developed to serve as the central platform for communication, collaboration, and promotion of every ACM member and officer in education, opportunities, and beyond.",
 	iconURL: "https://acmx.vercel.app/android-chrome-512x512.png",
