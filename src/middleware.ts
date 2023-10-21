@@ -7,7 +7,7 @@ const redirectMap: RedirectMap = {
 	"/": "/2023",
 };
 
-const host = process.env.NEXTAUTH_URL || "http://localhost:3000";
+const host = process.env.HOST_URL;
 export function middleware(req: NextRequest) {
 	const { pathname } = req.nextUrl;
 	const redirect = redirectMap[pathname];
