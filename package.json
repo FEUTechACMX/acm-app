@@ -63,7 +63,7 @@
 		"lint-staged": "^15.0.2",
 		"postcss": "^8.4.31",
 		"prettier": "^3.0.3",
-		"prisma": "^5.4.2",
+		"prisma": "^5.5.2",
 		"react-tsparticles": "^2.12.2",
 		"stylelint": "^15.11.0",
 		"stylelint-config-prettier": "^9.0.5",
