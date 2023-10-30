@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 const officers = ["1. JAE.png"];
 const Committees: React.FC = () => {
 	return (
