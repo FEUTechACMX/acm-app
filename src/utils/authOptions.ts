@@ -3,38 +3,27 @@ import { PrismaClient } from "@prisma/client";
 import { NextAuthOptions } from "next-auth";
 import EmailProvider from "next-auth/providers/email";
 import GoogleProvider from "next-auth/providers/google";
-// import Mailer, { serverDetails } from "./mailer/mailer";
-// import emailSignin from "./mailer/template/signin";
-
+import Mailer, { serverDetails } from "./mailer/mailer";
+import emailSignin from "./mailer/template/signin";
+import { mailerOptions } from "./mailer/mailer";
 const prisma = new PrismaClient();
 export const authOptions: NextAuthOptions = {
 	adapter: PrismaAdapter(prisma),
 	pages: {
 		signIn: "/2023/signin",
+		verifyRequest: "/2023/verify-request",
 	},
 	providers: [
-		// EmailProvider({
-		// 	server: serverDetails,
-		// 	from: serverDetails.from,
-		// 	// async sendVerificationRequest({ identifier: emailAddr, url }) {
-		// 	// 	await Mailer({
-		// 	// 		recipient: emailAddr,
-		// 	// 		subject: "Sign in to FEU Tech ACM-X",
-		// 	// 		html: emailSignin({ url }),
-		// 	// 	});
-		// 	// },
-		// }),
 		EmailProvider({
-			server: {
-				service: "gmail",
-				host: process.env.EMAIL_SERVER_HOST,
-				port: +process.env.EMAIL_SERVER_PORT,
-				auth: {
-					user: process.env.EMAIL_SERVER_USER,
-					pass: process.env.EMAIL_SERVER_PASSWORD,
-				},
+			server: mailerOptions,
+			from: serverDetails.from,
+			async sendVerificationRequest({ identifier: emailAddr, url }) {
+				await Mailer({
+					recipient: emailAddr,
+					subject: "Sign in to FEU Tech ACM-X",
+					html: emailSignin({ url }),
+				});
 			},
-			from: process.env.EMAIL_SERVER_USER,
 		}),
 		GoogleProvider({
 			clientId: process.env.GOOGLE_ID,
