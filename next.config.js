@@ -69,4 +69,13 @@ module.exports = withPWA({
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/2023',
+        permanent: false,
+      },
+    ]
+  },
 });
