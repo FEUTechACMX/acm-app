@@ -4,8 +4,10 @@ import { useState } from "react";
 import ACMImage from "@/components/2023/(website)/(main)/_gen/image/acm";
 import { getCsrfToken } from "next-auth/react";
 import { useEffect } from "react";
+import regexSchoolEmail from "@/utils/regex/schoolEmail";
+import regexToString from "@/utils/regex/_toString";
 const AuthForm: React.FC = () => {
-	const [email, setEmail] = useState<string>("202211383@fit.edu.ph");
+	const [email, setEmail] = useState<string>("");
 	const [csrfToken, setCsrfToken] = useState<string | undefined>(undefined);
 
 	useEffect(() => {
@@ -38,7 +40,7 @@ const AuthForm: React.FC = () => {
 					autoFocus
 					autoSave="on"
 					autoCorrect="off"
-					pattern="(20)(1|2)(0|1|2|3|4)([0-9]{5})(@fit.edu.ph)"
+					pattern={regexToString(regexSchoolEmail)}
 					minLength={20}
 					maxLength={20}
 					autoComplete="off"
@@ -50,7 +52,7 @@ const AuthForm: React.FC = () => {
 					onClick={async () =>
 						await signIn("email", {
 							email,
-							redirect: false,
+							callbackUrl: "/2023/dashboard",
 						})
 					}
 				>
