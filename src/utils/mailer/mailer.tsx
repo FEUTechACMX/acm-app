@@ -25,7 +25,7 @@ export const serverDetails = {
 	// https://nodemailer.com/smtp/ on secure: false,
 	// secure: false,
 
-	from: `FEU Tech ACM-X Team <${process.env.EMAIL_SERVER_USER}>`,
+	from: `ACM-X Team <${process.env.EMAIL_SERVER_USER}>`,
 	opportunisticTLS: true,
 	priority: "high",
 	connectionTimeout: 10 * 60 * 1000, // 10 minutes

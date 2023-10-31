@@ -6,6 +6,7 @@ import GoogleProvider from "next-auth/providers/google";
 import Mailer, { serverDetails } from "./mailer/mailer";
 import emailSignin from "./mailer/template/signin";
 import { mailerOptions } from "./mailer/mailer";
+import regexSchoolEmail from "./regex/schoolEmail";
 const prisma = new PrismaClient();
 export const authOptions: NextAuthOptions = {
 	adapter: PrismaAdapter(prisma),
@@ -36,12 +37,13 @@ export const authOptions: NextAuthOptions = {
 		logo: `${process.env.HOST_URL}/android-chrome-256x256.png`,
 		buttonText: "#6661ff",
 	},
-	// callbacks: {
-	// 	// async signIn({ profile }) {
-	// 	// 	const email = profile?.email;
-	// 	// 	if (email?.length !== 20) return false;
-	// 	// 	return profile?.email?.endsWith("@fit.edu.ph") ?? false;
-	// 	// },
-	// },
+	callbacks: {
+		async signIn({ user }) {
+			const email = user.email;
+			if (!email) return false;
+			if (!regexSchoolEmail.test(email)) return false;
+			return true;
+		},
+	},
 	secret: process.env.NEXTAUTH_SECRET,
 };

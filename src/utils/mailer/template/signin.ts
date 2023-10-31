@@ -32,7 +32,7 @@ export default function emailSignin({ url }: Params) {
 				Helvetica Neue,
 				sans-serif;
 		">
-		<img src="${process.env.NEXTAUTH_URL}/android-chrome-512x512.png" alt="FEU Tech ACM-X Logo" height="64"
+		<img src="${process.env.HOST_URL}/android-chrome-512x512.png" alt="FEU Tech ACM-X Logo" height="64"
 			width="64" style="display: block; margin: auto; border-radius: 0.4rem" />
 		<h1 style="padding: 0; margin: 0; text-align: center; color: #833fe0; font-size:1.4rem;">
 			FEU Tech ACM-X Sign In
