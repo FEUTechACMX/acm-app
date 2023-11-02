@@ -5,16 +5,17 @@ import EmailProvider from "next-auth/providers/email";
 import GoogleProvider from "next-auth/providers/google";
 import Mailer, { serverDetails } from "./mailer/mailer";
 import emailSignin from "./mailer/template/signin";
-
+import { mailerOptions } from "./mailer/mailer";
 const prisma = new PrismaClient();
 export const authOptions: NextAuthOptions = {
 	adapter: PrismaAdapter(prisma),
 	pages: {
-		signIn: "/signin",
+		signIn: "/2023/signin",
+		verifyRequest: "/2023/verify-request",
 	},
 	providers: [
 		EmailProvider({
-			server: serverDetails,
+			server: mailerOptions,
 			from: serverDetails.from,
 			async sendVerificationRequest({ identifier: emailAddr, url }) {
 				await Mailer({
@@ -35,12 +36,12 @@ export const authOptions: NextAuthOptions = {
 		logo: `${process.env.HOST_URL}/android-chrome-256x256.png`,
 		buttonText: "#6661ff",
 	},
-	callbacks: {
-		async signIn({ profile }) {
-			const email = profile?.email;
-			if (email?.length !== 20) return false;
-			return profile?.email?.endsWith("@fit.edu.ph") ?? false;
-		},
-	},
+	// callbacks: {
+	// 	// async signIn({ profile }) {
+	// 	// 	const email = profile?.email;
+	// 	// 	if (email?.length !== 20) return false;
+	// 	// 	return profile?.email?.endsWith("@fit.edu.ph") ?? false;
+	// 	// },
+	// },
 	secret: process.env.NEXTAUTH_SECRET,
 };

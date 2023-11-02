@@ -2,16 +2,30 @@ import NextAuthProvider from "@/components/2023/(app)/provider";
 import { ReduxProviders } from "@/utils/redux/provider";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
+import { Viewport } from "next";
 import "./globals.css";
 const metaData = {
 	app_name: "FEU Tech ACM-X",
 	title: "FEU Tech ACM-X | Coding Chaos In Digital Dystopia",
-	url: process.env.NEXT_PUBLIC_VERCEL_URL,
+	url: process.env.HOST_URL,
 	description:
 		"The FEU Tech ACM Organization's official cross-platform application developed to serve as the central platform for communication, collaboration, and promotion of every ACM member and officer in education, opportunities, and beyond.",
 	iconURL: "https://acmx.vercel.app/android-chrome-512x512.png",
 };
 const { app_name, url, description, title, iconURL } = metaData;
+
+export const viewport: Viewport = {
+	themeColor: "#0b001a",
+	colorScheme: "dark",
+	viewportFit: "cover",
+	interactiveWidget: "resizes-visual",
+	initialScale: 1,
+	minimumScale: 1,
+	maximumScale: 1,
+	userScalable: false,
+	width: "device-width",
+};
+
 export const metadata: Metadata = {
 	appleWebApp: {
 		capable: true,
@@ -80,7 +94,6 @@ export const metadata: Metadata = {
 	],
 	category: "Technology",
 	classification: "Technology",
-	colorScheme: "dark",
 	creator: "FEU Tech ACM Student Chapter",
 	description,
 	formatDetection: {
@@ -93,7 +106,7 @@ export const metadata: Metadata = {
 	keywords:
 		"FEU Tech, ACM, Student Chapter, FEU Tech ACM, FEU Tech ACM Student Chapter, Application, Web Application, FEU Tech ACM-X, FEU Tech ACM-X Application, FEU Tech ACM-X Web Application, FEU Tech ACM-X Web Application",
 	manifest: "/manifest.webmanifest",
-	// metadataBase: "https://acmx.vercel.app",
+	metadataBase: new URL("https://acmx.vercel.app"),
 	openGraph: {
 		description,
 		images: [
@@ -107,7 +120,6 @@ export const metadata: Metadata = {
 		url,
 	},
 	robots: "index, follow",
-	themeColor: "#0b001a",
 	title,
 	twitter: {
 		card: "summary_large_image",
@@ -117,14 +129,6 @@ export const metadata: Metadata = {
 	},
 	verification: {
 		google: "c631ed2b9ed775b4",
-	},
-	viewport: {
-		initialScale: 1,
-		interactiveWidget: "resizes-visual",
-		maximumScale: 1,
-		minimumScale: 1,
-		userScalable: false,
-		width: "device-width",
 	},
 };
 interface Props {

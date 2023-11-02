@@ -4,10 +4,19 @@ interface MailerOptions {
 	subject: string;
 	html?: string;
 }
-export const serverDetails = {
-	service: "gmail",
+
+export const mailerOptions = {
 	host: process.env.EMAIL_SERVER_HOST,
 	port: +process.env.EMAIL_SERVER_PORT,
+	service: "gmail",
+	auth: {
+		user: process.env.EMAIL_SERVER_USER,
+		pass: process.env.EMAIL_SERVER_PASSWORD,
+	},
+};
+
+export const serverDetails = {
+	...mailerOptions,
 	pool: true,
 	tls: {
 		rejectUnauthorized: false,
@@ -15,11 +24,8 @@ export const serverDetails = {
 	// DO NOT SET TO TRUE
 	// https://nodemailer.com/smtp/ on secure: false,
 	// secure: false,
-	auth: {
-		user: process.env.EMAIL_USER,
-		pass: process.env.EMAIL_PASSWORD,
-	},
-	from: `FEU Tech ACM-X Team <${process.env.EMAIL_USER}>`,
+
+	from: `FEU Tech ACM-X Team <${process.env.EMAIL_SERVER_USER}>`,
 	opportunisticTLS: true,
 	priority: "high",
 	connectionTimeout: 10 * 60 * 1000, // 10 minutes

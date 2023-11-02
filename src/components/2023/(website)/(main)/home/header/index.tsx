@@ -11,8 +11,8 @@ const links: LinkProps[] = [
 		href: "/register",
 	},
 	{
-		name: "ACM-X Dashboard",
-		href: "/dashboard",
+		name: "--CS EXPO 2023--",
+		href: "/cs-expo-2023",
 	},
 	{
 		name: "Collaborate with us",
@@ -79,8 +79,8 @@ const Header: React.FC = () => {
 						>
 							{links.map((link, index) => {
 								return (
-									<motion.div
-										key={link.name}
+									<motion.span
+										key={index}
 										initial="hidden"
 										animate={getAnimate()}
 										variants={animationVariants}
@@ -92,7 +92,7 @@ const Header: React.FC = () => {
 										>
 											{link.name}
 										</Link>
-									</motion.div>
+									</motion.span>
 								);
 							})}
 						</motion.p>
