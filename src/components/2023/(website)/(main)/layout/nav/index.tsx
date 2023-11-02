@@ -2,7 +2,7 @@
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
 import { toggleNav } from "@/utils/redux/slices/(website)/nav";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { LinkProps } from "types/link";
 import Sound from "../side/music";
