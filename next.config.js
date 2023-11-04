@@ -80,6 +80,11 @@ module.exports = withPWA({
         source: '/legal/privacy-policy',
         destination: 'https://portal.termshub.io/acmx.vercel.app/privacy_policy/',
         permanent: false,
+      },
+      {
+        source: '/404',
+        destination: '/2023/404',
+        permanent: false,
       }
     ]
   },
