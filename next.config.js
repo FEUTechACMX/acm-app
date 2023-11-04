@@ -76,6 +76,11 @@ module.exports = withPWA({
         destination: '/2023',
         permanent: false,
       },
+      {
+        source: '/legal/privacy-policy',
+        destination: 'https://portal.termshub.io/acmx.vercel.app/privacy_policy/',
+        permanent: false,
+      }
     ]
   },
 });
