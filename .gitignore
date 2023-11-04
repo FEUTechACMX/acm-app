@@ -58,3 +58,9 @@ next-env.d.ts
 
 # sitemap
 **/public/sitemap-0.xml
+
+## PWA deployments
+/pwa/playstore/**/*
+/pwa/microsoft/**/*
+/pwa/playstore/*
+/pwa/microsoft/*

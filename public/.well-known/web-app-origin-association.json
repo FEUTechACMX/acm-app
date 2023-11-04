@@ -1,0 +1,8 @@
+{
+	"web_apps": {
+		"https://acmx.vercel.app": {
+			"scope": "/",
+			"authorize": ["intercept-links"]
+		}
+	}
+}
