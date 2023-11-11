@@ -11,8 +11,9 @@ const metaData = {
 	description:
 		"The FEU Tech ACM Organization's official cross-platform application developed to serve as the central platform for communication, collaboration, and promotion of every ACM member and officer in education, opportunities, and beyond.",
 	iconURL: "https://acmx.vercel.app/android-chrome-512x512.png",
+	emails: ["acm.feu.it@gmail.com"],
 };
-const { app_name, url, description, title, iconURL } = metaData;
+const { app_name, url, description, title, iconURL, emails } = metaData;
 
 export const viewport: Viewport = {
 	themeColor: "#0b001a",
@@ -34,9 +35,9 @@ export const metadata: Metadata = {
 	appLinks: {
 		android: {
 			app_name,
-			class: "",
-			package: "",
-			url: "",
+			class: "app",
+			package: "app.vercel.acmx.twa",
+			url: "https://play.google.com/store/apps/details?id=app.vercel.acmx.twa",
 		},
 		ios: {
 			app_name,
@@ -75,6 +76,7 @@ export const metadata: Metadata = {
 	},
 	// NOTE: Do not enable this. It will display a white screen.
 	// assets: "",
+	generator: "FEU Tech ACM-X",
 	authors: [
 		{
 			name: "Abraham Magpantay",
@@ -118,9 +120,19 @@ export const metadata: Metadata = {
 		title,
 		type: "website",
 		url,
+		emails,
 	},
-	robots: "index, follow",
+	robots: {
+		follow: true,
+		index: true,
+		googleBot: {
+			index: true,
+			follow: true,
+		},
+	},
 	title,
+	publisher: "FEU Tech ACM Student Chapter",
+	referrer: "no-referrer",
 	twitter: {
 		card: "summary_large_image",
 		site: "@feutechacm",
@@ -129,6 +141,9 @@ export const metadata: Metadata = {
 	},
 	verification: {
 		google: "c631ed2b9ed775b4",
+		yandex: "568d1a736ad86d8a",
+		yahoo: "E01A119E5EAA9A5963570A31EA4A5058",
+		me: "feutechacm",
 	},
 };
 interface Props {
