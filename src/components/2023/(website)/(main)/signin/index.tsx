@@ -1,4 +1,3 @@
-// "use client";
 import { signIn } from "next-auth/react";
 import { useState } from "react";
 import ACMImage from "@/components/2023/(website)/(main)/_gen/image/acm";
@@ -64,7 +63,7 @@ const AuthForm: React.FC = () => {
 			<button
 				className="px-2 py-1 sm:px-4 border-2 w-full border-accents rounded-md hover:bg-accents"
 				onClick={async () =>
-					await signIn("google", { callbackUrl: "/dashboard" })
+					await signIn("google", { callbackUrl: "/2023/dashboard" })
 				}
 			>
 				<i className="icon-google"></i>
