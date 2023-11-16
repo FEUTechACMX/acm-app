@@ -1,8 +1,7 @@
-import React from "react";
+import Image from "next/image";
 import { useEffect } from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import Image from "next/image";
-
+import Glide from "@glidejs/glide";
 /* The `interface Slide` defines the structure of an object that represents a slide in the
 ProjectsCarousel component. It has three properties: `title`, `imageLink`, and `backgroundColor`,
 all of which are of type string. These properties define the content and styling of each slide in
@@ -17,9 +16,6 @@ interface Slide {
 `ProjectsCarousel` component. It has one property called `slides`, which is an array of objects of
 type `Slide`. This allows the parent component to pass an array of slides to the `ProjectsCarousel`
 component, specifying the content and styling for each slide in the carousel. */
-interface ProjectsCarouselProps {
-	slides: Slide[];
-}
 
 // Configuration options for the Glide.js carousel.
 const config = {
@@ -43,9 +39,13 @@ const config = {
 			perView: 4,
 		},
 	},
-};
+} as const;
 
-const ProjectsCarousel: React.FC<ProjectsCarouselProps> = ({ slides }) => {
+interface ProjectsCarouselProps {
+	slides: Slide[];
+}
+
+const ProjectsCarousel: React.FC<ProjectsCarouselProps> = () => {
 	useEffect(() => {
 		new Glide(".glide", config).mount(); // Glide is called from `layout.tsx` as a CDN, so don't worry about "Cannot find name 'Glide'"
 	}, []);

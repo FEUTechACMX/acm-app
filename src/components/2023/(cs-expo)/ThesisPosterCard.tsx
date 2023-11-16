@@ -1,6 +1,7 @@
 /* The useState is for managing the image index, which is an array of integers.
 The useEffect is for setting up a timer to change the image index at a 5-second interval. */
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 /* The `categories` constant is an array of objects that represents different categories. 
 Each category object has the following properties: name, images from public/ directory,
@@ -91,7 +92,7 @@ const ThesisPoster = () => {
 						<div key={categoryIndex} className="stack">
 							{/* daisyUI's stack images component */}
 							{/* <img> needs to be optimized for production */}
-							<img
+							<Image
 								src={category.images[imageIndex[categoryIndex]]}
 								alt={`Image ${imageIndex[categoryIndex] + 1}`}
 								className="rounded w-[350px] h-[350px] object-cover mx-120 my-10"

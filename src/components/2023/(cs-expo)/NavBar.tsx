@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import { AiOutlineDown } from "react-icons/ai";
 import { FaBars } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
@@ -25,24 +25,25 @@ const NavBar: React.FC = () => {
 
 	const [width] = useWindowSize();
 	const isMobile = width < 768;
-	const [showEventsDropdown, setShowEventsDropdown] = useState(false);
-	const [showProjectsDropdown, setShowProjectsDropdown] = useState(false);
+	const [showEventsDropdown, setShowEventsDropdown] = useState<boolean>(false);
+	const [showProjectsDropdown, setShowProjectsDropdown] =
+		useState<boolean>(false);
 	const [showMobileEventsDropdown, setShowMobileEventsDropdown] =
-		useState(false);
+		useState<boolean>(false);
 	const [showMobileProjectsDropdown, setShowMobileProjectsDropdown] =
-		useState(false);
-	const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
+		useState<boolean>(false);
+	const [mobileMenuVisible, setMobileMenuVisible] = useState<boolean>(false);
 	const dropdownRef = useRef<HTMLDivElement | null>(null);
-	const [isNavbarAtTop, setIsNavbarAtTop] = useState(true);
+	const [isNavbarAtTop, setIsNavbarAtTop] = useState<boolean>(true);
 	const mobileNavbarRef = useRef<HTMLDivElement | null>(null);
 
 	const toggleEventsDropdown = () => {
-		setShowEventsDropdown(!showEventsDropdown);
+		setShowEventsDropdown((prev) => !prev);
 		setShowProjectsDropdown(false);
 	};
 
 	const toggleProjectsDropdown = () => {
-		setShowProjectsDropdown(!showProjectsDropdown);
+		setShowProjectsDropdown((prev) => !prev);
 		setShowEventsDropdown(false);
 	};
 
@@ -52,11 +53,11 @@ const NavBar: React.FC = () => {
 	};
 
 	const toggleMobileEventsDropdown = () => {
-		setShowMobileEventsDropdown(!showMobileEventsDropdown);
+		setShowMobileEventsDropdown((prev) => !prev);
 	};
 
 	const toggleMobileProjectsDropdown = () => {
-		setShowMobileProjectsDropdown(!showMobileProjectsDropdown);
+		setShowMobileProjectsDropdown((prev) => !prev);
 	};
 
 	const handleMobileDropdownLinkClick = () => {
@@ -67,7 +68,7 @@ const NavBar: React.FC = () => {
 	const toggleMobileMenu = () => {
 		setShowMobileEventsDropdown(false);
 		setShowMobileProjectsDropdown(false);
-		setMobileMenuVisible(!mobileMenuVisible);
+		setMobileMenuVisible((prev) => !prev);
 	};
 
 	useEffect(() => {
@@ -117,10 +118,10 @@ const NavBar: React.FC = () => {
 		};
 	}, [mobileMenuVisible]);
 
-	const [menuOpen, setMenuOpen] = useState(false);
-	const handleNav = () => {
-		setMenuOpen(!menuOpen);
-	};
+	// const [menuOpen, setMenuOpen] = useState(false);
+	// const handleNav = () => {
+	// 	setMenuOpen(!menuOpen);
+	// };
 
 	const defaultMenu = () => {
 		return (
@@ -142,7 +143,7 @@ const NavBar: React.FC = () => {
 							className="absolute mt-2 bg-white border rounded-md text-left font-normal w-max"
 						>
 							<Link
-								href="/events"
+								href="/2023/cs-expo/events"
 								className="block px-4 py-2 hover:text-coral-pink"
 								onClick={handleDropdownLinkClick}
 							>
@@ -150,7 +151,7 @@ const NavBar: React.FC = () => {
 							</Link>
 
 							<Link
-								href="/events/dev-day"
+								href="/2023/cs-expo/events/dev-day"
 								className="block px-4 py-2 hover:text-coral-pink"
 								onClick={handleDropdownLinkClick}
 							>
@@ -158,7 +159,7 @@ const NavBar: React.FC = () => {
 							</Link>
 
 							<Link
-								href="/events/cs-expo"
+								href="/2023/cs-expo/events/cs-expo"
 								className="block px-4 py-2 hover:text-coral-pink"
 								onClick={handleDropdownLinkClick}
 							>
@@ -166,7 +167,7 @@ const NavBar: React.FC = () => {
 							</Link>
 
 							<Link
-								href="/events/committees"
+								href="/2023/cs-expo/events/committees"
 								className="block px-4 py-2 hover:text-coral-pink"
 								onClick={handleDropdownLinkClick}
 							>
@@ -193,7 +194,7 @@ const NavBar: React.FC = () => {
 							className="absolute mt-2 bg-white border rounded-md font-normal w-max"
 						>
 							<Link
-								href="/projects"
+								href="/2023/cs-expo/projects"
 								className="block px-4 py-2 hover:text-coral-pink"
 								onClick={handleDropdownLinkClick}
 							>
@@ -201,7 +202,7 @@ const NavBar: React.FC = () => {
 							</Link>
 
 							<Link
-								href="/projects/hall-of-fame"
+								href="/2023/cs-expo/projects/hall-of-fame"
 								className="block px-4 py-2 hover:text-coral-pink"
 								onClick={handleDropdownLinkClick}
 							>
@@ -209,7 +210,7 @@ const NavBar: React.FC = () => {
 							</Link>
 
 							<Link
-								href="/projects/collections-of-projects"
+								href="/2023/cs-expo/projects/collections-of-projects"
 								className="block px-4 py-2 hover:text-coral-pink"
 								onClick={handleDropdownLinkClick}
 							>
@@ -220,7 +221,7 @@ const NavBar: React.FC = () => {
 				</div>
 
 				<Link
-					href="/partners"
+					href="/2023/cs-expo/partners"
 					className="cursor-pointer ml-4 font-medium hover:text-coral-pink"
 				>
 					Partners
@@ -251,7 +252,7 @@ const NavBar: React.FC = () => {
 					{showMobileEventsDropdown && (
 						<div className="relative m-4 flex flex-col text-left font-normal w-max">
 							<Link
-								href="/events"
+								href="/2023/cs-expo/events"
 								onClick={handleMobileDropdownLinkClick}
 								className="hover:text-coral-pink"
 							>
@@ -259,7 +260,7 @@ const NavBar: React.FC = () => {
 							</Link>
 
 							<Link
-								href="/events/dev-day"
+								href="/2023/cs-expo/events/dev-day"
 								onClick={handleDropdownLinkClick}
 								className="hover:text-coral-pink"
 							>
@@ -267,7 +268,7 @@ const NavBar: React.FC = () => {
 							</Link>
 
 							<Link
-								href="/events/cs-expo"
+								href="/2023/cs-expo/events/cs-expo"
 								onClick={handleDropdownLinkClick}
 								className="hover:text-coral-pink"
 							>
@@ -275,7 +276,7 @@ const NavBar: React.FC = () => {
 							</Link>
 
 							<Link
-								href="/events/committees"
+								href="/2023/cs-expo/events/committees"
 								onClick={handleDropdownLinkClick}
 								className="hover:text-coral-pink"
 							>
@@ -299,7 +300,7 @@ const NavBar: React.FC = () => {
 					{showMobileProjectsDropdown && (
 						<div className="relative m-4 flex flex-col text-left font-normal w-max">
 							<Link
-								href="/projects"
+								href="/2023/cs-expo/projects"
 								onClick={handleMobileDropdownLinkClick}
 								className="hover:text-coral-pink"
 							>
@@ -307,7 +308,7 @@ const NavBar: React.FC = () => {
 							</Link>
 
 							<Link
-								href="/projects/hall-of-fame"
+								href="/2023/cs-expo/projects/hall-of-fame"
 								onClick={handleDropdownLinkClick}
 								className="hover:text-coral-pink"
 							>
@@ -315,7 +316,7 @@ const NavBar: React.FC = () => {
 							</Link>
 
 							<Link
-								href="/projects/collections-of-projects"
+								href="/2023/cs-expo/projects/collections-of-projects"
 								onClick={handleDropdownLinkClick}
 								className="hover:text-coral-pink"
 							>
@@ -325,7 +326,10 @@ const NavBar: React.FC = () => {
 					)}
 				</div>
 
-				<Link href="/partners" className="cursor-pointer hover:text-coral-pink">
+				<Link
+					href="/2023/cs-expo/partners"
+					className="cursor-pointer hover:text-coral-pink"
+				>
 					Partners
 				</Link>
 			</div>
@@ -340,12 +344,12 @@ const NavBar: React.FC = () => {
 			}`}
 		>
 			<nav className="w-full mx-auto flex justify-between items-center px-6 py-3 bg-transparent">
-				<Link href="/">
+				<Link href="/2023/cs-expo">
 					<Image
 						src={
 							isNavbarAtTop
-								? "/cs-expo-logo-black.png"
-								: "/cs-expo-logo-white.png"
+								? "/2023/cs-expo/cs-expo-logo-black.png"
+								: "/2023/cs-expo/cs-expo-logo-white.png"
 						}
 						alt="logo"
 						width={117}

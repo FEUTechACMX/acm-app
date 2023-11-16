@@ -21,7 +21,9 @@
 			}
 		],
 		"paths": {
-			"@/*": ["./src/*"]
+			"@/*": ["./src/*"],
+			"@expo23-components/*": ["./src/components/2023/(cs-expo)/*"],
+			"@expo23-json/*": ["./public/2023/cs-expo/_json/*"]
 		}
 	},
 	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

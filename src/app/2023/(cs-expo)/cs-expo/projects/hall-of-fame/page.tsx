@@ -1,6 +1,5 @@
-import React from "react";
-import ProjectsHeader from "@/components/ProjectsHeader";
-import Carousel from "@/components/HallOfFameCarousel";
+import ProjectsHeader from "@expo23-components/ProjectsHeader";
+import Carousel from "@expo23-components/HallOfFameCarousel";
 
 const HallOfFame = () => {
 	return (

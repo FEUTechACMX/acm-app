@@ -1,6 +1,5 @@
-import React from "react";
-import ProjectArticle from "../../../components/ProjectArticle";
-import GroupsData from "../../../thesis-projects.json";
+import ProjectArticle from "@expo23-components/ProjectArticle";
+import GroupsData from "@expo23-json/thesis-projects.json";
 
 interface GroupProps {
 	params: {

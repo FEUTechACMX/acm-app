@@ -1,5 +1,4 @@
-import React from "react";
-import EventsHeader from "@/components/EventsOverviewHeader";
+import EventsHeader from "@expo23-components/EventsOverviewHeader";
 
 const titles = ["EVENTS", "CS EXPO", "DEV DAY", "COMMITTEES"];
 const desc = [

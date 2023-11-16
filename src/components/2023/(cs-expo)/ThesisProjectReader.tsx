@@ -1,5 +1,4 @@
-import React from "react";
-import thesisData from "../thesis-projects.json";
+import thesisData from "@expo23-json/thesis-projects.json";
 
 interface ThesisProject {
 	groupname: string;

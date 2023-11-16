@@ -1,5 +1,3 @@
-import React from "react";
-
 interface MeetTheCommitteesProps {
 	headerText: string;
 	subheaderText: string;

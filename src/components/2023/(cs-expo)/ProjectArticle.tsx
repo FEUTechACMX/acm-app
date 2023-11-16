@@ -1,7 +1,7 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
 import { AiOutlineRight, AiOutlineUp } from "react-icons/ai";
-import GallerySlider from "../components/ProjectArticleGallerySlider";
+import GallerySlider from "./ProjectArticleGallerySlider";
 
 interface ProjectArticleProps {
 	groupname: string | undefined;
@@ -18,11 +18,11 @@ const ProjectArticle: React.FC<ProjectArticleProps> = ({
 	groupname,
 	thesisTitle,
 	abstract,
-	summary,
-	members,
-	category,
-	posterFilePath,
-	AVPLink,
+	// summary,
+	// members,
+	// category,
+	// posterFilePath,
+	// AVPLink,
 }) => {
 	const [isReadMore, setReadMoreState] = useState(false);
 	const toggleReadMore = () => {

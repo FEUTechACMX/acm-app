@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-
+import Glide from "@glidejs/glide";
 interface Slide {
 	backgroundColor: string;
 }
@@ -28,7 +28,7 @@ const Carousel: React.FC<CarouselProps> = ({
 			startAt: 0,
 			perView: perView || 3,
 			autoplay: 2000,
-		};
+		} as const;
 		new Glide(`#${id}`, config).mount();
 	}, []);
 
@@ -44,8 +44,8 @@ const Carousel: React.FC<CarouselProps> = ({
 						<div className="w-[2000px]">
 							<div className="glide__track" data-glide-el="track">
 								<ul className="glide__slides">
-									{slides.map((slide) => (
-										<li className="glide__slide">
+									{slides.map((slide, index) => (
+										<li className="glide__slide" key={index}>
 											<div
 												className="w-[320px] h-[180px]"
 												style={{

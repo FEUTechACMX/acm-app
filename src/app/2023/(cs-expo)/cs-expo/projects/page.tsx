@@ -1,11 +1,9 @@
 "use client";
 
-import React, { useEffect } from "react";
 import Link from "next/link";
 import { AiOutlineRight } from "react-icons/ai";
-import ProjectsHeader from "@/components/ProjectsHeader";
-import ProjectsCarousel from "@/components/ProjectsCarousel";
-import { title } from "process";
+import ProjectsHeader from "@expo23-components/ProjectsHeader";
+import ProjectsCarousel from "@expo23-components/ProjectsCarousel";
 
 const Projects = () => {
 	return (

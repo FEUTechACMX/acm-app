@@ -1,5 +1,4 @@
-import React from "react";
-
+import { Fragment } from "react";
 interface HomeOverviewHeaderProps {
 	title: string;
 	description: string;
@@ -12,10 +11,10 @@ const EventComponent: React.FC<HomeOverviewHeaderProps> = ({
 	button,
 }) => {
 	const desc = description.split("\n").map((line, index) => (
-		<React.Fragment key={index}>
+		<Fragment key={index}>
 			{line}
 			<br />
-		</React.Fragment>
+		</Fragment>
 	));
 
 	return (
