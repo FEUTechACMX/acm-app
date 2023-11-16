@@ -3,7 +3,7 @@ import Header from "@/components/2023/(website)/(main)/home/header";
 import Prompt from "@/components/2023/(website)/(main)/home/prompt";
 import type { NextPage } from "next";
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 const Home: NextPage = () => {
 	const { data: session } = useSession();
 	const router = useRouter();

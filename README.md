@@ -1,6 +1,6 @@
 # 🚀 FEU Tech ACM App
 
-![FEU Tech ACM Background](/public/media/img/dp_cover/cover.png)
+![FEU Tech ACM Background](/public/2023/media/img/dp_cover/cover.png)
 
 Welcome to the **FEU Tech ACM** App repository!
 

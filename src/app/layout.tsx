@@ -113,7 +113,7 @@ export const metadata: Metadata = {
 		description,
 		images: [
 			{
-				url: "/media/img/dp_cover/cover.png",
+				url: "/2023/media/img/dp_cover/cover.png",
 			},
 		],
 		siteName: app_name,
@@ -137,7 +137,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		site: "@feutechacm",
 		creator: "@feutechACM",
-		images: "/media/img/dp_cover/cover.png",
+		images: "/2023/media/img/dp_cover/cover.png",
 	},
 	verification: {
 		google: "c631ed2b9ed775b4",

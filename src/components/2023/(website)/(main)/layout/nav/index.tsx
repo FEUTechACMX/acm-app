@@ -59,7 +59,7 @@ const Nav: React.FC = () => {
 			<Link href="/" className="flex justify-center items-center">
 				<div className="relative h-8 w-16">
 					<Image
-						src="/media/img/logo/FIT_ACM.png"
+						src="/2023/media/img/logo/FIT_ACM.png"
 						alt="FEU Tech ACM Logo"
 						layout={"fill"}
 						objectFit={"contain"}
@@ -83,11 +83,11 @@ const Nav: React.FC = () => {
 							key={link.name}
 							events={{
 								onMouseEnter: {
-									path: "/media/sfx/gun_cocking_short.mp3",
+									path: "/2023/media/sfx/gun_cocking_short.mp3",
 									isLooped: false,
 								},
 								onClick: {
-									path: "/media/sfx/gun_shot.mp3",
+									path: "/2023/media/sfx/gun_shot.mp3",
 									isLooped: false,
 								},
 							}}

@@ -22,7 +22,7 @@ const Side: React.FC = () => {
 				<Sound
 					events={{
 						onClick: {
-							path: "/media/music/dynasty.mp3",
+							path: "/2023/media/music/dynasty.mp3",
 							isLooped: true,
 						},
 					}}
