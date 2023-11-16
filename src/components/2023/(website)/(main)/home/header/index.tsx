@@ -8,11 +8,11 @@ import ParticleAmongUs from "./particles";
 const links: LinkProps[] = [
 	{
 		name: "Become a Member",
-		href: "/register",
+		href: "https://forms.gle/Vyxp1Ky2MaZZPmvD6",
 	},
 	{
 		name: "--CS EXPO 2023--",
-		href: "/cs-expo-2023",
+		href: "/cs-expo",
 	},
 	{
 		name: "Collaborate with us",
