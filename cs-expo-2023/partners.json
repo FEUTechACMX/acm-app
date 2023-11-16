@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Partner 1",
+    "Web": "https://partner1.com",
+    "facebook": "https://facebook.com/partner1",
+    "twitter": "https://twitter.com/partner1",
+    "instagram": "https://instagram.com/partner1",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+    "imagePath": "/kekw-kek.gif"
+  },
+  {
+    "id": 2,
+    "name": "Partner 2",
+    "Web": "https://partner2.com",
+    "facebook": "https://facebook.com/partner2",
+    "twitter": "https://twitter.com/partner2",
+    "instagram": "https://instagram.com/partner2",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+    "imagePath": "/kekl.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Partner 3",
+    "Web": "https://partner3.com",
+    "facebook": "https://facebook.com/partner3",
+    "twitter": "https://twitter.com/partner3",
+    "instagram": "https://instagram.com/partner3",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+    "imagePath": "/kekw.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Partner 4",
+    "Web": "https://partner4.com",
+    "facebook": "https://facebook.com/partner4",
+    "twitter": "https://twitter.com/partner4",
+    "instagram": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+    "imagePath": "/kekl.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Partner 5",
+    "Web": "https://partner5.com",
+    "facebook": "https://facebook.com/partner5",
+    "twitter": "https://twitter.com/partner5",
+    "instagram": "https://instagram.com/partner5",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+    "imagePath": "/kekw.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Partner 6",
+    "Web": "https://partner6.com",
+    "facebook": "https://facebook.com/partner6",
+    "twitter": "https://twitter.com/partner6",
+    "instagram": "https://instagram.com/partner6",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+    "imagePath": "/kekl.jpg"
+  },    
+  {
+    "id": 6,
+    "name": "Partner 6",
+    "Web": "https://partner6.com",
+    "facebook": "https://facebook.com/partner6",
+    "twitter": "https://twitter.com/partner6",
+    "instagram": "https://instagram.com/partner6",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non est ex. Donec malesuada risus quis bibendum rutrum. Phasellus et ex et nunc viverra imperdiet. Morbi id arcu eu arcu viverra porttitor. Ut vel posuere sem. Fusce nec neque sit amet ipsum eleifend sagittis ut sed elit. Nunc in imperdiet leo. Ut aliquam elementum mollis.",
+    "imagePath": "/kekl.jpg"
+  }
+]
