@@ -1,308 +1,308 @@
 {
-    "Adorables": {
-        "groupname": "Adorables",
-        "thesisTitle": "LUNGTI: Providing 5 - IoT service through Augmented and Virtual Reality Tour with Navigation in Manila Zoo",
-        "abstract": "The Manila Zoo is a renowned tourist attraction in the Philippines. However, traditional tours may not fully engage visitors, and inadequate information about the animals can hinder their overall experience. To address these problems, this study proposes the development of a mobile application that enhances the touring experience at Manila Zoo through the utilization of a QR code reader, virtual reality (VR), augmented reality (AR), and the Improved VGG-16 model. The objective is to provide visitors with an educational and interactive platform that fosters engagement and enriches their understanding of the zoo's animals and habitats. By leveraging AR and VR technologies, users can explore the zoo in an immersive and informative manner. The application will employ the Improved VGG-16 model to accurately identify specific animals within the zoo. Additionally, the application features an IoT integration for real-time data collection and a QR code reader for accessing trivia questions about the animals, promoting an interactive and educational experience. Furthermore, the Improved VGG-16 model was evaluated against the original VGG-16 model through three trials. whereas the improved VGG-16 model achieved a total average accuracy of 81.82%. These findings highlight the capabilities of the improved model in accurately identifying and classifying animals. The development of this mobile application aims to revolutionize the visitor experience at Manila Zoo, combining technology, entertainment, and education. By providing a platform for interactive learning and immersive exploration, the proposed solution aims to enhance visitors' engagement and knowledge about the zoo's diverse animal species and their natural environments.",
-        "summary": "Summary3",
-        "members": [
-            "Advincula, Jeri-Michael Joseph S.",
-            "Adora, Clintt M.",
-            "Donato, Zeno Gilerence T.",
-            "Evangelista, Erica Francia G."
-        ],
-        "category": "IoT",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "AiM": {
-        "groupname": "Aim",
-        "thesisTitle": "Colorectal Disease Detection Using You Only Look Once Algorithm",
-        "abstract": "The proponents for this study developed a descriptive developmental type of research, by constructing a  software application with the use of YOLOv4-tiny  algorithm to be able to detect certain abnormalities  within the colon, namely Polyps and Diverticula,  which are the leading causes of cancer in the colon and rectal area. The respondents of this study are  chosen through purposive sampling, to which includes  each of their own expertise in helping for software  development. The respondents are Medical  Practitioners, for their expertise in the subject relating  to the medical field and was served as the main  utilizers of the system, CS/IT Professionals for the  purpose of critiquing the software application and its  intended modules, and lastly CS/IT Students provided  their recommendations and suggestions for improving  the software application. Based on the survey derived  from the categories of ISO 25010, the total average  accumulated from each respondent group is valued at 4.08 for medical practitioners, 4.62 from CS/IT  Professionals, and 4.32 from CS/IT Students. The  software application was developed to be light-weight,  enabling a capability of real-time detection. The  average time for the system to process uploaded  colonoscopy videos were dependent on the size and  length of the provided colonoscopy videos. In the  researchers alpha tests, the time it took for the videos to fully process ranges from 3 - 5 minutes. The findings of the study shows that the YOLOv4  algorithm displayed a 90% accuracy in detecting  polyps and diverticula with also the implementation of  deep CNNs and as well as ReLu activation, thus  establishing an intricate relationship between the colon abnormality's features. The researchers  successfully created a system that is capable of  detecting said Polyps and Diverticula at 90% accuracy  by employing the confusion matrix. ",
-        "summary": "Summary3",
-        "members": [
-            "Franco Gian E. Ramos",
-            "Kyle Austin T. Dimabasa",
-            "Juan Alfonso Q. Magpantay",
-            "Jan Miguel A. Pinlac"
-        ],
-        "category": "Health",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "Array-Co": {
-        "groupname": "Array Co",
-        "thesisTitle": "Composite Restoration Using Image Recognition for Teeth Shade Matching Using Deep Learning",
-        "abstract": "Accurately matching the shade of dental composite restorations to  natural teeth is a crucial aspect of dental treatment, as it can  significantly impact patient satisfaction and treatment outcomes.  However, the subjective nature of manual shade selection often  leads to shade mismatch, with reports suggesting that  approximately 35% of composite restorations fail on the first visit.  To address this problem, this study proposes a novel approach that  utilizes image processing and deep learning techniques for  objective and consistent dental shade matching. The developed  system employs Convolutional Neural Network (CNN)-based  MediaPipe Facial Landmark Detection and Support Vector  Machines (SVMs) for objective and consistent dental shade  matching. The system achieved an estimated accuracy of 90%  compared to traditional manual shade matching. The system has  scored an overall average of 4.58 on an initial survey using the ISO  25010 guidelines and 4.64 on a subsequent resurvey, indicating its  high agreeability and satisfiability in achieving objective and  consistent dental shade matching. The implementation and  validation of this application offer a significant technological  advancement in dental shade matching, reducing the likelihood of  shade mismatch. The findings have significant implications for  clinical practice, empowering dental professionals with a reliable  tool to improve patient care and satisfaction. This study emphasizes  the importance of incorporating advanced technology into clinical  practice, ultimately improving patient outcomes. ",
-        "summary": "Summary3",
-        "members": [
-            "Tan, Micah Sophia Q.",
-            "Almoro, Jericho John O.",
-            "Cañon, Francis Dale P.",
-            "Goldman, Bianca H.",
-            "Yap, John Angelo B."
-        ],
-        "category": "Img proc/CV",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "Codebebs": {
-        "groupname": "Codebebs",
-        "thesisTitle": "SirenaTech: A Water Quality Testing Algorithm for Detecting the Potability of Water",
-        "abstract": "In the Philippines alone, the amount of citizens that rely on unsafe water for daily use and consumption is at an overwhelming amount due to the fast urbanization of the country and a lack of sanitation when it comes to several bodies of water. Previous researches have aimed their focuses at being able to identify several water sources and utilizing either a machine learning algorithm or an Internet of Things device coupled with the machine learning algorithm to help monitor and classify water supplies at their sources or at a water reserve and in identifying abnormalities that the researchers would need to monitor. Here, this research utilizes an I.o.T device coupled with a Naive Bayes algorithm to help classify the data inputted form a given sensor and a Convolutional Neural Network to help monitor images of a water sample than can identify both Microscopic and Macroscopic images from a given water supply. The effectiveness of bringing an Internet of Things device and combining the technology with Machine Learning Algorithms and making the system portable via an Android Application has given the system a profound portability and accessibility when compared to pre-existing water monitoring devices. The addition of image taking as well as geotagging has given the system more versatility in the field when it comes to wastewater treatment and water quality monitoring. The system created by the researchers was able to identify macroscopic images with an accuracy of 86.5% and microscopic images with 84% for the C.N.N. algorithm and 96.9% for the Naive Bayes algorithm. These diseases but also to help bring relief to those who may be unsure of their source of water. The researchers have decided to use a machine learning model, specifically a Convolutional Neural Network, to create a system that is able to detect impurities from an image of water fed into the system.",
-        "summary": "Summary3",
-        "members": [
-            "Gavinno Othello C. Angeles",
-            "Art Eli Aluri B. Bautista",
-            "Noriel Joy S. Embudo",
-            "Seth Johann S. Esteban",
-            "Paul Andre A. Gabriel"
-        ],
-        "category": "IoT",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "DEoS": {
-        "groupname": "DEoS",
-        "thesisTitle": "A BROWSER EXTENSION FOR IDENTIFYING RELEVANT PRODUCT REVIEWS ON ONLINE SHOPPING PLATFORMS USING IMAGE AND NATURAL LANGUAGE PROCESSING ALGORITHMS",
-        "abstract": "The study's aims to create a web tool designed to help general users  navigate through the reviews on the e-commerce website and help  them navigate relevant product reviews to the irrelevant ones. This  tool will help in giving users information on the relevancy of the  reviews that are displayed on e-commerce websites with the aim of  making the shopping experience easier and more efficient.  Convenient sampling was utilized and was conducted with 30  respondents gathered from different age brackets including Gen Z  composed of ages 18-24 mostly teenagers, Millennials ages 25-40,  Gen X, Merchants & CS/IT Professionals that were part of the  respondents who answered the technical and nontechnical  questionnaire based from the ISO 25010 standard, ensuring that  the respondents were knowledgeable in using e-commerce  platforms. Data from the e-commerce website was gathered using  Selenium automation to extract data from the testing environment  and processing it with Cross-correlation Template Matching  algorithm for images and Multinomial Naive Bayes algorithm for  text sentiment analysis, combining the results using a weighted  average with weights 50/50 for both algorithms. Although the  results were similar to simple mean, weighted mean was chosen for  easier manipulation of values during testing. The results were  determined by a 4-point likert-type rating scale with proper colors  for easier understanding: 76%-100% for Highly Relevant (Darker  Green), 51%-75% for Relevant (Light Green), 26%-50% for  Slightly Relevant (Orange), and 0%-25% for Irrelevant (Red)  results. ",
-        "summary": "Summary3",
-        "members": [
-            "Wilem Joshua R. Offemaria",
-            "Christian Dale D. Selisana",
-            "Patrick Nicolae M. Agbayani",
-            "John Felix M. Agda"
-        ],
-        "category": "NLP",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "Engeenz": {
-        "groupname": "Engeenaz",
-        "thesisTitle": "Recognizance: An Instagram-Based Recommender System using Naïve Bayes Classifier with TensorFlow for T-Cup-Zone in the City of Manila",
-        "abstract": "Recognizance is an Instagram-based recommender system designed to address the challenges faced by T-Cup-Zone, a small food and milk tea business in Manila. This research focuses on developing a recommendation system using Naïve Bayes Classifier and Decision Tree to help them in expanding their business, identifying suitable locations for expansion, and enhancing visibility by suggesting potential influencers for product promotion. Recognizance aims to differentiate itself from traditional practices by leveraging Instagram as a platform for generating recommendations. The FURPS software quality model is utilized as the development and evaluation approach. A total of 50 respondents, consisting of CS/IT students from FEU Tech, professionals, and small business owners within Manila, evaluated the application. The assessment provided an average weighted mean of 4.5, indicating a high level of satisfaction. For users, Recognizance offers a valuable tool for small businesses aiming to enhance their marketing strategies and boost their competitiveness in the market. The proponents suggest that future researchers explore alternative social media platforms for data scraping to access a broader range of data sources, improving data quality and diversity. Additionally, the proponents recommend expanding the recommender system's categories to support a wider variety of small businesses. ",
-        "summary": "Summary3",
-        "members": [
-            "David John H. Bas",
-            "Curt Russel M. Celeste",
-            "Gerardo Joshua D.S. Dela Cruz",
-            "Miguel Angelo M. Fesalbon",
-            "Gerald Z. Gueco"
-        ],
-        "category": "Data analytics",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "Hello-World": {
-        "groupname": "Hello World",
-        "thesisTitle": "Bloodline: an Emergency Blood Resource Locator Implemented Using Contraction Hierarchies In OSRMV1 and GPS Tracking",
-        "abstract": "This research paper aims to improve the blood bank system by enhancing data accuracy, organizational structure, inventory management, and path optimization. It utilizes OSRMv1, GPS technology, and advanced routing algorithms for better accuracy and efficient tracking. The study emphasizes important aspects like functional suitability, maintainability, performance efficiency, compatibility, usability, reliability, security, and portability. The research uses both developmental and descriptive methodologies, involving 50 diverse respondents. Evaluation methods include alpha testing, black box testing, white box testing, and Cronbach's alpha for questionnaire reliability. Beta testing with end-users in real-world scenarios is also conducted. Findings show high participant satisfaction across all categories, validating the effectiveness of the system enhancements. Users strongly agreed with the functional suitability (3.538), maintainability (3.475), performance efficiency (3.472), compatibility (3.625), usability (3.508), reliability (3.508), security (3.503), and portability (3.511) of the system. These positive responses demonstrate that the implemented enhancements have significantly improved the blood bank system.",
-        "summary": "Summary3",
-        "members": [
-            "Magtibay, Allan Jr C.",
-            "Carandan, Carl Anthony Lar D.",
-            "Espiritu, Randel Jason B.",
-            "Valerio, Andre Martee G."
-        ],
-        "category": "Health",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "INNOV8": {
-        "groupname": "INNOV8",
-        "thesisTitle": "Name3",
-        "abstract": "An Android-based mobile application called the Indoor Air Quality  Monitoring and Recommendation System (AIRZEN) can help the  FEU Tech’s Facilities Office (FO) and general Indoor spaces in  assessing the Air Quality inside indoor spaces. This system is a tool  used to monitor and check the Air Quality inside Indoor spaces as  well as give recommendations to help mitigate the effects of bad  Indoor Air Quality. The KNN algorithm was utilized for the  prediction of the AQI value and classification of  Recommendations. To determine whether the system works as  intended, testing was administered together with a survey  participated by 50 respondents consisting of professionals from the  IT/CS/IAQ Industry, IT/CS/CPE students, IT/CS Faculty, and  Office workers. This capstone project’s output received an Above  Average rating of (4.56) in terms of Functionality, Reliability, and  Efficiency. Future researchers can make system improvements by  adding a Backup and Restore feature for times of data outage as  well as an Ios integration for a bigger range of users. An additional  Recommendation is also to add feedback from existing users inside  the application as well as a notification system that notifies users  while they are out of their homes. The proponents also recommend  the implementation of multiple monitoring device support for  bigger scalability. ",
-        "summary": "Summary3",
-        "members": [
-            "Paramio, Rhuzzel L.", 
-            "Francia, Jude Michael A.",
-            "Cañete, Berwynn Rae M.",
-            "Belleza, Yunno Honesto Rico B.",
-            "Dela Cruz, Cyrill James G."
-        ],
-        "category": "IoT",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "Javangers": {
-        "groupname": "Javangers",
-        "thesisTitle": "ALGPT: An AI-based Mobile Application for Generating Solution Steps in Solving Algebraic Word Problems",
-        "abstract": "The study investigates the impact of ALGPT, an Android mobile app designed specifically for the grade 7 Algebra curriculum. The primary objective of this paper is to examine how ALGPT influences the test scores of 7th grade students in Algebra. The study involved a total of 153 participants, including 133 grade 7 students, 10 math teachers, and 10 CS/IT professionals. For this reason, there were a total of 13 fine tuned Da Vinci OpenAI models. The accuracy of the models were tested using simple accuracy, true positive rate (TPR), true negative rate (TNR), negative predictive value (NPV), positive predictive value (PPV) and F-measure. The results show the app's varying accuracy and reliability across various mathematical concepts demonstrate its potential to support and enhance learning experiences.",
-        "summary": "Summary3",
-        "members": [
-            "Avañez, Nichole Anne Marie J.", 
-            "Espino, Richard Lyndon M.",
-            "Esquivel, Vence Carl T.", 
-            "Limyu, Alan Gabriel D.A."
-        ],
-        "category": "Educ",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "Midnight-Coders": {
-        "groupname": "Midnight Coders",
-        "thesisTitle": "GoGreen: A Novel Approach to Food Waste R2 - EDUCtion through Image Processing-Based Food Analyzer and Recommendation System",
-        "abstract": "The urgent issue of food waste is addressed in this thesis using a novel system. The main goal of the study is to provide a unique method for reducing kitchen food waste using a recommendation system and image processing-driven food analysis. For the image processing-driven food analysis, the researchers employed the YOLOv5 (You Only Look Once version 5) model, a state-of-the-art deep learning model renowned for its real-time object detection capabilities. YOLOv5 enables the system to accurately identify and classify various food items within images, contributing to a more comprehensive understanding of food waste patterns. Simultaneously, a content-based recommendation system was implemented using cosine similarity. This recommendation system analyzes the ingredients of food items detected by the YOLOv5 model and compares them to suggest recipes that utilize similar ingredients. Cosine similarity, a mathematical measure of similarity between two vectors, is applied to determine the likeness between ingredient profiles. This innovative approach enhances the system's ability to suggest relevant recipes that align with the available ingredients in a user's kitchen. The importance of this study rests in its creative strategy for addressing the pressing problem of food waste. The \"GoGreen\" technology provides a workable approach to lowering kitchen waste by smoothly merging image processing for food analysis and a well-structured suggestion system. The results of this study offer useful information for both homes and culinary experts as food waste continues to pose ethical and environmental problems.",
-        "summary": "Summary3",
-        "members": [
-            "Dela Cruz, Lorenzo Miguel ",
-            "Panela, Jewel Anne B.",
-            "Liwanag, Phoebe Kelly C.",
-            "Bucsit, Mark Wilson W."        
-        ],
-        "category": "Img proc/CV",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "Peaky-Blinders": {
-        "groupname": "Peaky Blinders",
-        "thesisTitle": "Intelligent Tutoring System for Learning Threads using Bayesian Network",
-        "abstract": "This paper presented the development and evaluation of an  Intelligent Tutoring System (ITS) for learning Java threads.  The system utilized a Bayesian Network to predict student  certainty in Computer Science students at FEU Institute of  Technology. The main objective of the system is to help  students better understand the concept of Java threads and  improved their performance in this area. The research  approach follows a Descriptive-Developmental study  design, which evaluated the impact of the ITS on student learning outcomes. The system provided a concept thread  related activities, assesses student answers, and tracks  performance data. It benefits instructors by offering insights  into student knowledge, automating tasks, and providing  analytics for decision-making. To prove the effectiveness of  the system for tutoring computer science students. The  researchers conducted a survey involving 74 respondents,  including students and instructors. The software evaluation  received positive feedback regarding functional suitability,  usability, reliability, and efficiency. The ITS achieved a high  Likert scale average rating of 4.4 signified those respondents  were \"Very Satisfied\" with its overall performance. It  effectively supported tutoring and enhanced student learning  that highlighted the potential of Bayesian Networks in  Intelligent Tutoring Systems.",
-        "summary": "Summary3",
-        "members":[
-            "Santos, Francis Niño S. ",
-            "Reyes, John Florenz M.",
-            "Simsiman, Marvin M.",
-            "Sapnu, Dioshua D."        
-        ],
-        "category": "Educ",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "Quinta": {
-        "groupname": "Quinta",
-        "thesisTitle": "LANGUAGE REVIVAL: GAMIFYING KAPAMPANGAN  USING LEITNER SYSTEM AND SUPERMEMO  ALGORITHMS ",
-        "abstract": "With the decline usage of the Kapampangan language in the  Philippines, the researchers took an approach of gamified language learning approach to address this issue. Gamified  learning is an approach in learning with the application of game  elements. This allows for increase in engagement and learner  motivation. Which led the researches to create a gamified  Kapampangan android application, named “LUID.” This study  utilized the Spaced Repetition algorithms of Leitner System and  the SuperMemo Algorithm. The anticipated outcomes of this  research include the revitalization and promotion of the  Kapampangan language, empowering individuals to utilize their  mother tongue more frequently. By facilitating language learning  in an accessible and enjoyable manner, this study strives to bridge  the gap between non-proficient speakers and native speakers,  thereby promoting a more inclusive linguistic landscape within the Filipino community. With a sample population of 50 respondents being CS/IT  professionals, faculty, non-familiar, and familiar speakers being  surveyed, the results show a total average of 4.71 out of 5.0 which  shows that the application served its purpose. In order for  continuous development, the researchers would recommend OS  support for more accessibility, adding audio for pronunciation, and a multiplayer mode for additional motivation and  encouragement.",
-        "summary": "Summary3",
-        "members": [
-            "Gonzales, Michaella O. ",
-            "Magallanes, Alkier Gabriel C.",
-            "Mendoza, Dhancovic Ivan G.",
-            "Ong, Maria Evangelicalyn D.",
-            "Sapida, Charles Christian D."            
-        ],
-        "category": "Educ",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "return-to_sleep": {
-        "groupname": "return to_sleep",
-        "thesisTitle": "TomatoCare: A supply and demand forecasting support tool for tomatoes using ARIMA modeling.",
-        "abstract": "The tomato industry plays a crucial role in the agricultural sector, necessitating accurate supply and demand forecasting to aid farmers and stakeholders in making informed decisions. This study aimed to design and develop TomatoCare, a forecasting system that leverages ARIMA (AutoRegressive Integrated Moving Average) modeling to provide reliable forecasts and valuable insights for effective resource allocation and market planning. The research followed a mixed-methods approach, combining various data collection methods such as interviews with Subject Matter Experts (SMEs), data scraping, and data mining from external sources, including the Department of Agriculture, Department of Trade and Industry, and Philippine Statistics Authority websites. These methods facilitated the collection of comprehensive and up-to-date data on tomato supply and demand.",
-        "summary": "Summary3",
-        "members": [
-            "Mendizabal, Jed Marco S.",
-            "Cruz, Carlo Eraño C.",
-            "Nanalig, Fhiel Ashley Nichole B.",
-            "Ramoso, Zedric James D."  
-        ],
-        "category": "Data analytics",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "Rob_lux": {
-        "groupname": "Rob_lux",
-        "thesisTitle": "Constraint-Based Intelligent Tutor for Augmentative and Alternative Communication for Filipino Preschoolers with Speech Delay: An Application of Decision Tree Algorithm",
-        "abstract": "This study centers on the essential role played by Speech-Language Pathologists (SLPs) in the diagnosis and treatment of speech and language disorders within the Philippines. It underscores the significant difficulties resulting from the limited availability and effectiveness of Augmentative and Alternative Communication (AAC) tools, particularly in the context of the Filipino language. These limitations impede the progress of Filipino children struggling with speech delay disorders. The study aims to develop AAC software integrated with an intelligent tutoring system in Filipino. This innovative approach incorporates Filipino AAC tools such as AAC boards, assessments, client management, and identification of rapid-guessing behavior on AAC assessments on different difficulty levels using a decision tree algorithm, providing a structured and personalized therapy approach. The software was evaluated by a total of 50 participants, most of whom are our main beneficiaries- the speech-language pathologists, and the majority of them found it to be a helpful tool during therapy sessions. The findings of this study and the developed software have significant implications in the field of Augmentative and Alternative Communication (AAC). Additionally, this study's contribution serves as a foundation for future advancements in AAC-related technologies, driving innovation and improvement in the field. ",
-        "summary": "Summary3",
-        "members": [
-            "Ascaño, Leigh Reign A. ",
-            "De Leon, Jose Ian Miguel S.",
-            "Andres, Brylle Miguel E.",
-            "Fragata, Mark Revin G."        
-        ],
-        "category": "Educ",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "SOFTIES": {
-        "groupname": "SOFTIES",
-        "thesisTitle": "PoseCheckr: Exercise Posture Correction Application Using Image Processing",
-        "abstract": "Fitness activities are tremendously beneficial to personal health and fitness; yet, if performed incorrectly by the user, they can be unproductive and perhaps hazardous. Workout mistakes occur when the user fails to adopt proper form or stance. PoseCheckr was developed to help people monitor and track their form and posture when performing a specific exercise with the utilization of Image Processing through Convolutional Neural Networks and MoveNet, a pose estimation model. The application is able to track 17 key points of the body and make a judgment whether their form is proper or improper. If an improper form was detected, the application will give helpful feedback on how to improve their form. The application also stores the progress of the user. The application has been developed to be used by different kinds of people for their own advantages. It is mainly developed to be used by everyday citizens to avoid and prevent injuries while performing an exercise. To assess the application, the developers conducted a survey with 50 participants, including gym goers, instructors, professors, students, and experts . Within the range of categories provided by the developers, the respondents gave the program an average rating of 4.29 out of 5.0. This value is reflected as Satisfactory. The findings of this study and the developed software have significant implications in the field of fitness and Pose Estimation. For future studies, the developers recommended diversifying poses for various fitness levels, providing detailed pose explanations, collecting user feedback, and conducting long-term studies to enhance the inclusivity, safety, and effectiveness of pose exercises.",
-        "summary": "Summary3",
-        "members": [
-            "Rola, Michael John T.",
-            "Alvarez, Daniel Joseph M.", 
-            "Bulos, John O'nel D.",
-            "Mazo, Alijah Ethan E."
-        ],
-        "category": "Health",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "Softyware": {
-        "groupname": "Softyware",
-        "thesisTitle": "Email Phishing and Spam Detector using Backtracking Algorithm and Image Processing",
-        "abstract": "The thesis involved the usage of the Backtracking Algorithm and Yolov5 to create a phishing and spam email detector. The researchers picked 55 respondents, ranging from Information  Technology and Computer Science students, professors,  professionals, normal Gmail users, and workers under the age of  60. After testing the system, the respondents answered a five-to ten-minute survey regarding the performance of the system. Based  on the results of said survey, 64.2% of the respondents agreed that  the system successfully detected phishing and spam emails as well  as determining legitimate emails. Respondents’ comments include  praising the scoring system as well as color-coding the email  based on its severity so that the user may easily identify which  was a phishing or spam email. There were also suggestions such  as making the interface more colorful as well as having its results  screen a refresh button to avoid going back to the dashboard and  scanning once more. Given the results of the survey, the system  was a near-perfect success, despite the minor errors and  suggestions given. Future researchers would use this to expand the  current application and improve its performance by adding a  budget to its development as this application had no budget.  Future researchers were also recommended to expand the  system’s availability in operating systems, such as being able to  be run in MacOS and(or) Linux, as well as being able to accept  other types of online accounts such as Outlook.",
-        "summary": "Summary3",
-        "members": [
-            "Medenilla, Varon James A.", 
-            "Calinisan, Jeremie A.", 
-            "Rafanan, Daniel Marco S.", 
-            "Guerrero, Drennix Jean-Roe E.", 
-            "Andrada, Micko Alhwin T."
-        ],
-        "category": "Data analytics",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "S.T.A.R.K.": {
-        "groupname": "S.T.A.R.K.",
-        "thesisTitle": "Video Content Analysis through Computer Vision and Natural Language Processing",
-        "abstract": "Online education has gained widespread popularity due to its delivery of high-quality educational content, rich visual resources, and access to expert instructors. However, maintaining student engagement and comprehension in online classes remains a challenge. In response, we introduce a software that analyzes educational videos, designed to enhance students' understanding of these videos efficiently. We present Video Lens, a web application that leverages Natural Language Processing (NLP) and Computer Vision techniques, rooted in deep learning foundation models. It has four video analysis features: searching in video, transcription, summarization, and topic detection.\nWe have found in the evaluation, involving students and teaching staff, the potential for Video Lens as a valuable educational tool. As a result, Video Lens has allowed us to let students test a tool for those who would like to efficiently use their time and efforts in studying their courses accompanied by video materials. This efficiency allows teaching staff to allocate more time to prepare and understand the content of lecture videos beforehand. These findings emphasize its potential to enhance the learning experience when engaging with lecture videos.",
-        "summary": "Summary3",
-        "members": [
-            "Cajipe, Ralph Henrik I.", 
-            "Santos, Charles Andrew G.", 
-            "Español, Kyle G.", 
-            "Segundo Jr., Sally P."],
-        "category": "NLP",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "TeaSis": {
-        "groupname": "TeaSis",
-        "thesisTitle": "GameFace: Head Tracking and Facial Recognition and Detection as Inputs for Gaming using Haar Cascade and MediaPipe Framework",
-        "abstract": "Video games have been around for a long time and have become a big part of people’s lives. The number of people that enjoy them are numerous; however, not everyone who enjoys them can actually play them due to physical limitations. This study aims to help people with disabilities, specifically those on the arms or hands, by providing them a new way to play games, specifically computer games, through the use of face detection, face recognition, and a face and head movement tracking system to control the video game. The program is made to be utilized in playing only simple games with at most seven controls, and can only input at maximum, two controls simultaneously. Special focus was given in making the program lightweight in order to be capable of real-time gameplay. The respondents for this study were sampled using the purposive sampling technique. The program was used by the respondents using computer vision and rated the program in accordance with ISO 25010. Their answers were obtained by utilizing surveys. On the other hand, the accuracy of the program was evaluated through alpha testing results utilizing the confusion matrix and real-world testing results. The results showed that the respondents strongly agree with the functional suitability, compatibility, and portability of the software, while they agree with the performance efficiency, usability, reliability, security, and maintainability of the software. Furthermore, the program yielded an average accuracy of 88% and an average F1 score of 0.86 or 86% in the alpha testing results, and an average accuracy of 89% for real world testing results. These results show that the program produced satisfactory results and can be used to play computer games hands-free.",
-        "summary": "Summary3",
-        "members": [
-            "Lim, Kenneth Bryce T.", 
-            "Azarcon, Joshua G.", 
-            "Gomez, Edra Abel S.", 
-            "Contreras, John Dominic S."
-        ],
-        "category": "Img proc/CV",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "TechniQ": {
-        "groupname": "TechniQ",
-        "thesisTitle": "Digital Action Officer: A Recommendation System using Machine Learning for the Streamlining of Workflow in Public Assistance Offices",
-        "abstract": "The availability of public services to meet the needs of each community is one of the most important aspects of a country. People who require government assistance submit requests for assistance through public assistance offices, however, the number of complaints and requests received by these offices has become disproportionate to the number of people processing them. To address this, the researchers proposed the development of an automated system that can assist employees in streamlining the workflow within public assistance offices, which can help enhance workplace efficiency and quicken the resolution of cases. The system uses the Multinomial Naive Bayes algorithm to extract relevant information from emails and classify them based on the training data, determining the appropriate agency for the email to be sent to. Emails received are initially processed and then stored in a database that can be easily edited and re-processed. During testing, the researchers conducted a trial using a testing dataset of 150 emails, which took three and a half minutes (3m30s) to classify and send emails to their appropriate agencies, which is a significant improvement compared to the manual system that is able to process 300-500 emails within a 3-day timeframe. The researchers surveyed 45 respondents comprising students, teachers, professionals, and public assistance officers to evaluate the application. The respondents rated the application an average of 4.6 out of 5.0 across the categories given by the developers which corresponds to a Satisfactory rating. For future studies, the researchers recommended for the program to accommodate more classifications, separate the nature of concern and agency in the classification, implement alternative algorithms, implement stronger security measures, and add filtering options.",
-        "summary": "Summary2",
-        "members": [
-            "Gacula, Gabrielle Rose P.", 
-            "Tantay, Patrick Wayne", 
-            "Vallo, Kyle Dominic C.", 
-            "Alido, Rico Ray R."
-        ],
-        "category": "NLP",
-        "posterFilePath": "",
-        "AVPLink": ""
-    },
-    "Yaymiko": {
-        "groupname": "Yaymiko",
-      "thesisTitle": "Guide to Geometry (GtG) : Mobile App Intelligent Tutoring System for Grade 8 Geometry Using Logistic Regression",
-      "abstract": "According to the study of Dayao, R. J. C (2018) the Philippines faces a problem of improving Filipino students’ performance in mathematics and science. Many Filipino students lacked the capacity to academically compete globally. Geometry was one of the lowest mastered areas in grade 8 students and many were below the 75% passing mark (Capate, 2017). This shows that many students have difficulties mastering the contents of these topics. This study presents the development of a mobile application that uses an Intelligent Tutoring System (ITS) for grade 8 students in the topic of Geometry, specifically Triangles. The application uses the Logistic regression algorithm to predict the confusion behavior of the students by having confusion as the dependent variable and Score, TakingTime, TimePercentage, and GuessCheck constraints as the independent variables. It also uses a fuzzy logic controller (FLC) to evaluate and categorize students’ performance during quizzes. The FLC mirrors human reasoning processes to distinguish varying levels of mastery. The respondents of the study will be grade 8 students of no particular school with a sample size of 30.\nThe logistic regression model exhibited high accuracy of 95% in identifying student confusion and allows for timely intervention. Students that also took multiple attempts using the application also displayed higher scores on their subsequent quiz attempts.",
-      "summary": "Summary1",
-      "members": [
-        "Peñaranda, Charles Dmitri M.",
-        "Albano, Ivan Dominic", 
-        "Claveria, Kyle Sebastian T.", 
-        "Vicencio, Vernon GabrielAngelo A."
-    ],
-        "category": "Educ",
-        "posterFilePath": "",
-        "AVPLink": ""
-    }
-  } 
-  
+	"Adorables": {
+		"groupname": "Adorables",
+		"thesisTitle": "LUNGTI: Providing 5 - IoT service through Augmented and Virtual Reality Tour with Navigation in Manila Zoo",
+		"abstract": "The Manila Zoo is a renowned tourist attraction in the Philippines. However, traditional tours may not fully engage visitors, and inadequate information about the animals can hinder their overall experience. To address these problems, this study proposes the development of a mobile application that enhances the touring experience at Manila Zoo through the utilization of a QR code reader, virtual reality (VR), augmented reality (AR), and the Improved VGG-16 model. The objective is to provide visitors with an educational and interactive platform that fosters engagement and enriches their understanding of the zoo's animals and habitats. By leveraging AR and VR technologies, users can explore the zoo in an immersive and informative manner. The application will employ the Improved VGG-16 model to accurately identify specific animals within the zoo. Additionally, the application features an IoT integration for real-time data collection and a QR code reader for accessing trivia questions about the animals, promoting an interactive and educational experience. Furthermore, the Improved VGG-16 model was evaluated against the original VGG-16 model through three trials. whereas the improved VGG-16 model achieved a total average accuracy of 81.82%. These findings highlight the capabilities of the improved model in accurately identifying and classifying animals. The development of this mobile application aims to revolutionize the visitor experience at Manila Zoo, combining technology, entertainment, and education. By providing a platform for interactive learning and immersive exploration, the proposed solution aims to enhance visitors' engagement and knowledge about the zoo's diverse animal species and their natural environments.",
+		"summary": "Summary3",
+		"members": [
+			"Advincula, Jeri-Michael Joseph S.",
+			"Adora, Clintt M.",
+			"Donato, Zeno Gilerence T.",
+			"Evangelista, Erica Francia G."
+		],
+		"category": "IoT",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"AiM": {
+		"groupname": "Aim",
+		"thesisTitle": "Colorectal Disease Detection Using You Only Look Once Algorithm",
+		"abstract": "The proponents for this study developed a descriptive developmental type of research, by constructing a  software application with the use of YOLOv4-tiny  algorithm to be able to detect certain abnormalities  within the colon, namely Polyps and Diverticula,  which are the leading causes of cancer in the colon and rectal area. The respondents of this study are  chosen through purposive sampling, to which includes  each of their own expertise in helping for software  development. The respondents are Medical  Practitioners, for their expertise in the subject relating  to the medical field and was served as the main  utilizers of the system, CS/IT Professionals for the  purpose of critiquing the software application and its  intended modules, and lastly CS/IT Students provided  their recommendations and suggestions for improving  the software application. Based on the survey derived  from the categories of ISO 25010, the total average  accumulated from each respondent group is valued at 4.08 for medical practitioners, 4.62 from CS/IT  Professionals, and 4.32 from CS/IT Students. The  software application was developed to be light-weight,  enabling a capability of real-time detection. The  average time for the system to process uploaded  colonoscopy videos were dependent on the size and  length of the provided colonoscopy videos. In the  researchers alpha tests, the time it took for the videos to fully process ranges from 3 - 5 minutes. The findings of the study shows that the YOLOv4  algorithm displayed a 90% accuracy in detecting  polyps and diverticula with also the implementation of  deep CNNs and as well as ReLu activation, thus  establishing an intricate relationship between the colon abnormality's features. The researchers  successfully created a system that is capable of  detecting said Polyps and Diverticula at 90% accuracy  by employing the confusion matrix. ",
+		"summary": "Summary3",
+		"members": [
+			"Franco Gian E. Ramos",
+			"Kyle Austin T. Dimabasa",
+			"Juan Alfonso Q. Magpantay",
+			"Jan Miguel A. Pinlac"
+		],
+		"category": "Health",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"Array-Co": {
+		"groupname": "Array Co",
+		"thesisTitle": "Composite Restoration Using Image Recognition for Teeth Shade Matching Using Deep Learning",
+		"abstract": "Accurately matching the shade of dental composite restorations to  natural teeth is a crucial aspect of dental treatment, as it can  significantly impact patient satisfaction and treatment outcomes.  However, the subjective nature of manual shade selection often  leads to shade mismatch, with reports suggesting that  approximately 35% of composite restorations fail on the first visit.  To address this problem, this study proposes a novel approach that  utilizes image processing and deep learning techniques for  objective and consistent dental shade matching. The developed  system employs Convolutional Neural Network (CNN)-based  MediaPipe Facial Landmark Detection and Support Vector  Machines (SVMs) for objective and consistent dental shade  matching. The system achieved an estimated accuracy of 90%  compared to traditional manual shade matching. The system has  scored an overall average of 4.58 on an initial survey using the ISO  25010 guidelines and 4.64 on a subsequent resurvey, indicating its  high agreeability and satisfiability in achieving objective and  consistent dental shade matching. The implementation and  validation of this application offer a significant technological  advancement in dental shade matching, reducing the likelihood of  shade mismatch. The findings have significant implications for  clinical practice, empowering dental professionals with a reliable  tool to improve patient care and satisfaction. This study emphasizes  the importance of incorporating advanced technology into clinical  practice, ultimately improving patient outcomes. ",
+		"summary": "Summary3",
+		"members": [
+			"Tan, Micah Sophia Q.",
+			"Almoro, Jericho John O.",
+			"Cañon, Francis Dale P.",
+			"Goldman, Bianca H.",
+			"Yap, John Angelo B."
+		],
+		"category": "Img proc/CV",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"Codebebs": {
+		"groupname": "Codebebs",
+		"thesisTitle": "SirenaTech: A Water Quality Testing Algorithm for Detecting the Potability of Water",
+		"abstract": "In the Philippines alone, the amount of citizens that rely on unsafe water for daily use and consumption is at an overwhelming amount due to the fast urbanization of the country and a lack of sanitation when it comes to several bodies of water. Previous researches have aimed their focuses at being able to identify several water sources and utilizing either a machine learning algorithm or an Internet of Things device coupled with the machine learning algorithm to help monitor and classify water supplies at their sources or at a water reserve and in identifying abnormalities that the researchers would need to monitor. Here, this research utilizes an I.o.T device coupled with a Naive Bayes algorithm to help classify the data inputted form a given sensor and a Convolutional Neural Network to help monitor images of a water sample than can identify both Microscopic and Macroscopic images from a given water supply. The effectiveness of bringing an Internet of Things device and combining the technology with Machine Learning Algorithms and making the system portable via an Android Application has given the system a profound portability and accessibility when compared to pre-existing water monitoring devices. The addition of image taking as well as geotagging has given the system more versatility in the field when it comes to wastewater treatment and water quality monitoring. The system created by the researchers was able to identify macroscopic images with an accuracy of 86.5% and microscopic images with 84% for the C.N.N. algorithm and 96.9% for the Naive Bayes algorithm. These diseases but also to help bring relief to those who may be unsure of their source of water. The researchers have decided to use a machine learning model, specifically a Convolutional Neural Network, to create a system that is able to detect impurities from an image of water fed into the system.",
+		"summary": "Summary3",
+		"members": [
+			"Gavinno Othello C. Angeles",
+			"Art Eli Aluri B. Bautista",
+			"Noriel Joy S. Embudo",
+			"Seth Johann S. Esteban",
+			"Paul Andre A. Gabriel"
+		],
+		"category": "IoT",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"DEoS": {
+		"groupname": "DEoS",
+		"thesisTitle": "A BROWSER EXTENSION FOR IDENTIFYING RELEVANT PRODUCT REVIEWS ON ONLINE SHOPPING PLATFORMS USING IMAGE AND NATURAL LANGUAGE PROCESSING ALGORITHMS",
+		"abstract": "The study's aims to create a web tool designed to help general users  navigate through the reviews on the e-commerce website and help  them navigate relevant product reviews to the irrelevant ones. This  tool will help in giving users information on the relevancy of the  reviews that are displayed on e-commerce websites with the aim of  making the shopping experience easier and more efficient.  Convenient sampling was utilized and was conducted with 30  respondents gathered from different age brackets including Gen Z  composed of ages 18-24 mostly teenagers, Millennials ages 25-40,  Gen X, Merchants & CS/IT Professionals that were part of the  respondents who answered the technical and nontechnical  questionnaire based from the ISO 25010 standard, ensuring that  the respondents were knowledgeable in using e-commerce  platforms. Data from the e-commerce website was gathered using  Selenium automation to extract data from the testing environment  and processing it with Cross-correlation Template Matching  algorithm for images and Multinomial Naive Bayes algorithm for  text sentiment analysis, combining the results using a weighted  average with weights 50/50 for both algorithms. Although the  results were similar to simple mean, weighted mean was chosen for  easier manipulation of values during testing. The results were  determined by a 4-point likert-type rating scale with proper colors  for easier understanding: 76%-100% for Highly Relevant (Darker  Green), 51%-75% for Relevant (Light Green), 26%-50% for  Slightly Relevant (Orange), and 0%-25% for Irrelevant (Red)  results. ",
+		"summary": "Summary3",
+		"members": [
+			"Wilem Joshua R. Offemaria",
+			"Christian Dale D. Selisana",
+			"Patrick Nicolae M. Agbayani",
+			"John Felix M. Agda"
+		],
+		"category": "NLP",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"Engeenz": {
+		"groupname": "Engeenaz",
+		"thesisTitle": "Recognizance: An Instagram-Based Recommender System using Naïve Bayes Classifier with TensorFlow for T-Cup-Zone in the City of Manila",
+		"abstract": "Recognizance is an Instagram-based recommender system designed to address the challenges faced by T-Cup-Zone, a small food and milk tea business in Manila. This research focuses on developing a recommendation system using Naïve Bayes Classifier and Decision Tree to help them in expanding their business, identifying suitable locations for expansion, and enhancing visibility by suggesting potential influencers for product promotion. Recognizance aims to differentiate itself from traditional practices by leveraging Instagram as a platform for generating recommendations. The FURPS software quality model is utilized as the development and evaluation approach. A total of 50 respondents, consisting of CS/IT students from FEU Tech, professionals, and small business owners within Manila, evaluated the application. The assessment provided an average weighted mean of 4.5, indicating a high level of satisfaction. For users, Recognizance offers a valuable tool for small businesses aiming to enhance their marketing strategies and boost their competitiveness in the market. The proponents suggest that future researchers explore alternative social media platforms for data scraping to access a broader range of data sources, improving data quality and diversity. Additionally, the proponents recommend expanding the recommender system's categories to support a wider variety of small businesses. ",
+		"summary": "Summary3",
+		"members": [
+			"David John H. Bas",
+			"Curt Russel M. Celeste",
+			"Gerardo Joshua D.S. Dela Cruz",
+			"Miguel Angelo M. Fesalbon",
+			"Gerald Z. Gueco"
+		],
+		"category": "Data analytics",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"Hello-World": {
+		"groupname": "Hello World",
+		"thesisTitle": "Bloodline: an Emergency Blood Resource Locator Implemented Using Contraction Hierarchies In OSRMV1 and GPS Tracking",
+		"abstract": "This research paper aims to improve the blood bank system by enhancing data accuracy, organizational structure, inventory management, and path optimization. It utilizes OSRMv1, GPS technology, and advanced routing algorithms for better accuracy and efficient tracking. The study emphasizes important aspects like functional suitability, maintainability, performance efficiency, compatibility, usability, reliability, security, and portability. The research uses both developmental and descriptive methodologies, involving 50 diverse respondents. Evaluation methods include alpha testing, black box testing, white box testing, and Cronbach's alpha for questionnaire reliability. Beta testing with end-users in real-world scenarios is also conducted. Findings show high participant satisfaction across all categories, validating the effectiveness of the system enhancements. Users strongly agreed with the functional suitability (3.538), maintainability (3.475), performance efficiency (3.472), compatibility (3.625), usability (3.508), reliability (3.508), security (3.503), and portability (3.511) of the system. These positive responses demonstrate that the implemented enhancements have significantly improved the blood bank system.",
+		"summary": "Summary3",
+		"members": [
+			"Magtibay, Allan Jr C.",
+			"Carandan, Carl Anthony Lar D.",
+			"Espiritu, Randel Jason B.",
+			"Valerio, Andre Martee G."
+		],
+		"category": "Health",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"INNOV8": {
+		"groupname": "INNOV8",
+		"thesisTitle": "Name3",
+		"abstract": "An Android-based mobile application called the Indoor Air Quality  Monitoring and Recommendation System (AIRZEN) can help the  FEU Tech’s Facilities Office (FO) and general Indoor spaces in  assessing the Air Quality inside indoor spaces. This system is a tool  used to monitor and check the Air Quality inside Indoor spaces as  well as give recommendations to help mitigate the effects of bad  Indoor Air Quality. The KNN algorithm was utilized for the  prediction of the AQI value and classification of  Recommendations. To determine whether the system works as  intended, testing was administered together with a survey  participated by 50 respondents consisting of professionals from the  IT/CS/IAQ Industry, IT/CS/CPE students, IT/CS Faculty, and  Office workers. This capstone project’s output received an Above  Average rating of (4.56) in terms of Functionality, Reliability, and  Efficiency. Future researchers can make system improvements by  adding a Backup and Restore feature for times of data outage as  well as an Ios integration for a bigger range of users. An additional  Recommendation is also to add feedback from existing users inside  the application as well as a notification system that notifies users  while they are out of their homes. The proponents also recommend  the implementation of multiple monitoring device support for  bigger scalability. ",
+		"summary": "Summary3",
+		"members": [
+			"Paramio, Rhuzzel L.",
+			"Francia, Jude Michael A.",
+			"Cañete, Berwynn Rae M.",
+			"Belleza, Yunno Honesto Rico B.",
+			"Dela Cruz, Cyrill James G."
+		],
+		"category": "IoT",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"Javangers": {
+		"groupname": "Javangers",
+		"thesisTitle": "ALGPT: An AI-based Mobile Application for Generating Solution Steps in Solving Algebraic Word Problems",
+		"abstract": "The study investigates the impact of ALGPT, an Android mobile app designed specifically for the grade 7 Algebra curriculum. The primary objective of this paper is to examine how ALGPT influences the test scores of 7th grade students in Algebra. The study involved a total of 153 participants, including 133 grade 7 students, 10 math teachers, and 10 CS/IT professionals. For this reason, there were a total of 13 fine tuned Da Vinci OpenAI models. The accuracy of the models were tested using simple accuracy, true positive rate (TPR), true negative rate (TNR), negative predictive value (NPV), positive predictive value (PPV) and F-measure. The results show the app's varying accuracy and reliability across various mathematical concepts demonstrate its potential to support and enhance learning experiences.",
+		"summary": "Summary3",
+		"members": [
+			"Avañez, Nichole Anne Marie J.",
+			"Espino, Richard Lyndon M.",
+			"Esquivel, Vence Carl T.",
+			"Limyu, Alan Gabriel D.A."
+		],
+		"category": "Educ",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"Midnight-Coders": {
+		"groupname": "Midnight Coders",
+		"thesisTitle": "GoGreen: A Novel Approach to Food Waste R2 - EDUCtion through Image Processing-Based Food Analyzer and Recommendation System",
+		"abstract": "The urgent issue of food waste is addressed in this thesis using a novel system. The main goal of the study is to provide a unique method for reducing kitchen food waste using a recommendation system and image processing-driven food analysis. For the image processing-driven food analysis, the researchers employed the YOLOv5 (You Only Look Once version 5) model, a state-of-the-art deep learning model renowned for its real-time object detection capabilities. YOLOv5 enables the system to accurately identify and classify various food items within images, contributing to a more comprehensive understanding of food waste patterns. Simultaneously, a content-based recommendation system was implemented using cosine similarity. This recommendation system analyzes the ingredients of food items detected by the YOLOv5 model and compares them to suggest recipes that utilize similar ingredients. Cosine similarity, a mathematical measure of similarity between two vectors, is applied to determine the likeness between ingredient profiles. This innovative approach enhances the system's ability to suggest relevant recipes that align with the available ingredients in a user's kitchen. The importance of this study rests in its creative strategy for addressing the pressing problem of food waste. The \"GoGreen\" technology provides a workable approach to lowering kitchen waste by smoothly merging image processing for food analysis and a well-structured suggestion system. The results of this study offer useful information for both homes and culinary experts as food waste continues to pose ethical and environmental problems.",
+		"summary": "Summary3",
+		"members": [
+			"Dela Cruz, Lorenzo Miguel ",
+			"Panela, Jewel Anne B.",
+			"Liwanag, Phoebe Kelly C.",
+			"Bucsit, Mark Wilson W."
+		],
+		"category": "Img proc/CV",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"Peaky-Blinders": {
+		"groupname": "Peaky Blinders",
+		"thesisTitle": "Intelligent Tutoring System for Learning Threads using Bayesian Network",
+		"abstract": "This paper presented the development and evaluation of an  Intelligent Tutoring System (ITS) for learning Java threads.  The system utilized a Bayesian Network to predict student  certainty in Computer Science students at FEU Institute of  Technology. The main objective of the system is to help  students better understand the concept of Java threads and  improved their performance in this area. The research  approach follows a Descriptive-Developmental study  design, which evaluated the impact of the ITS on student learning outcomes. The system provided a concept thread  related activities, assesses student answers, and tracks  performance data. It benefits instructors by offering insights  into student knowledge, automating tasks, and providing  analytics for decision-making. To prove the effectiveness of  the system for tutoring computer science students. The  researchers conducted a survey involving 74 respondents,  including students and instructors. The software evaluation  received positive feedback regarding functional suitability,  usability, reliability, and efficiency. The ITS achieved a high  Likert scale average rating of 4.4 signified those respondents  were \"Very Satisfied\" with its overall performance. It  effectively supported tutoring and enhanced student learning  that highlighted the potential of Bayesian Networks in  Intelligent Tutoring Systems.",
+		"summary": "Summary3",
+		"members": [
+			"Santos, Francis Niño S. ",
+			"Reyes, John Florenz M.",
+			"Simsiman, Marvin M.",
+			"Sapnu, Dioshua D."
+		],
+		"category": "Educ",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"Quinta": {
+		"groupname": "Quinta",
+		"thesisTitle": "LANGUAGE REVIVAL: GAMIFYING KAPAMPANGAN  USING LEITNER SYSTEM AND SUPERMEMO  ALGORITHMS ",
+		"abstract": "With the decline usage of the Kapampangan language in the  Philippines, the researchers took an approach of gamified language learning approach to address this issue. Gamified  learning is an approach in learning with the application of game  elements. This allows for increase in engagement and learner  motivation. Which led the researches to create a gamified  Kapampangan android application, named “LUID.” This study  utilized the Spaced Repetition algorithms of Leitner System and  the SuperMemo Algorithm. The anticipated outcomes of this  research include the revitalization and promotion of the  Kapampangan language, empowering individuals to utilize their  mother tongue more frequently. By facilitating language learning  in an accessible and enjoyable manner, this study strives to bridge  the gap between non-proficient speakers and native speakers,  thereby promoting a more inclusive linguistic landscape within the Filipino community. With a sample population of 50 respondents being CS/IT  professionals, faculty, non-familiar, and familiar speakers being  surveyed, the results show a total average of 4.71 out of 5.0 which  shows that the application served its purpose. In order for  continuous development, the researchers would recommend OS  support for more accessibility, adding audio for pronunciation, and a multiplayer mode for additional motivation and  encouragement.",
+		"summary": "Summary3",
+		"members": [
+			"Gonzales, Michaella O. ",
+			"Magallanes, Alkier Gabriel C.",
+			"Mendoza, Dhancovic Ivan G.",
+			"Ong, Maria Evangelicalyn D.",
+			"Sapida, Charles Christian D."
+		],
+		"category": "Educ",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"return-to_sleep": {
+		"groupname": "return to_sleep",
+		"thesisTitle": "TomatoCare: A supply and demand forecasting support tool for tomatoes using ARIMA modeling.",
+		"abstract": "The tomato industry plays a crucial role in the agricultural sector, necessitating accurate supply and demand forecasting to aid farmers and stakeholders in making informed decisions. This study aimed to design and develop TomatoCare, a forecasting system that leverages ARIMA (AutoRegressive Integrated Moving Average) modeling to provide reliable forecasts and valuable insights for effective resource allocation and market planning. The research followed a mixed-methods approach, combining various data collection methods such as interviews with Subject Matter Experts (SMEs), data scraping, and data mining from external sources, including the Department of Agriculture, Department of Trade and Industry, and Philippine Statistics Authority websites. These methods facilitated the collection of comprehensive and up-to-date data on tomato supply and demand.",
+		"summary": "Summary3",
+		"members": [
+			"Mendizabal, Jed Marco S.",
+			"Cruz, Carlo Eraño C.",
+			"Nanalig, Fhiel Ashley Nichole B.",
+			"Ramoso, Zedric James D."
+		],
+		"category": "Data analytics",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"Rob_lux": {
+		"groupname": "Rob_lux",
+		"thesisTitle": "Constraint-Based Intelligent Tutor for Augmentative and Alternative Communication for Filipino Preschoolers with Speech Delay: An Application of Decision Tree Algorithm",
+		"abstract": "This study centers on the essential role played by Speech-Language Pathologists (SLPs) in the diagnosis and treatment of speech and language disorders within the Philippines. It underscores the significant difficulties resulting from the limited availability and effectiveness of Augmentative and Alternative Communication (AAC) tools, particularly in the context of the Filipino language. These limitations impede the progress of Filipino children struggling with speech delay disorders. The study aims to develop AAC software integrated with an intelligent tutoring system in Filipino. This innovative approach incorporates Filipino AAC tools such as AAC boards, assessments, client management, and identification of rapid-guessing behavior on AAC assessments on different difficulty levels using a decision tree algorithm, providing a structured and personalized therapy approach. The software was evaluated by a total of 50 participants, most of whom are our main beneficiaries- the speech-language pathologists, and the majority of them found it to be a helpful tool during therapy sessions. The findings of this study and the developed software have significant implications in the field of Augmentative and Alternative Communication (AAC). Additionally, this study's contribution serves as a foundation for future advancements in AAC-related technologies, driving innovation and improvement in the field. ",
+		"summary": "Summary3",
+		"members": [
+			"Ascaño, Leigh Reign A. ",
+			"De Leon, Jose Ian Miguel S.",
+			"Andres, Brylle Miguel E.",
+			"Fragata, Mark Revin G."
+		],
+		"category": "Educ",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"SOFTIES": {
+		"groupname": "SOFTIES",
+		"thesisTitle": "PoseCheckr: Exercise Posture Correction Application Using Image Processing",
+		"abstract": "Fitness activities are tremendously beneficial to personal health and fitness; yet, if performed incorrectly by the user, they can be unproductive and perhaps hazardous. Workout mistakes occur when the user fails to adopt proper form or stance. PoseCheckr was developed to help people monitor and track their form and posture when performing a specific exercise with the utilization of Image Processing through Convolutional Neural Networks and MoveNet, a pose estimation model. The application is able to track 17 key points of the body and make a judgment whether their form is proper or improper. If an improper form was detected, the application will give helpful feedback on how to improve their form. The application also stores the progress of the user. The application has been developed to be used by different kinds of people for their own advantages. It is mainly developed to be used by everyday citizens to avoid and prevent injuries while performing an exercise. To assess the application, the developers conducted a survey with 50 participants, including gym goers, instructors, professors, students, and experts . Within the range of categories provided by the developers, the respondents gave the program an average rating of 4.29 out of 5.0. This value is reflected as Satisfactory. The findings of this study and the developed software have significant implications in the field of fitness and Pose Estimation. For future studies, the developers recommended diversifying poses for various fitness levels, providing detailed pose explanations, collecting user feedback, and conducting long-term studies to enhance the inclusivity, safety, and effectiveness of pose exercises.",
+		"summary": "Summary3",
+		"members": [
+			"Rola, Michael John T.",
+			"Alvarez, Daniel Joseph M.",
+			"Bulos, John O'nel D.",
+			"Mazo, Alijah Ethan E."
+		],
+		"category": "Health",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"Softyware": {
+		"groupname": "Softyware",
+		"thesisTitle": "Email Phishing and Spam Detector using Backtracking Algorithm and Image Processing",
+		"abstract": "The thesis involved the usage of the Backtracking Algorithm and Yolov5 to create a phishing and spam email detector. The researchers picked 55 respondents, ranging from Information  Technology and Computer Science students, professors,  professionals, normal Gmail users, and workers under the age of  60. After testing the system, the respondents answered a five-to ten-minute survey regarding the performance of the system. Based  on the results of said survey, 64.2% of the respondents agreed that  the system successfully detected phishing and spam emails as well  as determining legitimate emails. Respondents’ comments include  praising the scoring system as well as color-coding the email  based on its severity so that the user may easily identify which  was a phishing or spam email. There were also suggestions such  as making the interface more colorful as well as having its results  screen a refresh button to avoid going back to the dashboard and  scanning once more. Given the results of the survey, the system  was a near-perfect success, despite the minor errors and  suggestions given. Future researchers would use this to expand the  current application and improve its performance by adding a  budget to its development as this application had no budget.  Future researchers were also recommended to expand the  system’s availability in operating systems, such as being able to  be run in MacOS and(or) Linux, as well as being able to accept  other types of online accounts such as Outlook.",
+		"summary": "Summary3",
+		"members": [
+			"Medenilla, Varon James A.",
+			"Calinisan, Jeremie A.",
+			"Rafanan, Daniel Marco S.",
+			"Guerrero, Drennix Jean-Roe E.",
+			"Andrada, Micko Alhwin T."
+		],
+		"category": "Data analytics",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"S.T.A.R.K.": {
+		"groupname": "S.T.A.R.K.",
+		"thesisTitle": "Video Content Analysis through Computer Vision and Natural Language Processing",
+		"abstract": "Online education has gained widespread popularity due to its delivery of high-quality educational content, rich visual resources, and access to expert instructors. However, maintaining student engagement and comprehension in online classes remains a challenge. In response, we introduce a software that analyzes educational videos, designed to enhance students' understanding of these videos efficiently. We present Video Lens, a web application that leverages Natural Language Processing (NLP) and Computer Vision techniques, rooted in deep learning foundation models. It has four video analysis features: searching in video, transcription, summarization, and topic detection.\nWe have found in the evaluation, involving students and teaching staff, the potential for Video Lens as a valuable educational tool. As a result, Video Lens has allowed us to let students test a tool for those who would like to efficiently use their time and efforts in studying their courses accompanied by video materials. This efficiency allows teaching staff to allocate more time to prepare and understand the content of lecture videos beforehand. These findings emphasize its potential to enhance the learning experience when engaging with lecture videos.",
+		"summary": "Summary3",
+		"members": [
+			"Cajipe, Ralph Henrik I.",
+			"Santos, Charles Andrew G.",
+			"Español, Kyle G.",
+			"Segundo Jr., Sally P."
+		],
+		"category": "NLP",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"TeaSis": {
+		"groupname": "TeaSis",
+		"thesisTitle": "GameFace: Head Tracking and Facial Recognition and Detection as Inputs for Gaming using Haar Cascade and MediaPipe Framework",
+		"abstract": "Video games have been around for a long time and have become a big part of people’s lives. The number of people that enjoy them are numerous; however, not everyone who enjoys them can actually play them due to physical limitations. This study aims to help people with disabilities, specifically those on the arms or hands, by providing them a new way to play games, specifically computer games, through the use of face detection, face recognition, and a face and head movement tracking system to control the video game. The program is made to be utilized in playing only simple games with at most seven controls, and can only input at maximum, two controls simultaneously. Special focus was given in making the program lightweight in order to be capable of real-time gameplay. The respondents for this study were sampled using the purposive sampling technique. The program was used by the respondents using computer vision and rated the program in accordance with ISO 25010. Their answers were obtained by utilizing surveys. On the other hand, the accuracy of the program was evaluated through alpha testing results utilizing the confusion matrix and real-world testing results. The results showed that the respondents strongly agree with the functional suitability, compatibility, and portability of the software, while they agree with the performance efficiency, usability, reliability, security, and maintainability of the software. Furthermore, the program yielded an average accuracy of 88% and an average F1 score of 0.86 or 86% in the alpha testing results, and an average accuracy of 89% for real world testing results. These results show that the program produced satisfactory results and can be used to play computer games hands-free.",
+		"summary": "Summary3",
+		"members": [
+			"Lim, Kenneth Bryce T.",
+			"Azarcon, Joshua G.",
+			"Gomez, Edra Abel S.",
+			"Contreras, John Dominic S."
+		],
+		"category": "Img proc/CV",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"TechniQ": {
+		"groupname": "TechniQ",
+		"thesisTitle": "Digital Action Officer: A Recommendation System using Machine Learning for the Streamlining of Workflow in Public Assistance Offices",
+		"abstract": "The availability of public services to meet the needs of each community is one of the most important aspects of a country. People who require government assistance submit requests for assistance through public assistance offices, however, the number of complaints and requests received by these offices has become disproportionate to the number of people processing them. To address this, the researchers proposed the development of an automated system that can assist employees in streamlining the workflow within public assistance offices, which can help enhance workplace efficiency and quicken the resolution of cases. The system uses the Multinomial Naive Bayes algorithm to extract relevant information from emails and classify them based on the training data, determining the appropriate agency for the email to be sent to. Emails received are initially processed and then stored in a database that can be easily edited and re-processed. During testing, the researchers conducted a trial using a testing dataset of 150 emails, which took three and a half minutes (3m30s) to classify and send emails to their appropriate agencies, which is a significant improvement compared to the manual system that is able to process 300-500 emails within a 3-day timeframe. The researchers surveyed 45 respondents comprising students, teachers, professionals, and public assistance officers to evaluate the application. The respondents rated the application an average of 4.6 out of 5.0 across the categories given by the developers which corresponds to a Satisfactory rating. For future studies, the researchers recommended for the program to accommodate more classifications, separate the nature of concern and agency in the classification, implement alternative algorithms, implement stronger security measures, and add filtering options.",
+		"summary": "Summary2",
+		"members": [
+			"Gacula, Gabrielle Rose P.",
+			"Tantay, Patrick Wayne",
+			"Vallo, Kyle Dominic C.",
+			"Alido, Rico Ray R."
+		],
+		"category": "NLP",
+		"posterFilePath": "",
+		"AVPLink": ""
+	},
+	"Yaymiko": {
+		"groupname": "Yaymiko",
+		"thesisTitle": "Guide to Geometry (GtG) : Mobile App Intelligent Tutoring System for Grade 8 Geometry Using Logistic Regression",
+		"abstract": "According to the study of Dayao, R. J. C (2018) the Philippines faces a problem of improving Filipino students’ performance in mathematics and science. Many Filipino students lacked the capacity to academically compete globally. Geometry was one of the lowest mastered areas in grade 8 students and many were below the 75% passing mark (Capate, 2017). This shows that many students have difficulties mastering the contents of these topics. This study presents the development of a mobile application that uses an Intelligent Tutoring System (ITS) for grade 8 students in the topic of Geometry, specifically Triangles. The application uses the Logistic regression algorithm to predict the confusion behavior of the students by having confusion as the dependent variable and Score, TakingTime, TimePercentage, and GuessCheck constraints as the independent variables. It also uses a fuzzy logic controller (FLC) to evaluate and categorize students’ performance during quizzes. The FLC mirrors human reasoning processes to distinguish varying levels of mastery. The respondents of the study will be grade 8 students of no particular school with a sample size of 30.\nThe logistic regression model exhibited high accuracy of 95% in identifying student confusion and allows for timely intervention. Students that also took multiple attempts using the application also displayed higher scores on their subsequent quiz attempts.",
+		"summary": "Summary1",
+		"members": [
+			"Peñaranda, Charles Dmitri M.",
+			"Albano, Ivan Dominic",
+			"Claveria, Kyle Sebastian T.",
+			"Vicencio, Vernon GabrielAngelo A."
+		],
+		"category": "Educ",
+		"posterFilePath": "",
+		"AVPLink": ""
+	}
+}

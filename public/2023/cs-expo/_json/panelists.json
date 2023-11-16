@@ -1,69 +1,68 @@
 {
-    "panelists": [
-      {
-        "name": "PANELIST 1",
-        "photoNumber": "Photo 1",
-        "profession": "Software Engineer",
-        "intOrExt": "INTERNAL",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus",
-        "photo": ""
-      },
-      {
-        "name": "PANELIST 2",
-        "photoNumber": "Photo 2",
-        "profession": "Software Analyst",
-        "intOrExt": "EXTERNAL",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus",
-        "photo": ""
-      },
-      {
-        "name": "PANELIST 3",
-        "photoNumber": "Photo 3",
-        "profession": "Game Developer",
-        "intOrExt": "INTERNAL",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus",
-        "photo": ""
-      },
-      {
-        "name": "PANELIST 4",
-        "photoNumber": "Photo 4",
-        "profession": "Cyber Security",
-        "intOrExt": "EXTERNAL",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus",
-        "photo": ""
-      },
-      {
-        "name": "PANELIST 5",
-        "photoNumber": "Photo 5",
-        "profession": "Computer Technician",
-        "intOrExt": "INTERNAL",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus",
-        "photo": ""
-      },
-      {
-        "name": "PANELIST 6",
-        "photoNumber": "Photo 6",
-        "profession": "Computer Engineer",
-        "intOrExt": "EXTERNAL",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus",
-        "photo": ""
-      },
-      {
-        "name": "PANELIST 7",
-        "photoNumber": "Photo 7",
-        "profession": "Data Scientist",
-        "intOrExt": "INTERNAL",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus",
-        "photo": ""
-      },
-      {
-        "name": "PANELIST 8",
-        "photoNumber": "Photo 8",
-        "profession": "Software Consultant",
-        "intOrExt": "EXTERNAL",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus",
-        "photo": ""
-      }
-    ]
-  }
-  
+	"panelists": [
+		{
+			"name": "PANELIST 1",
+			"photoNumber": "Photo 1",
+			"profession": "Software Engineer",
+			"intOrExt": "INTERNAL",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus",
+			"photo": ""
+		},
+		{
+			"name": "PANELIST 2",
+			"photoNumber": "Photo 2",
+			"profession": "Software Analyst",
+			"intOrExt": "EXTERNAL",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus",
+			"photo": ""
+		},
+		{
+			"name": "PANELIST 3",
+			"photoNumber": "Photo 3",
+			"profession": "Game Developer",
+			"intOrExt": "INTERNAL",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus",
+			"photo": ""
+		},
+		{
+			"name": "PANELIST 4",
+			"photoNumber": "Photo 4",
+			"profession": "Cyber Security",
+			"intOrExt": "EXTERNAL",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus",
+			"photo": ""
+		},
+		{
+			"name": "PANELIST 5",
+			"photoNumber": "Photo 5",
+			"profession": "Computer Technician",
+			"intOrExt": "INTERNAL",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus",
+			"photo": ""
+		},
+		{
+			"name": "PANELIST 6",
+			"photoNumber": "Photo 6",
+			"profession": "Computer Engineer",
+			"intOrExt": "EXTERNAL",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus",
+			"photo": ""
+		},
+		{
+			"name": "PANELIST 7",
+			"photoNumber": "Photo 7",
+			"profession": "Data Scientist",
+			"intOrExt": "INTERNAL",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus",
+			"photo": ""
+		},
+		{
+			"name": "PANELIST 8",
+			"photoNumber": "Photo 8",
+			"profession": "Software Consultant",
+			"intOrExt": "EXTERNAL",
+			"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl purus in mollis nunc sed id semper risus. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus",
+			"photo": ""
+		}
+	]
+}

@@ -3,30 +3,30 @@
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
 
-    /* Palette */
-    --coral-pink: #ff5a5f;
-    --eerie-black: #1b1c20;
-    --timberwolf: #e0d9d3;
+	/* Palette */
+	--coral-pink: #ff5a5f;
+	--eerie-black: #1b1c20;
+	--timberwolf: #e0d9d3;
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
-    }
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
 }
 
 .hall-of-fame-header {
-    writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
 }
 
 @media (max-width: 1024px) {
-    .hall-of-fame-header {
-        writing-mode: initial;
-    }
+	.hall-of-fame-header {
+		writing-mode: initial;
+	}
 }
