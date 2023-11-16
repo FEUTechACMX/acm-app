@@ -1,7 +1,7 @@
 "use client";
 import { useAppSelector } from "@/utils/redux/hooks";
 import { useEffect, useRef } from "react";
-type Path = `/media/music/${string}.mp3` | `/media/sfx${string}.mp3`;
+type Path = `/2023/media/music/${string}.mp3` | `/2023/media/sfx${string}.mp3`;
 
 interface AudioProps {
 	path: Path;

@@ -10,8 +10,8 @@
 		"start": "next start",
 		"lint": "next lint && stylelint \"**/*.css\"",
 		"prepare": "husky install",
-		"fontello": "cd public/media/icons && fontello-cli --config fontello-84cd01f8/config.json open",
-		"fontello-update": "cd public/media/icons && fontello-cli --config fontello-84cd01f8/config.json install",
+		"fontello": "fontello-cli --config $(grep -rl 'fontello-84cd01f8/config.json' public) open",
+		"fontello-update": "fontello-cli --config $(grep -rl 'fontello-84cd01f8/config.json' public) install",
 		"bubblewrap": "npx bubblewrap init --manifest=https://acmx.vercel.app/manifest.webmanifest",
 		"killport": "node -e \"const kill = require('kill-port');const p = 3000; setTimeout(() => kill(p, 'tcp').then(console.log('killed 3000'),process.exit(0)).catch(console.log('3000 not killed'),process.exit(0)), 1000)\"",
 		"removeNext": "node -e \"const fs = require('fs');const p = '.next';try {fs.rmdirSync(p, { recursive: true });} catch (e) {console.warn('Error folder:', p, e);}process.exit(0);\""
@@ -96,7 +96,7 @@
 			"no-descending-specificity": null
 		},
 		"ignoreFiles": [
-			"public/media/icons/**/*"
+			"public/2023/media/icons/**/*"
 		]
 	}
 }

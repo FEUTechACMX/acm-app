@@ -97,7 +97,7 @@
 	},
 	"screenshots":  [
 		{
-			"src": "/media/img/screenshots/homepage.png",
+			"src": "/2023/media/img/screenshots/homepage.png",
 			"sizes": "1440x900",
 			"label": "ACM-X Homepage"
 		}

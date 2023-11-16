@@ -12,7 +12,7 @@
 		"prettier",
 		"next/core-web-vitals"
 	],
-	"ignorePatterns": ["public/media/icons/**/*"],
+	"ignorePatterns": ["public/2023/media/icons/**/*"],
 	"parserOptions": {
 		"ecmaVersion": "latest",
 		"sourceType": "module",

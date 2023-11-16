@@ -9,7 +9,7 @@ const Committees: React.FC = () => {
 				return (
 					<div key={index} className="relative h-16 w-32">
 						<Image
-							src={`/media/img/officers/execs/${officer}`}
+							src={`/2023/media/img/officers/execs/${officer}`}
 							alt="FEU Tech ACM Logo"
 							layout={"fill"}
 							objectFit={"contain"}
