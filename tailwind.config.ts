@@ -20,7 +20,20 @@ const config: Config = {
 				accents: "var(--accents)",
 				text: "var(--text)",
 				panelColor: "var(--panel-color)",
+				'coral-pink': '#FF5A5F',
+				'eerie-black': '#1B1C20',
+				'timberwolf': '#E0D9D3',
 			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-conic':
+					'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+
+			},
+			screens: {
+				'ms': '320px', // Add your custom breakpoint here
+			},
+
 			boxShadowColor: {
 				panelColor: "var(--panel-color)",
 			},
