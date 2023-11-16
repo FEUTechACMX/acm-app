@@ -95,7 +95,7 @@
 	"scope_extensions": {
 		"origin": "https://acmx.vercel.app"
 	},
-	"screenshots":  [
+	"screenshots": [
 		{
 			"src": "/2023/media/img/screenshots/homepage.png",
 			"sizes": "1440x900",
