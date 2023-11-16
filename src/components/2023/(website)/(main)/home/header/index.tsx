@@ -12,7 +12,7 @@ const links: LinkProps[] = [
 	},
 	{
 		name: "--CS EXPO 2023--",
-		href: "/cs-expo",
+		href: "/2023/cs-expo",
 	},
 	{
 		name: "Collaborate with us",
