@@ -1,14 +1,14 @@
 "use client";
-
-import React, { useEffect } from "react";
-import {
-	AiOutlineLeft,
-	AiOutlineRight,
-	AiOutlineDown,
-	AiOutlineUp,
-} from "react-icons/ai";
+import Glide from "@glidejs/glide";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
+import {
+	AiOutlineDown,
+	AiOutlineLeft,
+	AiOutlineRight,
+	AiOutlineUp,
+} from "react-icons/ai";
 
 interface Slide {
 	backgroundColor: string;
@@ -33,7 +33,7 @@ interface CarouselProps {
 const Carousel: React.FC<CarouselProps> = ({
 	title,
 	slides,
-	perView,
+	// perView,
 	id,
 	carouselNumber,
 	carouselUp,
@@ -48,7 +48,7 @@ const Carousel: React.FC<CarouselProps> = ({
 		const targetDivUp = document.getElementById(carouselUpTarget);
 		const targetDivDown = document.getElementById(carouselDownTarget);
 
-		carouselUp.addEventListener("click", () => {
+		carouselUp?.addEventListener("click", () => {
 			console.log("up clicked");
 			if (targetDivUp) {
 				const targetPosition = targetDivUp.offsetTop;
@@ -62,7 +62,7 @@ const Carousel: React.FC<CarouselProps> = ({
 			}
 		});
 
-		carouselDown.addEventListener("click", () => {
+		carouselDown?.addEventListener("click", () => {
 			console.log("down clicked");
 			if (targetDivDown) {
 				const targetPosition = targetDivDown.offsetTop;
@@ -76,8 +76,7 @@ const Carousel: React.FC<CarouselProps> = ({
 			}
 		});
 
-		// Carousel
-		const config = {
+		const glide = new Glide(`#${id}`, {
 			type: "slider",
 			startAt: 0,
 			perView: 2,
@@ -85,9 +84,7 @@ const Carousel: React.FC<CarouselProps> = ({
 				before: 0,
 				after: 100,
 			},
-		};
-
-		const glide = new Glide(`#${id}`, config);
+		});
 
 		glide.on(["mount.after", "run"], () => {
 			const currentIndex = glide.index;
@@ -141,7 +138,7 @@ const Carousel: React.FC<CarouselProps> = ({
 							</div>
 							<div className="flex-grow relative">
 								<Image
-									src={"/halftone.png"}
+									src={"/2023/cs-expo/halftone.png"}
 									className="mt-4 ms-2"
 									layout="fill"
 									objectFit="cover"
@@ -175,8 +172,11 @@ const Carousel: React.FC<CarouselProps> = ({
 					<div className="w-[650px] sm:w-[1000px]">
 						<div className="glide__track" data-glide-el="track">
 							<ul className="glide__slides">
-								{slides.map((slide) => (
-									<li className="glide__slide flex flex-col items-center justify-center">
+								{slides.map((slide, index) => (
+									<li
+										className="glide__slide flex flex-col items-center justify-center"
+										key={index}
+									>
 										<div
 											id={`slide-image-${id}`}
 											className="w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]"

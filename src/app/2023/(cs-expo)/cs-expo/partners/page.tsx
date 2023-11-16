@@ -1,10 +1,8 @@
-import React from "react";
 import { NextPage } from "next";
-import PartnerIconsLayout from "../../components/PartnerIconsLayout";
-import AlternatingPartnersLayout from "../../components/AlternatingPartnersLayout";
-import partnersData from "../../partners.json";
-import CircularSidebar from "@/components/PartnersSidebar";
-
+import PartnerIconsLayout from "@expo23-components/PartnerIconsLayout";
+import AlternatingPartnersLayout from "@expo23-components/AlternatingPartnersLayout";
+import partnersData from "@expo23-json/partners.json";
+import CircularSidebar from "@expo23-components/PartnersSidebar";
 const Partners: NextPage = () => {
 	const partnerArray = Object.values(partnersData);
 	const partners = partnerArray.map((partnersData) => partnersData.imagePath); // Assuming 'imagePath' is the correct property

@@ -1,8 +1,8 @@
 "use client";
-
-import { AiOutlineUp, AiOutlineDown } from "react-icons/ai";
-import React, { useState, useEffect } from "react";
-
+import Splide from "@splidejs/splide";
+import { useEffect, useState } from "react";
+import { AiOutlineDown, AiOutlineUp } from "react-icons/ai";
+import Image from "next/image";
 interface Slide {
 	link: string;
 }
@@ -72,13 +72,17 @@ const GallerySlider: React.FC<GallerySliderProps> = ({ slides }) => {
 			<div id="my_splide" className="splide h-[250px] w-full overflow-hidden">
 				<div className="splide__track">
 					<ul className="splide__list h-[100px]">
-						{slides.map((slide) => (
-							<li className="splide__slide flex justify-center">
+						{slides.map((slide, index) => (
+							<li className="splide__slide flex justify-center" key={index}>
 								<div
 									id="slide-card"
 									className="h-[108px] flex justify-center items-center"
 								>
-									<img src={slide.link} className="w-48 h-[100px]"></img>
+									<img
+										alt={slide.link}
+										src={slide.link}
+										className="w-48 h-[100px]"
+									></img>
 								</div>
 							</li>
 						))}

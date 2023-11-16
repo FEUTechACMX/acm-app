@@ -1,5 +1,4 @@
-import React from "react";
-
+import Image from "next/image";
 interface AboutComponentProps {
 	customText: string;
 	sampleText: string;
@@ -7,7 +6,7 @@ interface AboutComponentProps {
 
 const AboutComponent: React.FC<AboutComponentProps> = ({
 	customText,
-	sampleText,
+	// sampleText,
 }) => {
 	return (
 		<div className="flex flex-col items-center sm:flex-row right-0 ml-auto lg:space-x-20">
@@ -18,11 +17,11 @@ const AboutComponent: React.FC<AboutComponentProps> = ({
 				</p>
 			</div>
 			<div className="p-20 sm:p-44 bg-timberwolf mt-3 mb-12">
-				<img
+				{/* <Image
 					src="/samplePhoto.png"
-					alt="SamplePhoto2"
-					className="right-0 self-end"
-				/>
+					alt="SamplePhoto1"
+					className="left-0 self-start"
+				/> */}
 			</div>
 		</div>
 	);

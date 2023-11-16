@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
 import { NextPage } from "next";
 
-import CollectionOfProjectsHeader from "../../../components/CollectionOfProjectsHeader";
-import GroupCardLayout from "../../../components/GroupCardLayout";
-import ThesisProjectsList from "../../../components/ThesisProjectReader";
-import thesisData from "../../../thesis-projects.json";
-import GroupsData from "../../../thesis-projects.json";
+import CollectionOfProjectsHeader from "@expo23-components/CollectionOfProjectsHeader";
+import GroupCardLayout from "@expo23-components/GroupCardLayout";
+// import ThesisProjectsList from "@expo23-components/ThesisProjectReader";
+// import thesisData from "@expo23-json/thesis-projects.json";
+// import GroupsData from "@expo23-json/;
 
 {
 	/* <ThesisProjectsList />
@@ -33,7 +32,7 @@ interface ThesisProjectData {
 	};
 }
 
-const CollectionOfProjects: NextPage = async () => {
+const CollectionOfProjects: NextPage = () => {
 	return (
 		<main className="flex min-h-screen flex-col p-24">
 			<CollectionOfProjectsHeader

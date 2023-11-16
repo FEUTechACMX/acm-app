@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 
 interface EventsOverviewHeaderProps {
 	title: string[];
@@ -17,13 +17,13 @@ const EventsHeader: React.FC<EventsOverviewHeaderProps> = ({
 	const detailclassName: string =
 		"text-base font-bold bg-transparent flex py-4 px-8 lex justify-center items-center text-coral-pink";
 
-	const nextEvent = () => {
-		setCurrentEvent((prev) => (prev < 3 ? prev + 1 : 0)); // Assuming there are 4 events
-	};
+	// const nextEvent = () => {
+	// 	setCurrentEvent((prev) => (prev < 3 ? prev + 1 : 0)); // Assuming there are 4 events
+	// };
 
-	const prevEvent = () => {
-		setCurrentEvent((prev) => (prev > 0 ? prev - 1 : 3)); // Assuming there are 4 events
-	};
+	// const prevEvent = () => {
+	// 	setCurrentEvent((prev) => (prev > 0 ? prev - 1 : 3)); // Assuming there are 4 events
+	// };
 
 	return (
 		<div>

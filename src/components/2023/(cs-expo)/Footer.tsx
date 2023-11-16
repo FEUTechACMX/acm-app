@@ -1,6 +1,5 @@
-import React from "react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
 	return (
@@ -73,10 +72,10 @@ const Footer: React.FC = () => {
 					</a>
 				</div>
 
-				<div className="flex flex-col ml-auto hidden sm:flex ms:hidden">
+				<div className="flex flex-col ml-auto sm:flex ms:hidden">
 					<Link href="/">
 						<Image
-							src="/cs-expo-logo-black.png"
+							src="/2023/cs-expo/cs-expo-logo-black.png"
 							alt="Description of your image"
 							width={160}
 							height={120}
@@ -88,7 +87,7 @@ const Footer: React.FC = () => {
 			<div className="relative justify-center flex py-5 pl-10 mx-auto pr-10 sm:hidden ms:flex">
 				<Link href="/">
 					<Image
-						src="/cs-expo-logo-black.png"
+						src="/2023/cs-expo/cs-expo-logo-black.png"
 						alt="Description of your image"
 						width={120}
 						height={80}

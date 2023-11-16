@@ -1,7 +1,7 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const Sidebar = ({ sideBarCallback }) => {
+const CircularSidebar = () => {
 	const [showArrow, setShowArrow] = useState(false);
 	const [showArrowColor, setShowArrowColor] = useState("coral-pink");
 
@@ -9,9 +9,16 @@ const Sidebar = ({ sideBarCallback }) => {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	};
 
-	const handleBoxClick = (boxNumber) => {
-		// Action
-		sideBarCallback(boxNumber);
+	const handleButtonClick = (buttonName) => {
+		console.log(`Clicked on ${buttonName} Button`);
+
+		const sectionElement = document.getElementById(buttonName.toLowerCase());
+
+		if (sectionElement) {
+			const scrollPosition = sectionElement.offsetTop;
+
+			window.scrollTo({ top: scrollPosition, behavior: "smooth" });
+		}
 	};
 
 	const handleScroll = () => {
@@ -42,22 +49,14 @@ const Sidebar = ({ sideBarCallback }) => {
 					</div>
 				</div>
 			)}
-			<div className="mb-2 mr-5 ml-5 flex-col text-white items-center justify-center">
-				{[
-					"All",
-					"Data Analytics",
-					"Education",
-					"Health",
-					"Img Proc - CV",
-					"IOT",
-					"NLP",
-				].map((boxNumber) => (
+			<div className="mr-10 ml-10 flex flex-col items-center text-white">
+				{["Major", "Minor", "Media"].map((buttonName, index) => (
 					<div
-						key={boxNumber}
-						className="w-40 h-10 bg-coral-pink mb-2 flex items-center justify-center cursor-pointer hover:bg-black transition duration-300 ease-in-out"
-						onClick={() => handleBoxClick(boxNumber)}
+						key={index}
+						className="w-20 h-20 bg-coral-pink rounded-full mb-2 flex items-center justify-center cursor-pointer"
+						onClick={() => handleButtonClick(buttonName)}
 					>
-						{boxNumber}
+						{buttonName}
 					</div>
 				))}
 			</div>
@@ -65,4 +64,4 @@ const Sidebar = ({ sideBarCallback }) => {
 	);
 };
 
-export default Sidebar;
+export default CircularSidebar;

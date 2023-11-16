@@ -56,7 +56,7 @@ const Nav: React.FC = () => {
 			}}
 			className="w-screen fixed p-2 border-t-4 border-panelBg border-solid z-20 flex justify-between font-bold backdrop-blur"
 		>
-			<Link href="/" className="flex justify-center items-center">
+			<Link href="/2023/cs-expo" className="flex justify-center items-center">
 				<div className="relative h-8 w-16">
 					<Image
 						src="/2023/media/img/logo/FIT_ACM.png"

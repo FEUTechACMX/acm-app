@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
-import Navbar from "@/components/NavBar";
-import Footer from "@/components/Footer";
-import HomeHeader from "@/components/HomeOverviewHeader";
+import { useEffect, useRef, useState } from "react";
+// import NavBar from "@expo23-components/NavBar";
+// import Footer from "@expo23-components/Footer";
+import HomeHeader from "@expo23-components/HomeOverviewHeader";
 
 export default function Home() {
-	const [text, setText] = useState("");
+	const [text, setText] = useState<string>("");
 	const textElementRef = useRef(null);
 	let timer: ReturnType<typeof setTimeout>;
 
@@ -77,7 +77,7 @@ export default function Home() {
           tempor incididunt ut labore et dolore magna aliqua. Nisi purus in mollis\n
           nunc sed id semper risus volutpat consequat mauris nunc congue nisi\n
           vitae suscipit tellus.`}
-				button="/events/cs-expo"
+				button="/2023/cs-expo/events/cs-expo"
 			/>
 			<HomeHeader
 				title="DEV DAY"
@@ -85,7 +85,7 @@ export default function Home() {
           tempor incididunt ut labore et dolore magna aliqua. Nisi purus in mollis\n
           nunc sed id semper risus volutpat consequat mauris nunc congue nisi\n
           vitae suscipit tellus.`}
-				button="/events/dev-day"
+				button="/2023/cs-expo/events/dev-day"
 			/>
 		</main>
 	);

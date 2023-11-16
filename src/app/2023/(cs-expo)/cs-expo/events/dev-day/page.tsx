@@ -1,14 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
-import Carousel from "@/components/Carousel";
-import PhotoComponent from "@/components/PhotoComponent";
-import AboutComponent from "@/components/AboutComponent";
-import ButtonComponent from "@/components/ButtonComponent";
-import SpeakerPanelistLayout from "../../../components/SpeakerPanelistLayout";
-import panelistsData from "@/panelists.json";
+import { useState } from "react";
+import { NextPage } from "next";
+import Carousel from "@expo23-components/Carousel";
+import PhotoComponent from "@expo23-components/PhotoComponent";
+import AboutComponent from "@expo23-components/AboutComponent";
+import ButtonComponent from "@expo23-components/ButtonComponent";
+import SpeakerPanelistLayout from "@expo23-components/SpeakerPanelistLayout";
+import panelistsData from "@expo23-json/panelists.json";
 
-export const EventsCSExpo = () => {
+export const EventsCSExpo: NextPage = () => {
 	const [currentButton, setCurrentButton] = useState(1);
 	const [currentIndex, setCurrentIndex] = useState(0);
 

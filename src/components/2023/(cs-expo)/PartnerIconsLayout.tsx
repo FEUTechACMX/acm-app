@@ -1,6 +1,3 @@
-import React from "react";
-import Image from "next/image";
-
 interface PartnerIconProps {
 	partner: {
 		imagePath?: string;
@@ -24,17 +21,23 @@ const PartnerIcon: React.FC<PartnerIconProps> = ({ partner }) => {
 };
 
 interface PartnersIconLayoutProps {
-	partners: Array<any>;
+	partners: any[];
 }
 const PartnerIconsLayout: React.FC<PartnersIconLayoutProps> = ({
 	partners,
 }) => {
-	const partnerIcons = [];
+	const partnerIcons: any[] = [];
 
 	partners.forEach((partner, index) => {
 		partnerIcons.push(<PartnerIcon key={index} partner={partner} />);
 	});
-	return <>{partnerIcons}</>;
+	return (
+		<>
+			{partnerIcons.forEach((partnerIcon) => {
+				return partnerIcon;
+			})}
+		</>
+	);
 };
 
 export default PartnerIconsLayout;

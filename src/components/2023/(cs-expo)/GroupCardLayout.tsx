@@ -1,7 +1,7 @@
 "use client";
-import Link from "@/node_modules/next/link";
-import React, { useEffect, useState } from "react";
-import Sidebar from "@/components/ProjectsSidebar";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import Sidebar from "./ProjectsSidebar";
 
 interface GroupCardProps {
 	groupId: string;
@@ -33,7 +33,7 @@ const GroupCard: React.FC<GroupCardProps> = ({
 					<div className="flex "></div>
 					<div className="flex flex-col h-[140px] bg-rose-500 s-full text-white text-start text-2xl px-2 pr-2 pt-1">
 						<div className="font-bold font-['Helvetica Now Text']">
-							{group.groupname}
+							{group.groupName}
 						</div>
 						<div className="text-sm font-['Helvetica Now Text']">
 							{group.thesisTitle}
@@ -52,13 +52,13 @@ const GroupCardLayout: React.FC<GroupCardLayoutProps> = ({ groupData }) => {
 	const groupNames = Object.keys(groupData);
 	const groupCards: React.JSX.Element[] = [];
 
-	const [allFilter, setAllFilter] = useState(true);
-	const [dataanalyticFilter, setDataanalyticFilter] = useState(false);
-	const [educationFilter, setEducationFilter] = useState(false);
-	const [healthFilter, setHealthFilter] = useState(false);
-	const [imgproccvFilter, setImageprooccvFilter] = useState(false);
-	const [iotFilter, setIotFilter] = useState(false);
-	const [nlpFilter, setNlpFilter] = useState(false);
+	const [allFilter, setAllFilter] = useState<boolean>(true);
+	const [dataanalyticFilter, setDataanalyticFilter] = useState<boolean>(false);
+	const [educationFilter, setEducationFilter] = useState<boolean>(false);
+	const [healthFilter, setHealthFilter] = useState<boolean>(false);
+	const [imgproccvFilter, setImageprooccvFilter] = useState<boolean>(false);
+	const [iotFilter, setIotFilter] = useState<boolean>(false);
+	const [nlpFilter, setNlpFilter] = useState<boolean>(false);
 
 	const [currentFilter, setCurrentFilter] = useState(() => {
 		if (typeof localStorage !== "undefined") {

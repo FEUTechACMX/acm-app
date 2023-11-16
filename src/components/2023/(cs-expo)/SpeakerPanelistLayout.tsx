@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
-	AiOutlineUp,
 	AiOutlineDown,
 	AiOutlineLeft,
 	AiOutlineRight,
+	AiOutlineUp,
 } from "react-icons/ai";
 
 interface SpeakerPanelistLayoutProps {
@@ -18,7 +18,7 @@ interface SpeakerPanelistLayoutProps {
 
 const SpeakerPanelistLayout: React.FC<SpeakerPanelistLayoutProps> = ({
 	speakerNames,
-	photoNumber,
+	// photoNumber,
 	speakerProfession,
 	intOrExt,
 	panelOrSpeaker,

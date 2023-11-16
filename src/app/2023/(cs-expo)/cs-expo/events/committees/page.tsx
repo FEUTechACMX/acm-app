@@ -1,9 +1,9 @@
-import React from "react";
-import MeetTheCommitteesHeader from "@/components/MeetTheCommitteesHeader";
-import CommitteesGrid from "@/components/CommitteesGrid";
-import CommitteesPic from "@/components/CommitteesPic";
+import { NextPage } from "next";
+import MeetTheCommitteesHeader from "@expo23-components/MeetTheCommitteesHeader";
+import CommitteesGrid from "@expo23-components/CommitteesGrid";
+import CommitteesPic from "@expo23-components/CommitteesPic";
 
-const EventsCommittees = () => {
+const EventsCommittees: NextPage = () => {
 	return (
 		<main className="flex min-h-screen justify-between p-24">
 			<div>

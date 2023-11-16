@@ -1,7 +1,6 @@
-import React from "react";
-
 interface ButtonComponentProps {
 	currentButton: number;
+	// eslint-disable-next-line no-unused-vars
 	changeButton: (buttonNumber: number) => void;
 }
 
