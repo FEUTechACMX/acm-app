@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="dmd" id="CDCD5196-980C-5E63-CAA2-AE538973ADD5" version="3.5">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:04:56 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>CDCD5196-980C-5E63-CAA2-AE538973ADD5</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="B57A9756-2CA3-5EDF-350A-548F33414420">
+<designStoragePath>/PP</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

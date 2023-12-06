@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="CommitteeMembers" directorySegmentName="seg_0" id="490F076F-96B2-F751-B436-28498B556C86">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="user_id" id="0F0931DF-50D4-4E86-0E90-069F25151D30">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="committee_id" id="6C9A50DB-3C6E-1725-C961-99BAF287B84D">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="is_director" id="758E0589-F044-2B03-C75F-330FAA0E01F8">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="CommitteeMembers_PK" id="40F1DB7F-9CF2-FD7E-2B45-5E6C0284E0C9">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="SYS_CommitteeMembers0" id="45492238-66D3-A9AF-CD98-3FFBC0876F77">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+<TableCheckConstraint name="max_committees" id="4C5C800E-EDC3-61BA-57A8-24F903F55FB7">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+<TableCheckConstraint name="SYS_CommitteeMembers1" id="72CE666C-6192-3475-9789-04BF1D324DA0">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+</tableCheckConstraints>
+</TableProxyOraclev11g>

@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<settings>
+	<logical_type_for_domain_presentation value="false" />
+	<automatic_pk_generation value="false" />
+	<automatic_uk_generation value="false" />
+	<automatic_fk_generation value="false" />
+	<preserve_ddl_generation_options value="false" />
+	<use_global_design_level_settings value="false" />
+	<use_preferred_classification_types value="false" />
+	<substitution_patterns>
+	</substitution_patterns>
+	<classification_types>
+		<type name="ファクト" color="-7482" fgcolor="-16776961" prefix="" id="1" preferred="false" >
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="要素" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="4"/>
+			<font_object fo_type="データ型" font_color="-16744448" font_name="Dialog" font_size="10" font_style="0" id="5"/>
+			<font_object fo_type="PK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="7"/>
+			<font_object fo_type="FK要素" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="8"/>
+			<font_object fo_type="UK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="9"/>
+			<font_object fo_type="NOT NULL" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="10"/>
+			<font_object fo_type="キー" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="6"/>
+			<font_object fo_type="コメント" font_color="-12566464" font_name="Dialog" font_size="10" font_style="0" id="28"/>
+		</fonts>
+		</type>
+		<type name="ディメンション" color="-1781507" fgcolor="-16776961" prefix="" id="2" preferred="false" >
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="要素" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="4"/>
+			<font_object fo_type="データ型" font_color="-16744448" font_name="Dialog" font_size="10" font_style="0" id="5"/>
+			<font_object fo_type="PK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="7"/>
+			<font_object fo_type="FK要素" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="8"/>
+			<font_object fo_type="UK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="9"/>
+			<font_object fo_type="NOT NULL" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="10"/>
+			<font_object fo_type="キー" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="6"/>
+			<font_object fo_type="コメント" font_color="-12566464" font_name="Dialog" font_size="10" font_style="0" id="28"/>
+		</fonts>
+		</type>
+		<type name="ロギング" color="-1776412" fgcolor="-16776961" prefix="" id="3" preferred="false" >
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="要素" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="4"/>
+			<font_object fo_type="データ型" font_color="-16744448" font_name="Dialog" font_size="10" font_style="0" id="5"/>
+			<font_object fo_type="PK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="7"/>
+			<font_object fo_type="FK要素" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="8"/>
+			<font_object fo_type="UK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="9"/>
+			<font_object fo_type="NOT NULL" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="10"/>
+			<font_object fo_type="キー" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="6"/>
+			<font_object fo_type="コメント" font_color="-12566464" font_name="Dialog" font_size="10" font_style="0" id="28"/>
+		</fonts>
+		</type>
+		<type name="サマリー" color="-3148598" fgcolor="-16776961" prefix="" id="4" preferred="false" >
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="要素" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="4"/>
+			<font_object fo_type="データ型" font_color="-16744448" font_name="Dialog" font_size="10" font_style="0" id="5"/>
+			<font_object fo_type="PK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="7"/>
+			<font_object fo_type="FK要素" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="8"/>
+			<font_object fo_type="UK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="9"/>
+			<font_object fo_type="NOT NULL" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="10"/>
+			<font_object fo_type="キー" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="6"/>
+			<font_object fo_type="コメント" font_color="-12566464" font_name="Dialog" font_size="10" font_style="0" id="28"/>
+		</fonts>
+		</type>
+		<type name="一時" color="-1" fgcolor="-16776961" prefix="" id="5" preferred="false" >
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="要素" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="4"/>
+			<font_object fo_type="データ型" font_color="-16744448" font_name="Dialog" font_size="10" font_style="0" id="5"/>
+			<font_object fo_type="PK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="7"/>
+			<font_object fo_type="FK要素" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="8"/>
+			<font_object fo_type="UK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="9"/>
+			<font_object fo_type="NOT NULL" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="10"/>
+			<font_object fo_type="キー" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="6"/>
+			<font_object fo_type="コメント" font_color="-12566464" font_name="Dialog" font_size="10" font_style="0" id="28"/>
+		</fonts>
+		</type>
+		<type name="外部" color="-720908" fgcolor="-16776961" prefix="" id="6" preferred="false" >
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="要素" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="4"/>
+			<font_object fo_type="データ型" font_color="-16744448" font_name="Dialog" font_size="10" font_style="0" id="5"/>
+			<font_object fo_type="PK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="7"/>
+			<font_object fo_type="FK要素" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="8"/>
+			<font_object fo_type="UK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="9"/>
+			<font_object fo_type="NOT NULL" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="10"/>
+			<font_object fo_type="キー" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="6"/>
+			<font_object fo_type="コメント" font_color="-12566464" font_name="Dialog" font_size="10" font_style="0" id="28"/>
+		</fonts>
+		</type>
+		</classification_types>
+	<default_fonts_and_colors>
+		<fc_object classname="Entity" background="-5971457" foreground="-16776961" noBackgroundColor="false" noForegroundColor="false">
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="属性" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="3"/>
+			<font_object fo_type="データ型" font_color="-16744448" font_name="Dialog" font_size="10" font_style="0" id="5"/>
+			<font_object fo_type="PK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="7"/>
+			<font_object fo_type="FK要素" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="8"/>
+			<font_object fo_type="UK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="9"/>
+			<font_object fo_type="NOT NULL" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="10"/>
+			<font_object fo_type="キー" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="6"/>
+			<font_object fo_type="コメント" font_color="-12566464" font_name="Dialog" font_size="10" font_style="0" id="28"/>
+		</fonts>
+		</fc_object>
+		<fc_object classname="Logical View" background="-25750" foreground="-16776961" noBackgroundColor="false" noForegroundColor="false">
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="属性" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="3"/>
+			<font_object fo_type="データ型" font_color="-16744448" font_name="Dialog" font_size="10" font_style="0" id="5"/>
+			<font_object fo_type="コメント" font_color="-12566464" font_name="Dialog" font_size="10" font_style="0" id="28"/>
+		</fonts>
+		</fc_object>
+		<fc_object classname="Table" background="-76" foreground="-16776961" noBackgroundColor="false" noForegroundColor="false">
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="列" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="2"/>
+			<font_object fo_type="データ型" font_color="-16744448" font_name="Dialog" font_size="10" font_style="0" id="5"/>
+			<font_object fo_type="PK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="7"/>
+			<font_object fo_type="FK要素" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="8"/>
+			<font_object fo_type="UK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="9"/>
+			<font_object fo_type="NOT NULL" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="10"/>
+			<font_object fo_type="キー" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="6"/>
+			<font_object fo_type="コメント" font_color="-12566464" font_name="Dialog" font_size="10" font_style="0" id="28"/>
+		</fonts>
+		</fc_object>
+		<fc_object classname="Relational View" background="-6881386" foreground="-16776961" noBackgroundColor="false" noForegroundColor="false">
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="列" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="2"/>
+			<font_object fo_type="データ型" font_color="-16744448" font_name="Dialog" font_size="10" font_style="0" id="5"/>
+			<font_object fo_type="PK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="7"/>
+			<font_object fo_type="FK要素" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="8"/>
+			<font_object fo_type="UK要素" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="9"/>
+			<font_object fo_type="NOT NULL" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="10"/>
+			<font_object fo_type="キー" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="6"/>
+			<font_object fo_type="コメント" font_color="-12566464" font_name="Dialog" font_size="10" font_style="0" id="28"/>
+		</fonts>
+		</fc_object>
+		<fc_object classname="Structured Type" background="-7537956" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="属性" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="3"/>
+			<font_object fo_type="データ型" font_color="-16777056" font_name="Dialog" font_size="10" font_style="0" id="5"/>
+			<font_object fo_type="メソッド" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="11"/>
+			<font_object fo_type="インスタンス化不可能" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="12"/>
+			<font_object fo_type="必須" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="13"/>
+		</fonts>
+		</fc_object>
+		<fc_object classname="Cube" background="-7482" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="ファクト・エンティティ" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="14"/>
+			<font_object fo_type="メジャー・タイプ" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="17"/>
+			<font_object fo_type="メジャー" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="16"/>
+			<font_object fo_type="関数" font_color="-16777056" font_name="Dialog" font_size="10" font_style="0" id="20"/>
+			<font_object fo_type="式" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="18"/>
+			<font_object fo_type="子から親の属性" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="19"/>
+		</fonts>
+		</fc_object>
+		<fc_object classname="Dimension" background="-16713196" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+		</fonts>
+		</fc_object>
+		<fc_object classname="Level" background="-1781507" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="レベル・エンティティ" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="15"/>
+			<font_object fo_type="タイプ" font_color="-16776961" font_name="Dialog" font_size="10" font_style="0" id="21"/>
+			<font_object fo_type="属性" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="3"/>
+			<font_object fo_type="関数" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="20"/>
+		</fonts>
+		</fc_object>
+		<fc_object classname="Process" background="-106" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="プロセス番号" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="22"/>
+			<font_object fo_type="トランスフォーメーション・タスク" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="23"/>
+		</fonts>
+		</fc_object>
+		<fc_object classname="External Agent" background="-5570646" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+		</fonts>
+		</fc_object>
+		<fc_object classname="Information Store" background="-10170881" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16776961" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="数" font_color="-1" font_name="Dialog" font_size="10" font_style="1" id="24"/>
+		</fonts>
+		</fc_object>
+		<fc_object classname="In-Out Parameters" background="-328966" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16777216" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="パラメータ" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="26"/>
+			<font_object fo_type="データ型" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="5"/>
+		</fonts>
+		</fc_object>
+		<fc_object classname="Transformation" background="-43" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16777216" font_name="Dialog" font_size="10" font_style="1" id="1"/>
+			<font_object fo_type="プロセス番号" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="22"/>
+		</fonts>
+		</fc_object>
+		<fc_object classname="Note" background="-4144960" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
+		<fonts>
+			<font_object fo_type="タイトル" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="1"/>
+		</fonts>
+		</fc_object>
+		<fc_object classname="Label" background="-1" foreground="-16777216" noBackgroundColor="true" noForegroundColor="true">
+		<fonts>
+			<font_object fo_type="テキスト" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="27"/>
+		</fonts>
+		</fc_object>
+		<fc_object classname="Relationship Attributes" background="-26266" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
+		<fonts>
+			<font_object fo_type="属性" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="3"/>
+			<font_object fo_type="データ型" font_color="-16744448" font_name="Dialog" font_size="10" font_style="0" id="5"/>
+			<font_object fo_type="NOT NULL" font_color="-65536" font_name="Dialog" font_size="10" font_style="0" id="10"/>
+		</fonts>
+		</fc_object>
+		<fc_object classname="Legend" background="-1" foreground="-16777216" noBackgroundColor="false" noForegroundColor="false">
+		<fonts>
+			<font_object fo_type="ダイアグラム" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="29"/>
+			<font_object fo_type="作成者" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="30"/>
+			<font_object fo_type="作成日" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="31"/>
+			<font_object fo_type="変更日" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="32"/>
+			<font_object fo_type="修正者" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="33"/>
+			<font_object fo_type="設計" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="34"/>
+			<font_object fo_type="モデル" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="35"/>
+			<font_object fo_type="ユーザー定義プロパティ" font_color="-16777216" font_name="Dialog" font_size="10" font_style="0" id="36"/>
+		</fonts>
+		</fc_object>
+	</default_fonts_and_colors>
+	<default_line_widths_and_colors>
+		<lwc_object classname="Logical Relation" color="-16777216" width="1">
+		</lwc_object>
+		<lwc_object classname="Logical Inheritance" color="-65536" width="1">
+		</lwc_object>
+		<lwc_object classname="Relational Foreign Key" color="-16777216" width="1">
+		</lwc_object>
+		<lwc_object classname="Type Substitution" color="-16725996" width="1">
+		</lwc_object>
+		<lwc_object classname="Implied Foreign Key" color="-2472729" width="1">
+		</lwc_object>
+		<lwc_object classname="Datatype Reference" color="-16776961" width="1">
+		</lwc_object>
+		<lwc_object classname="Datatype Inheritance" color="-65536" width="1">
+		</lwc_object>
+		<lwc_object classname="Multidimentional Link" color="-16776961" width="1">
+		</lwc_object>
+		<lwc_object classname="Multidimensional Hierarchy" color="-16725996" width="1">
+		</lwc_object>
+		<lwc_object classname="Process Flow" color="-65536" width="1">
+		</lwc_object>
+	</default_line_widths_and_colors>
+	<naming_standard_rules>
+		<logical>
+			<separator value= "Space" char=" "/>
+			<entity>
+			</entity>
+			<attribute>
+			</attribute>
+		</logical>
+		<relational>
+			<separator value= "_" abbreviated_only="false"/>
+			<table>
+			</table>
+			<column>
+			</column>
+		</relational>
+		<domains>
+			<separator value= " "/>
+			<domain>
+			</domain>
+		</domains>
+		<constraints>
+			<pk value="{table}_PK"/>
+			<fk value="{child}_{parent}_FK"/>
+			<ck value="{table}_CK"/>
+			<un value="{table}_{column}_UN"/>
+			<idx value="{table}_{column}_IDX"/>
+			<automatic_idx value="{table}_{column}_IDX"/>
+			<colck value="CK_{table}_{column}"/>
+			<colnnc value="NNC_{table abbr}_{column}"/>
+			<column_foreign_key value="{ref table}_{ref column}"/>
+			<ui value="{entity} PK"/>
+			<relation_attribute value="{ref entity}_{ref attribute}"/>
+			<surrogate_key value="{table abbr}_PK"/>
+			<surrogate_key_col value="{table abbr}_ID"/>
+			<discriminator_col value="{table abbr}_TYPE"/>
+		</constraints>
+		<glossaries>
+		</glossaries>
+	</naming_standard_rules>
+	<comparemapping>
+	</comparemapping>
+	<engineering_params>
+		<delete_without_origin value="false"/>
+		<engineer_coordinates value="true"/>
+		<engineer_generated value="false"/>
+		<show_engineering_intree value="false"/>
+		<apply_naming_std value="true"/>
+		<use_pref_abbreviation value="true"/>
+		<upload_directory value=""/>
+		<date_format value="YYYY/MM/DD HH24:MI:SS"/>
+		<timestamp_format value="YYYY/MM/DD HH24:MI:SS.FF"/>
+		<timestamp_tz_format value="YYYY/MM/DD HH24:MI:SS.FFTZH:TZM"/>
+	</engineering_params>
+	<eng_compare show_sel_prop_only="true" not_apply_for_new_objects="true" exclude_from_tree="false">
+		<entity_table>
+			<property name="名前" selected="true"/>
+			<property name="短縮名/略称" selected="true"/>
+			<property name="非推奨" selected="true"/>
+			<property name="コメント" selected="true"/>
+			<property name="RDBMSのコメント" selected="true"/>
+			<property name="注意" selected="true"/>
+			<property name="一時表のスコープ" selected="true"/>
+			<property name="表タイプ" selected="true"/>
+			<property name="構造型" selected="true"/>
+			<property name="タイプ置換(スーパータイプ・オブジェクト)" selected="true"/>
+			<property name="型置換の許可" selected="true"/>
+			<property name="最小ボリューム" selected="true"/>
+			<property name="必要なボリューム" selected="true"/>
+			<property name="最大ボリューム" selected="true"/>
+			<property name="増加パーセント" selected="true"/>
+			<property name="増加タイプ" selected="true"/>
+			<property name="正規形" selected="true"/>
+			<property name="適切に正規化" selected="true"/>
+		</entity_table>
+		<attribute_column>
+			<property name="名前" selected="true"/>
+			<property name="非推奨" selected="true"/>
+			<property name="データ型" selected="true"/>
+			<property name="データ型の種類" selected="true"/>
+			<property name="必須" selected="true"/>
+			<property name="デフォルト値" selected="true"/>
+			<property name="チェック制約名" selected="true"/>
+			<property name="ドメイン制約の使用" selected="true"/>
+			<property name="CHECK制約" selected="true"/>
+			<property name="範囲制約" selected="true"/>
+			<property name="LOV制約" selected="true"/>
+			<property name="コメント" selected="true"/>
+			<property name="RDBMSのコメント" selected="true"/>
+			<property name="注意" selected="true"/>
+			<property name="ソース・タイプ" selected="true"/>
+			<property name="式の説明" selected="true"/>
+			<property name="型置換" selected="true"/>
+			<property name="スコープ" selected="true"/>
+		</attribute_column>
+		<key_index>
+			<property name="名前" selected="true"/>
+			<property name="非推奨" selected="true"/>
+			<property name="コメント" selected="true"/>
+			<property name="RDBMSのコメント" selected="true"/>
+			<property name="注意" selected="true"/>
+			<property name="主キー" selected="true"/>
+			<property name="属性/列" selected="true"/>
+		</key_index>
+		<relation_fk>
+			<property name="名前" selected="true"/>
+			<property name="ルールの削除" selected="true"/>
+			<property name="コメント" selected="true"/>
+			<property name="RDBMSのコメント" selected="true"/>
+			<property name="注意" selected="true"/>
+		</relation_fk>
+		<relation_table>
+			<property name="名前" selected="true"/>
+			<property name="コメント" selected="true"/>
+			<property name="RDBMSのコメント" selected="true"/>
+			<property name="注意" selected="true"/>
+		</relation_table>
+		<entityview_view>
+			<property name="名前" selected="true"/>
+			<property name="非推奨" selected="true"/>
+			<property name="コメント" selected="true"/>
+			<property name="RDBMSのコメント" selected="true"/>
+			<property name="注意" selected="true"/>
+			<property name="構造型" selected="true"/>
+			<property name="タイプ置換(スーパータイプ・オブジェクト)" selected="true"/>
+			<property name="WHERE" selected="true"/>
+			<property name="HAVING" selected="true"/>
+			<property name="ユーザー定義SQL" selected="true"/>
+		</entityview_view>
+	</eng_compare>
+	<model_compare_props_filter>
+	</model_compare_props_filter>
+	<model_compare_dyn_props_filter>
+	</model_compare_dyn_props_filter>
+	<model_compare_storage_props_filter>
+	</model_compare_storage_props_filter>
+	<naming_options>
+		<model_options objectid="61515FEF-67B4-830C-2A5F-5D69BCC61249">
+			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Table" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
+			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Column" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
+			<naming_option class_name="oracle.dbtools.crest.model.design.relational.TableView" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
+			<naming_option class_name="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
+			<naming_option class_name="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
+			<naming_option class_name="oracle.dbtools.crest.model.design.relational.Index" max_name_length="30" case_type="2" valid_characters="" all_valid="true" />
+		</model_options>
+		<model_options objectid="0944D118-7205-BA69-BAE9-7BCD6E119028">
+			<naming_option class_name="oracle.dbtools.crest.model.design.logical.Entity" max_name_length="254" case_type="2" valid_characters="" all_valid="true" />
+			<naming_option class_name="oracle.dbtools.crest.model.design.logical.Attribute" max_name_length="254" case_type="2" valid_characters="" all_valid="true" />
+			<naming_option class_name="oracle.dbtools.crest.model.design.logical.EntityView" max_name_length="254" case_type="2" valid_characters="" all_valid="true" />
+		</model_options>
+	</naming_options>
+	<deleted_files>
+	</deleted_files>
+	<dynamic_properties>
+	</dynamic_properties>
+	<design_estimates>
+		<logical_model_estimates>
+			<entities value="70"/>
+			<relations value="70"/>
+			<views value="70"/>
+			<arcs value="70"/>
+		</logical_model_estimates>
+		<data_types_model_estimates>
+			<structured_types value="70"/>
+			<collection_types value="70"/>
+			<distinct_types value="70"/>
+		</data_types_model_estimates>
+		<relational_model_estimates>
+			<relational_model_0_estimates>
+				<relational_model_name value="Relational_1"/>
+				<tables value="70"/>
+				<views value="70"/>
+				<foreign_keys value="70"/>
+				<schemas value="70"/>
+				<subviews value="70"/>
+				<arcs value="70"/>
+				<physical_models_estimates>
+							<physical_model_61515FEF-67B4-830C-2A5F-5D69BCC61249_Oracle_Database_11g>
+								<physical_model_name value="Oracle Database 11g"/>
+								<clusters value="70"/>
+								<contexts value="70"/>
+								<dBs value="70"/>
+								<dimensions value="70"/>
+								<directories value="70"/>
+								<diskGroups value="70"/>
+								<externalTables value="70"/>
+								<snapshots value="70"/>
+								<roles value="70"/>
+								<rollbackSegments value="70"/>
+								<segments value="70"/>
+								<sequences value="70"/>
+								<storedProcedures value="70"/>
+								<functions value="70"/>
+								<packages value="70"/>
+								<collectionTypes value="70"/>
+								<structuredTypes value="70"/>
+								<synonyms value="70"/>
+								<tables value="70"/>
+								<tableSpaces value="70"/>
+								<temporaryTableSpaces value="70"/>
+								<undoTableSpaces value="70"/>
+								<users value="70"/>
+								<views value="70"/>
+								<triggers value="70"/>
+							</physical_model_61515FEF-67B4-830C-2A5F-5D69BCC61249_Oracle_Database_11g>
+				</physical_models_estimates>
+			</relational_model_0_estimates>
+		</relational_model_estimates>
+	</design_estimates>
+</settings>

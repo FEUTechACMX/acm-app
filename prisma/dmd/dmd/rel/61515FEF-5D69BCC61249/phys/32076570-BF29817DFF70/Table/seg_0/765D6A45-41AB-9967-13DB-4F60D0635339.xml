@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="UserType" directorySegmentName="seg_0" id="765D6A45-41AB-9967-13DB-4F60D0635339">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="user_type_id" id="8AFE9427-BE63-7575-4D27-268D2179D4EB">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="user_type" id="C29E1D86-6735-E1C7-4D91-F230B94265A2">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="UserType_PK" id="FD6135A8-8FBB-73C4-1E51-538D89DEA91C">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="SYS_UserType0" id="CA3BDE84-C201-D659-2CFD-DCD63CAFAE63">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+</tableCheckConstraints>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="INDEX_1" id="C49E6B16-87A3-B854-75AE-B3158B8A6FFA">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<nameChanged>true</nameChanged>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev11g>

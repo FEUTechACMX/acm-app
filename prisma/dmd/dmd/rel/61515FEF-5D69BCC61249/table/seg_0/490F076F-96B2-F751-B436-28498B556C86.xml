@@ -1,0 +1,90 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="490F076F-96B2-F751-B436-28498B556C86" name="CommitteeMembers">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>3D757196-48AC-B6F0-EEE3-ADE899C8A17D</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="user_id" id="0F0931DF-50D4-4E86-0E90-069F25151D30">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>63D29140-23C5-D155-3BE9-A769EB775F93</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>64C9A416-9565-6C89-C29D-E25C3C390A21</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="committee_id" id="6C9A50DB-3C6E-1725-C961-99BAF287B84D">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>73FE248E-82F0-6711-0A60-343527535F46</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>64C9A416-9565-6C89-C29D-E25C3C390A21</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="is_director" id="758E0589-F044-2B03-C75F-330FAA0E01F8">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>D7331F74-1684-9BB8-5133-8AD359A51C07</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="40F1DB7F-9CF2-FD7E-2B45-5E6C0284E0C9" name="CommitteeMembers_PK">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>D5E928EF-ED6D-DCFD-046C-A37367051E20</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0F0931DF-50D4-4E86-0E90-069F25151D30"/>
+<colUsage columnID="6C9A50DB-3C6E-1725-C961-99BAF287B84D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="SYS_CommitteeMembers0" directorySegmentName="seg_0" id="45492238-66D3-A9AF-CD98-3FFBC0876F77">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>CC0B1D89-6FC9-CEDC-A7AC-25C539A54D8C</importedID>
+<rule><![CDATA[user_id NOT IN ( SELECT user_id FROM Directors ) OR is_director = TRUE]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="SYS_CommitteeMembers1" directorySegmentName="seg_0" id="72CE666C-6192-3475-9789-04BF1D324DA0">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>C2D276B1-B8E8-A6C9-17DC-7F152EE6501B</importedID>
+<rule><![CDATA[user_id IN ( SELECT user_id FROM Directors ) OR is_director = FALSE]]></rule>
+</tableCheckConstraint>
+<tableCheckConstraint name="max_committees" directorySegmentName="seg_0" id="4C5C800E-EDC3-61BA-57A8-24F903F55FB7">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>982D9A12-8449-B963-75B2-B21575A18F08</importedID>
+<rule><![CDATA[( SELECT COUNT(committee_id) FROM CommitteeMembers WHERE user_id = NEW.user_id ) <= 2]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

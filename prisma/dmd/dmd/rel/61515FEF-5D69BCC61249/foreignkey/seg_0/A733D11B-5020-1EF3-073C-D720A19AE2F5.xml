@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A733D11B-5020-1EF3-073C-D720A19AE2F5" containerWithKeyObject="DA2941A6-B5E2-EB8D-B584-2D18C0CEEF87" localFKIndex="54CFB5E9-4CB2-AD89-21F0-12F712F9A022" name="Designation_Year_FK">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>2094DF59-5813-2C48-BC22-8242CA382251</importedID>
+<referredTableLongName>Year</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>44692936-A255-7C9F-D53A-5AEACB305E67</referredTableID>
+<keyObject>A55F13C9-45B6-65ED-216B-FF942BBF4B55</keyObject>
+<referredKeyID>A55F13C9-45B6-65ED-216B-FF942BBF4B55</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>year_id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
