@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9CF1E7CF-79B7-B421-5F80-3619C7F94645" name="Committee">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>2CF52932-2920-8C5D-17CD-915C8D5B34FB</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="committee_id" id="C21720DC-0833-1DE7-72D3-F495296C6CE0">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>F4A0A316-ED69-7800-7628-1353B948208A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>64C9A416-9565-6C89-C29D-E25C3C390A21</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="committee_name" id="1DA9B1C7-1529-1603-15B0-87FABD380627">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>83B2790E-FEC5-35F9-4EE1-AD92B3A275A1</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>07D9B2BA-A268-39C5-F0C3-10D8303FDCD4</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B2657A21-4BF7-5BD0-FE5A-A1828B6A99E7" name="Committee_PK">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>5C4C4E5E-E9C8-6E4F-2C56-8D74DDF0794E</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C21720DC-0833-1DE7-72D3-F495296C6CE0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0BD6F01F-C9FC-BA1D-C0E9-358FC8B5F379" name="INDEX_1">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>977AD0D8-B96B-03F1-0C99-E3F793964CB9</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1DA9B1C7-1529-1603-15B0-87FABD380627"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

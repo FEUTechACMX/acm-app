@@ -1,0 +1,144 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DA2941A6-B5E2-EB8D-B584-2D18C0CEEF87" name="Designation">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>4F07DCAF-FCA4-0722-B904-C0DD566FD01A</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="designation_id" id="0E7504EC-A52B-BB4A-FE0D-4D4141B3F1AD">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>D3B35C4A-54FB-976A-A1A2-877454D9CFAF</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>64C9A416-9565-6C89-C29D-E25C3C390A21</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_id" id="1332C13D-FBD7-05CE-41D8-41426D90C41C">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>2AD5F52E-7E79-A2C7-6998-E11514DD9535</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>64C9A416-9565-6C89-C29D-E25C3C390A21</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="856FCB70-38EE-5D1F-DF5A-4322AD6C8D27" referredColumn="865AE9E0-53E9-13E1-9283-858F22E8726B"/>
+</associations>
+</Column>
+<Column name="committee_id" id="FC9766F4-8E07-EC99-494F-C75C6CFD0BBC">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>34CDF71A-6B21-4FA1-C8BD-3A9FFBAC2862</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>64C9A416-9565-6C89-C29D-E25C3C390A21</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E1510494-C83C-489A-D141-7142E1C075C3" referredColumn="C21720DC-0833-1DE7-72D3-F495296C6CE0"/>
+</associations>
+</Column>
+<Column name="position_id" id="6A4EC052-56CD-727D-23BA-77EDCB794B36">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>87607E1B-477B-632E-9CAC-1A335ED2476E</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>64C9A416-9565-6C89-C29D-E25C3C390A21</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="707AD6DC-E2BC-0306-8EEA-F06E948086B4" referredColumn="A5B540F1-0983-CDC8-8D1A-90FA47ED622A"/>
+</associations>
+</Column>
+<Column name="year_id" id="9AE69EBA-D14E-0A89-6264-B6C8F5BE9AB2">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>1DD7A223-05C7-956D-F015-97499249DC4F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>64C9A416-9565-6C89-C29D-E25C3C390A21</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A733D11B-5020-1EF3-073C-D720A19AE2F5" referredColumn="DF1645BD-E222-8643-F3BB-5A721C4933CC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B79A3379-8419-53EB-D31C-B92FE0B75FCC" name="Designation_PK">
+<sourceDDLFile>PP.SQL</sourceDDLFile>
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>2BD776F2-7D3E-CD49-DBBF-1D23F11E34E8</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0E7504EC-A52B-BB4A-FE0D-4D4141B3F1AD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C3579B3E-0683-18A2-7CB8-639CB275A4F0" name="Designation_Committee_FK">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC9766F4-8E07-EC99-494F-C75C6CFD0BBC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DD1AB2C0-04BC-5FB6-3D89-B50988579F5C" name="Designation_Position_FK">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6A4EC052-56CD-727D-23BA-77EDCB794B36"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2E3CB460-0A44-B28B-D7CA-67A8162FCCE6" name="Designation_User_FK">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1332C13D-FBD7-05CE-41D8-41426D90C41C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="54CFB5E9-4CB2-AD89-21F0-12F712F9A022" name="Designation_Year_FK">
+<createdBy>root</createdBy>
+<createdTime>2023-12-06 20:05:49 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9AE69EBA-D14E-0A89-6264-B6C8F5BE9AB2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
