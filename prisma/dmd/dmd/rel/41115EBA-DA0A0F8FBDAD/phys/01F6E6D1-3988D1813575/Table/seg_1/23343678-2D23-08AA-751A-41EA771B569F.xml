@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="external_organization" directorySegmentName="seg_1" id="23343678-2D23-08AA-751A-41EA771B569F">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="university_name" id="5BF1C1C4-FA0B-7AA8-F239-041F2AB44F12">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id" id="FD1CD0FD-D693-F9A3-C56A-5DADD32824E3">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="external_organization_organization_FK" id="E00732D4-D81B-17DC-43D9-E662702911D8">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="external_organization_PK" id="3C3D31C8-79DE-3361-915B-B0EA0BC3178A">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

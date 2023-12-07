@@ -1,5 +1,5 @@
-CREATE TABLE User_type_T (
-    user_type_id INT PRIMARY KEY,
+CREATE TABLE user_type (
+    id INT PRIMARY KEY,
     user_type VARCHAR(20) UNIQUE NOT NULL,
     CHECK (
         user_type = 'guest',
@@ -8,51 +8,46 @@ CREATE TABLE User_type_T (
     )
 );
 
-CREATE TABLE User_T (
-    user_id INT PRIMARY KEY,
+CREATE TABLE user (
+    id INT PRIMARY KEY,
     email VARCHAR(255) UNIQUE NOT NULL,
     user_type_id INT,
-    FOREIGN KEY (user_type_id) REFERENCES User_type_T(user_type_id)
+    FOREIGN KEY (user_type_id) REFERENCES user_type(id)
 );
 
-CREATE TABLE Guest_T (
-    guest_id INT PRIMARY KEY,
-    user_id INT,
+CREATE TABLE guest (
+    id INT PRIMARY KEY,
     company VARCHAR(50) NOT NULL,
     position VARCHAR(50) NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES User_T(user_id),
+    FOREIGN KEY (id) REFERENCES user(id)
 );
 
-CREATE TABLE Department_T (
-    department_id INT PRIMARY KEY,
-    department_name VARCHAR(50) UNIQUE NOT NULL,
-    CHECK (
-        department_name IN ("CS", "MPS", "HSC", "NSTP")
-    )
+CREATE TABLE department (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) UNIQUE NOT NULL,
+    CHECK (name IN ("CS", "MPS", "HSC", "NSTP"))
 );
 
-CREATE TABLE Faculty_T (
-    faculty_id INT PRIMARY KEY,
-    user_id INT,
+CREATE TABLE faculty (
+    id INT PRIMARY KEY,
     department_id INT,
-    FOREIGN KEY (user_id) REFERENCES User_T(user_id),
-    FOREIGN KEY (department_id) REFERENCES Department_T(department_id)
+    FOREIGN KEY (id) REFERENCES user(id),
+    FOREIGN KEY (department_id) REFERENCES department(id)
 );
 
-CREATE TABLE Student_T (
-    student_id INT PRIMARY KEY,
-    user_id INT,
+CREATE TABLE student (
+    id INT PRIMARY KEY,
     isACMMember BOOLEAN NOT NULL DEFAULT FALSE,
-    FOREIGN KEY (user_id) REFERENCES User_T(user_id)
+    FOREIGN KEY (id) REFERENCES user(id)
 );
 
-CREATE TABLE Position_T (
-    position_id INT PRIMARY KEY,
-    position_name VARCHAR(50) UNIQUE NOT NULL,
+CREATE TABLE position (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) UNIQUE NOT NULL,
     manager_id INT,
-    FOREIGN KEY (manager_id) REFERENCES Position_T(position_id),
+    FOREIGN KEY (manager_id) REFERENCES position(id),
     CHECK (
-        position_name IN (
+        name IN (
             'President',
             'VP Internal',
             'VP External',
@@ -79,11 +74,11 @@ CREATE TABLE Position_T (
     )
 );
 
-CREATE TABLE Committee_T (
-    committee_id INT PRIMARY KEY,
-    committee_name VARCHAR(50) UNIQUE NOT NULL,
+CREATE TABLE committee (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) UNIQUE NOT NULL,
     CHECK (
-        committee_name IN (
+        name IN (
             'Creative Committee',
             'Documentation Committee',
             'Media Committee',
@@ -100,14 +95,14 @@ CREATE TABLE Committee_T (
     )
 );
 
-CREATE TABLE Year_T (
-    year_id INT PRIMARY KEY,
+CREATE TABLE year_t (
+    id INT PRIMARY KEY,
     year INT UNIQUE NOT NULL
 );
 
-CREATE TABLE Term_T (
-    term_id INT PRIMARY KEY,
-    term VARCHAR(10) UNIQUE NOT NULL,
+CREATE TABLE term (
+    id INT PRIMARY KEY,
+    term VARCHAR(3) UNIQUE NOT NULL,
     CHECK (
         term IN (
             '1st',
@@ -117,33 +112,32 @@ CREATE TABLE Term_T (
     )
 );
 
-CREATE TABLE Designation_T (
-    designation_id INT PRIMARY KEY,
+CREATE TABLE designation (
+    id INT PRIMARY KEY,
     student_id INT,
     committee_id INT,
     position_id INT,
     year_id INT,
-    FOREIGN KEY (student_id) REFERENCES Student_T(student_id),
-    FOREIGN KEY (committee_id) REFERENCES Committee_T(committee_id),
-    FOREIGN KEY (position_id) REFERENCES Position_T(position_id),
-    FOREIGN KEY (year_id) REFERENCES Year_T(year_id),
-    CHECK (
+    FOREIGN KEY (student_id) REFERENCES student(id),
+    FOREIGN KEY (committee_id) REFERENCES committee(id),
+    FOREIGN KEY (position_id) REFERENCES position(id),
+    FOREIGN KEY (year_id) REFERENCES year_t(id) CHECK (
         (
             SELECT
                 isACMMember
             FROM
-                Student_T
+                student
             WHERE
-                student_id = student_id
+                student_id = student.id
         ) = TRUE
     )
 );
 
-CREATE TABLE Event_type_T (
-    event_type_id INT PRIMARY KEY,
-    event_type VARCHAR(50) UNIQUE NOT NULL,
+CREATE TABLE event_type (
+    id INT PRIMARY KEY,
+    type VARCHAR(20) UNIQUE NOT NULL,
     CHECK (
-        event_type IN (
+        type IN (
             'Convention',
             'Academic Competition',
             'General Assembly',
@@ -154,11 +148,11 @@ CREATE TABLE Event_type_T (
     )
 );
 
-CREATE TABLE Working_committee_role_T (
-    role_id INT PRIMARY KEY,
-    role_name VARCHAR(50) UNIQUE NOT NULL,
+CREATE TABLE working_committee_role (
+    id INT PRIMARY KEY,
+    name VARCHAR(20) UNIQUE NOT NULL,
     CHECK (
-        role_name IN (
+        name IN (
             'PROJECT HEAD',
             'PROJECT CO-HEAD',
             'CREATIVES HEAD',
@@ -176,57 +170,55 @@ CREATE TABLE Working_committee_role_T (
     )
 );
 
-CREATE TABLE Working_committee_head_T (
+CREATE TABLE working_committee_head (
     id INT PRIMARY KEY,
     student_id INT,
     role_id INT,
-    FOREIGN KEY (student_id) REFERENCES Student_T(student_id),
-    FOREIGN KEY (role_id) REFERENCES Working_committee_role_T(role_id)
+    FOREIGN KEY (student_id) REFERENCES student(id),
+    FOREIGN KEY (role_id) REFERENCES working_committee_role(id)
 );
 
-CREATE TABLE Event_T (
-    event_id INT PRIMARY KEY,
+CREATE TABLE event_t (
+    id INT PRIMARY KEY,
     event_type_id INT,
     description TEXT NOT NULL,
     year_id INT,
     term_id INT,
     start_date DATE NOT NULL,
     end_date DATE NOT NULL,
-    FOREIGN KEY (event_type_id) REFERENCES Event_type_T(event_type_id),
-    FOREIGN KEY (year_id) REFERENCES Year_T(year_id),
-    FOREIGN KEY (term_id) REFERENCES Term_T(term_id)
+    FOREIGN KEY (event_type_id) REFERENCES event_type(id),
+    FOREIGN KEY (year_id) REFERENCES year_t(id),
+    FOREIGN KEY (term_id) REFERENCES term(id)
 );
 
-CREATE TABLE Working_committee_T (
+CREATE TABLE working_committee (
     id INT PRIMARY KEY,
     event_id INT,
     working_committee_head_id INT,
-    FOREIGN KEY (event_id) REFERENCES Event_T(event_id),
-    FOREIGN KEY (working_committee_head_id) REFERENCES Working_committee_head_T(id)
+    FOREIGN KEY (event_id) REFERENCES event_t(event_id),
+    FOREIGN KEY (working_committee_head_id) REFERENCES working_committee_head(id)
 );
 
-CREATE TABLE Event_registration_T (
+CREATE TABLE event_registration (
     id INT PRIMARY KEY,
     event_id INT,
     student_id INT,
-    FOREIGN KEY (event_id) REFERENCES Event_T(event_id),
-    FOREIGN KEY (student_id) REFERENCES Student_T(student_id)
+    FOREIGN KEY (event_id) REFERENCES event_t(event_id),
+    FOREIGN KEY (student_id) REFERENCES student(id)
 );
 
-CREATE TABLE Organization_T (
-    org_id INT PRIMARY KEY,
-    org_name VARCHAR(70) UNIQUE NOT NULL,
-    name_acronym VARCHAR(14) UNIQUE NOT NULL,
-    site_link VARCHAR(70) UNIQUE NOT NULL,
-    org_image VARCHAR(255) UNIQUE NOT NULL,
-);
-
-CREATE TABLE Internal_organization (
+CREATE TABLE organization (
     id INT PRIMARY KEY,
-    org_id INT,
-    FOREIGN KEY (org_id) REFERENCES Organization_T(org_id),
+    name VARCHAR(70) UNIQUE NOT NULL,
+    acronym VARCHAR(14) UNIQUE NOT NULL,
+    site_link VARCHAR(70) UNIQUE NOT NULL,
+    image_url VARCHAR(255) UNIQUE NOT NULL,
+);
+CREATE TABLE internal_organization (
+    id INT PRIMARY KEY,
+    FOREIGN KEY (id) REFERENCES organization(id),
     CHECK (
-        name_acronym IN (
+        acronym IN (
             'AITS',
             'MECHS',
             'FSOC',
@@ -244,40 +236,69 @@ CREATE TABLE Internal_organization (
     )
 );
 
-CREATE TABLE External_organization (
+CREATE TABLE external_organization (
     id INT PRIMARY KEY,
-    org_id INT,
     university_name VARCHAR(50) NOT NULL,
-    FOREIGN KEY (org_id) REFERENCES Organization_T(org_id),
+    FOREIGN KEY (id) REFERENCES organization(id)
 );
 
-CREATE TABLE Company_T (
+CREATE TABLE company (
     id INT PRIMARY KEY,
-    company_name VARCHAR(50) UNIQUE NOT NULL,
+    name VARCHAR(50) UNIQUE NOT NULL,
     site_link VARCHAR(70) UNIQUE NOT NULL,
-    company_image VARCHAR(255) UNIQUE NOT NULL,
+    image_url VARCHAR(255) UNIQUE NOT NULL,
 );
 
-CREATE TABLE Event_sponsor_T (
+CREATE TABLE event_sponsor (
     id INT PRIMARY KEY,
     company_id INT,
     event_id INT,
-    FOREIGN KEY (company_id) REFERENCES Company_T(id),
-    FOREIGN KEY (event_id) REFERENCES Event_T(event_id)
+    FOREIGN KEY (company_id) REFERENCES company(id),
+    FOREIGN KEY (event_id) REFERENCES event_t(id)
 );
 
-CREATE TABLE Event_partner_T (
+CREATE TABLE event_partner (
     id INT PRIMARY KEY,
     org_id INT,
     event_id INT,
-    FOREIGN KEY (org_id) REFERENCES Organization_T(org_id),
-    FOREIGN KEY (event_id) REFERENCES Event_T(event_id)
+    FOREIGN KEY (org_id) REFERENCES organization(id),
+    FOREIGN KEY (event_id) REFERENCES event_t(id)
 );
 
-CREATE TABLE Course_T (
-    course_id INT PRIMARY KEY,
-    course_code VARCHAR(10) UNIQUE NOT NULL,
-    course_name VARCHAR(50) UNIQUE NOT NULL,
+CREATE TABLE course_type (
+    id INT PRIMARY KEY,
+    type VARCHAR(10) UNIQUE NOT NULL,
+    CHECK (
+        type IN (
+            'lecture',
+            'laboratory',
+        )
+    )
+);
+
+CREATE TABLE year_level (
+    id INT PRIMARY KEY,
+    year INT UNIQUE NOT NULL,
+    CHECK (
+        year IN (
+            1,
+            2,
+            3,
+            4,
+        )
+    )
+);
+
+CREATE TABLE course (
+    id INT PRIMARY KEY,
+    code VARCHAR(10) UNIQUE NOT NULL,
+    name VARCHAR(40) UNIQUE NOT NULL,
     department_id INT,
-    FOREIGN KEY (department_id) REFERENCES Department_T(department_id)
+    course_type_id INT,
+    year_level_id INT,
+    term_id INT,
+    FOREIGN KEY (department_id) REFERENCES department(id),
+    FOREIGN KEY (course_type_id) REFERENCES course_type(id),
+    FOREIGN KEY (year_level_id) REFERENCES year_level(id),
+    FOREIGN KEY (term_id) REFERENCES term(id)
 );

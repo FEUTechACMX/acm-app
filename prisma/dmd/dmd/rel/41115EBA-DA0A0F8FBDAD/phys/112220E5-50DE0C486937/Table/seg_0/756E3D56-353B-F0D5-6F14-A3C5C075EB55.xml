@@ -1,0 +1,32 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyUDBv81 class="oracle.dbtools.crest.model.design.storage.udb.v81.TableProxyUDBv81" name="internal_organization" directorySegmentName="seg_0" id="756E3D56-353B-F0D5-6F14-A3C5C075EB55">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<summaryQueryChanged>false</summaryQueryChanged>
+<summaryQueryDefinitionChanged>false</summaryQueryDefinitionChanged>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.udb.v81.ColumnProxyUDBv81" name="id" id="1D623BC2-F3EF-B7DD-042C-C9D3EFFE70BC">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<generate>BY DEFAULT</generate>
+<order>YES</order>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.udb.v81.FKProxyUDBv81" name="internal_organization_organization_FK" id="0CECFD91-1AC3-1B0E-290F-B7D818D1D60F">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<tableCheckConstraints>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.udb.v81.TableCheckConstraintProxyUDBv81" name="SYS_internal_organization0" id="C5A7DAF1-66BC-050B-ED52-18A19A67398F">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<table>756E3D56-353B-F0D5-6F14-A3C5C075EB55</table>
+</TableCheckConstraint>
+</tableCheckConstraints>
+</TableProxyUDBv81>

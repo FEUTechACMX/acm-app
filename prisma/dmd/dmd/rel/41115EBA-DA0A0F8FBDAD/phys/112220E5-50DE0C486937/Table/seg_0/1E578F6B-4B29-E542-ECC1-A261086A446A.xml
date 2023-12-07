@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyUDBv81 class="oracle.dbtools.crest.model.design.storage.udb.v81.TableProxyUDBv81" name="student" directorySegmentName="seg_0" id="1E578F6B-4B29-E542-ECC1-A261086A446A">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<summaryQueryChanged>false</summaryQueryChanged>
+<summaryQueryDefinitionChanged>false</summaryQueryDefinitionChanged>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.udb.v81.ColumnProxyUDBv81" name="id" id="804BC68F-3B63-EC15-2D04-02158DDB0E0A">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<generate>BY DEFAULT</generate>
+<order>YES</order>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.udb.v81.ColumnProxyUDBv81" name="isACMMember" id="FFB3D6B0-E20E-6789-0918-CC2B7E207C0F">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<generate>BY DEFAULT</generate>
+<order>YES</order>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.udb.v81.FKProxyUDBv81" name="student_user_FK" id="642FA714-CD2D-122A-C05D-08E6F000612B">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+</TableProxyUDBv81>

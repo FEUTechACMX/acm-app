@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyUDBv81 class="oracle.dbtools.crest.model.design.storage.udb.v81.TableProxyUDBv81" name="event_partner" directorySegmentName="seg_0" id="F295DEBC-1FB2-A7A3-11A0-DBD1D7DEFBC2">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<summaryQueryChanged>false</summaryQueryChanged>
+<summaryQueryDefinitionChanged>false</summaryQueryDefinitionChanged>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.udb.v81.ColumnProxyUDBv81" name="id" id="40576D61-709A-A6C2-C27F-C704818F2E1F">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<generate>BY DEFAULT</generate>
+<order>YES</order>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.udb.v81.ColumnProxyUDBv81" name="event_id" id="BD598CDA-94ED-777E-B55A-58720E9D3DEA">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<generate>BY DEFAULT</generate>
+<order>YES</order>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.udb.v81.ColumnProxyUDBv81" name="org_id" id="E5E687E5-8CE4-5525-1F00-945AEC3F492F">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<generate>BY DEFAULT</generate>
+<order>YES</order>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.udb.v81.FKProxyUDBv81" name="event_partner_event_t_FK" id="24D831D4-DD28-1C33-1B2B-4C47718CD3B0">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.udb.v81.FKProxyUDBv81" name="event_partner_organization_FK" id="6D8F34C6-6859-68CC-6281-FFD5C0C6ADAA">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+</TableProxyUDBv81>

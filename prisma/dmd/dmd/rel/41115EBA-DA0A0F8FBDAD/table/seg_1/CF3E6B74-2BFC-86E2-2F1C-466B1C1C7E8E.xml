@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="CF3E6B74-2BFC-86E2-2F1C-466B1C1C7E8E" name="working_committee_head">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>2EAB4452-D883-FA42-5393-FE716564587F</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="A828502A-F759-9160-9EEF-75E59032CC97">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>58D25A61-06F8-33B4-78E5-DA1D6997D87B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="student_id" id="74DBCAA9-1580-02FB-F7C4-9F9EDDCF6CCA">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>87585559-1C54-69F4-C654-0ACA9655661F</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="082DC2E3-7FFA-E24A-E974-F6F2FCAEEA73" referredColumn="804BC68F-3B63-EC15-2D04-02158DDB0E0A"/>
+</associations>
+</Column>
+<Column name="role_id" id="8B6C3069-1399-5A03-F452-D79429F37358">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>1680532C-FF32-1596-C969-2EDE95BFD452</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CACAE60C-80B1-E252-3D7F-7636BF7DF959" referredColumn="3D7FC1C6-1BC3-67AA-CD51-3056BE7A9ED6"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3D3EDEA1-2530-3405-2CE1-32F1A56DF954" name="working_committee_head_PK">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>ED350F5F-1D6D-B7B6-358F-3B149934699C</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A828502A-F759-9160-9EEF-75E59032CC97"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="65D5762B-981E-F688-5332-F68E7A014D91" name="working_committee_head_student_FK">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="74DBCAA9-1580-02FB-F7C4-9F9EDDCF6CCA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="07708466-8CBA-C1E3-EF4B-3CDDA8A8DF27" name="working_committee_head_working_committee_role_FK">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8B6C3069-1399-5A03-F452-D79429F37358"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,32 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyUDBv81 class="oracle.dbtools.crest.model.design.storage.udb.v81.TableProxyUDBv81" name="event_type" directorySegmentName="seg_0" id="96B78EF7-1EB9-0291-23B3-326B93F953F2">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<summaryQueryChanged>false</summaryQueryChanged>
+<summaryQueryDefinitionChanged>false</summaryQueryDefinitionChanged>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.udb.v81.ColumnProxyUDBv81" name="id" id="1F0BDA35-41F3-0A11-5430-C2E78EE5E116">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<generate>BY DEFAULT</generate>
+<order>YES</order>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.udb.v81.ColumnProxyUDBv81" name="type" id="C487AD0C-F8D5-2A44-31FB-99FE70FC3716">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<generate>BY DEFAULT</generate>
+<order>YES</order>
+</ColumnProxy>
+</columnProxies>
+<tableCheckConstraints>
+<TableCheckConstraint class="oracle.dbtools.crest.model.design.storage.udb.v81.TableCheckConstraintProxyUDBv81" name="SYS_event_type0" id="601BB004-FE72-ED1C-EA11-833101BEADFD">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<table>96B78EF7-1EB9-0291-23B3-326B93F953F2</table>
+</TableCheckConstraint>
+</tableCheckConstraints>
+</TableProxyUDBv81>

@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="23343678-2D23-08AA-751A-41EA771B569F" name="external_organization">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>57DDEB79-18D3-7F53-E8C2-D6EFE8419D9B</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="FD1CD0FD-D693-F9A3-C56A-5DADD32824E3">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>0D3A3EE1-A9E5-3ED9-8339-E503A786EEDC</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="57E44204-A74A-ABEB-834A-978E67D80C6F" referredColumn="818A1B84-BF2E-23BD-0095-3CB860D1CA66"/>
+</associations>
+</Column>
+<Column name="university_name" id="5BF1C1C4-FA0B-7AA8-F239-041F2AB44F12">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>163D3A31-4512-6C33-A5F4-DF8CA38050CD</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1E6C9ACD-49FB-FB8E-047E-9A87FAC447C2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3C3D31C8-79DE-3361-915B-B0EA0BC3178A" name="external_organization_PK">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>7E615AD7-D280-0F1F-7F94-BE90B660747A</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FD1CD0FD-D693-F9A3-C56A-5DADD32824E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E00732D4-D81B-17DC-43D9-E662702911D8" name="external_organization_organization_FK">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FD1CD0FD-D693-F9A3-C56A-5DADD32824E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
