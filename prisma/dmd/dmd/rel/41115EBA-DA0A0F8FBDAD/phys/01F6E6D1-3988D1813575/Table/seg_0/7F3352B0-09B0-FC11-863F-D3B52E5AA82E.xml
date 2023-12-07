@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="Event_T" directorySegmentName="seg_0" id="7F3352B0-09B0-FC11-863F-D3B52E5AA82E">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="year_id" id="5785646A-59A5-98EE-E122-BCEC72E2EAE9">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="description" id="5843AD89-9363-3958-659E-77174AC05B8B">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="term_id" id="7F74658E-6777-6F3D-FFD0-D2232CC7EE44">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="end_date" id="C603F690-035A-71FC-8177-D17CB3C430EF">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="event_type_id" id="C6B7C6A9-B4E1-A602-EB93-824C94038C0C">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="event_id" id="D18A56B6-D5A0-F235-5067-72703D103618">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="start_date" id="D7A7C235-160E-C5AB-2F6A-DDAB7D1EE647">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Event_T_Event_type_T_FK" id="12E488B5-16A9-F331-7DE3-A2A1922179FB">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Event_T_Year_T_FK" id="22635D20-55A1-DD3F-2D34-54F0051D7995">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Event_T_Term_T_FK" id="7EB0B48E-2303-C4E3-E50E-EDA72FE75A54">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Event_T_PK" id="1C5EBBCD-C2D9-2993-3282-D351A3D2EF5A">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

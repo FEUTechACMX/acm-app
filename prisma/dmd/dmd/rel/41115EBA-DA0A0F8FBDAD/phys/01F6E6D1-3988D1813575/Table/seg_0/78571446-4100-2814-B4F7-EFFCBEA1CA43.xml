@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="Department_T" directorySegmentName="seg_0" id="78571446-4100-2814-B4F7-EFFCBEA1CA43">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="department_name" id="A3B4CE53-76F4-A115-17E3-AD2656B64F1A">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="department_id" id="F460F098-BF41-2627-C8A0-FAB5D1EA4719">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Department_T_PK" id="BAAF5F96-1AD4-58D5-816A-DF969806343C">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="SYS_Department_T0" id="0CEDFB69-B8F9-88B1-3318-F93605FD4FCE">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+</tableCheckConstraints>
+<uniqueKeys>
+<UniqueKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.UniqueOraclev10g" name="INDEX_1" id="43850545-6604-800E-12C1-0C57D0734F35">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<nameChanged>true</nameChanged>
+<indexSort>SORTED</indexSort>
+</UniqueKey>
+</uniqueKeys>
+</TableProxyOraclev20c>

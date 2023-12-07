@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CDB304BC-86E0-DAE0-859D-239033F1AB62" name="Event_partner_T">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>8DD3F1D4-721B-182E-44F7-694E87DC12D5</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="4CCA2272-5EBB-046A-043F-CA64F25B3939">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>F9E6DF9E-58AD-BE25-CD30-ADF717F285B2</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="org_id" id="16BAB7A7-415A-2D21-8B53-AED97FE8940C">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>03361FC5-C548-D56C-3D24-ABDA6D461CD2</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9F8FADAD-90AC-6547-2992-CC817043DDC7" referredColumn="84384731-6616-889F-2F8C-AE4D2CB8E46A"/>
+</associations>
+</Column>
+<Column name="event_id" id="9B5956BC-48AC-D0D7-8186-44D2E1B87A2D">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>2D7B1895-67FD-3B06-304D-5FA083E999ED</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CD5A5264-585C-0AE2-E490-A8B3E3DCA2DC" referredColumn="D18A56B6-D5A0-F235-5067-72703D103618"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D705113A-E323-F173-3EB9-3CD4CF054942" name="Event_partner_T_PK">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>E20B6504-A1BF-D5FA-29CB-ED6AA56294A0</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4CCA2272-5EBB-046A-043F-CA64F25B3939"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7C3AD236-DE59-F409-C2A4-E657D43CB414" name="Event_partner_T_Event_T_FK">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9B5956BC-48AC-D0D7-8186-44D2E1B87A2D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CABEC9BD-5DE0-791A-1B3A-AB703BCE8235" name="Event_partner_T_Organization_T_FK">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="16BAB7A7-415A-2D21-8B53-AED97FE8940C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="Designation_T" directorySegmentName="seg_0" id="1668A72C-C9C3-C6E5-AD80-7B688B0BD923">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="student_id" id="3B54D1B8-5A4B-FAFB-1FF6-BB5925536FE2">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="committee_id" id="71707DBB-312E-641A-84C6-75DABA771B12">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="position_id" id="80CD08B3-CEEC-9DB7-09A4-5B0A86CAEF8D">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="designation_id" id="881D9E46-2996-73B4-234B-17CADDF4764D">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="year_id" id="AEC1AB07-E714-EC2D-8C46-06CAD0667E91">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Designation_T_Committee_T_FK" id="6429DB42-E02E-6016-8F0D-68DA8F348BBF">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Designation_T_Year_T_FK" id="8694B0AD-91F0-5C02-A60F-A8451E92B1ED">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Designation_T_Position_T_FK" id="AAD1D042-A6B6-1674-A4AD-8B62C8F60743">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="Designation_T_Student_T_FK" id="CEA8FBE2-D218-F82F-712A-78B87298D563">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="Designation_T_PK" id="C9CFAA07-0C46-571C-9175-0B33A47FB662">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="SYS_Designation_T0" id="060D0302-8244-D20A-8F09-4D1F878F8DB3">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<nameChanged>true</nameChanged>
+</TableCheckConstraint>
+</tableCheckConstraints>
+</TableProxyOraclev20c>
