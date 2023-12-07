@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="47EEA80D-747E-0CE7-9C70-A329F03ECD80" name="Working_committee_role_T">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>4065A810-5CE9-23B4-CAFD-A79C1DBAEA52</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="role_id" id="9CEE812D-DC9D-F136-71EF-8E1F02AD5094">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>B5EA3199-59A5-F8CA-F0FD-28560C30525B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="role_name" id="F98D0D44-8DBD-61CB-921A-2334A7B5D724">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>72C89001-5939-66FC-9072-EC3A495EB321</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1E6C9ACD-49FB-FB8E-047E-9A87FAC447C2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F73D10CA-0283-5E17-16AB-2DDA575FB032" name="Working_committee_role_T_PK">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>7D934648-097E-B13E-9B17-E0F921F0BD4A</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CEE812D-DC9D-F136-71EF-8E1F02AD5094"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F9B4A7D9-D259-9DD8-ECE5-75E5BD929B03" name="INDEX_1v10">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>3535A772-B37F-F1EB-1B21-9340EA3766F2</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F98D0D44-8DBD-61CB-921A-2334A7B5D724"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="SYS_Working_committee_role_T0" directorySegmentName="seg_0" id="0DA7C19F-A910-4C72-073B-C037A1966F8B">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>AB0AB6DB-8486-FBFD-CE02-33D1A5F9F87A</importedID>
+<rule><![CDATA[role_name IN ( 'PROJECT HEAD', 'PROJECT CO-HEAD', 'CREATIVES HEAD', 'PROGRAMS HEAD', 'EXTERNALS HEAD', 'SECRETARIAT HEAD', 'FINANCE HEAD', 'PUBLICITY HEAD', 'MEDIA HEAD', 'PUBLICATIONS HEAD', 'TECHNICALS HEAD', 'LOGISTICS HEAD', 'ACADEMICS HEAD', )]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

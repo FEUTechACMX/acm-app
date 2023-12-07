@@ -1,0 +1,92 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BABE48C7-58F4-1D4B-35F9-A00E49F6B38C" name="Working_committee_head_T">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>8C2DBF06-06A8-3787-DA82-977DA0F040BE</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="547F629D-43EA-06EE-9A5C-E9B8520ECAF4">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>8B68F29A-7FD7-1763-7A96-A458A6A9875E</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="student_id" id="B533FF09-0B17-C0BC-7BCB-598D51E9B7D1">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>BC318433-C433-2EF7-E7CC-F9C5D913653A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="25640ECE-807F-9B5D-89C4-3B97C8CA3C58" referredColumn="1F8F1119-7A90-1B82-5D75-0C0CF9C07AB8"/>
+</associations>
+</Column>
+<Column name="role_id" id="086DA686-BCD0-2C2D-F173-BE7CDD9F6A57">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>62D71F94-FCCD-8145-A710-2262E39E1514</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3D8A04CD-8E16-EFC7-EC0E-BE2AF116425A" referredColumn="9CEE812D-DC9D-F136-71EF-8E1F02AD5094"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="01077F5A-3E2A-985F-89BA-49F1A6387568" name="Working_committee_head_T_PK">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>B8A79E0A-1EB6-C3AB-C0AA-5CE8ED6069E1</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="547F629D-43EA-06EE-9A5C-E9B8520ECAF4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B6A3E1FE-81B7-6D97-DD36-D067A372D779" name="Working_committee_head_T_Student_T_FK">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:25 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B533FF09-0B17-C0BC-7BCB-598D51E9B7D1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5E567D64-66EC-FA5F-C995-88BAAB98E31D" name="Working_committee_head_T_Working_committee_role_T_FK">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:25 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="086DA686-BCD0-2C2D-F173-BE7CDD9F6A57"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

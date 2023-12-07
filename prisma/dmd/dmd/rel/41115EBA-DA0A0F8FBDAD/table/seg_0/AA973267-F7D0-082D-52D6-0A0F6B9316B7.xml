@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AA973267-F7D0-082D-52D6-0A0F6B9316B7" name="Committee_T">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>F1D89324-0D2B-0268-2E4B-CEEE8AAA5EE2</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="committee_id" id="ACFA149B-BF71-6459-1A25-F17A38EC998B">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>FEF05D6D-5CC2-E7D8-BC36-78093CA81DDC</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="committee_name" id="2D6B0E09-DF4A-CDA4-F5C2-7E7507FD1D89">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>68EBC617-DD76-7666-45BB-186DC11C5DA3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1E6C9ACD-49FB-FB8E-047E-9A87FAC447C2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="256E512C-784D-4594-B87F-3464EA354477" name="Committee_T_PK">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>496A1C1A-75A4-FBE8-114C-A135D8F79BB3</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ACFA149B-BF71-6459-1A25-F17A38EC998B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DF0B8A5E-4D7C-8C8A-DE65-86CF8C831763" name="INDEX_1">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>734C8312-F6AF-7221-E8A7-673798A2F952</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2D6B0E09-DF4A-CDA4-F5C2-7E7507FD1D89"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="SYS_Committee_T0" directorySegmentName="seg_0" id="9E08117A-A2F9-DA7D-E070-59E38D9EB705">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:34:24 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>51AD5595-89EA-004E-9E39-33B7504C5019</importedID>
+<rule><![CDATA[committee_name IN ( 'Creative Committee', 'Documentation Committee', 'Media Committee', 'Outreach Committee', 'Publication Committee', 'Publicity Committee', 'Academics Committee', 'Events Committee', 'Logistics Committee', 'Sports Committee', 'Technicals Committee', 'Software Engineering Committee', )]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

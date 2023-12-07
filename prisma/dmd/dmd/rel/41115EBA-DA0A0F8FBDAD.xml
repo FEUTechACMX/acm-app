@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="41115EBA-6889-CA3C-001A-DA0A0F8FBDAD" mainViewID="B1D49D23-29F0-E6C9-CBA3-829EEC34D83B">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 00:29:18 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>01F6E6D1-21D0-CFBD-ABDD-3988D1813575</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>schema.sql</fileName>
+<pathName>/home/alpha/Documents/_sw/_projects/acmx/7/prisma</pathName>
+<dbType>17</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>
