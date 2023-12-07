@@ -459,6 +459,22 @@
 								<views value="70"/>
 								<triggers value="70"/>
 							</physical_model_41115EBA-6889-CA3C-001A-DA0A0F8FBDAD_Oracle_Database_21c>
+							<physical_model_41115EBA-6889-CA3C-001A-DA0A0F8FBDAD_DB2_UDB_9>
+								<physical_model_name value="DB2/UDB 9"/>
+								<aliases value="70"/>
+								<buffer_pools value="70"/>
+								<data_bases value="70"/>
+								<db_partitions value="70"/>
+								<owners value="70"/>
+								<user_groups value="70"/>
+								<schemas value="70"/>
+								<sequences value="70"/>
+								<stored_procedures value="70"/>
+								<functions value="70"/>
+								<tables value="70"/>
+								<table_spaces value="70"/>
+								<triggers value="70"/>
+							</physical_model_41115EBA-6889-CA3C-001A-DA0A0F8FBDAD_DB2_UDB_9>
 				</physical_models_estimates>
 			</relational_model_0_estimates>
 		</relational_model_estimates>

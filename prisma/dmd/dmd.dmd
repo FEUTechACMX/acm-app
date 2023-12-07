@@ -9,5 +9,20 @@
 <designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="122A8135-1C05-967D-6693-99AA99186993">
 <designStoragePath>/schema</designStoragePath>
 </designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="0B1E8FAB-B8DF-645F-8F4C-0C1AAE81D6F8">
+<designStoragePath>/schema</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="1ABA04A1-02B1-2DAF-C623-E883DBECC85A">
+<designStoragePath>/schema</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="C31BE0CE-F04B-9364-F861-953A2F008462">
+<designStoragePath>/schema</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="759EFB67-A7FA-006B-4F50-D461A32B3ED0">
+<designStoragePath>/schema</designStoragePath>
+</designDescr>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="04C41B07-F1A3-D7C8-C6FE-B8E3AA3F6137">
+<designStoragePath>/schema</designStoragePath>
+</designDescr>
 </usedDesignStorageDescriptors>
 </OSDM_Design>

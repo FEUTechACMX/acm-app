@@ -50,6 +50,17 @@
 <fileName>schema_Domains</fileName>
 <logicalDatatype>LOGDT011</logicalDatatype>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_40" id="A85EE8B1-EC49-0963-8736-193DAD9FCB67">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:10:44 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>40</dataTypeSize>
+<fileName>schema_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_20" id="ABBE81A9-6DDB-F981-04D5-98860FC58AAA">
 <createdBy>alpha</createdBy>
 <createdTime>2023-12-07 00:34:24 UTC</createdTime>
@@ -80,6 +91,17 @@
 <dataTypePrecision>0</dataTypePrecision>
 <dataTypeScale>0</dataTypeScale>
 <dataTypeSize>10</dataTypeSize>
+<fileName>schema_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_3" id="F8E4A39B-B77E-9D36-E3E3-811706EC0B3A">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 02:50:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>3</dataTypeSize>
 <fileName>schema_Domains</fileName>
 <logicalDatatype>LOGDT024</logicalDatatype>
 </Domain>

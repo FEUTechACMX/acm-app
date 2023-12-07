@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="FEA8A623-3F00-15B9-4FE6-1813D1E75DCA" name="position">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>04C98577-A378-D664-03A1-51A6D74F0F34</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="77FBCF6E-6289-6D9F-6217-425A14F33F3A">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>A6229F1B-B619-1218-0522-E2F05A6B6C24</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="91C57BCB-C7AC-70A3-4671-87C97E6535E7">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>E26D2035-8E24-18F7-DD3C-F26FB30C2897</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1E6C9ACD-49FB-FB8E-047E-9A87FAC447C2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="manager_id" id="4C1C5975-BC45-1A92-8BE6-27660C1502E1">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>94C1CD93-E612-D3CF-4AAB-7A08BACC7A32</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8BE5E88E-0A6D-C104-1F75-5C28CB67BBC3" referredColumn="77FBCF6E-6289-6D9F-6217-425A14F33F3A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2A4F6E2A-12F1-730E-E590-4CA4F0F34682" name="position_PK">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>54C7E672-F951-D591-1099-0D057E41BE5F</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="77FBCF6E-6289-6D9F-6217-425A14F33F3A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9744E004-29F2-AFBE-8ED2-5BE08565FE3C" name="INDEX_1v7">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>97E505F1-98B7-425E-AED9-8C4D23363BAA</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="91C57BCB-C7AC-70A3-4671-87C97E6535E7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="05DB2298-D66F-7F94-87A9-7AF3F5DF1956" name="position_position_FK">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4C1C5975-BC45-1A92-8BE6-27660C1502E1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="SYS_position0" directorySegmentName="seg_0" id="E3346C52-AEA3-789C-60D8-144443F4D80E">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>BB29BCBF-D9DF-F52F-82E2-E49E083BEF92</importedID>
+<rule><![CDATA[name IN ( 'President', 'VP Internal', 'VP External', 'Secretary', 'Treasurer', 'Auditor', 'PRO', 'Director for Creatives', 'Director for Documentation', 'Director for Media', 'Director for Outreach', 'Director for Publication', 'Director for Publicity', 'Director for Academics', 'Director for Events', 'Director for Logistics', 'Director for Sports', 'Director for Technicals', 'Webmaster', 'Associate Webmaster', 'Junior Officer', 'Member' )]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

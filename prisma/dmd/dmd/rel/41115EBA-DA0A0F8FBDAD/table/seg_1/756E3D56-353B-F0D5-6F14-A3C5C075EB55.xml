@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="756E3D56-353B-F0D5-6F14-A3C5C075EB55" name="internal_organization">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>FE6710E2-4D5F-0A88-262B-6826BEFEE325</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="1D623BC2-F3EF-B7DD-042C-C9D3EFFE70BC">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>EA6059FC-3212-2E61-5257-6723817A673B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="454EABD4-DCB0-CD85-30A8-EE8889727BA8" referredColumn="818A1B84-BF2E-23BD-0095-3CB860D1CA66"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="409E8CDC-6F5E-CA41-3570-BAE944D922A3" name="internal_organization_PK">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>F6BED122-A037-EEB0-FEB9-23A5D8EF4DA0</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1D623BC2-F3EF-B7DD-042C-C9D3EFFE70BC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0CECFD91-1AC3-1B0E-290F-B7D818D1D60F" name="internal_organization_organization_FK">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1D623BC2-F3EF-B7DD-042C-C9D3EFFE70BC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.constraint.TableLevelConstraint">
+<tableCheckConstraint name="SYS_internal_organization0" directorySegmentName="seg_0" id="C5A7DAF1-66BC-050B-ED52-18A19A67398F">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>6F7E15C8-03EB-C61C-B3E9-BB27F82C4B2D</importedID>
+<rule><![CDATA[acronym IN ( 'AITS', 'MECHS', 'FSOC', 'ECESS', 'JPCS', 'GDSC', 'CPEO', 'TEC', 'AC', 'SAVE', 'ACES', 'ASTI', 'ACM' )]]></rule>
+</tableCheckConstraint>
+</tableCheckConstraints>
+</Table>

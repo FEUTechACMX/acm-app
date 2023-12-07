@@ -1,0 +1,192 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_1" id="A3CE207E-CEDE-2832-002E-1A73AE9DAD05" name="course">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>34046FEB-04E4-ACBA-5965-F1F5BE1CD9C3</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="FF713C43-8F23-3885-93DB-3D4462E5D6CF">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>4E7DABD1-FFAD-B917-9ECC-C8245023F675</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="code" id="8AAEAB77-01A6-980B-5D79-38196FB3E53E">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>F8906849-F74C-EDEC-450B-478F1CF7B3CF</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>F144CAEB-7010-5FAD-6CD8-53770FCC43B9</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="DBE6DC49-8D0B-4903-F664-93A86C88BF6F">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>6753D0B6-3181-160E-A60A-527148EB3372</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A85EE8B1-EC49-0963-8736-193DAD9FCB67</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="department_id" id="13C1F449-66AC-0AAD-785E-D8A7F872D24B">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>1CB62DF6-64E3-55E8-17F2-2575CD6068DA</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A4CB006E-209C-3A7E-9AA8-FF6F208E3916" referredColumn="E2438013-E8E1-3742-133F-69E6513E6A09"/>
+</associations>
+</Column>
+<Column name="course_type_id" id="58F90C78-031F-8C0B-087B-A15CA34109CF">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>7E1751C6-BE7F-6BE9-2264-5C18FD7C74E3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DA4D93D3-409E-1DB4-6D34-0B014CE5523B" referredColumn="DBDE88A5-6AC6-CD41-101F-BDBE270741C3"/>
+</associations>
+</Column>
+<Column name="year_level_id" id="200FA4FE-FA2D-825D-5B8E-6DA0B3EF58B4">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>9BFD6243-D063-388E-08F5-00748EE9B8EE</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2E7DE65C-DBA0-0FBE-5993-E8E3E30B945C" referredColumn="93B7D85C-46F9-7BDB-F6A6-A76326474E40"/>
+</associations>
+</Column>
+<Column name="term_id" id="3B1F8556-A615-9CA4-062A-BE5343DFCF6A">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>84D0ECCB-7280-7A2D-2341-733CDB28B1CC</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B5B63BE8-334A-AD54-B1D0-F091AC59F357" referredColumn="2A869F4F-E4C8-5FDE-7A7E-40B7CFAE9A95"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9EC91315-2415-4B9C-9F97-18FF5994FCDD" name="course_PK">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>C0D3D9BB-EC95-6926-17ED-48213B2A9AC0</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FF713C43-8F23-3885-93DB-3D4462E5D6CF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3CC25E30-6386-EAC3-0ED0-BCA2B6E6F54F" name="INDEX_1v2">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>4DDC0210-FE19-EB7C-8A13-0B57C689D058</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8AAEAB77-01A6-980B-5D79-38196FB3E53E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="76C415FC-282B-68F2-B8D9-EFC011494EA8" name="INDEX_2v1">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>B757203F-4423-706E-1067-AD5511CE82F9</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DBE6DC49-8D0B-4903-F664-93A86C88BF6F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="696F376C-55FF-5662-E010-DF41C1CAF86E" name="course_course_type_FK">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="58F90C78-031F-8C0B-087B-A15CA34109CF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="24DDC671-CAE6-474B-2DED-4E60F6DC7930" name="course_department_FK">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="13C1F449-66AC-0AAD-785E-D8A7F872D24B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E9C44AE6-C6A9-0D98-7035-1DF1BE81B4E7" name="course_term_FK">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3B1F8556-A615-9CA4-062A-BE5343DFCF6A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="96420672-BE38-708A-9B19-8F9230B6C717" name="course_year_level_FK">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 03:20:08 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="200FA4FE-FA2D-825D-5B8E-6DA0B3EF58B4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
