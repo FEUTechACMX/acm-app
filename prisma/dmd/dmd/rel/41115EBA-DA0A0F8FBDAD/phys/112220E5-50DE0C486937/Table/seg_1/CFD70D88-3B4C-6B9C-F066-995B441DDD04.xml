@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyUDBv81 class="oracle.dbtools.crest.model.design.storage.udb.v81.TableProxyUDBv81" name="reply" directorySegmentName="seg_1" id="CFD70D88-3B4C-6B9C-F066-995B441DDD04">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<summaryQueryChanged>false</summaryQueryChanged>
+<summaryQueryDefinitionChanged>false</summaryQueryDefinitionChanged>
+<columnProxies>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.udb.v81.ColumnProxyUDBv81" name="message_id" id="1F72F3C1-A3FE-9655-81A8-0D60FDAD7548">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<generate>BY DEFAULT</generate>
+<order>YES</order>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.udb.v81.ColumnProxyUDBv81" name="id" id="5CC6E44C-4C77-4D6A-543A-700229D74B99">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<generate>BY DEFAULT</generate>
+<order>YES</order>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.udb.v81.ColumnProxyUDBv81" name="reply" id="9A143D83-C060-2EFC-5F37-38B0F6047FE1">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<generate>BY DEFAULT</generate>
+<order>YES</order>
+</ColumnProxy>
+<ColumnProxy class="oracle.dbtools.crest.model.design.storage.udb.v81.ColumnProxyUDBv81" name="sender_id" id="D677EF68-14F8-E1C1-AF77-9B45B9DA492B">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<generate>BY DEFAULT</generate>
+<order>YES</order>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.udb.v81.FKProxyUDBv81" name="reply_inbox_FK" id="0C7F25B4-3464-8EAF-CCE3-8197B65EFC0E">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.udb.v81.FKProxyUDBv81" name="reply_user_FK" id="48926D2D-7FF7-9AE3-CE5D-0F95EAA65CE7">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+</TableProxyUDBv81>

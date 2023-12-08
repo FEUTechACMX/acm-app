@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_2" id="6C2084CE-3872-9D57-8C52-0DC10E886395" containerWithKeyObject="CFD70D88-3B4C-6B9C-F066-995B441DDD04" localFKIndex="0C7F25B4-3464-8EAF-CCE3-8197B65EFC0E" name="reply_inbox_FK">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>E4C3C13A-E082-559E-42DC-67FDAD56DB93</importedID>
+<referredTableLongName>inbox</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>FA7BCEA3-5379-B15E-C5DF-D1BFAF62057A</referredTableID>
+<keyObject>3AA7A721-6D55-4A58-316F-664C2A712D28</keyObject>
+<referredKeyID>3AA7A721-6D55-4A58-316F-664C2A712D28</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

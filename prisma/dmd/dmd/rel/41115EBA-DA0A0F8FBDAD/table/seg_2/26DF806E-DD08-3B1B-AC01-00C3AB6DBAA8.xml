@@ -1,0 +1,79 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="26DF806E-DD08-3B1B-AC01-00C3AB6DBAA8" name="faculty">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>DE30BD75-8052-4255-FC72-1CF86C653FE1</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="A6C6E48A-2001-68B0-9AEC-1986D9EC1B81">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>27A5E367-C99E-3EC0-AD9E-BA340837DE7D</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7F9AFA58-92D8-BFBD-76B9-07D616EB1DEB" referredColumn="94E8FCC2-DF2B-1ECB-6D7B-94A59857AB42"/>
+</associations>
+</Column>
+<Column name="department_id" id="EA3EC679-EEDE-B5E1-90F6-069870570BE2">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>F43678A3-662D-BF92-38BC-356E4FDAED3A</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="81A6153A-43B2-9374-83DD-0735387FEF8A" referredColumn="AAC7D925-5654-4EC5-865E-03F158E74D09"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="ADC12194-E319-EDBB-685D-BA1A610DE29A" name="faculty_PK">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>971D83ED-AFD9-B85A-869A-450D8FEE133C</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6C6E48A-2001-68B0-9AEC-1986D9EC1B81"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="05412953-05B3-1891-4627-DA6E63C60A01" name="faculty_department_FK">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA3EC679-EEDE-B5E1-90F6-069870570BE2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="875AB6E3-D77E-339E-27FE-2ADAC7BF63D8" name="faculty_user_FK">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A6C6E48A-2001-68B0-9AEC-1986D9EC1B81"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

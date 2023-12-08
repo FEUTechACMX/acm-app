@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_2" id="71F172D3-6D85-6A3E-ACC2-EE7F9B7E46F7" name="user_event_mission">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>B5A5A1D1-5667-669D-E340-1AF4FDB78F47</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="C1589086-B54E-C0DB-7CC1-4789F8DFFFE5">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>CAF2DCD7-BB6E-8D82-8B00-2A8D4C8F4159</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="user_id" id="A5208659-612C-2B06-5663-D581A7D5A8B9">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>1DC97110-B62F-3A34-9F17-F7F86CBDD739</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="98C17BAF-CE24-4308-4894-5E58F67CEEC6" referredColumn="94E8FCC2-DF2B-1ECB-6D7B-94A59857AB42"/>
+</associations>
+</Column>
+<Column name="event_mission_id" id="4DE8FF47-935B-D1C8-7478-D9FB47847B25">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>F647A9F9-66D8-94CB-281A-0331B6727A46</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>84EAB54C-5C85-7C92-5279-2525E17F04EE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1EB8C9EB-CECB-968B-F7F9-2E0E79211445" referredColumn="FF8488CD-969B-9E61-80EB-4AC33F117BED"/>
+</associations>
+</Column>
+<Column name="is_completed" id="CA6051D2-1339-B010-70BE-7523983FE9C6">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>8D03F55F-D30D-2359-3B9C-BE662AD65524</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A20261B6-DAAD-4B22-4282-82C937E03D05" name="user_event_mission_PK">
+<sourceDDLFile>schema.sql</sourceDDLFile>
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<importedID>2B3364E6-A960-3E1F-7059-A9C80FBD98A5</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C1589086-B54E-C0DB-7CC1-4789F8DFFFE5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="324A89F8-CD71-681E-B646-609F7D043E20" name="user_event_mission_event_mission_FK">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4DE8FF47-935B-D1C8-7478-D9FB47847B25"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C4016348-9460-524B-388A-2F4D491E80D5" name="user_event_mission_user_FK">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:24:53 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A5208659-612C-2B06-5663-D581A7D5A8B9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

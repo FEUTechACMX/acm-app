@@ -1,26 +1,26 @@
 datasource db {
-  provider = "postgresql"
-  url      = env("POSTGRES_PRISMA_URL")
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
   directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
 generator client {
-  provider        = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 model Account {
-  id                 String  @id @default(cuid())
-  userId             String
-  type               String
-  provider           String
-  providerAccountId  String
-  refresh_token      String?  @db.Text
-  access_token       String?  @db.Text
-  expires_at         Int?
-  token_type         String?
-  scope              String?
-  id_token           String?  @db.Text
-  session_state      String?
+  id                String  @id @default(cuid())
+  userId            Int
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
@@ -28,21 +28,11 @@ model Account {
 }
 
 model Session {
-  id           String   @id @default(cuid())
+  id           Int      @id @default(autoincrement())
   sessionToken String   @unique
-  userId       String
+  userId       Int
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-}
-
-model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String?   @unique
-  emailVerified DateTime?
-  image         String?
-  accounts      Account[]
-  sessions      Session[]
 }
 
 model VerificationToken {
@@ -51,4 +41,313 @@ model VerificationToken {
   expires    DateTime
 
   @@unique([identifier, token])
+}
+
+model UserType {
+  id        Int    @id @default(autoincrement())
+  user_type String @unique
+  User      User[]
+}
+
+model User {
+  id                Int                 @id @default(autoincrement())
+  name              String?
+  email             String?             @unique
+  emailVerified     DateTime?
+  image             String?
+  accounts          Account[]
+  sessions          Session[]
+  userTypeId        Int
+  userType          UserType?           @relation(fields: [userTypeId], references: [id])
+  guest             Guest?
+  faculty           Faculty?
+  student           Student?
+  Media             Media[]
+  eventRegistration EventRegistration[]
+  eventEvaluation   EventEvaluation[]
+  inboxSender       Inbox[]             @relation("SenderUser")
+  inboxReceiver     Inbox[]             @relation("ReceiverUser")
+  reply             Reply[]
+  userEventMission  UserEventMission[]
+}
+
+model Guest {
+  id       Int    @id
+  company  String
+  position String
+  user     User   @relation(fields: [id], references: [id])
+}
+
+model Department {
+  id      Int       @id
+  name    String    @unique
+  faculty Faculty[]
+  course  Course[]
+}
+
+model Faculty {
+  id           Int        @id
+  departmentId Int
+  User         User       @relation(fields: [id], references: [id])
+  department   Department @relation(fields: [departmentId], references: [id])
+}
+
+model Student {
+  id                   Int                    @id
+  isACMMember          Boolean                @default(false)
+  User                 User                   @relation(fields: [id], references: [id])
+  designation          Designation[]
+  workingCommitteeHead WorkingCommitteeHead[]
+}
+
+model Position {
+  id          Int           @id @default(autoincrement())
+  name        String        @unique
+  managerId   Int?
+  manager     Position?     @relation("Manager", fields: [managerId], references: [id])
+  members     Position[]    @relation("Manager")
+  designation Designation[]
+}
+
+model Committee {
+  id          Int           @id @default(autoincrement())
+  name        String        @unique
+  designation Designation[]
+}
+
+model Year {
+  id          Int           @id @default(autoincrement())
+  year        Int           @unique
+  designation Designation[]
+  event       Event[]
+}
+
+model Term {
+  id     Int      @id @default(autoincrement())
+  term   String   @unique
+  event  Event[]
+  course Course[]
+}
+
+model Designation {
+  id          Int       @id @default(autoincrement())
+  studentId   Int
+  committeeId Int
+  positionId  Int
+  yearId      Int
+  student     Student   @relation(fields: [studentId], references: [id])
+  committee   Committee @relation(fields: [committeeId], references: [id])
+  position    Position  @relation(fields: [positionId], references: [id])
+  year        Year      @relation(fields: [yearId], references: [id])
+}
+
+model Event {
+  id                  Int                 @id @default(autoincrement())
+  eventTypeId         Int
+  descriptionMarkdown String
+  yearId              Int
+  termId              Int
+  startDate           DateTime
+  endDate             DateTime
+  eventType           EventType           @relation(fields: [eventTypeId], references: [id])
+  year                Year                @relation(fields: [yearId], references: [id])
+  term                Term                @relation(fields: [termId], references: [id])
+  workingCommittee    WorkingCommittee[]
+  eventRegistration   EventRegistration[]
+  eventEvaluation     EventEvaluation[]
+  eventSponsor        EventSponsor[]
+  eventPartner        EventPartner[]
+  eventMission        EventMission[]
+  certificate         Certificate?
+}
+
+model EventType {
+  id    Int     @id @default(autoincrement())
+  type  String  @unique
+  event Event[]
+}
+
+model WorkingCommitteeRole {
+  id                   Int                    @id @default(autoincrement())
+  name                 String                 @unique
+  workingCommitteeHead WorkingCommitteeHead[]
+}
+
+model WorkingCommitteeHead {
+  id               Int                  @id @default(autoincrement())
+  studentId        Int
+  roleId           Int
+  student          Student              @relation(fields: [studentId], references: [id])
+  role             WorkingCommitteeRole @relation(fields: [roleId], references: [id])
+  workingCommittee WorkingCommittee[]
+}
+
+model WorkingCommittee {
+  id                     Int                  @id @default(autoincrement())
+  eventId                Int
+  workingCommitteeHeadId Int
+  event                  Event                @relation(fields: [eventId], references: [id])
+  workingCommitteeHead   WorkingCommitteeHead @relation(fields: [workingCommitteeHeadId], references: [id])
+}
+
+model Media {
+  id           Int           @id @default(autoincrement())
+  userId       Int
+  name         String
+  type         String
+  url          String
+  user         User          @relation(fields: [userId], references: [id])
+  organization Organization?
+  company      Company?
+  announcement Announcement?
+  certificate  Certificate?
+}
+
+model EventRegistration {
+  id      Int   @id @default(autoincrement())
+  eventId Int
+  userId  Int
+  event   Event @relation(fields: [eventId], references: [id])
+  user    User  @relation(fields: [userId], references: [id])
+}
+
+model EventEvaluation {
+  id      Int   @id @default(autoincrement())
+  eventId Int
+  userId  Int
+  event   Event @relation(fields: [eventId], references: [id])
+  user    User  @relation(fields: [userId], references: [id])
+}
+
+model Organization {
+  id                   Int                   @id @default(autoincrement())
+  name                 String                @unique
+  acronym              String                @unique
+  siteLink             String                @unique
+  imageId              Int?                  @unique
+  image                Media?                @relation(fields: [imageId], references: [id])
+  externalOrganization ExternalOrganization?
+  eventPartner         EventPartner[]
+}
+
+model ExternalOrganization {
+  id              Int           @id @default(autoincrement())
+  university_name String        @unique
+  organization    Organization? @relation(fields: [id], references: [id])
+}
+
+model Company {
+  id           Int            @id @default(autoincrement())
+  name         String         @unique
+  siteLink     String         @unique
+  imageId      Int?           @unique
+  image        Media?         @relation(fields: [imageId], references: [id])
+  eventSponsor EventSponsor[]
+}
+
+model EventSponsor {
+  id        Int      @id @default(autoincrement())
+  companyId Int?
+  eventId   Int
+  company   Company? @relation(fields: [companyId], references: [id])
+  event     Event    @relation(fields: [eventId], references: [id])
+}
+
+model EventPartner {
+  id             Int           @id @default(autoincrement())
+  organizationId Int?
+  eventId        Int
+  organization   Organization? @relation(fields: [organizationId], references: [id])
+  event          Event         @relation(fields: [eventId], references: [id])
+}
+
+model CourseType {
+  id     Int      @id @default(autoincrement())
+  type   String   @unique
+  course Course[]
+}
+
+model YearLevel {
+  id     Int      @id @default(autoincrement())
+  year   Int      @unique
+  course Course[]
+}
+
+model Course {
+  id           Int        @id @default(autoincrement())
+  code         String     @unique
+  name         String     @unique
+  departmentId Int
+  courseTypeId Int
+  yearLevelId  Int
+  termId       Int
+  department   Department @relation(fields: [departmentId], references: [id])
+  courseType   CourseType @relation(fields: [courseTypeId], references: [id])
+  yearLevel    YearLevel  @relation(fields: [yearLevelId], references: [id])
+  term         Term       @relation(fields: [termId], references: [id])
+}
+
+// CREATE TABLE inbox (
+//     id INT PRIMARY KEY,
+//     sender_id INT,
+//     receiver_id INT,
+//     subject VARCHAR(50) NOT NULL,
+//     body TEXT NOT NULL,
+//     FOREIGN KEY (sender_id) REFERENCES user(id),
+//     FOREIGN KEY (receiver_id) REFERENCES user(id),
+// );
+
+model Inbox {
+  id         Int     @id @default(autoincrement())
+  senderId   Int
+  receiverId Int
+  subject    String
+  body       String
+  sender     User    @relation("SenderUser", fields: [senderId], references: [id])
+  receiver   User    @relation("ReceiverUser", fields: [receiverId], references: [id])
+  reply      Reply[]
+}
+
+model Reply {
+  id        Int    @id @default(autoincrement())
+  messageId Int
+  senderId  Int
+  reply     String
+  message   Inbox  @relation(fields: [messageId], references: [id])
+  sender    User   @relation(fields: [senderId], references: [id])
+}
+
+model Announcement {
+  id      Int    @id @default(autoincrement())
+  title   String
+  body    String
+  imageId Int?   @unique
+  image   Media? @relation(fields: [imageId], references: [id])
+}
+
+model EventMission {
+  id               Int                @id @default(autoincrement())
+  eventId          Int
+  name             String
+  description      String
+  event            Event              @relation(fields: [eventId], references: [id])
+  userEventMission UserEventMission[]
+}
+
+model UserEventMission {
+  id             Int          @id @default(autoincrement())
+  userId         Int
+  eventMissionId Int
+  isCompleted    Boolean      @default(false)
+  user           User         @relation(fields: [userId], references: [id])
+  eventMission   EventMission @relation(fields: [eventMissionId], references: [id])
+}
+
+model Certificate {
+  id         Int    @id @default(autoincrement())
+  name       String
+  documentId Int    @unique
+  eventId    Int    @unique
+  event      Event  @relation(fields: [eventId], references: [id])
+  document   Media  @relation(fields: [documentId], references: [id])
 }

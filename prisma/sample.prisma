@@ -1,0 +1,40 @@
+// schema.prisma
+
+enum ActivityType {
+  edit
+  deletion
+}
+
+model Activity {
+  id        Int      @id @default(autoincrement())
+  // createdAt DateTime @default(now()) @db.Timestamptz(6)
+  type      ActivityType
+
+  userId Int
+
+  deletion Deletion?
+  edit     Edit?
+}
+
+model Deletion {
+  activity   Activity @relation(fields: [activityId], references: [id], onDelete: Cascade)
+  activityId Int      @id
+
+  // table    Table?     @relation(fields: [tableId], references: [id], onDelete: SetNull)
+  tableId  Int?
+
+  recordId   Json
+}
+
+model Edit {
+  activity   Activity @relation(fields: [activityId], references: [id], onDelete: Cascade)
+  activityId Int      @id
+
+  oldValue String
+  newValue String
+
+  // attribute    Attribute?     @relation(fields: [attributeId], references: [id], onDelete: SetNull)
+  attributeId  Int?
+
+  recordId   Json
+}
