@@ -8,11 +8,47 @@ CREATE TABLE user_type (
     )
 );
 
+CREATE TABLE account (
+    id INT PRIMARY KEY,
+    user_id INT,
+    type VARCHAR(20) NOT NULL,
+    provider VARCHAR(20) NOT NULL,
+    provider_account_id VARCHAR(20) NOT NULL,
+    refresh_token VARCHAR(255),
+    access_token VARCHAR(255),
+    expires_at INT,
+    token_type VARCHAR(20),
+    scope VARCHAR(255),
+    id_token VARCHAR(255),
+    session_state VARCHAR(255),
+    FOREIGN KEY (user_id) REFERENCES user(id)
+);
+
+CREATE TABLE session (
+    id INT PRIMARY KEY,
+    session_token VARCHAR(255) UNIQUE NOT NULL,
+    user_id INT,
+    expires TIMESTAMP NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES user(id)
+);
+
+-- model User {
+--   id            String    @id @default(cuid())
+--   name          String?
+--   email         String?   @unique
+--   emailVerified DateTime?
+--   image         String?
+--   accounts      Account[]
+--   sessions      Session[]
+
 CREATE TABLE user (
     id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
     email VARCHAR(255) UNIQUE NOT NULL,
+    email_verified BOOLEAN NOT NULL DEFAULT FALSE,
+    image_id VARCHAR(255),
+    type VARCHAR(20) NOT NULL,
     user_type_id INT,
-    FOREIGN KEY (user_type_id) REFERENCES user_type(id)
 );
 
 CREATE TABLE guest (
@@ -181,7 +217,7 @@ CREATE TABLE working_committee_head (
 CREATE TABLE event_t (
     id INT PRIMARY KEY,
     event_type_id INT,
-    description TEXT NOT NULL,
+    description_markdown TEXT NOT NULL,
     year_id INT,
     term_id INT,
     start_date DATE NOT NULL,
@@ -199,11 +235,27 @@ CREATE TABLE working_committee (
     FOREIGN KEY (working_committee_head_id) REFERENCES working_committee_head(id)
 );
 
+CREATE TABLE media (
+    id INT PRIMARY KEY,
+    url VARCHAR(255) UNIQUE NOT NULL,
+    uploaded_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    uploader_id INT,
+    FOREIGN KEY (uploader_id) REFERENCES student(id),
+);
+
 CREATE TABLE event_registration (
     id INT PRIMARY KEY,
     event_id INT,
     student_id INT,
-    FOREIGN KEY (event_id) REFERENCES event_t(event_id),
+    FOREIGN KEY (event_id) REFERENCES event_t(id),
+    FOREIGN KEY (student_id) REFERENCES student(id)
+);
+
+CREATE TABLE event_evaluation (
+    id INT PRIMARY KEY,
+    event_id INT,
+    student_id INT,
+    FOREIGN KEY (event_id) REFERENCES event_t(id),
     FOREIGN KEY (student_id) REFERENCES student(id)
 );
 
@@ -212,8 +264,10 @@ CREATE TABLE organization (
     name VARCHAR(70) UNIQUE NOT NULL,
     acronym VARCHAR(14) UNIQUE NOT NULL,
     site_link VARCHAR(70) UNIQUE NOT NULL,
-    image_url VARCHAR(255) UNIQUE NOT NULL,
+    image_id INT,
+    FOREIGN KEY (image_id) REFERENCES media(id),
 );
+
 CREATE TABLE internal_organization (
     id INT PRIMARY KEY,
     FOREIGN KEY (id) REFERENCES organization(id),
@@ -246,7 +300,8 @@ CREATE TABLE company (
     id INT PRIMARY KEY,
     name VARCHAR(50) UNIQUE NOT NULL,
     site_link VARCHAR(70) UNIQUE NOT NULL,
-    image_url VARCHAR(255) UNIQUE NOT NULL,
+    image_id INT,
+    FOREIGN KEY (image_id) REFERENCES media(id),
 );
 
 CREATE TABLE event_sponsor (
@@ -301,4 +356,57 @@ CREATE TABLE course (
     FOREIGN KEY (course_type_id) REFERENCES course_type(id),
     FOREIGN KEY (year_level_id) REFERENCES year_level(id),
     FOREIGN KEY (term_id) REFERENCES term(id)
+);
+
+CREATE TABLE inbox (
+    id INT PRIMARY KEY,
+    sender_id INT,
+    receiver_id INT,
+    subject VARCHAR(50) NOT NULL,
+    body TEXT NOT NULL,
+    FOREIGN KEY (sender_id) REFERENCES user(id),
+    FOREIGN KEY (receiver_id) REFERENCES user(id),
+);
+
+CREATE TABLE reply (
+    id INT PRIMARY KEY,
+    message_id INT,
+    sender_id INT,
+    reply TEXT NOT NULL,
+    FOREIGN KEY (message_id) REFERENCES inbox(id),
+    FOREIGN KEY (sender_id) REFERENCES user(id),
+);
+
+CREATE TABLE announcement (
+    id INT PRIMARY KEY,
+    title VARCHAR(50) NOT NULL,
+    body TEXT NOT NULL,
+    image_id INT,
+    FOREIGN KEY (image_id) REFERENCES media(id),
+);
+
+CREATE TABLE event_mission (
+    id INT PRIMARY KEY,
+    event_id INT,
+    name VARCHAR(50) NOT NULL,
+    description VARCHAR(255) NOT NULL,
+    FOREIGN KEY (event_id) REFERENCES event_t(id),
+);
+
+CREATE TABLE user_event_mission (
+    id INT PRIMARY KEY,
+    user_id INT,
+    event_mission_id INT,
+    is_completed BOOLEAN NOT NULL DEFAULT FALSE,
+    FOREIGN KEY (user_id) REFERENCES user(id),
+    FOREIGN KEY (event_mission_id) REFERENCES event_mission(id),
+);
+
+CREATE TABLE certificate (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    document_id VARCHAR(255) NOT NULL,
+    event_id INT,
+    FOREIGN KEY (event_id) REFERENCES event_t(id),
+    FOREIGN KEY (document_id) REFERENCES media(id)
 );

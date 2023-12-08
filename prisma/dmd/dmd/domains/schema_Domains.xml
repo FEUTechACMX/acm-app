@@ -83,6 +83,15 @@
 <fileName>schema_Domains</fileName>
 <logicalDatatype>LOGDT024</logicalDatatype>
 </Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Timestamp_6_0_0" id="E536AA70-184F-DFF2-4D51-8A2F90BC1DE8">
+<createdBy>alpha</createdBy>
+<createdTime>2023-12-07 04:01:55 UTC</createdTime>
+<ownerDesignName>dmd</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>6</dataTypePrecision>
+<fileName>schema_Domains</fileName>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Domain>
 <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_10" id="F144CAEB-7010-5FAD-6CD8-53770FCC43B9">
 <createdBy>alpha</createdBy>
 <createdTime>2023-12-07 00:34:24 UTC</createdTime>
