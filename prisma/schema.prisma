@@ -9,7 +9,7 @@ generator client {
 }
 
 model Account {
-  id                String  @id @default(cuid())
+  id                Int     @id @default(autoincrement())
   userId            Int
   type              String
   provider          String
@@ -94,19 +94,19 @@ model Faculty {
 
 model Student {
   id                   Int                    @id
-  isACMMember          Boolean                @default(false)
   User                 User                   @relation(fields: [id], references: [id])
   designation          Designation[]
   workingCommitteeHead WorkingCommitteeHead[]
+  membership           Membership[]
 }
 
-model Position {
-  id          Int           @id @default(autoincrement())
-  name        String        @unique
-  managerId   Int?
-  manager     Position?     @relation("Manager", fields: [managerId], references: [id])
-  members     Position[]    @relation("Manager")
-  designation Designation[]
+model SeniorPosition {
+  id                Int                 @id @default(autoincrement())
+  name              String              @unique
+  managerId         Int?
+  manager           SeniorPosition?     @relation("Manager", fields: [managerId], references: [id])
+  subordinates      SeniorPosition[]    @relation("Manager")
+  seniorDesignation SeniorDesignation[]
 }
 
 model Committee {
@@ -115,11 +115,20 @@ model Committee {
   designation Designation[]
 }
 
+model Membership {
+  id        Int     @id @default(autoincrement())
+  studentId Int
+  yearId    Int
+  student   Student @relation(fields: [studentId], references: [id])
+  year      Year    @relation(fields: [yearId], references: [id])
+}
+
 model Year {
   id          Int           @id @default(autoincrement())
   year        Int           @unique
   designation Designation[]
   event       Event[]
+  membership  Membership[]
 }
 
 model Term {
@@ -129,16 +138,34 @@ model Term {
   course Course[]
 }
 
+// NOTE: Default Designation is Junior Officer
+// NOTE: Default Designation is Junior Officer
+// NOTE: Default Designation is Junior Officer
 model Designation {
-  id          Int       @id @default(autoincrement())
-  studentId   Int
-  committeeId Int
-  positionId  Int
-  yearId      Int
-  student     Student   @relation(fields: [studentId], references: [id])
-  committee   Committee @relation(fields: [committeeId], references: [id])
-  position    Position  @relation(fields: [positionId], references: [id])
-  year        Year      @relation(fields: [yearId], references: [id])
+  id                Int                 @id @default(autoincrement())
+  studentId         Int
+  committeeId       Int
+  yearId            Int
+  student           Student             @relation(fields: [studentId], references: [id])
+  committee         Committee           @relation(fields: [committeeId], references: [id])
+  year              Year                @relation(fields: [yearId], references: [id])
+  seniorDesignation SeniorDesignation[]
+}
+
+// To get senior position user for committee in specific year
+// committeeId + yearId + seniorPositionId
+
+model SeniorDesignation {
+  id               Int            @id
+  seniorPositionId Int
+  designation      Designation    @relation(fields: [id], references: [id])
+  seniorPosition   SeniorPosition @relation(fields: [seniorPositionId], references: [id])
+}
+
+model EventType {
+  id    Int     @id @default(autoincrement())
+  type  String  @unique
+  event Event[]
 }
 
 model Event {
@@ -159,12 +186,6 @@ model Event {
   eventPartner        EventPartner[]
   eventMission        EventMission[]
   certificate         Certificate?
-}
-
-model EventType {
-  id    Int     @id @default(autoincrement())
-  type  String  @unique
-  event Event[]
 }
 
 model WorkingCommitteeRole {
@@ -231,9 +252,9 @@ model Organization {
 }
 
 model ExternalOrganization {
-  id              Int           @id @default(autoincrement())
-  university_name String        @unique
-  organization    Organization? @relation(fields: [id], references: [id])
+  id              Int          @id @default(autoincrement())
+  university_name String
+  organization    Organization @relation(fields: [id], references: [id])
 }
 
 model Company {
@@ -246,19 +267,19 @@ model Company {
 }
 
 model EventSponsor {
-  id        Int      @id @default(autoincrement())
-  companyId Int?
+  id        Int     @id @default(autoincrement())
+  companyId Int
   eventId   Int
-  company   Company? @relation(fields: [companyId], references: [id])
-  event     Event    @relation(fields: [eventId], references: [id])
+  company   Company @relation(fields: [companyId], references: [id])
+  event     Event   @relation(fields: [eventId], references: [id])
 }
 
 model EventPartner {
-  id             Int           @id @default(autoincrement())
-  organizationId Int?
+  id             Int          @id @default(autoincrement())
+  organizationId Int
   eventId        Int
-  organization   Organization? @relation(fields: [organizationId], references: [id])
-  event          Event         @relation(fields: [eventId], references: [id])
+  organization   Organization @relation(fields: [organizationId], references: [id])
+  event          Event        @relation(fields: [eventId], references: [id])
 }
 
 model CourseType {
@@ -287,34 +308,26 @@ model Course {
   term         Term       @relation(fields: [termId], references: [id])
 }
 
-// CREATE TABLE inbox (
-//     id INT PRIMARY KEY,
-//     sender_id INT,
-//     receiver_id INT,
-//     subject VARCHAR(50) NOT NULL,
-//     body TEXT NOT NULL,
-//     FOREIGN KEY (sender_id) REFERENCES user(id),
-//     FOREIGN KEY (receiver_id) REFERENCES user(id),
-// );
-
 model Inbox {
-  id         Int     @id @default(autoincrement())
+  id         Int      @id @default(autoincrement())
   senderId   Int
   receiverId Int
   subject    String
   body       String
-  sender     User    @relation("SenderUser", fields: [senderId], references: [id])
-  receiver   User    @relation("ReceiverUser", fields: [receiverId], references: [id])
+  sentAt     DateTime @default(now())
+  sender     User     @relation("SenderUser", fields: [senderId], references: [id])
+  receiver   User     @relation("ReceiverUser", fields: [receiverId], references: [id])
   reply      Reply[]
 }
 
 model Reply {
-  id        Int    @id @default(autoincrement())
+  id        Int      @id @default(autoincrement())
   messageId Int
   senderId  Int
   reply     String
-  message   Inbox  @relation(fields: [messageId], references: [id])
-  sender    User   @relation(fields: [senderId], references: [id])
+  sentAt    DateTime @default(now())
+  message   Inbox    @relation(fields: [messageId], references: [id])
+  sender    User     @relation(fields: [senderId], references: [id])
 }
 
 model Announcement {
@@ -327,9 +340,9 @@ model Announcement {
 
 model EventMission {
   id               Int                @id @default(autoincrement())
-  eventId          Int
   name             String
   description      String
+  eventId          Int
   event            Event              @relation(fields: [eventId], references: [id])
   userEventMission UserEventMission[]
 }
@@ -345,7 +358,7 @@ model UserEventMission {
 
 model Certificate {
   id         Int    @id @default(autoincrement())
-  name       String
+  name       String @unique
   documentId Int    @unique
   eventId    Int    @unique
   event      Event  @relation(fields: [eventId], references: [id])

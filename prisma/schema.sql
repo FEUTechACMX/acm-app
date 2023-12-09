@@ -1,17 +1,23 @@
 CREATE TABLE user_type (
     id INT PRIMARY KEY,
-    user_type VARCHAR(20) UNIQUE NOT NULL,
-    CHECK (
-        user_type = 'guest',
-        OR user_type = 'student',
-        OR user_type = 'faculty',
-    )
+    TYPE VARCHAR (20) UNIQUE NOT NULL,
+    CHECK (TYPE IN ('guest', 'faculty', 'student'))
+);
+
+CREATE TABLE user (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    email_verified BOOLEAN NOT NULL DEFAULT FALSE,
+    image_id VARCHAR(255),
+    user_type_id INT,
+    FOREIGN KEY (user_type_id) REFERENCES user_type(id)
 );
 
 CREATE TABLE account (
     id INT PRIMARY KEY,
     user_id INT,
-    type VARCHAR(20) NOT NULL,
+    account_type VARCHAR (20) NOT NULL,
     provider VARCHAR(20) NOT NULL,
     provider_account_id VARCHAR(20) NOT NULL,
     refresh_token VARCHAR(255),
@@ -21,10 +27,10 @@ CREATE TABLE account (
     scope VARCHAR(255),
     id_token VARCHAR(255),
     session_state VARCHAR(255),
-    FOREIGN KEY (user_id) REFERENCES user(id)
+    FOREIGN KEY (user_id) REFERENCES user (id)
 );
 
-CREATE TABLE session (
+CREATE TABLE SESSION (
     id INT PRIMARY KEY,
     session_token VARCHAR(255) UNIQUE NOT NULL,
     user_id INT,
@@ -32,30 +38,11 @@ CREATE TABLE session (
     FOREIGN KEY (user_id) REFERENCES user(id)
 );
 
--- model User {
---   id            String    @id @default(cuid())
---   name          String?
---   email         String?   @unique
---   emailVerified DateTime?
---   image         String?
---   accounts      Account[]
---   sessions      Session[]
-
-CREATE TABLE user (
-    id INT PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
-    email VARCHAR(255) UNIQUE NOT NULL,
-    email_verified BOOLEAN NOT NULL DEFAULT FALSE,
-    image_id VARCHAR(255),
-    type VARCHAR(20) NOT NULL,
-    user_type_id INT,
-);
-
 CREATE TABLE guest (
     id INT PRIMARY KEY,
     company VARCHAR(50) NOT NULL,
     position VARCHAR(50) NOT NULL,
-    FOREIGN KEY (id) REFERENCES user(id)
+    FOREIGN KEY (id) REFERENCES user_(id)
 );
 
 CREATE TABLE department (
@@ -73,15 +60,14 @@ CREATE TABLE faculty (
 
 CREATE TABLE student (
     id INT PRIMARY KEY,
-    isACMMember BOOLEAN NOT NULL DEFAULT FALSE,
     FOREIGN KEY (id) REFERENCES user(id)
 );
 
-CREATE TABLE position (
+CREATE TABLE senior_position (
     id INT PRIMARY KEY,
     name VARCHAR(50) UNIQUE NOT NULL,
     manager_id INT,
-    FOREIGN KEY (manager_id) REFERENCES position(id),
+    FOREIGN KEY (manager_id) REFERENCES senior_position(id),
     CHECK (
         name IN (
             'President',
@@ -103,9 +89,7 @@ CREATE TABLE position (
             'Director for Sports',
             'Director for Technicals',
             'Webmaster',
-            'Associate Webmaster',
-            'Junior Officer',
-            'Member'
+            'Associate Webmaster'
         )
     )
 );
@@ -115,6 +99,7 @@ CREATE TABLE committee (
     name VARCHAR(50) UNIQUE NOT NULL,
     CHECK (
         name IN (
+            'Executive Committee',
             'Creative Committee',
             'Documentation Committee',
             'Media Committee',
@@ -126,7 +111,7 @@ CREATE TABLE committee (
             'Logistics Committee',
             'Sports Committee',
             'Technicals Committee',
-            'Software Engineering Committee',
+            'Software Engineering Committee'
         )
     )
 );
@@ -136,6 +121,13 @@ CREATE TABLE year_t (
     year INT UNIQUE NOT NULL
 );
 
+CREATE TABLE membership (
+    student_id INT,
+    year_id INT,
+    FOREIGN KEY (student_id) REFERENCES student(id),
+    FOREIGN KEY (year_id) REFERENCES year_t(id)
+);
+
 CREATE TABLE term (
     id INT PRIMARY KEY,
     term VARCHAR(3) UNIQUE NOT NULL,
@@ -143,12 +135,23 @@ CREATE TABLE term (
         term IN (
             '1st',
             '2nd',
-            '3rd',
+            '3rd'
         )
     )
 );
 
-CREATE TABLE designation (
+CREATE TABLE junior_designation (
+    student_id INT,
+    committee_id INT,
+    manager_id INT,
+    year_id INT,
+    FOREIGN KEY (student_id) REFERENCES student(id),
+    FOREIGN KEY (committee_id) REFERENCES committee(id),
+    FOREIGN KEY (manager_id) REFERENCES senior_position(id),
+    FOREIGN KEY (year_id) REFERENCES year_t(id)
+);
+
+CREATE TABLE senior_designation (
     id INT PRIMARY KEY,
     student_id INT,
     committee_id INT,
@@ -156,30 +159,21 @@ CREATE TABLE designation (
     year_id INT,
     FOREIGN KEY (student_id) REFERENCES student(id),
     FOREIGN KEY (committee_id) REFERENCES committee(id),
-    FOREIGN KEY (position_id) REFERENCES position(id),
-    FOREIGN KEY (year_id) REFERENCES year_t(id) CHECK (
-        (
-            SELECT
-                isACMMember
-            FROM
-                student
-            WHERE
-                student_id = student.id
-        ) = TRUE
-    )
+    FOREIGN KEY (position_id) REFERENCES senior_position(id),
+    FOREIGN KEY (year_id) REFERENCES year_t (id)
 );
 
 CREATE TABLE event_type (
     id INT PRIMARY KEY,
-    type VARCHAR(20) UNIQUE NOT NULL,
+    TYPE VARCHAR (20) UNIQUE NOT NULL,
     CHECK (
-        type IN (
+        TYPE IN (
             'Convention',
             'Academic Competition',
             'General Assembly',
             'Outreach',
             'Seminar/Workshop',
-            'Review Session',
+            'Review Session'
         )
     )
 );
@@ -201,7 +195,7 @@ CREATE TABLE working_committee_role (
             'PUBLICATIONS HEAD',
             'TECHNICALS HEAD',
             'LOGISTICS HEAD',
-            'ACADEMICS HEAD',
+            'ACADEMICS HEAD'
         )
     )
 );
@@ -322,13 +316,8 @@ CREATE TABLE event_partner (
 
 CREATE TABLE course_type (
     id INT PRIMARY KEY,
-    type VARCHAR(10) UNIQUE NOT NULL,
-    CHECK (
-        type IN (
-            'lecture',
-            'laboratory',
-        )
-    )
+    TYPE VARCHAR (10) UNIQUE NOT NULL,
+    CHECK (TYPE IN ('lecture', 'laboratory'))
 );
 
 CREATE TABLE year_level (
@@ -339,7 +328,7 @@ CREATE TABLE year_level (
             1,
             2,
             3,
-            4,
+            4
         )
     )
 );
