@@ -193,9 +193,6 @@ const prismaEventType = prisma.eventType.createMany({
 			type: "Seminar/Workshop",
 		},
 		{
-			type: "Seminar/Workshop",
-		},
-		{
 			type: "Outreach",
 		},
 	],
@@ -956,17 +953,30 @@ const prismaCourse = prisma.course.createMany({
 	],
 });
 
-export {
-	prismaCommittee,
-	prismaCourse,
-	prismaCourseType,
-	prismaDepartment,
-	prismaEventType,
-	prismaOrganization,
-	prismaSeniorPosition,
-	prismaTerm,
-	prismaUserType,
-	prismaWorkingCommitteeRole,
-	prismaYear,
-	prismaYearLevel,
-};
+async function prismaPopulate() {
+	try {
+		console.log("Populating database...");
+		const res1 = await Promise.allSettled([
+			prismaUserType,
+			prismaDepartment,
+			prismaYear,
+			prismaSeniorPosition,
+			prismaCommittee,
+			prismaTerm,
+			prismaEventType,
+			prismaWorkingCommitteeRole,
+			prismaOrganization,
+			prismaYearLevel,
+			prismaCourseType,
+		]);
+		const res2 = await Promise.allSettled([prismaCourse]);
+		console.log(res1, res2);
+
+		// console.log(res1, res2);
+		console.log("Database populated!");
+	} catch (err) {
+		console.log(err);
+	}
+}
+
+export default prismaPopulate;
