@@ -1,86 +1,14 @@
+import * as queries from "@/utils/db/init";
 import { prisma } from "@/utils/prisman";
-
 async function prismaPopulate() {
-	await prisma.seniorPosition.createMany({
-		data: [
-			{
-				name: "President",
-				managerId: null,
-			},
-			{
-				name: "VP Internal",
-				managerId: 1,
-			},
-			{
-				name: "VP External",
-				managerId: 1,
-			},
-			{
-				name: "Secretary",
-				managerId: 2,
-			},
-			{
-				name: "Treasurer",
-				managerId: 2,
-			},
-			{
-				name: "Auditor",
-				managerId: 2,
-			},
-			{
-				name: "PRO",
-				managerId: 3,
-			},
-			{
-				name: "Director for Documentation",
-				managerId: 2,
-			},
-			{
-				name: "Director for Academics",
-				managerId: 2,
-			},
-			{
-				name: "Director for Technicals",
-				managerId: 2,
-			},
-			{
-				name: "Webmaster",
-				managerId: 2,
-			},
-			{
-				name: "Director for Events",
-				managerId: 2,
-			},
-			{
-				name: "Director for Logistics",
-				managerId: 2,
-			},
-			{
-				name: "Director for Sports",
-				managerId: 2,
-			},
-			{
-				name: "Director for Media",
-				managerId: 3,
-			},
-			{
-				name: "Director for Creatives",
-				managerId: 3,
-			},
-			{
-				name: "Director for Outreach",
-				managerId: 3,
-			},
-			{
-				name: "Director for Publication",
-				managerId: 3,
-			},
-			{
-				name: "Director for Publicity",
-				managerId: 3,
-			},
-		],
-	});
+	try {
+		const res = await Promise.allSettled(
+			Object.values(queries).map((query) => query),
+		);
+		console.log(res);
+	} catch (err) {
+		console.log(err);
+	}
 }
 async function prismaDelete() {
 	await prisma.$executeRaw`TRUNCATE TABLE "Position"`;

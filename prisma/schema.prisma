@@ -79,10 +79,11 @@ model Guest {
 }
 
 model Department {
-  id      Int       @id
-  name    String    @unique
-  faculty Faculty[]
-  course  Course[]
+  id           Int       @id @default(autoincrement())
+  name         String    @unique
+  abbreviation String    @unique
+  faculty      Faculty[]
+  course       Course[]
 }
 
 model Faculty {
@@ -190,7 +191,7 @@ model Event {
 
 model WorkingCommitteeRole {
   id                   Int                    @id @default(autoincrement())
-  name                 String                 @unique
+  role                 String                 @unique
   workingCommitteeHead WorkingCommitteeHead[]
 }
 
