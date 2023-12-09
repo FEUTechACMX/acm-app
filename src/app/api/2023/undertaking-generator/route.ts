@@ -19,33 +19,51 @@ const zip = new AdmZip();
 const dataPath = "public/data";
 const source = `${dataPath}/CONFIDENTIALITY-UNDERTAKING-template.pdf`;
 const target = `${dataPath}/ACMX-Undertaking.zip`;
-const signaturePath = `${dataPath}/alpha_signature.png`;
+const signaturePath = `${dataPath}/test.png`;
 const idPath = `${dataPath}/alpha_id.jpg`;
 const pageDims = {
-	width: 612,
-	height: 792,
+	pageWidth: 612,
+	pageHeight: 792,
 };
 const fontSize = {
 	title: 7.8,
 	reg: 10,
 };
+const sigMaxDims = {
+	sigMaxWidth: 100,
+	sigMaxHeight: 50,
+};
 const { title, reg } = fontSize;
-const { width, height } = pageDims;
+const { pageWidth, pageHeight } = pageDims;
+const { sigMaxWidth, sigMaxHeight } = sigMaxDims;
 
 const createTemplate = async (signatureBytes: Buffer, idBytes: Buffer) => {
 	const templatePdf = await PDFDocument.load(await readFile(source));
-	const idImage = templatePdf.embedJpg(idBytes);
-	const sigImage = templatePdf.embedPng(signatureBytes);
+	const idImgPromise = templatePdf.embedJpg(idBytes);
+	const sigImgPromise = templatePdf.embedPng(signatureBytes);
+	const [idImg, sigImg] = await Promise.all([idImgPromise, sigImgPromise]);
+	const aspectRatio = sigImg.width / sigImg.height;
+	let sigWidth = sigMaxWidth;
+	let sigHeight = sigMaxWidth / aspectRatio;
 
-	const [idImagePage] = await Promise.all([idImage, sigImage]);
+	if (sigHeight > sigMaxHeight) {
+		sigHeight = sigMaxHeight;
+		sigWidth = sigMaxHeight * aspectRatio;
+	}
 
-	const secondPage = templatePdf.getPage(1);
-	const { width: sigWidth, height: sigHeight } = idImagePage.scale(0.25);
-	secondPage.drawImage(idImagePage, {
-		x: width / 2 - sigWidth / 2,
-		y: height / 2 - sigHeight / 2,
+	templatePdf.getPage(0).drawImage(sigImg, {
+		x: 400,
+		y: 145,
 		width: sigWidth,
 		height: sigHeight,
+	});
+
+	const { width: idWidth, height: idHeight } = idImg.scale(0.25);
+	templatePdf.getPage(1).drawImage(idImg, {
+		x: pageWidth / 2 - idWidth / 2,
+		y: pageHeight / 2 - idHeight / 2,
+		width: idWidth,
+		height: idHeight,
 	});
 
 	return templatePdf.save();
