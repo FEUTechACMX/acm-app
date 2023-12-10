@@ -201,37 +201,37 @@ const prismaEventType = prisma.eventType.createMany({
 const prismaWorkingCommitteeRole = prisma.workingCommitteeRole.createMany({
 	data: [
 		{
-			role: "PROJECT HEAD",
+			role: "Project Head",
 		},
 		{
-			role: "PROJECT CO-HEAD",
+			role: "Project Co-Head",
 		},
 		{
-			role: "CREATIVES HEAD",
+			role: "Creatives Head",
 		},
 		{
-			role: "EXTERNALS HEAD",
+			role: "Externals Head",
 		},
 		{
-			role: "FINANCE HEAD",
+			role: "Finance Head",
 		},
 		{
-			role: "PROGRAMS HEAD",
+			role: "Programs Head",
 		},
 		{
-			role: "PUBLICATIONS HEAD",
+			role: "Publications Head",
 		},
 		{
-			role: "PUBLICITY HEAD",
+			role: "Publicity Head",
 		},
 		{
-			role: "SECRETARIAT HEAD",
+			role: "Secretariat Head",
 		},
 		{
-			role: "TECHNICALS HEAD",
+			role: "Technicals Head",
 		},
 		{
-			role: "ACADEMICS HEAD",
+			role: "Academics Head",
 		},
 	],
 });
@@ -328,7 +328,7 @@ const prismaCourse = prisma.course.createMany({
 	data: [
 		{
 			code: "CCS0001",
-			name: " INTRODUCTION TO COMPUTING (LEC)",
+			name: " Introduction to Computing (Lec)",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -336,7 +336,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CCS0001L",
-			name: "INTRODUCTION TO COMPUTING (LAB)",
+			name: "Introduction to Computing (Lab)",
 			departmentId: 1,
 			courseTypeId: 2,
 			yearLevelId: 1,
@@ -344,7 +344,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0004",
-			name: "PHYSICAL EDUCATION 1",
+			name: "Physical Education 1",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -352,7 +352,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0006",
-			name: "PERSONAL AND PROFESSIONAL EFFECTIVENESS",
+			name: "Personal and Professional Effectiveness",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -360,7 +360,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0009",
-			name: "READINGS IN PHILIPPINE HISTORY",
+			name: "Readings In Philippine History",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -368,7 +368,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0011",
-			name: "SCIENCE, TECHNOLOGY AND SOCIETY",
+			name: "Science, Technology and Society",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -376,7 +376,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CCS0005",
-			name: "INTRODUCTION TO HUMAN COMPUTER INTERACTION (LEC)",
+			name: "Introduction to Human Computer Interaction (Lec)",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -384,7 +384,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CCS0005L",
-			name: "INTRODUCTION TO HUMAN COMPUTER INTERACTION (LAB)",
+			name: "Introduction to Human Computer Interaction (Lab)",
 			departmentId: 1,
 			courseTypeId: 2,
 			yearLevelId: 1,
@@ -392,7 +392,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CCS0007",
-			name: "COMPUTER PROGRAMMING 2 (LEC)",
+			name: "Computer Programming 2 (Lec)",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -400,7 +400,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CCS0007L",
-			name: "COMPUTER PROGRAMMING 2 (LAB)",
+			name: "Computer Programming 2 (Lab)",
 			departmentId: 1,
 			courseTypeId: 2,
 			yearLevelId: 1,
@@ -408,7 +408,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0001",
-			name: "SPECIALIZED ENGLISH PROGRAM 1",
+			name: "Specialized English Program 1",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -416,7 +416,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0015",
-			name: "PHYSICAL EDUCATION 2",
+			name: "Physical Education 2",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -424,7 +424,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0027",
-			name: "MATHEMATICS IN THE MODERN WORLD",
+			name: "Mathematics in the Modern World",
 			departmentId: 2,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -432,7 +432,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0029",
-			name: "ANALYTIC GEOMETRY WITH CALCULUS",
+			name: "Analytic Geometry with Calculus",
 			departmentId: 2,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -440,7 +440,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "NSTP1",
-			name: "CIVIC WELFARE TRAINING SERVICE 1",
+			name: "Civic Welfare Training Service 1",
 			departmentId: 4,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -448,7 +448,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CCS0015",
-			name: "DATA STRUCTURES AND ALGORITHMS (LEC)",
+			name: "Data Structures and Algorithms (Lec)",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -456,7 +456,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CCS0015L",
-			name: "DATA STRUCTURES AND ALGORITHMS (LAB)",
+			name: "Data Structures and Algorithms (Lab)",
 			departmentId: 1,
 			courseTypeId: 2,
 			yearLevelId: 1,
@@ -464,7 +464,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CCS0105",
-			name: "PROFESSIONAL DEVELOPMENT (COMPUTING PROFESSION)",
+			name: "Professional Development (Computing Profession)",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -472,7 +472,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0007",
-			name: "ART APPRECIATION ",
+			name: "Art Appreciation ",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -480,7 +480,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0023",
-			name: "PHYSICAL EDUCATION 3",
+			name: "Physical Education 3",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -488,7 +488,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0035",
-			name: "THE CONTEMPORARY WORLD",
+			name: "the Contemporary World",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -496,7 +496,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0040",
-			name: "APPLIED STATISTICS FOR CS",
+			name: "Applied Statistics for CS",
 			departmentId: 2,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -504,7 +504,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0055",
-			name: "MATHEMATICAL ANALYSIS",
+			name: "Mathematical Analysis",
 			departmentId: 2,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -512,7 +512,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "NSTP2",
-			name: "CIVIC WELFARE TRAINING SERVICE 2",
+			name: "Civic Welfare Training Service 2",
 			departmentId: 4,
 			courseTypeId: 1,
 			yearLevelId: 1,
@@ -520,7 +520,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CCS0021",
-			name: "INFORMATION MANAGEMENT (LEC)",
+			name: "Information Management (Lec)",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -528,7 +528,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CCS0021L",
-			name: "INFORMATION MANAGEMENT (LAB)",
+			name: "Information Management (Lab)",
 			departmentId: 1,
 			courseTypeId: 2,
 			yearLevelId: 2,
@@ -536,7 +536,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0001",
-			name: "DISCRETE STRUCTURES 1",
+			name: "Discrete Structures 1",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -544,7 +544,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0003",
-			name: "COMPUTER SYSTEMS & ARCHITECTURE (LEC)",
+			name: "Computer Systems & Architecture (Lec)",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -552,7 +552,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0003L",
-			name: "COMPUTER SYSTEMS & ARCHITECTURE (LAB)",
+			name: "Computer Systems & Architecture (Lab)",
 			departmentId: 1,
 			courseTypeId: 2,
 			yearLevelId: 2,
@@ -560,7 +560,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0070",
-			name: "OBJECT ORIENTED PROGRAMMING (LEC)",
+			name: "Object Oriented Programming (Lec)",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -568,7 +568,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0070L",
-			name: "OBJECT ORIENTED PROGRAMMING (LAB)",
+			name: "Object Oriented Programming (Lab)",
 			departmentId: 1,
 			courseTypeId: 2,
 			yearLevelId: 2,
@@ -576,7 +576,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0021",
-			name: "SPECIALIZED ENGLISH PROGRAM 2",
+			name: "Specialized English Program 2",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -584,7 +584,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0075",
-			name: "LINEAR ALGEBRA",
+			name: "Linear Algebra",
 			departmentId: 2,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -592,7 +592,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0081",
-			name: "COLLEGE PHYSICS 1 LECTURE",
+			name: "College Physics 1 Lecture",
 			departmentId: 2,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -600,7 +600,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0081L",
-			name: "COLLEGE PHYSICS 1 LABORATORY",
+			name: "College Physics 1 Laboratory",
 			departmentId: 2,
 			courseTypeId: 2,
 			yearLevelId: 2,
@@ -608,7 +608,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CCS0101",
-			name: "DESIGN THINKING (CCS)",
+			name: "Design Thinking (CCS)",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -616,7 +616,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0007",
-			name: "ALGORITHM",
+			name: "Algorithm",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -624,7 +624,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0010",
-			name: "FUNDAMENTALS OF ANALYTICS",
+			name: "Fundamentals of Analytics",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -632,7 +632,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0017",
-			name: "OPERATING SYSTEM",
+			name: "Operating System",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -640,7 +640,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0021",
-			name: "DISCRETE STRUCTURES 2",
+			name: "Discrete Structures 2",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -648,7 +648,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0083",
-			name: "COLLEGE PHYSICS 2 LECTURE",
+			name: "College Physics 2 Lecture",
 			departmentId: 2,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -656,7 +656,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0083L",
-			name: "COLLEGE PHYSICS 2 LABORATORY",
+			name: "College Physics 2 Laboratory",
 			departmentId: 2,
 			courseTypeId: 2,
 			yearLevelId: 2,
@@ -664,7 +664,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CCS0043",
-			name: "APPLICATIONS DEVELOPMENT AND EMERGING TECHNOLOGIES (LEC)",
+			name: "Applications Development and Emerging Technologies (Lec)",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -672,7 +672,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CCS0043L",
-			name: "APPLICATIONS DEVELOPMENT AND EMERGING TECHNOLOGIES (LAB)",
+			name: "Applications Development and Emerging Technologies (Lab)",
 			departmentId: 1,
 			courseTypeId: 2,
 			yearLevelId: 2,
@@ -680,7 +680,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CCS0103",
-			name: "TECHNOPRENEURSHIP (CCS)",
+			name: "Technopreneurship (CSS)",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -688,7 +688,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0005",
-			name: "DATABASE SYSTEMS",
+			name: "Database Systems",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -696,7 +696,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0013",
-			name: "NETWORKS AND COMMUNICATIONS 1",
+			name: "Networks and Communications 1",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -704,7 +704,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0023",
-			name: "AUTOMATA THEORY AND FORMAL LANGUAGES",
+			name: "Automata Theory and Formal Languages",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -712,7 +712,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0048",
-			name: "CS SPECIALIZATION 1 (STRUCTURED PROGRAMMING LANGUAGE)",
+			name: "CS Specialization 1 (Structured Programming Language)",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -720,7 +720,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0031",
-			name: "PURPOSIVE COMMUNICATION",
+			name: "Purposive Communication",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 2,
@@ -728,7 +728,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0011",
-			name: "MOBILE PROGRAMMING",
+			name: "Mobile Programming",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -736,7 +736,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0016",
-			name: "NETWORK AND COMMUNICATIONS 2A",
+			name: "Network and Communications 2a",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -744,7 +744,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0019",
-			name: "MODELING AND SIMULATION",
+			name: "Modeling and Simulation",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -752,7 +752,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0025",
-			name: "SOFTWARE ENGINEERING 1",
+			name: "Software Engineering 1",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -760,7 +760,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0045",
-			name: "CS ELECTIVE - COMPUTER GRAPHICS AND VISUAL COMPUTING",
+			name: "CS Elective - Computer Graphics and Visual Computing",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -768,7 +768,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0053",
-			name: "CS SPECIALIZATION 2 - PROGRAMMING TOOLS AND TECHNIQUES",
+			name: "CS Specialization 2 - Programming Tools and Techniques",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -776,7 +776,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0085",
-			name: "GENDER AND SOCIETY",
+			name: "Gender and Society",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -784,7 +784,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0027",
-			name: "CS PROJECT MANAGEMENT",
+			name: "CS Project Management",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -792,7 +792,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0031",
-			name: "SOFTWARE ENGINEERING 2",
+			name: "Software Engineering 2",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -800,7 +800,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0035",
-			name: "PROGRAMMING LANGUAGES",
+			name: "Programming Languages",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -808,7 +808,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0051",
-			name: "CS ELECTIVE - PARALLEL AND DISTRIBUTED COMPUTING",
+			name: "CS Elective - Parallel and Distributed Computing",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -816,7 +816,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0057",
-			name: "CS SPECIALIZATION 3 - IMAGE PROCESSING",
+			name: "CS Specialization 3 - Image Processing",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -824,7 +824,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0019",
-			name: "UNDERSTANDING THE SELF",
+			name: "Understanding the Self",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -832,7 +832,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0059",
-			name: "MATHEMATICAL METHODS",
+			name: "Mathematical Methods",
 			departmentId: 2,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -840,7 +840,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CCS0047",
-			name: "NUMBER THEORY",
+			name: "Number Theory",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -848,7 +848,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0029",
-			name: "INFORMATION ASSURANCE AND SECURITY",
+			name: "Information Assurance and Security",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -856,7 +856,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0033",
-			name: "CS PROJECT 1",
+			name: "CS Project 1",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -864,7 +864,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0061",
-			name: "CS SPECIALIZATION 4 - BUSINESS PROCESS FOR COMPUTING",
+			name: "CS Specialization 4 - Business Process for Computing",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -872,7 +872,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0061",
-			name: "ETHICS",
+			name: "Ethics",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -880,7 +880,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0073",
-			name: "GE ELECTIVE 2",
+			name: "Ge Elective 2",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 3,
@@ -888,7 +888,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0037",
-			name: "SOCIAL ISSUES AND PROFESSIONAL PRACTICE",
+			name: "Social Issues and Professional Practice",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 4,
@@ -896,7 +896,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0039",
-			name: "CS PROJECT 2",
+			name: "CS Project 2",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 4,
@@ -904,7 +904,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0066",
-			name: "CS ELECTIVE 3 - BLOCKCHAIN TECHNOLOGY",
+			name: "CS Elective 3 - Blockchain Technology",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 4,
@@ -912,7 +912,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0047",
-			name: "FOREIGN LANGUAGE",
+			name: "Foreign Language",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 4,
@@ -920,7 +920,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0049",
-			name: "LIFE AND WORKS OF RIZAL",
+			name: "Life and Works of Rizal",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 4,
@@ -928,7 +928,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "GED0065",
-			name: "ENVIRONMENTAL SCIENCE",
+			name: "Environmental Science",
 			departmentId: 3,
 			courseTypeId: 1,
 			yearLevelId: 4,
@@ -936,7 +936,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0041",
-			name: "INTERNSHIP 1",
+			name: "Internship 1",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 4,
@@ -944,7 +944,7 @@ const prismaCourse = prisma.course.createMany({
 		},
 		{
 			code: "CS0043",
-			name: "INTERNSHIP 2",
+			name: "Internship 2",
 			departmentId: 1,
 			courseTypeId: 1,
 			yearLevelId: 4,
@@ -972,7 +972,6 @@ async function prismaPopulate() {
 		const res2 = await Promise.allSettled([prismaCourse]);
 		console.log(res1, res2);
 
-		// console.log(res1, res2);
 		console.log("Database populated!");
 	} catch (err) {
 		console.log(err);

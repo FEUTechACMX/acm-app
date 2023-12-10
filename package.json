@@ -27,6 +27,7 @@
 		"@bubblewrap/cli": "^1.21.0",
 		"@builder.io/partytown": "^0.8.1",
 		"@prisma/client": "^5.7.0",
+		"@prisma/extension-accelerate": "^0.6.2",
 		"@reduxjs/toolkit": "^2.0.1",
 		"@types/node": "20.10.4",
 		"@types/react": "18.2.43",
