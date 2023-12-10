@@ -11,6 +11,6 @@ async function prismaDelete() {
 		}
 		continue;
 	}
-	console.log("Truncate all tables");
+	console.log("Tables dropped");
 }
 export { prismaDelete as DELETE, prismaPopulate as GET };
