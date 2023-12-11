@@ -1,4 +1,5 @@
 import { createTransport } from "nodemailer";
+import { env } from "@/server/env";
 interface MailerOptions {
 	recipient: string;
 	subject: string;
@@ -6,12 +7,12 @@ interface MailerOptions {
 }
 
 export const mailerOptions = {
-	host: process.env.EMAIL_SERVER_HOST,
-	port: +process.env.EMAIL_SERVER_PORT,
+	host: env.EMAIL_SERVER_HOST,
+	port: +env.EMAIL_SERVER_PORT,
 	service: "gmail",
 	auth: {
-		user: process.env.EMAIL_SERVER_USER,
-		pass: process.env.EMAIL_SERVER_PASSWORD,
+		user: env.EMAIL_SERVER_USER,
+		pass: env.EMAIL_SERVER_PASSWORD,
 	},
 };
 
@@ -25,7 +26,7 @@ export const serverDetails = {
 	// https://nodemailer.com/smtp/ on secure: false,
 	// secure: false,
 
-	from: `ACM-X Team <${process.env.EMAIL_SERVER_USER}>`,
+	from: `ACM-X Team <${env.EMAIL_SERVER_USER}>`,
 	opportunisticTLS: true,
 	priority: "high",
 	connectionTimeout: 10 * 60 * 1000, // 10 minutes

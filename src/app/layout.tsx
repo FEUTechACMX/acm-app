@@ -1,4 +1,5 @@
 import NextAuthProvider from "@/components/2023/(app)/provider";
+import { env } from "@/server/env";
 import { ReduxProviders } from "@/utils/redux/provider";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
@@ -7,7 +8,7 @@ import "./globals.css";
 const metaData = {
 	app_name: "FEU Tech ACM-X",
 	title: "FEU Tech ACM-X | Coding Chaos In Digital Dystopia",
-	url: process.env.HOST_URL,
+	url: env.HOST_URL,
 	description:
 		"The FEU Tech ACM Organization's official cross-platform application developed to serve as the central platform for communication, collaboration, and promotion of every ACM member and officer in education, opportunities, and beyond.",
 	iconURL: "https://acmx.vercel.app/android-chrome-512x512.png",
