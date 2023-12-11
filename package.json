@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev",
+		"dev": "next dev --turbo",
 		"build": "yarn run partytown && next build",
 		"postbuild": "next-sitemap",
 		"partytown": "partytown copylib public/~partytown",
@@ -29,6 +29,7 @@
 		"@prisma/client": "^5.7.0",
 		"@prisma/extension-accelerate": "^0.6.2",
 		"@reduxjs/toolkit": "^2.0.1",
+		"@t3-oss/env-nextjs": "^0.7.1",
 		"@types/node": "20.10.4",
 		"@types/react": "18.2.43",
 		"@types/react-dom": "18.2.17",
@@ -45,13 +46,15 @@
 		"nodemailer": "^6.9.7",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
+		"react-hook-form": "^7.49.0",
 		"react-redux": "^9.0.3",
 		"sharp": "^0.33.0",
-		"typescript": "5.3.3"
+		"typescript": "5.3.3",
+		"zod": "^3.22.4"
 	},
 	"main": "next.config.js",
 	"repository": "git@github.com:FEU-Tech-ACM-Student-Chapter/acm-app.git",
-	"author": "Alpha Romer Coma <400829150120@r3-1.deped.gov.ph>",
+	"author": "Alpha Romer Coma <alpha.coma.ict@gmail.com>",
 	"license": "Apache-2.0",
 	"devDependencies": {
 		"@commitlint/cli": "^18.4.3",
