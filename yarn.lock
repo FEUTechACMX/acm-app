@@ -29,24 +29,25 @@
     jsonpointer "^5.0.0"
     leven "^3.1.0"
 
-"@auth/core@0.18.4":
-  version "0.18.4"
-  resolved "https://registry.yarnpkg.com/@auth/core/-/core-0.18.4.tgz#5c91f7835dc24329d5486a2939d766608a7aacb8"
-  integrity sha512-GsNhsP1xE/3FoNS3dVkPjqRljLNJ4iyL2OLv3klQGNvw3bMpROFcK4lqhx7+pPHiamnVaYt2vg1xbB+lsNaevg==
+"@auth/core@0.18.5":
+  version "0.18.5"
+  resolved "https://registry.yarnpkg.com/@auth/core/-/core-0.18.5.tgz#7025d5c533588f9b01965c34ab32abf262987525"
+  integrity sha512-Ql8YobXp57mbXqHNaaroIAgBopKaxWI+3Tlu1rGcXW5KPzXdfTqijZ4HOuZvWKqmhbMWQ9xS9r8uG4fMonZYwg==
   dependencies:
     "@panva/hkdf" "^1.1.1"
+    "@types/cookie" "0.6.0"
     cookie "0.6.0"
     jose "^5.1.0"
     oauth4webapi "^2.3.0"
     preact "10.11.3"
     preact-render-to-string "5.2.3"
 
-"@auth/prisma-adapter@^1.0.9":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@auth/prisma-adapter/-/prisma-adapter-1.0.9.tgz#e9559e266ebc988bc4a603e143e991747a6b539e"
-  integrity sha512-/GiOE/7kVggulEtwnoRv9WDTjz4pDRpB78DvYfOYmVyxk+0bIDxAfaFE5qk2lsBtWOyYPUSgfLkO89ZM93qdqA==
+"@auth/prisma-adapter@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@auth/prisma-adapter/-/prisma-adapter-1.0.10.tgz#04392352164c57f26b3c2ad0216f7d9d9d169f64"
+  integrity sha512-k2rrlgVwhyZlLtxm27FWeY7spsznIxAjdTgYuXFtF5jLEG6v1Ju1Y3cgVld8BKNljhmVaSJ8xVmaK/U+roD1DA==
   dependencies:
-    "@auth/core" "0.18.4"
+    "@auth/core" "0.18.5"
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.22.13", "@babel/code-frame@^7.23.5":
   version "7.23.5"
@@ -2077,6 +2078,11 @@
   integrity sha512-NMiNcZFRUAiUUCCf7zkAelY8eV3aKqfbzyFQlXpPIEeoNDbsEHGpb854V3gzTsGKYj830I5zPuOwU/TP5/cW6A==
   dependencies:
     "@types/color-convert" "*"
+
+"@types/cookie@0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@types/cookie/-/cookie-0.6.0.tgz#eac397f28bf1d6ae0ae081363eca2f425bedf0d5"
+  integrity sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==
 
 "@types/eslint-config-prettier@^6.11.3":
   version "6.11.3"
