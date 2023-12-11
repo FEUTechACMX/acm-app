@@ -64,7 +64,7 @@ const Sound: React.FC<Props> = ({ children, events, className, autoPlay }) => {
 					[event]: () => playAudio(event as keyof typeof events),
 				}),
 				{},
-		  )
+			)
 		: {};
 
 	return (
