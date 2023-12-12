@@ -1,4 +1,3 @@
-import prismaPopulate from "@/utils/db/init";
 import { prisma } from "@/utils/prisman";
 import { Prisma } from "@prisma/client";
 const tableNames = Object.values(Prisma.ModelName);
@@ -13,4 +12,4 @@ async function prismaDelete() {
 	}
 	console.log("Tables dropped");
 }
-export { prismaDelete as DELETE, prismaPopulate as GET };
+export { prismaDelete as DELETE };

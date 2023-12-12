@@ -25,7 +25,7 @@ export const env = createEnv({
 		GOOGLE_SECRET: process.env.GOOGLE_SECRET,
 		HOST_URL: process.env.HOST_URL,
 		NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
-		NEXTAUTH_URL: process.env.NEXTAUTH_URL,
+		NEXTAUTH_URL: process.env.NEXTAUTH_URL ?? process.env.VERCEL_URL,
 		NODE_ENV: process.env.NODE_ENV,
 		POSTGRES_DATABASE: process.env.POSTGRES_DATABASE,
 		POSTGRES_HOST: process.env.POSTGRES_HOST,
