@@ -1,3 +1,5 @@
-const regexSchoolEmail = /(20)(1|2)(0|1|2|3|4)([0-9]{5})(@fit.edu.ph)/;
+import regexIdNumber from "./schoolId";
+// extend the regexIdNumber to include the school email. Attach @fit.edu.ph at the end. $ must be used.
+const regexSchoolEmail = new RegExp(regexIdNumber.source + "@fit.edu.ph$");
 
 export default regexSchoolEmail;
