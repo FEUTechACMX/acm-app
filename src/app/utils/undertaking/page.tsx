@@ -18,9 +18,13 @@ export type UndertakingData = Awaited<ReturnType<typeof getCourses>>;
 const UndertakingPage: NextPage = async () => {
 	const data = await getCourses();
 	return (
-		<>
-			<UndertakingForm props={{ data }} />
-		</>
+		<section>
+			<div className="h-screen w-screen">
+				<div className="flex justify-center items-center h-full relative m-auto">
+					<UndertakingForm props={{ data }} />
+				</div>
+			</div>
+		</section>
 	);
 };
 
