@@ -60,10 +60,10 @@
 		"@commitlint/cli": "^18.4.3",
 		"@commitlint/config-conventional": "^18.4.3",
 		"@next-auth/prisma-adapter": "^1.0.7",
-		"@types/adm-zip": "^0.5.5",
 		"@tsparticles/engine": "^3.0.2",
 		"@tsparticles/react": "^3.0.0",
 		"@tsparticles/slim": "^3.0.2",
+		"@types/adm-zip": "^0.5.5",
 		"@types/eslint-config-prettier": "^6.11.3",
 		"@types/next-pwa": "^5.6.9",
 		"@types/nodemailer": "^6.4.14",
@@ -83,7 +83,8 @@
 		"stylelint-config-prettier": "^9.0.5",
 		"stylelint-config-recommended": "^14.0.0",
 		"stylelint-order": "^6.0.4",
-		"tailwindcss": "^3.3.6"
+		"tailwindcss": "^3.3.6",
+		"tsx": "^4.6.2"
 	},
 	"stylelint": {
 		"extends": [
