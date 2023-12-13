@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Viewport } from "next";
 import "./globals.css";
+import NextUIProv from "./provider";
 const metaData = {
 	app_name: "FEU Tech ACM-X",
 	title: "FEU Tech ACM-X | Coding Chaos In Digital Dystopia",
@@ -156,7 +157,7 @@ const RootLayout: React.FC<Props> = ({ children }) => {
 		<html lang="en">
 			<NextAuthProvider>
 				<ReduxProviders>
-					{children}
+					<NextUIProv>{children}</NextUIProv>
 					<Analytics />
 				</ReduxProviders>
 			</NextAuthProvider>

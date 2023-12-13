@@ -88,10 +88,3 @@ input[type="file"]::file-selector-button {
 	border-right: 2px solid var(--accents);
 	background: var(--panel-bg);
 }
-/* 
-label {
-    color: var(--accents);
-} */
-input[type="checkbox"]:checked + label {
-	color: var(--accents);
-}

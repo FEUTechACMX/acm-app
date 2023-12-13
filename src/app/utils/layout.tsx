@@ -35,11 +35,13 @@ interface Props {
 
 const Layout: React.FC<Props> = ({ children }) => {
 	return (
-		<body
-			className={`${f_f1s.variable} ${f_hae.variable} ${f_ot.variable} text-base sm:text-lg lg:text-xl`}
-		>
-			{children}
-		</body>
+		<html lang="en">
+			<body
+				className={`${f_f1s.variable} ${f_hae.variable} ${f_ot.variable} text-base sm:text-lg lg:text-xl`}
+			>
+				{children}
+			</body>
+		</html>
 	);
 };
 

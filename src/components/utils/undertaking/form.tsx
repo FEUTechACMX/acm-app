@@ -1,5 +1,7 @@
 "use client";
 import { UndertakingData } from "@/app/utils/undertaking/page";
+import ACMImage from "@/components/2023/(website)/(main)/_gen/image/acm";
+import { Button, Checkbox } from "@nextui-org/react";
 import { SubmitHandler, useForm } from "react-hook-form";
 type Inputs = {
 	fullName: string;
@@ -27,11 +29,37 @@ const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
 	return (
 		<form
 			onSubmit={handleSubmit(onSubmit)}
-			className="flex justify-center items-center h-full relative m-auto"
+			className="flex flex-col w-full justify-center items-center gap-2 p-4"
 		>
-			<div className="sm:p-6 rounded-lg sm:shadow-md sm:shadow-accents">
-				{/* <div className="w-full p-4 flex gap-1 flex-col">
-					<div className="w-32 h-12 relative m-auto">
+			<div className="w-32 h-12 relative">
+				<ACMImage />
+			</div>
+			<h1 className="text-center">Undertaking Generator</h1>
+			<hr className="w-full" />
+			<div className="max-h-[500px] overflow-y-auto border-b-2 border-accents w-full">
+				{data.map((course) => {
+					return (
+						<Checkbox className="flex max-w-full w-full" key={course.id}>
+							<p className="flex justify-between">
+								<span className="w-16">{course.code}</span>
+								<span className="truncate">{course.name}</span>
+							</p>
+						</Checkbox>
+					);
+				})}
+			</div>
+			<div className="flex justify-between w-full">
+				<Button radius="sm" variant="ghost" color="primary">
+					Back
+				</Button>
+				<Button radius="sm" variant="ghost" color="primary">
+					Next
+				</Button>
+			</div>
+
+			{/* <div className="flex max-w-2xl"> */}
+			{/* <div className="w-full p-4 flex gap-1 flex-col"> */}
+			{/* <div className="w-32 h-12 relative m-auto">
 						<ACMImage />
 					</div>
 					<h1>Undertaking Generator</h1>
@@ -92,35 +120,8 @@ const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
 							{...(register("idImg"), { required: true })}
 							className="block  border-2 border-accents w-full rounded-md"
 						/>
-					</div>
-				</div> */}
-
-				<div className="w-full p-4 flex gap-1 flex-col">
-					<h2>Course Select</h2>
-					<hr className="w-full" />
-					<input
-						type="search"
-						placeholder="Search for course name"
-						className="px-1 py-2 sm:px-4 sm:py-2 w-full border-2 border-accents rounded-md"
-					/>
-					<div className="flex flex-col gap-1 max-h-96 overflow-y-scroll">
-						{data.map((course, index) => (
-							<div className="flex gap-2" key={course.id}>
-								<input
-									type="checkbox"
-									name={"course" + index}
-									id={course.code}
-									className="p-1 border-2 border-accents rounded-md"
-								/>
-								<label htmlFor={course.code} className="flex">
-									<span className="w-32">{course.code}</span>
-									<span>{course.name}</span>
-								</label>
-							</div>
-						))}
-					</div>
-				</div>
-			</div>
+					</div> */}
+			{/* </div> */}
 		</form>
 	);
 };
