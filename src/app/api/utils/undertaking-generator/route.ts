@@ -4,13 +4,14 @@ import { readFile, writeFile } from "fs/promises";
 import { NextResponse } from "next/server";
 import { PDFDocument } from "pdf-lib";
 
-interface Body {
-	name: string;
-	signature: string;
+export interface UndertakingBody {
+	fullName: string;
+	idImg: File | FileList;
+	signatureImg: File | FileList;
 	studentNumber: string;
-	yearLvl: string;
+	year: string;
 	program: string;
-	courseCodes: string[];
+	courses: string[];
 }
 
 const uniName = "FEU Institute of Technology";
@@ -19,8 +20,6 @@ const zip = new AdmZip();
 const dataPath = "public/data";
 const source = `${dataPath}/CONFIDENTIALITY-UNDERTAKING-template.pdf`;
 const target = `${dataPath}/ACMX-Undertaking.zip`;
-const signaturePath = `${dataPath}/test.png`;
-const idPath = `${dataPath}/alpha_id.jpg`;
 const pageDims = {
 	pageWidth: 612,
 	pageHeight: 792,
@@ -69,20 +68,33 @@ const createTemplate = async (signatureBytes: Buffer, idBytes: Buffer) => {
 	return templatePdf.save();
 };
 
-const generatePDF = serverWrapper(async (req) => {
-	const body: Body = await req.json();
-	const { name, studentNumber, yearLvl, program, courseCodes } = body;
+const POST = serverWrapper(async (req) => {
+	const formData = await req.formData();
+	const body = Object.fromEntries(
+		formData.entries(),
+	) as unknown as UndertakingBody;
+	const {
+		fullName,
+		studentNumber,
+		year,
+		program,
+		courses,
+		idImg,
+		signatureImg,
+	} = body;
+	const coursesArray = JSON.parse(courses as any);
 
-	const signatureBytesPromise = readFile(signaturePath);
-	const idBytesPromise = readFile(idPath);
 	const [signature, id] = await Promise.all([
-		signatureBytesPromise,
-		idBytesPromise,
+		(signatureImg as File).arrayBuffer(),
+		(idImg as File).arrayBuffer(),
 	]);
-	const templatePdfBytes = await createTemplate(signature, id);
+	const idBytes = Buffer.from(id);
+	const signatureBytes = Buffer.from(signature);
+
+	const templatePdfBytes = await createTemplate(signatureBytes, idBytes);
 	const date = new Date().toLocaleDateString("en-PH");
 
-	const promises = courseCodes.map(async (course) => {
+	const promises = coursesArray.map(async (course: string) => {
 		const pdfDoc = await PDFDocument.load(templatePdfBytes);
 		const firstPage = pdfDoc.getPage(0);
 		firstPage.drawText(`${uniName} - ${course}`, {
@@ -97,13 +109,13 @@ const generatePDF = serverWrapper(async (req) => {
 			size: reg,
 		});
 
-		firstPage.drawText(name, {
+		firstPage.drawText(fullName, {
 			x: 400,
 			y: 136,
 			size: reg,
 		});
 
-		firstPage.drawText(`${yearLvl} / ${program}`, {
+		firstPage.drawText(`${year} / ${program}`, {
 			x: 400,
 			y: 122,
 			size: reg,
@@ -132,4 +144,4 @@ const generatePDF = serverWrapper(async (req) => {
 	});
 });
 
-export { generatePDF as POST };
+export { POST };
