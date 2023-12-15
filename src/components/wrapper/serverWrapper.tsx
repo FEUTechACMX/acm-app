@@ -1,13 +1,12 @@
 /* eslint-disable no-unused-vars */
-import { NextApiRequest, NextApiResponse } from "next";
-import { NextResponse, NextRequest } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 const serverWrapper = (
 	fn: (
 		req: NextRequest,
-		res: NextApiResponse,
+		res: NextResponse,
 	) => NextResponse | Promise<NextResponse>,
 ) => {
-	return async (req: NextRequest, res: NextApiResponse) => {
+	return async (req: NextRequest, res: NextResponse) => {
 		try {
 			return await fn(req, res);
 		} catch (e) {
