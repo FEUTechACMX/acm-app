@@ -6,6 +6,7 @@ import regexIdNumber from "@/utils/regex/schoolId";
 import { Button, Checkbox } from "@nextui-org/react";
 import { useEffect } from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
+import { env } from "@/server/env";
 
 interface Props {
 	props: {
@@ -58,7 +59,7 @@ const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
 		appendFile("signatureImg", signatureImg);
 		// eslint-disable-next-line no-unused-vars
 		const res = await fetch(
-			"http://localhost:3000/api/utils/undertaking-generator",
+			`${env.NEXT_PUBLIC_HOST_URL}/api/utils/undertaking-generator`,
 			{
 				method: "POST",
 				body: formData,

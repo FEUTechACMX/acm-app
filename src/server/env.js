@@ -13,7 +13,9 @@ function stringTrim() {
 }
 
 export const env = createEnv({
-	client: {},
+	client: {
+		NEXT_PUBLIC_HOST_URL: stringTrim().min(1).max(50).url(),
+	},
 	emptyStringAsUndefined: true,
 	runtimeEnv: {
 		DATABASE_URL: process.env.DATABASE_URL,
@@ -26,6 +28,7 @@ export const env = createEnv({
 		HOST_URL: process.env.HOST_URL,
 		NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
 		NEXTAUTH_URL: process.env.NEXTAUTH_URL ?? process.env.VERCEL_URL,
+		NEXT_PUBLIC_HOST_URL: process.env.NEXT_PUBLIC_HOST_URL,
 		NODE_ENV: process.env.NODE_ENV,
 		POSTGRES_DATABASE: process.env.POSTGRES_DATABASE,
 		POSTGRES_HOST: process.env.POSTGRES_HOST,
