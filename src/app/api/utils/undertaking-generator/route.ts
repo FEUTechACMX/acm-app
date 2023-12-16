@@ -154,8 +154,8 @@ const POST = serverWrapper(async (req) => {
 		throw new Error("Image too large");
 	}
 	const [signature, id] = await Promise.all([
-		idF.arrayBuffer(),
 		signatureF.arrayBuffer(),
+		idF.arrayBuffer(),
 	]);
 	const idBytes = Buffer.from(id);
 	const signatureBytes = Buffer.from(signature);
