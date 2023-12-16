@@ -145,7 +145,7 @@ const UndertakingForm: React.FC = () => {
 			</div>
 
 			<div className="w-full">
-				<label htmlFor="studentNumber">Signature Upload (png/jpg):</label>
+				<label htmlFor="signatureImg">Signature Upload (png/jpg):</label>
 				<Controller
 					name="signatureImg"
 					control={control}
@@ -167,7 +167,7 @@ const UndertakingForm: React.FC = () => {
 			</div>
 
 			<div className="w-full">
-				<label htmlFor="studentNumber">ID Upload (png/jpg):</label>
+				<label htmlFor="idImg">ID Upload (png/jpg):</label>
 				<Controller
 					name="idImg"
 					control={control}

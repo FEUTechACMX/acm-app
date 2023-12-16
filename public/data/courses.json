@@ -305,9 +305,17 @@
 	},
 	{
 		"code": "CS0017",
-		"name": "Operating System",
+		"name": "Operating System (Lec)",
 		"departmentId": 1,
 		"courseTypeId": 1,
+		"yearLevelId": 2,
+		"termId": 2
+	},
+	{
+		"code": "CS0017L",
+		"name": "Operating System (Lab)",
+		"departmentId": 1,
+		"courseTypeId": 2,
 		"yearLevelId": 2,
 		"termId": 2
 	},
@@ -385,9 +393,17 @@
 	},
 	{
 		"code": "CS0048",
-		"name": "CS Specialization 1 (Structured Programming Language)",
+		"name": "CS Specialization 1 (Structured Programming Language) Lec",
 		"departmentId": 1,
 		"courseTypeId": 1,
+		"yearLevelId": 2,
+		"termId": 3
+	},
+	{
+		"code": "CS0048L",
+		"name": "CS Specialization 1 (Structured Programming Language) Lab",
+		"departmentId": 1,
+		"courseTypeId": 2,
 		"yearLevelId": 2,
 		"termId": 3
 	},
@@ -537,9 +553,17 @@
 	},
 	{
 		"code": "CS0061",
-		"name": "CS Specialization 4 - Business Process for Computing",
+		"name": "CS Specialization 4 - Business Process for Computing Lec",
 		"departmentId": 1,
 		"courseTypeId": 1,
+		"yearLevelId": 3,
+		"termId": 3
+	},
+	{
+		"code": "CS0061L",
+		"name": "CS Specialization 4 - Business Process for Computing Lab",
+		"departmentId": 1,
+		"courseTypeId": 2,
 		"yearLevelId": 3,
 		"termId": 3
 	},
