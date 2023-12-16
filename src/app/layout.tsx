@@ -3,6 +3,7 @@ import { env } from "@/server/env";
 import { ReduxProviders } from "@/utils/redux/provider";
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Viewport } from "next";
 import "./globals.css";
 import NextUIProv from "./provider";
@@ -159,6 +160,7 @@ const RootLayout: React.FC<Props> = ({ children }) => {
 				<ReduxProviders>
 					<NextUIProv>{children}</NextUIProv>
 					<Analytics />
+					<SpeedInsights />
 				</ReduxProviders>
 			</NextAuthProvider>
 		</html>
