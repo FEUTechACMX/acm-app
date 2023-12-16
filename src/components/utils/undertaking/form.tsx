@@ -6,7 +6,6 @@ import regexIdNumber from "@/utils/regex/schoolId";
 import { Button, Checkbox } from "@nextui-org/react";
 import { useEffect } from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import { env } from "@/server/env";
 
 interface Props {
 	props: {
@@ -59,16 +58,16 @@ const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
 		appendFile("signatureImg", signatureImg);
 		// eslint-disable-next-line no-unused-vars
 		const res = await fetch(
-			`${env.NEXT_PUBLIC_HOST_URL}/api/utils/undertaking-generator`,
+			"https://acmx.vercel.app/api/utils/undertaking-generator",
 			{
 				method: "POST",
 				body: formData,
 			},
 		);
 		if (res.ok) {
+			console.log("Downloading");
 			const blob = await res.blob();
 			const url = window.URL.createObjectURL(blob);
-
 			const link = document.createElement("a");
 			link.href = url;
 			link.download = "CONFIDENTIALITY-UNDERTAKING.zip";
@@ -77,8 +76,9 @@ const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
 			link.click();
 			document.body.removeChild(link);
 			window.URL.revokeObjectURL(url);
+			console.log("Downloaded");
 		} else {
-			// handle error
+			console.log(await res.text());
 		}
 	};
 	useEffect(() => {
