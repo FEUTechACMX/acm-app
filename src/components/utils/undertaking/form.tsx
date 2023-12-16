@@ -70,7 +70,7 @@ const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
 
 			const link = document.createElement("a");
 			link.href = url;
-			link.download = "archive.zip";
+			link.download = "CONFIDENTIALITY-UNDERTAKING.zip";
 			link.style.display = "none";
 			document.body.appendChild(link);
 			link.click();
@@ -148,7 +148,7 @@ const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
 			</div>
 
 			<div className="w-full">
-				<label htmlFor="studentNumber">Signature Upload:</label>
+				<label htmlFor="studentNumber">Signature Upload (png/jpg):</label>
 				<Controller
 					name="signatureImg"
 					control={control}
@@ -169,7 +169,7 @@ const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
 			</div>
 
 			<div className="w-full">
-				<label htmlFor="studentNumber">ID Upload:</label>
+				<label htmlFor="studentNumber">ID Upload (png/jpg):</label>
 				<Controller
 					name="idImg"
 					control={control}
@@ -188,39 +188,49 @@ const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
 					)}
 				/>
 			</div>
-			<div className="max-h-[500px] overflow-y-auto border-b-2 border-accents w-full">
-				{data.map((course) => {
-					return (
-						<Controller
-							control={control}
-							name={`courses.${course.id}`}
-							key={course.id}
-							render={({ field }) => (
-								<Checkbox
-									className="flex max-w-full w-full"
-									onChange={(e) => {
-										if (e.target.checked) {
-											setValue(`courses.${course.id}`, course.code);
-										} else {
-											setValue(`courses.${course.id}`, "");
-										}
-									}}
-									isSelected={field.value === course.code}
-									value={course.code}
-								>
-									<p className="flex justify-between">
-										<span className="w-16">{course.code}</span>
-										<span className="truncate">{course.name}</span>
-									</p>
-								</Checkbox>
-							)}
-						/>
-					);
-				})}
+
+			<div className="w-full">
+				<label htmlFor="courses">Select Courses:</label>
+				<div className="max-h-[500px] overflow-y-auto border-b-2 border-accents w-full">
+					{data.map((course) => {
+						return (
+							<Controller
+								control={control}
+								name={`courses.${course.id}`}
+								key={course.id}
+								render={({ field }) => (
+									<Checkbox
+										className="flex max-w-full w-full"
+										onChange={(e) => {
+											if (e.target.checked) {
+												setValue(`courses.${course.id}`, course.code);
+											} else {
+												setValue(`courses.${course.id}`, "");
+											}
+										}}
+										isSelected={field.value === course.code}
+										value={course.code}
+									>
+										<p className="flex justify-between">
+											<span className="w-16">{course.code}</span>
+											<span className="truncate">{course.name}</span>
+										</p>
+									</Checkbox>
+								)}
+							/>
+						);
+					})}
+				</div>
 			</div>
 			<div className="w-full">
-				<Button type="submit" color="primary" variant="ghost">
-					Generate!
+				<Button
+					type="submit"
+					color="primary"
+					variant="solid"
+					size="lg"
+					className="w-full"
+				>
+					-- Generate and Download --
 				</Button>
 			</div>
 		</form>
