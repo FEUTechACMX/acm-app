@@ -22,7 +22,6 @@ interface ImgTypes {
 }
 
 const uniName = "FEU Institute of Technology";
-const zip = new AdmZip();
 
 const source = join(
 	process.cwd(),
@@ -176,7 +175,7 @@ const POST = serverWrapper(async (req) => {
 			studentNumber,
 		},
 	);
-
+	const zip = new AdmZip();
 	const promises = coursesArray.map(async (course: string) => {
 		const pdfDoc = await PDFDocument.load(templatePdfBytes);
 		const firstPage = pdfDoc.getPage(0);
