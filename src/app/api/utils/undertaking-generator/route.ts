@@ -117,6 +117,7 @@ const createTemplate = async (
 };
 
 const POST = serverWrapper(async (req) => {
+	console.log("Request received");
 	const formData = await req.formData();
 	const body = Object.fromEntries(
 		formData.entries(),
@@ -131,6 +132,7 @@ const POST = serverWrapper(async (req) => {
 		signatureImg,
 	} = body;
 	const coursesArray = JSON.parse(courses as any);
+
 	if (Array.isArray(idImg) || Array.isArray(signatureImg)) {
 		throw new Error("Invalid image type");
 	}
@@ -144,6 +146,7 @@ const POST = serverWrapper(async (req) => {
 	const signatureBytes = Buffer.from(signature);
 	const idType = undertakingImgType(idF.type) as number;
 	const sigType = undertakingImgType(signatureF.type) as number;
+	console.log("Generating PDFs...");
 	const templatePdfBytes = await createTemplate(
 		signatureBytes,
 		idBytes,
@@ -181,6 +184,7 @@ const POST = serverWrapper(async (req) => {
 	});
 	await Promise.allSettled(promises);
 	zip.addFile("README.md", Buffer.from(undertakingCredits));
+	console.log("PDFs generated successfully");
 	return new NextResponse(zip.toBuffer(), {
 		status: 200,
 		headers,
