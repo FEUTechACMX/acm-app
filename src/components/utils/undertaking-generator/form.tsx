@@ -1,23 +1,18 @@
 "use client";
 import { UndertakingBody } from "@/app/api/utils/undertaking-generator/route";
-import { UndertakingData } from "@/app/utils/undertaking/page";
 import ACMImage from "@/components/2023/(website)/(main)/_gen/image/acm";
 import regexIdNumber from "@/utils/regex/schoolId";
 import { Button, Checkbox } from "@nextui-org/react";
+import data from "public/data/courses.json";
+import { env } from "@/server/env";
 import { useEffect } from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 
-interface Props {
-	props: {
-		data: UndertakingData;
-	};
-}
-const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
+const UndertakingForm: React.FC = () => {
 	const {
 		register,
 		handleSubmit,
-		// eslint-disable-next-line no-unused-vars
-		formState: { errors },
+		formState: { isSubmitting },
 		control,
 		setValue,
 	} = useForm<UndertakingBody>();
@@ -56,9 +51,8 @@ const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
 		};
 		appendFile("idImg", idImg);
 		appendFile("signatureImg", signatureImg);
-		// eslint-disable-next-line no-unused-vars
 		const res = await fetch(
-			"https://acmx.vercel.app/api/utils/undertaking-generator",
+			`${env.NEXT_PUBLIC_HOST_URL}/api/utils/undertaking-generator`,
 			{
 				method: "POST",
 				body: formData,
@@ -79,6 +73,8 @@ const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
 			console.log("Downloaded");
 		} else {
 			console.log(await res.text());
+			console.log(res);
+			alert("Error");
 		}
 	};
 	useEffect(() => {
@@ -104,7 +100,7 @@ const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
 						minLength: 5,
 						maxLength: 50,
 					})}
-					placeholder="Victor Magtanggol"
+					placeholder="ex. Victor Magtanggol"
 					className="px-1 py-2 sm:px-4 sm:py-2 w-full border-2 border-accents rounded-md"
 				/>
 			</div>
@@ -118,7 +114,7 @@ const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
 						maxLength: 9,
 						pattern: regexIdNumber,
 					})}
-					placeholder="20yyxxxxx"
+					placeholder="ex. 20yyxxxxx"
 					className="px-1 py-2 sm:px-4 sm:py-2 w-full border-2 border-accents rounded-md"
 				/>
 			</div>
@@ -158,6 +154,7 @@ const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
 							type="file"
 							ref={ref}
 							required
+							accept="image/png,image/jpeg,image/jpg"
 							className="w-full rounded-md"
 							name={name}
 							onBlur={onBlur}
@@ -179,6 +176,7 @@ const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
 							type="file"
 							ref={ref}
 							required
+							accept="image/png,image/jpeg,image/jpg"
 							className="w-full rounded-md"
 							name={name}
 							onBlur={onBlur}
@@ -193,20 +191,20 @@ const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
 			<div className="w-full">
 				<label htmlFor="courses">Select Courses:</label>
 				<div className="max-h-[500px] overflow-y-auto border-b-2 border-accents w-full">
-					{data.map((course) => {
+					{data.map((course, index) => {
 						return (
 							<Controller
 								control={control}
-								name={`courses.${course.id}`}
-								key={course.id}
+								name={`courses.${index}`}
+								key={course.code}
 								render={({ field }) => (
 									<Checkbox
 										className="flex max-w-full w-full"
 										onChange={(e) => {
 											if (e.target.checked) {
-												setValue(`courses.${course.id}`, course.code);
+												setValue(`courses.${index}`, course.code);
 											} else {
-												setValue(`courses.${course.id}`, "");
+												setValue(`courses.${index}`, "");
 											}
 										}}
 										isSelected={field.value === course.code}
@@ -230,6 +228,7 @@ const UndertakingForm: React.FC<Props> = ({ props: { data } }) => {
 					variant="solid"
 					size="lg"
 					className="w-full"
+					disabled={isSubmitting}
 				>
 					-- Generate and Download --
 				</Button>

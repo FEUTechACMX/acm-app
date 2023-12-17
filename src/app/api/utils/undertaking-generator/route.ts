@@ -64,7 +64,7 @@ const createTemplate = async (
 	imgTypes: ImgTypes,
 	rest: UndertakingBodyWithoutIdSigCourse,
 ) => {
-	const { fullName, year, program } = rest;
+	const { fullName, year, program, studentNumber } = rest;
 	const templatePdf = await PDFDocument.load(await readFile(source));
 	const { idImgType, signatureImgType } = imgTypes;
 	const idImgPromise = undertakingEmbedImage(idBytes, idImgType, templatePdf);
@@ -105,6 +105,12 @@ const createTemplate = async (
 		size: reg,
 	});
 
+	firstPage.drawText(studentNumber, {
+		x: 400,
+		y: 110,
+		size: reg,
+	});
+
 	firstPage.drawText(`${year} / ${program}`, {
 		x: 400,
 		y: 122,
@@ -121,7 +127,7 @@ const createTemplate = async (
 
 	return templatePdf.save();
 };
-
+const MAX_FILE_SIZE = 2_000_000;
 const POST = serverWrapper(async (req) => {
 	console.log("Request received");
 	const formData = await req.formData();
@@ -144,21 +150,24 @@ const POST = serverWrapper(async (req) => {
 	}
 	const idF = idImg as File;
 	const signatureF = signatureImg as File;
+	if (idF.size > MAX_FILE_SIZE || signatureF.size > MAX_FILE_SIZE) {
+		throw new Error("Image too large");
+	}
 	const [signature, id] = await Promise.all([
 		idF.arrayBuffer(),
 		signatureF.arrayBuffer(),
 	]);
 	const idBytes = Buffer.from(id);
 	const signatureBytes = Buffer.from(signature);
-	const idType = undertakingImgType(idF.type) as number;
-	const sigType = undertakingImgType(signatureF.type) as number;
+	const idImgType = undertakingImgType(idF.type) as number;
+	const signatureImgType = undertakingImgType(signatureF.type) as number;
 	console.log("Generating PDFs...");
 	const templatePdfBytes = await createTemplate(
 		signatureBytes,
 		idBytes,
 		{
-			idImgType: idType,
-			signatureImgType: sigType,
+			idImgType,
+			signatureImgType,
 		},
 		{
 			fullName,
@@ -175,12 +184,6 @@ const POST = serverWrapper(async (req) => {
 			x: 244,
 			y: 694,
 			size: title,
-		});
-
-		firstPage.drawText(studentNumber, {
-			x: 400,
-			y: 110,
-			size: reg,
 		});
 		const coursePdfBytes = await pdfDoc.save();
 		zip.addFile(
