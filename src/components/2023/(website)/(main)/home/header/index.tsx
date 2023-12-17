@@ -12,11 +12,11 @@ const links: LinkProps[] = [
 	},
 	{
 		name: "--CS EXPO 2023--",
-		href: "/cs-expo-2023",
+		href: "https://cs-expo-2023.vercel.app/",
 	},
 	{
 		name: "Collaborate with us",
-		href: "/collaborate",
+		href: "/",
 	},
 ];
 
