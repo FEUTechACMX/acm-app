@@ -1,6 +1,6 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useState } from "react";
+import { loadFull } from "tsparticles";
 
 const ParticleAmongUs = () => {
 	const [init, setInit] = useState(false);
@@ -12,8 +12,7 @@ const ParticleAmongUs = () => {
 			// this loads the tsparticles package bundle, it's the easiest method for getting everything ready
 			// starting from v2 you can add only the features you need reducing the bundle size
 			//await loadAll(engine);
-			//await loadFull(engine);
-			await loadSlim(engine);
+			await loadFull(engine);
 			//await loadBasic(engine);
 		}).then(() => {
 			setInit(true);
@@ -42,17 +41,18 @@ const ParticleAmongUs = () => {
 							composite: "destination-out",
 							cover: {
 								color: {
-									value: "#833fe0",
+									value: "#c505f5",
 								},
 								opacity: 1,
 							},
 							enable: false,
 						},
+						clear: true,
 						defaultThemes: {},
 						delay: 0,
 						fullScreen: {
 							enable: true,
-							zIndex: -1,
+							zIndex: 0,
 						},
 						detectRetina: true,
 						duration: 0,
@@ -62,17 +62,10 @@ const ParticleAmongUs = () => {
 							events: {
 								onClick: {
 									enable: false,
-									mode: [],
 								},
-								onDiv: {
-									selectors: [],
-									enable: false,
-									mode: [],
-									type: "circle",
-								},
+
 								onHover: {
 									enable: false,
-									mode: [],
 									parallax: {
 										enable: false,
 										force: 2,
@@ -84,100 +77,8 @@ const ParticleAmongUs = () => {
 									enable: true,
 								},
 							},
-							modes: {
-								trail: {
-									delay: 1,
-									pauseOnStop: false,
-									quantity: 1,
-								},
-								attract: {
-									distance: 200,
-									duration: 0.4,
-									easing: "ease-out-quad",
-									factor: 1,
-									maxSpeed: 50,
-									speed: 1,
-								},
-								bounce: {
-									distance: 200,
-								},
-								bubble: {
-									distance: 200,
-									duration: 0.4,
-									mix: false,
-									divs: {
-										distance: 200,
-										duration: 0.4,
-										mix: false,
-										selectors: [],
-									},
-								},
-								connect: {
-									distance: 80,
-									links: {
-										opacity: 0.5,
-									},
-									radius: 60,
-								},
-								grab: {
-									distance: 100,
-									links: {
-										blink: false,
-										consent: false,
-										opacity: 1,
-									},
-								},
-								push: {
-									default: true,
-									groups: [],
-									quantity: 4,
-								},
-								remove: {
-									quantity: 2,
-								},
-								repulse: {
-									distance: 200,
-									duration: 0.4,
-									factor: 100,
-									speed: 1,
-									maxSpeed: 50,
-									easing: "ease-out-quad",
-									divs: {
-										distance: 200,
-										duration: 0.4,
-										factor: 100,
-										speed: 1,
-										maxSpeed: 50,
-										easing: "ease-out-quad",
-										selectors: [],
-									},
-								},
-								slow: {
-									factor: 3,
-									radius: 200,
-								},
-								light: {
-									area: {
-										gradient: {
-											start: {
-												value: "#ffffff",
-											},
-											stop: {
-												value: "#000000",
-											},
-										},
-										radius: 1000,
-									},
-									shadow: {
-										color: {
-											value: "#833fe0",
-										},
-										length: 2000,
-									},
-								},
-							},
+							modes: {},
 						},
-						manualParticles: [],
 						particles: {
 							bounce: {
 								horizontal: {
@@ -208,36 +109,41 @@ const ParticleAmongUs = () => {
 								},
 							},
 							color: {
-								value: "#833fe0",
+								value: "#c505f5",
 								animation: {
 									h: {
 										count: 0,
 										enable: false,
-										offset: 0,
 										speed: 20,
-										delay: 0,
 										decay: 0,
+										delay: 0,
 										sync: true,
+										offset: 0,
 									},
 									s: {
 										count: 0,
 										enable: false,
-										offset: 0,
 										speed: 1,
-										delay: 0,
 										decay: 0,
+										delay: 0,
 										sync: true,
+										offset: 0,
 									},
 									l: {
 										count: 0,
 										enable: false,
-										offset: 0,
 										speed: 1,
-										delay: 0,
 										decay: 0,
+										delay: 0,
 										sync: true,
+										offset: 0,
 									},
 								},
+							},
+							effect: {
+								close: true,
+								fill: true,
+								options: {},
 							},
 							groups: {
 								z5000: {
@@ -282,8 +188,8 @@ const ParticleAmongUs = () => {
 									distance: 200,
 									enable: false,
 									rotate: {
-										x: 600,
-										y: 1200,
+										x: 3000,
+										y: 3000,
 									},
 								},
 								center: {
@@ -313,10 +219,6 @@ const ParticleAmongUs = () => {
 								},
 								outModes: {
 									default: "out",
-									bottom: "out",
-									left: "out",
-									right: "out",
-									top: "out",
 								},
 								random: false,
 								size: false,
@@ -340,6 +242,10 @@ const ParticleAmongUs = () => {
 									width: 1920,
 									height: 1080,
 								},
+								limit: {
+									mode: "delete",
+									value: 0,
+								},
 								value: 200,
 							},
 							opacity: {
@@ -347,7 +253,7 @@ const ParticleAmongUs = () => {
 								animation: {
 									count: 0,
 									enable: false,
-									speed: 3,
+									speed: 2,
 									decay: 0,
 									delay: 0,
 									sync: false,
@@ -360,7 +266,7 @@ const ParticleAmongUs = () => {
 							shadow: {
 								blur: 0,
 								color: {
-									value: "#833fe0",
+									value: "#c505f5",
 								},
 								enable: false,
 								offset: {
@@ -412,7 +318,6 @@ const ParticleAmongUs = () => {
 										},
 									},
 									sizeOffset: true,
-									particles: {},
 								},
 							},
 							roll: {
@@ -462,18 +367,10 @@ const ParticleAmongUs = () => {
 							life: {
 								count: 0,
 								delay: {
-									random: {
-										enable: false,
-										minimumValue: 0,
-									},
 									value: 0,
 									sync: false,
 								},
 								duration: {
-									random: {
-										enable: false,
-										minimumValue: 0.0001,
-									},
 									value: 0,
 									sync: false,
 								},
@@ -501,10 +398,6 @@ const ParticleAmongUs = () => {
 								enable: false,
 								opacity: 1,
 								rotation: {
-									random: {
-										enable: false,
-										minimumValue: 0,
-									},
 									value: 45,
 								},
 								width: 1,
@@ -512,17 +405,17 @@ const ParticleAmongUs = () => {
 							links: {
 								blink: false,
 								color: {
-									value: "#833fe0",
+									value: "#c505f5",
 								},
 								consent: false,
 								distance: 100,
 								enable: false,
 								frequency: 1,
-								opacity: 0.4,
+								opacity: 1,
 								shadow: {
 									blur: 5,
 									color: {
-										value: "#833fe0",
+										value: "#c505f5",
 									},
 									enable: false,
 								},
@@ -544,11 +437,10 @@ const ParticleAmongUs = () => {
 						},
 						pauseOnBlur: true,
 						pauseOnOutsideViewport: true,
-						responsive: [],
 						smooth: false,
 						style: {},
-						themes: [],
 						zLayers: 100,
+						name: "Among Us",
 						emitters: {
 							autoPlay: true,
 							fill: true,
@@ -559,7 +451,14 @@ const ParticleAmongUs = () => {
 								quantity: 1,
 								delay: 7,
 							},
-							shape: "square",
+							shape: {
+								options: {},
+								replace: {
+									color: false,
+									opacity: false,
+								},
+								type: "square",
+							},
 							startCount: 0,
 							size: {
 								mode: "percent",
