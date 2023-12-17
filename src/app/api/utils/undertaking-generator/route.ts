@@ -2,6 +2,7 @@ import serverWrapper from "@/components/wrapper/serverWrapper";
 import AdmZip from "adm-zip";
 import { readFile } from "fs/promises";
 import { NextResponse } from "next/server";
+import { join } from "path";
 import { PDFDocument } from "pdf-lib";
 import undertakingCredits from "./credits";
 import undertakingEmbedImage from "./image";
@@ -23,8 +24,13 @@ interface ImgTypes {
 const uniName = "FEU Institute of Technology";
 const zip = new AdmZip();
 
-const dataPath = "public/data";
-const source = `${dataPath}/CONFIDENTIALITY-UNDERTAKING-template.pdf`;
+const source = join(
+	process.cwd(),
+	"public",
+	"data",
+	"CONFIDENTIALITY-UNDERTAKING-template.pdf",
+);
+
 const pageDims = {
 	pageWidth: 612,
 	pageHeight: 792,
