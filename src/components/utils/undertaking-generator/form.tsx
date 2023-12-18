@@ -1,10 +1,10 @@
 "use client";
 import { UndertakingBody } from "@/app/api/utils/undertaking-generator/route";
 import ACMImage from "@/components/2023/(website)/(main)/_gen/image/acm";
+import { env } from "@/server/env";
 import regexIdNumber from "@/utils/regex/schoolId";
 import { Button, Checkbox } from "@nextui-org/react";
 import data from "public/data/courses.json";
-import { env } from "@/server/env";
 import { useEffect } from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 
@@ -74,7 +74,9 @@ const UndertakingForm: React.FC = () => {
 		} else {
 			console.log(await res.text());
 			console.log(res);
-			alert("Error");
+			alert(
+				"Error: Images must be < 2MB. If issues persist, change image to upload",
+			);
 		}
 	};
 	useEffect(() => {
