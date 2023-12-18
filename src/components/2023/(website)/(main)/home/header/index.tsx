@@ -7,16 +7,16 @@ import ACMImage from "../../_gen/image/acm";
 import ParticleAmongUs from "./particles";
 const links: LinkProps[] = [
 	{
-		name: "Become a Member",
-		href: "/register",
-	},
-	{
-		name: "--CS EXPO 2023--",
+		name: "CS EXPO 2023",
 		href: "https://cs-expo-2023.vercel.app/",
 	},
 	{
-		name: "Collaborate with us",
-		href: "/",
+		name: "Undertaking Generator",
+		href: "/utils/undertaking-generator",
+	},
+	{
+		name: "Contact Us!",
+		href: "mailto:acm.feu.it@gmail.com",
 	},
 ];
 
@@ -59,7 +59,7 @@ const Header: React.FC = () => {
 							transition={{ duration: 1 }}
 							className="text-center drop-shadow-[0_4px_2px_rgba(255,255,255,0.3)]"
 						>
-							FEU Tech ACM Student Chapter
+							FEU Tech ACM Student&nbsp;Chapter
 						</motion.h1>
 						<motion.q
 							initial="hidden"
