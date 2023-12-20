@@ -3,11 +3,11 @@ import { UndertakingBody } from "@/app/api/utils/undertaking-generator/route";
 import ACMImage from "@/components/2023/(website)/(main)/_gen/image/acm";
 import { env } from "@/server/env";
 import regexIdNumber from "@/utils/regex/schoolId";
+import { universityNameArr } from "@/utils/universityName";
 import { Button, Checkbox } from "@nextui-org/react";
 import data from "public/data/courses.json";
 import { useEffect } from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-
 const UndertakingForm: React.FC = () => {
 	const {
 		register,
@@ -25,12 +25,14 @@ const UndertakingForm: React.FC = () => {
 			courses,
 			idImg,
 			signatureImg,
+			enrollmentFormat,
 		} = data;
 		const formData = new FormData();
 		formData.append("fullName", fullName);
 		formData.append("studentNumber", studentNumber);
 		formData.append("year", year);
 		formData.append("program", program);
+		formData.append("enrollmentFormat", enrollmentFormat);
 		formData.append(
 			"courses",
 			JSON.stringify(courses.filter((course) => course)),
@@ -75,7 +77,7 @@ const UndertakingForm: React.FC = () => {
 			console.log(await res.text());
 			console.log(res);
 			alert(
-				"Error: Images must be < 2MB. If issues persist, change image to upload",
+				"Error: Images must be < 3MB. If issues persist, change image to upload",
 			);
 		}
 	};
@@ -145,7 +147,27 @@ const UndertakingForm: React.FC = () => {
 					</select>
 				</div>
 			</div>
-
+			<div className="w-full">
+				<label htmlFor="enrollmentFormat">Enrollment Format:</label>
+				<div className="flex w-full gap-2">
+					<select
+						{...register("enrollmentFormat", {
+							required: true,
+						})}
+						className=" p-1 border-2 border-accents rounded-md flex-1"
+					>
+						{universityNameArr.map((uni) => {
+							const key = uni[0];
+							return (
+								<option value={key} key={key}>
+									{uni[1]} - &lt;Course Code&gt;
+								</option>
+							);
+						})}
+						;
+					</select>
+				</div>
+			</div>
 			<div className="w-full">
 				<label htmlFor="signatureImg">Signature Upload (png/jpg):</label>
 				<Controller
@@ -167,7 +189,6 @@ const UndertakingForm: React.FC = () => {
 					)}
 				/>
 			</div>
-
 			<div className="w-full">
 				<label htmlFor="idImg">ID Upload (png/jpg):</label>
 				<Controller
@@ -189,7 +210,6 @@ const UndertakingForm: React.FC = () => {
 					)}
 				/>
 			</div>
-
 			<div className="w-full">
 				<label htmlFor="courses">Select Courses:</label>
 				<div className="max-h-[500px] overflow-y-auto border-b-2 border-accents w-full">

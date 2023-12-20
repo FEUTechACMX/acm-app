@@ -1,4 +1,5 @@
 import serverWrapper from "@/components/wrapper/serverWrapper";
+import { getUniversityName } from "@/utils/universityName";
 import AdmZip from "adm-zip";
 import { readFile } from "fs/promises";
 import { NextResponse } from "next/server";
@@ -11,6 +12,7 @@ export interface UndertakingBody {
 	fullName: string;
 	idImg: File | FileList;
 	signatureImg: File | FileList;
+	enrollmentFormat: string;
 	studentNumber: string;
 	year: string;
 	program: string;
@@ -21,34 +23,39 @@ interface ImgTypes {
 	signatureImgType: number;
 }
 
-const uniName = "FEU Institute of Technology";
-
 const source = join(
 	process.cwd(),
 	"public",
 	"data",
-	"CONFIDENTIALITY-UNDERTAKING-template.pdf",
+	"CONFIDENTIALITY-UNDERTAKING-original.pdf",
 );
 
-const pageDims = {
-	pageWidth: 612,
-	pageHeight: 792,
-};
-const fontSize = {
-	title: 7.8,
-	reg: 10,
-};
-const sigMaxDims = {
-	sigMaxWidth: 100,
-	sigMaxHeight: 50,
-};
-const { title, reg } = fontSize;
-const { pageWidth, pageHeight } = pageDims;
-const { sigMaxWidth, sigMaxHeight } = sigMaxDims;
+const reg = 10;
+const fontSize = new Map([
+	["1", 12],
+	["2", 7.8],
+]);
 
-type UndertakingBodyWithoutIdSigCourse = Omit<
+interface dim {
+	width: number;
+	height: number;
+}
+
+const _maxDims: Record<string, dim> = {
+	sig: {
+		width: 100,
+		height: 50,
+	},
+	id: {
+		width: 150,
+		height: 150,
+	},
+};
+const { sig: sigMaxDims, id: idMaxDims } = _maxDims;
+
+type UndertakingBodyWithoutIdSigCourseFormat = Omit<
 	UndertakingBody,
-	"idImg" | "signatureImg" | "courses"
+	"idImg" | "signatureImg" | "courses" | "enrollmentFormat"
 >;
 
 const headers = new Headers({
@@ -56,12 +63,25 @@ const headers = new Headers({
 	"Content-Disposition": "attachment; filename=CONFIDENTIALITY-UNDERTAKING.zip",
 	"Content-Type": "application/zip",
 });
+function setDimWithAspectRatio(_width: number, _height: number, maxDims: dim) {
+	const aspectRatio = _width / _height;
+	let width = maxDims.width;
+	let height = maxDims.width / aspectRatio;
 
+	if (height > maxDims.height) {
+		height = maxDims.height;
+		width = maxDims.height * aspectRatio;
+	}
+	return {
+		width,
+		height,
+	};
+}
 const createTemplate = async (
 	signatureBytes: Buffer,
 	idBytes: Buffer,
 	imgTypes: ImgTypes,
-	rest: UndertakingBodyWithoutIdSigCourse,
+	rest: UndertakingBodyWithoutIdSigCourseFormat,
 ) => {
 	const { fullName, year, program, studentNumber } = rest;
 	const templatePdf = await PDFDocument.load(await readFile(source));
@@ -74,14 +94,11 @@ const createTemplate = async (
 	);
 
 	const [idImg, sigImg] = await Promise.all([idImgPromise, sigImgPromise]);
-	const aspectRatio = sigImg.width / sigImg.height;
-	let sigWidth = sigMaxWidth;
-	let sigHeight = sigMaxWidth / aspectRatio;
-
-	if (sigHeight > sigMaxHeight) {
-		sigHeight = sigMaxHeight;
-		sigWidth = sigMaxHeight * aspectRatio;
-	}
+	const { width: sigWidth, height: sigHeight } = setDimWithAspectRatio(
+		sigImg.width,
+		sigImg.height,
+		sigMaxDims,
+	);
 
 	const firstPage = templatePdf.getPage(0);
 	firstPage.drawImage(sigImg, {
@@ -116,17 +133,22 @@ const createTemplate = async (
 		size: reg,
 	});
 
-	const { width: idWidth, height: idHeight } = idImg.scale(0.25);
-	templatePdf.getPage(1).drawImage(idImg, {
-		x: pageWidth / 2 - idWidth / 2,
-		y: pageHeight / 2 - idHeight / 2,
-		width: idWidth,
-		height: idHeight,
+	const { width: idImgWidth, height: idImgHeight } = setDimWithAspectRatio(
+		idImg.width,
+		idImg.height,
+		idMaxDims,
+	);
+
+	firstPage.drawImage(idImg, {
+		x: 100,
+		y: 10,
+		width: idImgWidth,
+		height: idImgHeight,
 	});
 
 	return templatePdf.save();
 };
-const MAX_FILE_SIZE = 2_000_000;
+const MAX_FILE_SIZE = 3_000_000;
 const POST = serverWrapper(async (req) => {
 	console.log("Request received");
 	const formData = await req.formData();
@@ -141,6 +163,7 @@ const POST = serverWrapper(async (req) => {
 		courses,
 		idImg,
 		signatureImg,
+		enrollmentFormat,
 	} = body;
 	const coursesArray = JSON.parse(courses as any);
 
@@ -156,14 +179,12 @@ const POST = serverWrapper(async (req) => {
 		signatureF.arrayBuffer(),
 		idF.arrayBuffer(),
 	]);
-	const idBytes = Buffer.from(id);
-	const signatureBytes = Buffer.from(signature);
-	const idImgType = undertakingImgType(idF.type) as number;
-	const signatureImgType = undertakingImgType(signatureF.type) as number;
+	const idImgType = undertakingImgType(idF.type);
+	const signatureImgType = undertakingImgType(signatureF.type);
 	console.log("Generating PDFs...");
 	const templatePdfBytes = await createTemplate(
-		signatureBytes,
-		idBytes,
+		Buffer.from(signature),
+		Buffer.from(id),
 		{
 			idImgType,
 			signatureImgType,
@@ -176,6 +197,9 @@ const POST = serverWrapper(async (req) => {
 		},
 	);
 	const zip = new AdmZip();
+	// get key from value
+	const [uniId, uniName] = getUniversityName(enrollmentFormat);
+	const title = fontSize.get(uniId);
 	const promises = coursesArray.map(async (course: string) => {
 		const pdfDoc = await PDFDocument.load(templatePdfBytes);
 		const firstPage = pdfDoc.getPage(0);
