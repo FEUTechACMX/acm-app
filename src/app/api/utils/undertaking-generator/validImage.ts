@@ -4,8 +4,9 @@ const extMap = new Map([
 	["image/jpeg", 2],
 ]);
 const undertakingImgType = (ext: string) => {
-	if (extMap.has(ext)) return extMap.get(ext);
-	throw new Error("Invalid image type");
+	const imgType = extMap.get(ext);
+	if (!imgType) throw new Error("Invalid image type");
+	return imgType;
 };
 
 export default undertakingImgType;
