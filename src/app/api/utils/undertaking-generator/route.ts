@@ -3,11 +3,15 @@ import { getUniversityName } from "@/utils/universityName";
 import AdmZip from "adm-zip";
 import { readFile } from "fs/promises";
 import { NextResponse } from "next/server";
-import { join } from "path";
 import { PDFDocument } from "pdf-lib";
 import undertakingCredits from "./credits";
 import undertakingEmbedImage from "./image";
 import undertakingImgType from "./validImage";
+
+function isFile(obj: File | FileList): obj is File {
+	return (obj as File).name !== undefined;
+}
+
 export interface UndertakingBody {
 	fullName: string;
 	idImg: File | FileList;
@@ -23,12 +27,8 @@ interface ImgTypes {
 	signatureImgType: number;
 }
 
-const source = join(
-	process.cwd(),
-	"public",
-	"data",
-	"CONFIDENTIALITY-UNDERTAKING-original.pdf",
-);
+const source =
+	process.cwd() + "/public/data/CONFIDENTIALITY-UNDERTAKING-original.pdf";
 
 const reg = 10;
 const fontSize = new Map([
@@ -53,7 +53,7 @@ const _maxDims: Record<string, dim> = {
 };
 const { sig: sigMaxDims, id: idMaxDims } = _maxDims;
 
-type UndertakingBodyWithoutIdSigCourseFormat = Omit<
+type UndertakingBodyPartial = Omit<
 	UndertakingBody,
 	"idImg" | "signatureImg" | "courses" | "enrollmentFormat"
 >;
@@ -63,25 +63,25 @@ const headers = new Headers({
 	"Content-Disposition": "attachment; filename=CONFIDENTIALITY-UNDERTAKING.zip",
 	"Content-Type": "application/zip",
 });
-function setDimWithAspectRatio(_width: number, _height: number, maxDims: dim) {
-	const aspectRatio = _width / _height;
-	let width = maxDims.width;
-	let height = maxDims.width / aspectRatio;
+function setDimWithAspectRatio(width: number, height: number, maxDims: dim) {
+	const aspectRatio = width / height;
+	let w = maxDims.width;
+	let h = maxDims.width / aspectRatio;
 
-	if (height > maxDims.height) {
-		height = maxDims.height;
-		width = maxDims.height * aspectRatio;
+	if (h > maxDims.height) {
+		h = maxDims.height;
+		w = maxDims.height * aspectRatio;
 	}
 	return {
-		width,
-		height,
+		width: w,
+		height: h,
 	};
 }
 const createTemplate = async (
 	signatureBytes: Buffer,
 	idBytes: Buffer,
 	imgTypes: ImgTypes,
-	rest: UndertakingBodyWithoutIdSigCourseFormat,
+	rest: UndertakingBodyPartial,
 ) => {
 	const { fullName, year, program, studentNumber } = rest;
 	const templatePdf = await PDFDocument.load(await readFile(source));
@@ -167,20 +167,18 @@ const POST = serverWrapper(async (req) => {
 	} = body;
 	const coursesArray = JSON.parse(courses as any);
 
-	if (Array.isArray(idImg) || Array.isArray(signatureImg)) {
-		throw new Error("Invalid image type");
+	if (!(isFile(idImg) && isFile(signatureImg))) {
+		throw new Error("Invalid file");
 	}
-	const idF = idImg as File;
-	const signatureF = signatureImg as File;
-	if (idF.size > MAX_FILE_SIZE || signatureF.size > MAX_FILE_SIZE) {
+	if (idImg.size > MAX_FILE_SIZE || signatureImg.size > MAX_FILE_SIZE) {
 		throw new Error("Image too large");
 	}
 	const [signature, id] = await Promise.all([
-		signatureF.arrayBuffer(),
-		idF.arrayBuffer(),
+		signatureImg.arrayBuffer(),
+		idImg.arrayBuffer(),
 	]);
-	const idImgType = undertakingImgType(idF.type);
-	const signatureImgType = undertakingImgType(signatureF.type);
+	const idImgType = undertakingImgType(idImg.type);
+	const signatureImgType = undertakingImgType(signatureImg.type);
 	console.log("Generating PDFs...");
 	const templatePdfBytes = await createTemplate(
 		Buffer.from(signature),
@@ -197,10 +195,9 @@ const POST = serverWrapper(async (req) => {
 		},
 	);
 	const zip = new AdmZip();
-	// get key from value
 	const [uniId, uniName] = getUniversityName(enrollmentFormat);
 	const title = fontSize.get(uniId);
-	const promises = coursesArray.map(async (course: string) => {
+	for await (const course of coursesArray) {
 		const pdfDoc = await PDFDocument.load(templatePdfBytes);
 		const firstPage = pdfDoc.getPage(0);
 		firstPage.drawText(`${uniName} - ${course}`, {
@@ -213,8 +210,7 @@ const POST = serverWrapper(async (req) => {
 			`${course}-CONFIDENTIALITY-UNDERTAKING.pdf`,
 			Buffer.from(coursePdfBytes),
 		);
-	});
-	await Promise.allSettled(promises);
+	}
 	zip.addFile("README.md", Buffer.from(undertakingCredits));
 	console.log("PDFs generated successfully");
 	return new NextResponse(zip.toBuffer(), {
