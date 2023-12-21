@@ -1,8 +1,6 @@
 import UndertakingForm from "@/components/utils/undertaking-generator/form";
 import { NextPage } from "next";
 
-// export type UndertakingData = Awaited<ReturnType<typeof getCourses>>;
-
 const UndertakingPage: NextPage = async () => {
 	return (
 		<div className="min-h-screen w-screen">
