@@ -40,7 +40,7 @@ const Header: React.FC = () => {
 	return (
 		<header id="home">
 			<div className="h-screen w-screen">
-				<ParticleAmongUs />
+				{/* <ParticleAmongUs /> */}
 				<div className="flex justify-center items-center h-full relative">
 					<div className="w-11/12 flex gap-4 flex-col justify-center items-center">
 						<motion.div
