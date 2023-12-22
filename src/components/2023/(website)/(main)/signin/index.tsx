@@ -1,10 +1,10 @@
-import { signIn } from "next-auth/react";
-import { useState } from "react";
 import ACMImage from "@/components/2023/(website)/(main)/_gen/image/acm";
-import { getCsrfToken } from "next-auth/react";
-import { useEffect } from "react";
-import regexSchoolEmail from "@/utils/regex/schoolEmail";
 import regexToString from "@/utils/regex/_toString";
+import regexSchoolEmail from "@/utils/regex/schoolEmail";
+import { getCsrfToken, signIn } from "next-auth/react";
+import { useEffect, useState } from "react";
+import { FaRegEnvelope, FaGoogle } from "react-icons/fa6";
+import InlineFont from "@/utils/font/InlineFont";
 const AuthForm: React.FC = () => {
 	const [email, setEmail] = useState<string>("");
 	const [csrfToken, setCsrfToken] = useState<string | undefined>(undefined);
@@ -55,8 +55,14 @@ const AuthForm: React.FC = () => {
 						})
 					}
 				>
-					<i className="icon-email"></i>
-					Sign in with Email
+					{/* <EnvelopeIcon className="h-5 w-5" /> */}
+					{/* <i className="icon-mail-alt"></i> */}
+					{/* <span className="flex justify-center items-center gap-1"> */}
+					<InlineFont>
+						<FaRegEnvelope />
+						Sign in with Email
+					</InlineFont>
+					{/* </span> */}
 				</button>
 				<p className=" font-bold">Or Sign in with</p>
 			</form>
@@ -66,8 +72,10 @@ const AuthForm: React.FC = () => {
 					await signIn("google", { callbackUrl: "/2023/dashboard" })
 				}
 			>
-				<i className="icon-google"></i>
-				Sign in with Google
+				<InlineFont>
+					<FaGoogle />
+					Sign in with Google
+				</InlineFont>
 			</button>
 		</span>
 	);
