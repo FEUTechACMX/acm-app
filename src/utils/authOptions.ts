@@ -1,5 +1,6 @@
 import { env } from "@/server/env";
 import { PrismaAdapter } from "@auth/prisma-adapter";
+import type { Adapter } from "next-auth/adapters";
 import { PrismaClient } from "@prisma/client";
 import { getServerSession, type NextAuthOptions } from "next-auth";
 import EmailProvider from "next-auth/providers/email";
@@ -11,7 +12,8 @@ import regexSchoolEmail from "./regex/schoolEmail";
 const prisma = new PrismaClient();
 
 export const authOptions: NextAuthOptions = {
-	adapter: PrismaAdapter(prisma),
+	// https://stackoverflow.com/a/76585568
+	adapter: PrismaAdapter(prisma) as Adapter,
 	pages: {
 		signIn: "/2023/signin",
 		verifyRequest: "/2023/verify-request",
