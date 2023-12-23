@@ -12,7 +12,8 @@
 		"prepare": "husky install",
 		"bubblewrap": "npx bubblewrap init --manifest=https://acmx.vercel.app/manifest.webmanifest",
 		"killport": "node -e \"const kill = require('kill-port');const p = 3000; setTimeout(() => kill(p, 'tcp').then(console.log('killed 3000'),process.exit(0)).catch(console.log('3000 not killed'),process.exit(0)), 1000)\"",
-		"removeNext": "node -e \"const fs = require('fs');const p = '.next';try {fs.rmdirSync(p, { recursive: true });} catch (e) {console.warn('Error folder:', p, e);}process.exit(0);\""
+		"removeNext": "node -e \"const fs = require('fs');const p = '.next';try {fs.rmdirSync(p, { recursive: true });} catch (e) {console.warn('Error folder:', p, e);}process.exit(0);\"",
+		"unlighthouse": "npx unlighthouse  --site http://localhost:3000"
 	},
 	"lint-staged": {
 		"**/*": "prettier --write --ignore-unknown"
