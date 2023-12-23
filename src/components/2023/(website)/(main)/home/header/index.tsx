@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { LinkProps } from "types/link";
 import ACMImage from "../../_gen/image/ACMImage";
 import ParticleAmongUs from "./particles";
+import PlayStore from "./playstore";
 const links: LinkProps[] = [
 	{
 		name: "CS EXPO 2023",
@@ -103,6 +104,7 @@ const Header: React.FC = () => {
 					</div>
 				</div>
 			</div>
+			<PlayStore />
 		</header>
 	);
 };

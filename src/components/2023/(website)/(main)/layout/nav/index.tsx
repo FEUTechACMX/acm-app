@@ -104,20 +104,10 @@ const Nav: React.FC = () => {
 					<p className="font-bold text-xl hidden sm:block">FEU Tech ACM</p>
 				</Link>
 			</NavbarBrand>
-			<NavbarContent className="hidden sm:flex gap-4 text-lg" justify="start">
-				{links.map((link) => {
-					return (
-						<NavbarItem key={link.name}>
-							<Link href={link.href} color="foreground">
-								<InlineFont>
-									{link.icon}
-									{link.name}
-								</InlineFont>
-							</Link>
-						</NavbarItem>
-					);
-				})}
-			</NavbarContent>
+			<NavbarContent
+				className="hidden sm:flex gap-4"
+				justify="start"
+			></NavbarContent>
 			<NavbarMenu>
 				{links.map((link) => {
 					return (
