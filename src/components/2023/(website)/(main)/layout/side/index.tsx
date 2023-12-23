@@ -6,7 +6,6 @@ import Sound from "./music";
 import Share from "./share";
 const Side: React.FC = () => {
 	const { isSoundAllowed } = useAppSelector((state) => state.soundReducer);
-	// const ref = useRef<HTMLButtonElement>(null);
 	return (
 		<motion.section
 			animate={{
