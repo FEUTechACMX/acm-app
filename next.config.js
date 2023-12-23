@@ -55,9 +55,13 @@ module.exports = withPWA({
   // reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: [
-      'lh3.googleusercontent.com',
-    ]
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+        pathname: '**',
+      },
+    ],
   },
   env: {},
   async headers () {
@@ -69,7 +73,7 @@ module.exports = withPWA({
       },
     ];
   },
-  async redirects() {
+  async redirects () {
     return [
       {
         source: '/',
@@ -86,6 +90,6 @@ module.exports = withPWA({
         destination: '/2023/404',
         permanent: false,
       }
-    ]
+    ];
   },
 });
