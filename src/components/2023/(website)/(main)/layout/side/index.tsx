@@ -1,13 +1,12 @@
 "use client";
 import { useAppSelector } from "@/utils/redux/hooks";
 import { motion } from "framer-motion";
-import { useRef } from "react";
 import { FaVolumeHigh, FaVolumeXmark } from "react-icons/fa6";
 import Sound from "./music";
 import Share from "./share";
 const Side: React.FC = () => {
 	const { isSoundAllowed } = useAppSelector((state) => state.soundReducer);
-	const ref = useRef<HTMLButtonElement>(null);
+	// const ref = useRef<HTMLButtonElement>(null);
 	return (
 		<motion.section
 			animate={{
@@ -17,9 +16,9 @@ const Side: React.FC = () => {
 					delay: 2,
 				},
 			}}
-			className="flex flex-col fixed bottom-0 md:bottom-1/4 right-0 z-10"
+			className="flex flex-col fixed justify-center items-center bottom-0 md:bottom-1/4 right-0 z-10"
 		>
-			<button className="text-lg text-center" ref={ref}>
+			<button>
 				<Sound
 					events={{
 						onClick: {
@@ -29,7 +28,11 @@ const Side: React.FC = () => {
 					}}
 					autoPlay={isSoundAllowed}
 				>
-					{isSoundAllowed ? <FaVolumeHigh /> : <FaVolumeXmark />}
+					{isSoundAllowed ? (
+						<FaVolumeHigh size={40} />
+					) : (
+						<FaVolumeXmark size={40} />
+					)}
 				</Sound>
 			</button>
 			<Share />

@@ -67,7 +67,7 @@ const Header: React.FC = () => {
 							animate={getAnimate()}
 							variants={animationVariants}
 							transition={{ duration: 1 }}
-							className="font-hae text-4xl"
+							className="font-hae text-4xl font-semibold"
 						>
 							&lt;Coding Chaos In Digital Dystopia /&gt;
 						</motion.q>
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
 											as={Link}
 											variant="shadow"
 											radius="sm"
-											className="flex justify-center items-center text-center  w-full  p-2"
+											className="flex justify-center items-center text-center text-lg  w-full  p-2"
 										>
 											{link.name}
 										</Button>
