@@ -1,9 +1,9 @@
 "use client";
 import { useAppSelector } from "@/utils/redux/hooks";
+import { Button, Link } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import { LinkProps } from "types/link";
-import ACMImage from "../../_gen/image/acm";
-import { Button, Link } from "@nextui-org/react";
+import ACMImage from "../../_gen/image/ACMImage";
 import ParticleAmongUs from "./particles";
 const links: LinkProps[] = [
 	{

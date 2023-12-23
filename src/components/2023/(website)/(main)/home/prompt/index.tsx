@@ -1,4 +1,5 @@
-import FadeIn from "@/components/2023/(website)/(main)/_framer/fadeIn";
+import Loading from "@/app/2023/(website)/(main)/loading";
+import FadeIn from "../../_framer/FadeIn";
 import { toggleSound } from "@/components/2023/(website)/(main)/_gen/sound";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
 import {
@@ -6,9 +7,8 @@ import {
 	toggleSoundPrompt,
 } from "@/utils/redux/slices/(website)/prompt";
 import { motion } from "framer-motion";
-import ACMImage from "../../_gen/image/acm";
-import Loading from "@/app/2023/(website)/(main)/loading";
 import { Suspense } from "react";
+import ACMImage from "../../_gen/image/ACMImage";
 
 const Prompt: React.FC = () => {
 	const { isSoundPromptShown, isFeaturedShown } = useAppSelector(
@@ -20,7 +20,7 @@ const Prompt: React.FC = () => {
 			<motion.section
 				className={`${
 					isFeaturedShown || isSoundPromptShown
-						? "w-screen h-screen fixed z-20 bg-bg"
+						? "w-screen h-screen fixed z-20 bg-bg fixed top-0 left-0"
 						: "hidden"
 				}`}
 			>

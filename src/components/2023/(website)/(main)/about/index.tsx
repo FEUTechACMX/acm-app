@@ -1,8 +1,8 @@
 "use client";
-import FadeIn from "@/components/2023/(website)/(main)/_framer/fadeIn";
+import FadeIn from "../_framer/FadeIn";
 const About: React.FC = () => {
 	return (
-		<div className="w-screen h-auto p-8 pt-24 md:p-24">
+		<div className="w-screen h-auto p-8  md:p-24">
 			<div className="flex justify-center items-center gap-6 flex-col h-full lg:w-9/12 m-auto">
 				<FadeIn props={{ delay: 0.5 }}>
 					<h2 className="font-ot text-panelColor">Who Are We</h2>
