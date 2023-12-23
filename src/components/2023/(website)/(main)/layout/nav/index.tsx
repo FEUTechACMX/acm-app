@@ -1,52 +1,64 @@
 "use client";
+import InlineFont from "@/utils/font/InlineFont";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
 import { toggleNav } from "@/utils/redux/slices/(website)/nav";
-import { motion } from "framer-motion";
-import Image from "next/legacy/image";
-// import Link from "next/link";
-import { LinkProps } from "types/link";
 import {
+	Button,
+	Link,
 	Navbar,
 	NavbarBrand,
 	NavbarContent,
 	NavbarItem,
-	Button,
-	Link
+	NavbarMenu,
+	NavbarMenuItem,
+	NavbarMenuToggle,
 } from "@nextui-org/react";
-import Sound from "../side/music";
-import ACMImage from "../../_gen/image/acm";
+import Image from "next/legacy/image";
+import {
+	FaHouseChimney,
+	FaMedal,
+	FaPeopleGroup,
+	FaRegCalendarDays,
+	FaFirstOrder,
+	FaShop,
+	FaPhone,
+} from "react-icons/fa6";
+import { LinkProps } from "types/link";
 const links: LinkProps[] = [
 	{
 		name: "Home",
 		href: "/",
+		icon: <FaHouseChimney />,
 	},
 	{
 		name: "About",
 		href: "/about",
+		icon: <FaPeopleGroup />,
 	},
 	{
 		name: "Featured",
 		href: "/featured",
+		icon: <FaMedal />,
 	},
 	{
 		name: "Events",
 		href: "/events",
+		icon: <FaRegCalendarDays />,
 	},
 	{
 		name: "Merch",
 		href: "/merch",
+		icon: <FaShop />,
 	},
 	{
 		name: "Committees",
 		href: "/committees",
+		icon: <FaFirstOrder />,
 	},
 	{
 		name: "Contact",
 		href: "/contact",
-	},
-	{
-		name: "Signin",
-		href: "/signin",
+		icon: <FaPhone />,
 	},
 ];
 const Nav: React.FC = () => {
@@ -55,6 +67,9 @@ const Nav: React.FC = () => {
 
 	return (
 		<Navbar
+			isBordered
+			isMenuOpen={isOpen}
+			onMenuOpenChange={() => dispatch(toggleNav())}
 			classNames={{
 				item: [
 					"flex",
@@ -72,42 +87,82 @@ const Nav: React.FC = () => {
 				],
 			}}
 		>
-			<NavbarBrand>
-		<div className="relative h-8 w-16">
-			<Image
-				src="/2023/media/img/logo/FIT_ACM.png"
-				alt="FEU Tech ACM Logo"
-				layout={"fill"}
-				objectFit={"contain"}
-				className="m-auto"
-			></Image>
-		</div>
-				<p className="font-bold text-inherit">FEU Tech ACM-X</p>
-			</NavbarBrand>
-			<NavbarContent className="sm:flex gap-4" justify="center">
-				<NavbarItem>
-					<Link href="#">
-						Features
-					</Link>
-				</NavbarItem>
-				<NavbarItem>
-					<Link href="#" aria-current="page">
-						Customers
-					</Link>
-				</NavbarItem>
-				<NavbarItem>
-					<Link color="foreground" href="#">
-						Integrations
-					</Link>
-				</NavbarItem>
+			<NavbarContent className="sm:hidden" justify="start">
+				<NavbarMenuToggle aria-label={isOpen ? "Close menu" : "Open menu"} />
 			</NavbarContent>
-			<NavbarContent justify="end">
-				<NavbarItem className="hidden lg:flex">
-					<Link href="#">Login</Link>
+			<NavbarBrand className="flex justify-center sm:justify-start">
+				<Link href="/" color="foreground">
+					<div className="relative h-8 w-16">
+						<Image
+							src="/2023/media/img/logo/FIT_ACM.png"
+							alt="FEU Tech ACM Logo"
+							layout={"fill"}
+							objectFit={"contain"}
+							className="m-auto"
+						></Image>
+					</div>
+					<p className="font-bold text-lg hidden sm:block">FEU Tech ACM-X</p>
+				</Link>
+			</NavbarBrand>
+
+			<NavbarMenu>
+				{links.map((link) => {
+					return (
+						<NavbarMenuItem key={link.name}>
+							<Link href={link.href} className="text-2xl" color="foreground">
+								<InlineFont>
+									{link.icon}
+									{link.name}
+								</InlineFont>
+							</Link>
+						</NavbarMenuItem>
+					);
+				})}
+			</NavbarMenu>
+
+			{/* <NavbarContent className="sm:flex gap-4" justify="center">
+				<NavbarItem>
+					<Link href="/2023/home">
+						<InlineFont>
+							<FaHouseChimney />
+							Home
+						</InlineFont>
+					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Button as={Link} color="primary" href="#" variant="flat">
-						Sign Up
+					<Link href="/2023/about">
+						<InlineFont>
+							<FaPeopleGroup />
+							About
+						</InlineFont>
+					</Link>
+				</NavbarItem>
+				<NavbarItem>
+					<Link href="/2023/featured">
+						<InlineFont>
+							<FaMedal />
+							Featured
+						</InlineFont>
+					</Link>
+				</NavbarItem>
+				<NavbarItem>
+					<Link href="/2023/events">
+						<InlineFont>
+							<FaRegCalendarDays />
+							Events
+						</InlineFont>
+					</Link>
+				</NavbarItem>
+			</NavbarContent> */}
+			<NavbarContent justify="end">
+				<NavbarItem>
+					<Button
+						as={Link}
+						color="primary"
+						href="/2023/signin"
+						variant="shadow"
+					>
+						Sign In
 					</Button>
 				</NavbarItem>
 			</NavbarContent>
