@@ -1,5 +1,5 @@
+import ACMImage from "@/components/2023/(website)/(main)/_gen/image/ACMImage";
 import { NextPage } from "next";
-import ACMImage from "@/components/2023/(website)/(main)/_gen/image/acm";
 const VerifyRequest: NextPage = () => {
 	return (
 		<section>

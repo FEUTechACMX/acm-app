@@ -1,10 +1,10 @@
-import ACMImage from "@/components/2023/(website)/(main)/_gen/image/acm";
+import ACMImage from "@/components/2023/(website)/(main)/_gen/image/ACMImage";
+import InlineFont from "@/utils/font/InlineFont";
 import regexToString from "@/utils/regex/_toString";
 import regexSchoolEmail from "@/utils/regex/schoolEmail";
 import { getCsrfToken, signIn } from "next-auth/react";
 import { useEffect, useState } from "react";
-import { FaRegEnvelope, FaGoogle } from "react-icons/fa6";
-import InlineFont from "@/utils/font/InlineFont";
+import { FaGoogle, FaRegEnvelope } from "react-icons/fa6";
 const AuthForm: React.FC = () => {
 	const [email, setEmail] = useState<string>("");
 	const [csrfToken, setCsrfToken] = useState<string | undefined>(undefined);
