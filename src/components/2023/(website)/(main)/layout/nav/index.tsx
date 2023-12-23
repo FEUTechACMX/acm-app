@@ -32,32 +32,32 @@ const links: LinkProps[] = [
 	},
 	{
 		name: "About",
-		href: "/about",
+		href: "/2023/about",
 		icon: <FaPeopleGroup />,
 	},
 	{
 		name: "Featured",
-		href: "/featured",
+		href: "/2023/featured",
 		icon: <FaMedal />,
 	},
 	{
 		name: "Events",
-		href: "/events",
+		href: "/2023/events",
 		icon: <FaRegCalendarDays />,
 	},
 	{
 		name: "Merch",
-		href: "/merch",
+		href: "/2023/merch",
 		icon: <FaShop />,
 	},
 	{
 		name: "Committees",
-		href: "/committees",
+		href: "/2023/committees",
 		icon: <FaFirstOrder />,
 	},
 	{
 		name: "Contact",
-		href: "/contact",
+		href: "/2023/contact",
 		icon: <FaPhone />,
 	},
 ];
@@ -101,7 +101,7 @@ const Nav: React.FC = () => {
 							className="m-auto"
 						></Image>
 					</div>
-					<p className="font-bold text-lg hidden sm:block">FEU Tech ACM-X</p>
+					<p className="font-bold text-2xl hidden sm:block">FEU Tech ACM</p>
 				</Link>
 			</NavbarBrand>
 
