@@ -4,7 +4,8 @@ import regexToString from "@/utils/regex/_toString";
 import regexSchoolEmail from "@/utils/regex/schoolEmail";
 import { getCsrfToken, signIn } from "next-auth/react";
 import { useEffect, useState } from "react";
-import { FaGoogle, FaRegEnvelope } from "react-icons/fa6";
+import { FcGoogle } from "react-icons/fc";
+import { FaRegEnvelope } from "react-icons/fa6";
 const AuthForm: React.FC = () => {
 	const [email, setEmail] = useState<string>("");
 	const [csrfToken, setCsrfToken] = useState<string | undefined>(undefined);
@@ -73,7 +74,7 @@ const AuthForm: React.FC = () => {
 				}
 			>
 				<InlineFont>
-					<FaGoogle />
+					<FcGoogle />
 					Sign in with Google
 				</InlineFont>
 			</button>
