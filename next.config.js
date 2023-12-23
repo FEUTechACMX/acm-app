@@ -1,4 +1,3 @@
-/** @type {import('next').NextConfig} */
 const runtimeCaching = require('next-pwa/cache');
 const nextDataIndex = runtimeCaching.findIndex(
   (entry) => entry.options.cacheName === 'next-data'
@@ -9,13 +8,14 @@ if (nextDataIndex !== -1) {
   throw new Error('Failed to find next-data object in runtime caching');
 }
 
+/** @type {import('next').NextConfig} */
 const withPWA = require('next-pwa')({
   dest: 'public',
   runtimeCaching,
   cacheOnFrontEndNav: process.env.NODE_ENV === 'production',
   fallbacks: {
     image: '/android-chrome-512x512.png',
-    // document: '/pages/_offline.tsx',
+    document: '/2023/offline',
     // font: '',
     // audio: '',
     // video: ''
@@ -63,7 +63,9 @@ module.exports = withPWA({
       },
     ],
   },
-  env: {},
+  experimental: {
+    nextScriptWorkers: true,
+  },
   async headers () {
     return [
       {

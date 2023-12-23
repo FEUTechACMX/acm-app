@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 const Error404: NextPage = () => {
 	return (
-		<div className="h-screen w-screen flex flex-col justify-center items-center text-center">
+		<div className="h-screen w-screen flex flex-col justify-center items-center text-center fixed top-0 left-0">
 			<h1>Error 404: Not Found</h1>
 			<p>🚧 The website is under development 🚧</p>
 			<p>
