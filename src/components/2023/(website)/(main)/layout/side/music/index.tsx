@@ -1,5 +1,7 @@
 "use client";
 import { useAppSelector } from "@/utils/redux/hooks";
+import { toggleSound } from "../../../_gen/sound";
+import { useAppDispatch } from "@/utils/redux/hooks";
 import { useEffect, useRef } from "react";
 type Path = `/2023/media/music/${string}.mp3` | `/2023/media/sfx${string}.mp3`;
 
@@ -30,6 +32,7 @@ const createAudioElement = (audioProps?: AudioProps): AudioRef => {
 
 const Sound: React.FC<Props> = ({ children, events, className, autoPlay }) => {
 	const { isSoundAllowed } = useAppSelector((state) => state.soundReducer);
+	const dispatch = useAppDispatch();
 	const refs = useRef<{
 		// eslint-disable-next-line no-unused-vars
 		[K in keyof typeof events]?: React.RefObject<AudioRef>;
@@ -51,7 +54,10 @@ const Sound: React.FC<Props> = ({ children, events, className, autoPlay }) => {
 	}, [autoPlay]);
 
 	const playAudio = (event: keyof typeof events) => {
-		if (!isSoundAllowed) return;
+		if (!isSoundAllowed) {
+			dispatch(toggleSound());
+			return;
+		}
 		const audioRef = refs.current[event];
 		if (audioRef?.current?.paused) audioRef.current?.play();
 		else audioRef?.current?.pause();
