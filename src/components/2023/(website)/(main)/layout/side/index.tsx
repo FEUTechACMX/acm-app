@@ -2,6 +2,7 @@
 import { useAppSelector } from "@/utils/redux/hooks";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import { FaVolumeHigh, FaVolumeXmark } from "react-icons/fa6";
 import Sound from "./music";
 import Share from "./share";
 const Side: React.FC = () => {
@@ -28,7 +29,7 @@ const Side: React.FC = () => {
 					}}
 					autoPlay={isSoundAllowed}
 				>
-					--Sound--
+					{isSoundAllowed ? <FaVolumeHigh /> : <FaVolumeXmark />}
 				</Sound>
 			</button>
 			<Share />
