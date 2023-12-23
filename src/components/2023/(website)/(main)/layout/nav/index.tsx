@@ -101,10 +101,23 @@ const Nav: React.FC = () => {
 							className="m-auto"
 						></Image>
 					</div>
-					<p className="font-bold text-2xl hidden sm:block">FEU Tech ACM</p>
+					<p className="font-bold text-xl hidden sm:block">FEU Tech ACM</p>
 				</Link>
 			</NavbarBrand>
-
+			<NavbarContent className="hidden sm:flex gap-4 text-lg" justify="start">
+				{links.map((link) => {
+					return (
+						<NavbarItem key={link.name}>
+							<Link href={link.href} color="foreground">
+								<InlineFont>
+									{link.icon}
+									{link.name}
+								</InlineFont>
+							</Link>
+						</NavbarItem>
+					);
+				})}
+			</NavbarContent>
 			<NavbarMenu>
 				{links.map((link) => {
 					return (
@@ -119,41 +132,6 @@ const Nav: React.FC = () => {
 					);
 				})}
 			</NavbarMenu>
-
-			{/* <NavbarContent className="sm:flex gap-4" justify="center">
-				<NavbarItem>
-					<Link href="/2023/home">
-						<InlineFont>
-							<FaHouseChimney />
-							Home
-						</InlineFont>
-					</Link>
-				</NavbarItem>
-				<NavbarItem>
-					<Link href="/2023/about">
-						<InlineFont>
-							<FaPeopleGroup />
-							About
-						</InlineFont>
-					</Link>
-				</NavbarItem>
-				<NavbarItem>
-					<Link href="/2023/featured">
-						<InlineFont>
-							<FaMedal />
-							Featured
-						</InlineFont>
-					</Link>
-				</NavbarItem>
-				<NavbarItem>
-					<Link href="/2023/events">
-						<InlineFont>
-							<FaRegCalendarDays />
-							Events
-						</InlineFont>
-					</Link>
-				</NavbarItem>
-			</NavbarContent> */}
 			<NavbarContent justify="end">
 				<NavbarItem>
 					<Button
@@ -167,108 +145,6 @@ const Nav: React.FC = () => {
 				</NavbarItem>
 			</NavbarContent>
 		</Navbar>
-
-		// <motion.nav
-		// 	id="home-nav"
-		// 	animate={{
-		// 		opacity: [0, 1],
-		// 		transition: {
-		// 			duration: 1,
-		// 			delay: 2,
-		// 		},
-		// 	}}
-		// 	className="w-screen fixed p-2 border-t-4 border-panelBg border-solid z-20 flex justify-between font-bold backdrop-blur"
-		// >
-		// 	<Link href="/" className="flex justify-center items-center">
-		// 		<div className="relative h-8 w-16">
-		// 			<Image
-		// 				src="/2023/media/img/logo/FIT_ACM.png"
-		// 				alt="FEU Tech ACM Logo"
-		// 				layout={"fill"}
-		// 				objectFit={"contain"}
-		// 				className="m-auto"
-		// 			></Image>
-		// 		</div>
-		// 		<p className="font-bold text-xl hover:text-accents transition-colors">
-		// 			FEU&nbsp;Tech&nbsp;ACM
-		// 		</p>
-		// 	</Link>
-		// 	<div
-		// 		className={`${
-		// 			isOpen
-		// 				? "fixed w-screen h-screen justify-center flex-col flex items-center bg-bg top-0 left-0 z-10"
-		// 				: "hidden"
-		// 		} md:flex md:static md:w-auto md:h-auto md:bg-transparent md:flex-row md:items-center md:justify-between`}
-		// 	>
-		// 		{links.map((link) => {
-		// 			return (
-		// 				<Sound
-		// 					key={link.name}
-		// 					events={{
-		// 						onMouseEnter: {
-		// 							path: "/2023/media/sfx/gun_cocking_short.mp3",
-		// 							isLooped: false,
-		// 						},
-		// 						onClick: {
-		// 							path: "/2023/media/sfx/gun_shot.mp3",
-		// 							isLooped: false,
-		// 						},
-		// 					}}
-		// 					className={`${
-		// 						isOpen && "w-full text-center"
-		// 					} hover:text-accents transition-colors cursor-pointer flex`}
-		// 				>
-		// 					<Link
-		// 						href={`/2023${link.href}`}
-		// 						className="font-bold text-xl w-full p-2"
-		// 						onClick={() => dispatch(toggleNav())}
-		// 					>
-		// 						{link.name}
-		// 					</Link>
-		// 				</Sound>
-		// 			);
-		// 		})}
-		// 	</div>
-		// 	<div className="flex md:hidden z-10">
-		// 		<button onClick={() => dispatch(toggleNav())}>
-		// 			{isOpen ? (
-		// 				<>
-		// 					<svg
-		// 						xmlns="http://www.w3.org/2000/svg"
-		// 						className="h-10 w-10 text-accents hover:text-accentsDark transition-colors"
-		// 						fill="none"
-		// 						viewBox="0 0 24 24"
-		// 						stroke="currentColor"
-		// 					>
-		// 						<path
-		// 							strokeLinecap="round"
-		// 							strokeLinejoin="round"
-		// 							strokeWidth="3"
-		// 							d="M6 18L18 6M6 6l12 12"
-		// 						/>
-		// 					</svg>
-		// 				</>
-		// 			) : (
-		// 				<>
-		// 					<svg
-		// 						xmlns="http://www.w3.org/2000/svg"
-		// 						className="h-10 w-10 text-accents hover:text-accentsDark transition-colors"
-		// 						fill="none"
-		// 						viewBox="0 0 24 24"
-		// 						stroke="currentColor"
-		// 					>
-		// 						<path
-		// 							strokeLinecap="round"
-		// 							strokeLinejoin="round"
-		// 							strokeWidth="3"
-		// 							d="M4 6h16M4 12h16M4 18h16"
-		// 						/>
-		// 					</svg>
-		// 				</>
-		// 			)}
-		// 		</button>
-		// 	</div>
-		// </motion.nav>
 	);
 };
 
