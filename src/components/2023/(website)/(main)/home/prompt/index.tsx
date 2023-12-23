@@ -20,7 +20,7 @@ const Prompt: React.FC = () => {
 			<motion.section
 				className={`${
 					isFeaturedShown || isSoundPromptShown
-						? "w-screen h-screen fixed z-20 bg-bg fixed top-0 left-0"
+						? "w-screen h-screen fixed z-20 bg-bg top-0 left-0"
 						: "hidden"
 				}`}
 			>
