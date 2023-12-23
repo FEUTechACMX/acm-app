@@ -6,9 +6,7 @@ interface Props {
 
 const InlineFont: React.FC<Props> = ({ children }) => {
 	return (
-		<span className="flex justify-center items-center gap-1">
-			{children}
-		</span>
+		<span className="flex justify-center items-center gap-1">{children}</span>
 	);
 };
 

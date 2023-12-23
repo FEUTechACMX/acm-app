@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { LinkProps } from "types/link";
 import ACMImage from "../../_gen/image/acm";
-import ParticleAmongUs from "./particles";
+// import ParticleAmongUs from "./particles";
 const links: LinkProps[] = [
 	{
 		name: "CS EXPO 2023",
