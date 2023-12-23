@@ -1,10 +1,10 @@
 "use client";
 import { useAppSelector } from "@/utils/redux/hooks";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { LinkProps } from "types/link";
 import ACMImage from "../../_gen/image/acm";
-// import ParticleAmongUs from "./particles";
+import { Button, Link } from "@nextui-org/react";
+import ParticleAmongUs from "./particles";
 const links: LinkProps[] = [
 	{
 		name: "CS EXPO 2023",
@@ -15,7 +15,7 @@ const links: LinkProps[] = [
 		href: "/utils/undertaking-generator",
 	},
 	{
-		name: "Contact Us!",
+		name: "Collaborate With Us!",
 		href: "mailto:acm.feu.it@gmail.com",
 	},
 ];
@@ -39,8 +39,8 @@ const Header: React.FC = () => {
 
 	return (
 		<header id="home">
-			<div className="h-screen w-screen">
-				{/* <ParticleAmongUs /> */}
+			<div className="h-screen w-screen fixed top-0 left-0">
+				<ParticleAmongUs />
 				<div className="flex justify-center items-center h-full relative">
 					<div className="w-11/12 flex gap-4 flex-col justify-center items-center">
 						<motion.div
@@ -75,7 +75,7 @@ const Header: React.FC = () => {
 							animate={getAnimate()}
 							variants={animationVariants}
 							transition={{ duration: 1 }}
-							className="flex flex-col md:flex-row gap-4 justify-center items-center"
+							className="flex  w-7/12 sm:w-5/12  flex-col md:flex-row gap-2 items-stretch"
 						>
 							{links.map((link, index) => {
 								return (
@@ -85,13 +85,17 @@ const Header: React.FC = () => {
 										animate={getAnimate()}
 										variants={animationVariants}
 										transition={{ duration: 1, delay: getDelay(index) }}
+										className="w-full flex"
 									>
-										<Link
+										<Button
 											href={link.href}
-											className="hover:bg-accents transition-colors p-2 border-2 border-accents rounded-md shadow-sm shadow-accents"
+											as={Link}
+											variant="shadow"
+											radius="sm"
+											className="flex justify-center items-center text-center  w-full  p-2"
 										>
 											{link.name}
-										</Link>
+										</Button>
 									</motion.span>
 								);
 							})}
