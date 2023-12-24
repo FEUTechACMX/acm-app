@@ -1,4 +1,4 @@
-import UndertakingForm from "@/components/utils/undertaking-generator/form";
+import UndertakingForm from "@/components/utils/undertaking-generator/UndertakingForm";
 import { NextPage } from "next";
 
 const UndertakingPage: NextPage = async () => {

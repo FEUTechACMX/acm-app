@@ -1,6 +1,6 @@
 "use client";
-import Header from "@/components/2023/(website)/(main)/home/header";
-import Prompt from "@/components/2023/(website)/(main)/home/prompt";
+import HomeHeader from "@/components/(website)/2023/home/header";
+import HomePrompt from "@/components/(website)/2023/home/prompt";
 import type { NextPage } from "next";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -10,8 +10,8 @@ const Home: NextPage = () => {
 	if (session) router.push("/2023/dashboard");
 	return (
 		<main>
-			<Prompt />
-			<Header />
+			<HomePrompt />
+			<HomeHeader />
 		</main>
 	);
 };
