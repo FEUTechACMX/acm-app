@@ -1,4 +1,4 @@
-import Loading from "@/app/2023/(website)/(main)/loading";
+import Loading from "@/app/(website)/2023/loading";
 import FadeIn from "../../_framer/FadeIn";
 import { toggleSound } from "@/components/2023/(website)/(main)/_gen/sound";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";

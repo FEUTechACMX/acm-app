@@ -2,10 +2,42 @@ import NextAuthProvider from "@/components/2023/(app)/provider";
 import { env } from "@/server/env";
 import { ReduxProviders } from "@/utils/redux/provider";
 import { Analytics } from "@vercel/analytics/react";
-import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import type { Metadata } from "next";
 import { Viewport } from "next";
-import "./globals.css";
+import localFont from "next/font/local";
+const font_f1s = localFont({
+	src: [
+		{
+			path: "../../public/2023/fonts/f1-secuencia-quad-ffp/font.ttf",
+			style: "normal",
+		},
+	],
+	variable: "--font-f1s",
+});
+const font_hae = localFont({
+	src: [
+		{
+			path: "../../public/2023/fonts/human-alter-ego/font.ttf",
+			style: "normal",
+		},
+	],
+	variable: "--font-hae",
+});
+
+const font_ot = localFont({
+	src: [
+		{
+			path: "../../public/2023/fonts/over-there/font.ttf",
+			style: "normal",
+		},
+	],
+	variable: "--font-ot",
+});
+
+import "src/styles/2023/style.css"; // <- Notice this for the next year's website
+import "src/styles/globals.css";
+import ChildrenProps from "types/ChildrenProps";
 import NextUIProv from "./provider";
 const metaData = {
 	app_name: "FEU Tech ACM-X",
@@ -109,7 +141,7 @@ export const metadata: Metadata = {
 		{ rel: "apple-touch-icon", url: iconURL },
 	],
 	keywords:
-		"FEU Tech, ACM, Student Chapter, FEU Tech ACM, FEU Tech ACM Student Chapter, Application, Web Application, FEU Tech ACM-X, FEU Tech ACM-X Application, FEU Tech ACM-X Web Application, FEU Tech ACM-X Web Application",
+		"FEU Tech, ACM, Student Chapter, FEU Tech ACM, FEU Tech ACM Student Chapter, Application, Web Application, FEU Tech ACM-X, FEU Tech ACM-X Application, FEU Tech ACM-X Web Application, FEU Tech ACM-X Web Application, Official Application, Google Play Store, Website",
 	manifest: "/manifest.webmanifest",
 	metadataBase: new URL("https://acmx.vercel.app"),
 	openGraph: {
@@ -149,16 +181,19 @@ export const metadata: Metadata = {
 		me: "feutechacm",
 	},
 };
-interface Props {
-	children: React.ReactNode;
-}
 
-const RootLayout: React.FC<Props> = ({ children }) => {
+const RootLayout: React.FC<ChildrenProps> = ({ children }) => {
 	return (
 		<html lang="en">
 			<NextAuthProvider>
 				<ReduxProviders>
-					<NextUIProv>{children}</NextUIProv>
+					<NextUIProv>
+						<body
+							className={`${font_f1s.variable} ${font_hae.variable} ${font_ot.variable} text-base sm:text-lg lg:text-xl`}
+						>
+							{children}
+						</body>
+					</NextUIProv>
 					<Analytics />
 					<SpeedInsights />
 				</ReduxProviders>
