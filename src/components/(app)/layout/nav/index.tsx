@@ -30,27 +30,27 @@ import LinkProps from "types/LinkProps";
 const links: LinkProps[] = [
 	{
 		name: "Dashboard",
-		href: "/dashboard",
+		href: "/app/dashboard",
 		icon: <FaGauge />,
 	},
 	{
 		name: "Forum",
-		href: "/home",
+		href: "/app/forum",
 		icon: <FaGlobe />,
 	},
 	{
 		name: "Events",
-		href: "/events",
+		href: "/app/events",
 		icon: <FaCalendarDays />,
 	},
 	{
 		name: "Notifications",
-		href: "/notifications",
+		href: "/app/notifications",
 		icon: <FaBell />,
 	},
 	{
 		name: "Inbox",
-		href: "/inbox",
+		href: "/app/inbox",
 		icon: <FaInbox />,
 	},
 ];
