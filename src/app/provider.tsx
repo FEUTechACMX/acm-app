@@ -2,10 +2,8 @@
 
 import { NextUIProvider } from "@nextui-org/react";
 
-interface Props {
-	children: React.ReactNode;
-}
-const NextUIProv: React.FC<Props> = ({ children }) => {
+import ChildrenProps from "types/ChildrenProps";
+const NextUIProv: React.FC<ChildrenProps> = ({ children }) => {
 	return <NextUIProvider>{children}</NextUIProvider>;
 };
 

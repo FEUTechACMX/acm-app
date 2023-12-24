@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-interface Props {
-	children: React.ReactNode;
+import ChildrenProps from "types/ChildrenProps";
+interface Props extends ChildrenProps {
 	props?: {
 		duration?: number;
 		delay?: number;
