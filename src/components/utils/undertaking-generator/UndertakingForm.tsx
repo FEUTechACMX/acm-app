@@ -1,6 +1,6 @@
 "use client";
 import { UndertakingBody } from "@/app/api/utils/undertaking-generator/route";
-import ACMImage from "@/components/(website)/2023/_gen/image/ACMImage";
+import ACMImage from "@/components/2023/_gen/image/ACMImage";
 import { env } from "@/server/env";
 import regexIdNumber from "@/utils/regex/schoolId";
 import { universityNameArr } from "@/utils/universityName";

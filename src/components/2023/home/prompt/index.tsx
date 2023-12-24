@@ -1,5 +1,5 @@
 import Loading from "@/app/2023/loading";
-import { toggleSound } from "@/components/(website)/2023/_gen/sound";
+import { toggleSound } from "../../_gen/sound";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
 import {
 	toggleFeatured,

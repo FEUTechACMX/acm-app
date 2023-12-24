@@ -1,6 +1,6 @@
 "use client";
-import SigninForm from "@/components/(website)/2023/signin";
-import ParticlePolygon from "@/components/(website)/2023/signin/particles";
+import SigninForm from "@/components/2023/signin";
+import ParticlePolygon from "@/components/2023/signin/particles";
 import { NextPage } from "next";
 const Signin: NextPage = () => {
 	return (
