@@ -52,7 +52,7 @@ const SigninForm: React.FC = () => {
 					onClick={async () =>
 						await signIn("email", {
 							email,
-							callbackUrl: "/2023/dashboard",
+							callbackUrl: "/app/dashboard",
 						})
 					}
 				>

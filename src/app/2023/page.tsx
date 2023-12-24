@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 const Home: NextPage = () => {
 	const { data: session } = useSession();
 	const router = useRouter();
-	if (session) router.push("/2023/dashboard");
+	if (session) router.push("/app/dashboard");
 	return (
 		<main>
 			<HomePrompt />

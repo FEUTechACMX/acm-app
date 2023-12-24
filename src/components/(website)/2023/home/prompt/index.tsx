@@ -1,4 +1,4 @@
-import Loading from "@/app/(website)/2023/loading";
+import Loading from "@/app/2023/loading";
 import { toggleSound } from "@/components/(website)/2023/_gen/sound";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
 import {

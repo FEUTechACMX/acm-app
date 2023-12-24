@@ -2,7 +2,6 @@
 import InlineFont from "@/utils/font/InlineFont";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
 import { toggleNav } from "@/utils/redux/slices/(website)/nav";
-import ACMImage from "../../_gen/image/ACMImage";
 import {
 	Button,
 	Link,
@@ -14,7 +13,6 @@ import {
 	NavbarMenuItem,
 	NavbarMenuToggle,
 } from "@nextui-org/react";
-import Image from "next/legacy/image";
 import {
 	FaFirstOrder,
 	FaHouseChimney,
@@ -25,6 +23,7 @@ import {
 	FaShop,
 } from "react-icons/fa6";
 import LinkProps from "types/LinkProps";
+import ACMImage from "../../_gen/image/ACMImage";
 const links: LinkProps[] = [
 	{
 		name: "Home",
@@ -101,21 +100,18 @@ const Site2023LayoutNav: React.FC = () => {
 			</NavbarBrand>
 
 			<NavbarContent className="hidden sm:flex gap-4" justify="center">
-				{
-					links.map((link) => {
-						return (
-							<NavbarItem key={link.name}>
-								<Link color="foreground" href={link.href}>
-									<InlineFont>
-										{link.icon}
-										{link.name}
-									</InlineFont>
-								</Link>
-							</NavbarItem>
-						);
-					}
-					)
-				}
+				{links.map((link) => {
+					return (
+						<NavbarItem key={link.name}>
+							<Link color="foreground" href={link.href}>
+								<InlineFont>
+									{link.icon}
+									{link.name}
+								</InlineFont>
+							</Link>
+						</NavbarItem>
+					);
+				})}
 			</NavbarContent>
 
 			<NavbarMenu>
