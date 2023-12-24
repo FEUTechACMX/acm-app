@@ -1,14 +1,14 @@
-import LayoutNav from "@/components/(website)/2023/layout/nav";
-import LayoutSide from "@/components/(website)/2023/layout/side";
+import Site2023LayoutNav from "@/components/(website)/2023/layout/nav";
+import Site2023LayoutSide from "@/components/(website)/2023/layout/side";
 import ChildrenProps from "types/ChildrenProps";
-const Layout: React.FC<ChildrenProps> = ({ children }) => {
+const Site2023Layout: React.FC<ChildrenProps> = ({ children }) => {
 	return (
 		<>
-			<LayoutNav />
-			<LayoutSide />
+			<Site2023LayoutNav />
+			<Site2023LayoutSide />
 			{children}
 		</>
 	);
 };
 
-export default Layout;
+export default Site2023Layout;

@@ -5,7 +5,7 @@ const initialState: NavState = {
 	isNavOpen: false,
 };
 
-export const Site23Nav = createSlice({
+export const AppNav = createSlice({
 	name: "nav",
 	initialState,
 	reducers: {
@@ -15,5 +15,5 @@ export const Site23Nav = createSlice({
 	},
 });
 
-export const { toggleNav } = Site23Nav.actions;
-export default Site23Nav.reducer;
+export const { toggleNav } = AppNav.actions;
+export default AppNav.reducer;

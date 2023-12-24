@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { FaVolumeHigh, FaVolumeXmark } from "react-icons/fa6";
 import LayoutSound from "./music";
 import LayoutShare from "./share";
-const LayoutSide: React.FC = () => {
+const Site2023LayoutSide: React.FC = () => {
 	const { isSoundAllowed } = useAppSelector((state) => state.soundReducer);
 	return (
 		<motion.section
@@ -39,4 +39,4 @@ const LayoutSide: React.FC = () => {
 	);
 };
 
-export default LayoutSide;
+export default Site2023LayoutSide;

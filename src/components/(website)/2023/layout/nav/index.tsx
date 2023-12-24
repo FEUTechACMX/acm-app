@@ -2,6 +2,7 @@
 import InlineFont from "@/utils/font/InlineFont";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
 import { toggleNav } from "@/utils/redux/slices/(website)/nav";
+import ACMImage from "../../_gen/image/ACMImage";
 import {
 	Button,
 	Link,
@@ -61,7 +62,7 @@ const links: LinkProps[] = [
 		icon: <FaPhone />,
 	},
 ];
-const LayoutNav: React.FC = () => {
+const Site2023LayoutNav: React.FC = () => {
 	const isOpen = useAppSelector((state) => state.navReducer.isNavOpen);
 	const dispatch = useAppDispatch();
 
@@ -93,21 +94,30 @@ const LayoutNav: React.FC = () => {
 			<NavbarBrand className="flex justify-center sm:justify-start">
 				<Link href="/" color="foreground">
 					<div className="relative h-8 w-16">
-						<Image
-							src="/2023/media/img/logo/FIT_ACM.png"
-							alt="FEU Tech ACM Logo"
-							layout={"fill"}
-							objectFit={"contain"}
-							className="m-auto"
-						></Image>
+						<ACMImage />
 					</div>
 					<p className="font-bold text-xl hidden sm:block">FEU Tech ACM</p>
 				</Link>
 			</NavbarBrand>
-			<NavbarContent
-				className="hidden sm:flex gap-4"
-				justify="start"
-			></NavbarContent>
+
+			<NavbarContent className="hidden sm:flex gap-4" justify="center">
+				{
+					links.map((link) => {
+						return (
+							<NavbarItem key={link.name}>
+								<Link color="foreground" href={link.href}>
+									<InlineFont>
+										{link.icon}
+										{link.name}
+									</InlineFont>
+								</Link>
+							</NavbarItem>
+						);
+					}
+					)
+				}
+			</NavbarContent>
+
 			<NavbarMenu>
 				{links.map((link) => {
 					return (
@@ -138,4 +148,4 @@ const LayoutNav: React.FC = () => {
 	);
 };
 
-export default LayoutNav;
+export default Site2023LayoutNav;
