@@ -1,8 +1,8 @@
 "use client";
-import { useAppSelector } from "@/utils/redux/hooks";
-import { toggleSound } from "../../../_gen/sound";
-import { useAppDispatch } from "@/utils/redux/hooks";
+import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
 import { useEffect, useRef } from "react";
+import ChildrenProps from "types/ChildrenProps";
+import { toggleSound } from "../../../_gen/sound";
 type Path = `/2023/media/music/${string}.mp3` | `/2023/media/sfx${string}.mp3`;
 
 interface AudioProps {
@@ -10,9 +10,8 @@ interface AudioProps {
 	isLooped: boolean;
 }
 
-interface Props {
+interface Props extends ChildrenProps {
 	className?: string;
-	children: React.ReactNode;
 	autoPlay?: boolean;
 	events: {
 		// eslint-disable-next-line no-unused-vars

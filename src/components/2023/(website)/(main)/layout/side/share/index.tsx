@@ -1,7 +1,7 @@
 import { FaSquareFacebook } from "react-icons/fa6";
 import { FaSquareYoutube } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
-import { LinkProps } from "types/link";
+import LinkProps from "types/LinkProps";
 const socials: LinkProps[] = [
 	{
 		name: "Facebook",

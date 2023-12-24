@@ -1,10 +1,7 @@
 import React from "react";
 
-interface Props {
-	children: React.ReactNode;
-}
-
-const InlineFont: React.FC<Props> = ({ children }) => {
+import ChildrenProps from "types/ChildrenProps";
+const InlineFont: React.FC<ChildrenProps> = ({ children }) => {
 	return (
 		<span className="flex justify-center items-center gap-1">{children}</span>
 	);

@@ -2,7 +2,7 @@
 import { useAppSelector } from "@/utils/redux/hooks";
 import { Button, Link } from "@nextui-org/react";
 import { motion } from "framer-motion";
-import { LinkProps } from "types/link";
+import LinkProps from "types/LinkProps";
 import ACMImage from "../../_gen/image/ACMImage";
 import ParticleAmongUs from "./particles";
 import PlayStore from "./playstore";

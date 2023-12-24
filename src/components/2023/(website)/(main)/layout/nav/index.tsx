@@ -23,7 +23,7 @@ import {
 	FaShop,
 	FaPhone,
 } from "react-icons/fa6";
-import { LinkProps } from "types/link";
+import LinkProps from "types/LinkProps";
 const links: LinkProps[] = [
 	{
 		name: "Home",
