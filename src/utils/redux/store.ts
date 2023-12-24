@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import soundReducer from "../../components/2023/(website)/(main)/_gen/sound";
+import soundReducer from "../../components/(website)/2023/_gen/sound";
 import navReducer from "./slices/(website)/nav";
 import initialPromptReducer from "./slices/(website)/prompt";
 import counterReducer from "./slices/counter";
