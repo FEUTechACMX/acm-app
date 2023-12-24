@@ -1,4 +1,4 @@
-import NextAuthProvider from "@/components/(app)/NextAuthProvider";
+import NextAuthProvider from "@/components/app/NextAuthProvider";
 import { env } from "@/server/env";
 import { ReduxProviders } from "@/utils/redux/provider";
 import { Analytics } from "@vercel/analytics/react";

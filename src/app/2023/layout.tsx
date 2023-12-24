@@ -1,5 +1,5 @@
-import Site2023LayoutNav from "@/components/(website)/2023/layout/nav";
-import Site2023LayoutSide from "@/components/(website)/2023/layout/side";
+import Site2023LayoutNav from "@/components/2023/layout/nav";
+import Site2023LayoutSide from "@/components/2023/layout/side";
 import ChildrenProps from "types/ChildrenProps";
 const Site2023Layout: React.FC<ChildrenProps> = ({ children }) => {
 	return (

@@ -1,5 +1,5 @@
 "use client";
-import ACMImage from "@/components/(website)/2023/_gen/image/ACMImage";
+import ACMImage from "@/components/2023/_gen/image/ACMImage";
 import InlineFont from "@/utils/font/InlineFont";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
 import { toggleNav } from "@/utils/redux/slices/(app)/nav";
