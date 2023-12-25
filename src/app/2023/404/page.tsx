@@ -1,11 +1,12 @@
+import CenterComponent from "@/components/2023/_gen/center/HomeCenter";
 import { NextPage } from "next";
 const Error404: NextPage = () => {
 	return (
-		<div className="h-screen w-screen flex flex-col justify-center items-center text-center fixed top-0 left-0">
-			<h1>Error 404: Not Found</h1>
-			<p>🚧 The website is under development 🚧</p>
+		<CenterComponent>
+			<h1>Error 404: Not&nbsp;Found</h1>
+			<p>🚧 The application is under development 🚧</p>
 			<p>
-				For site or project inquiries, contact the{" "}
+				For site inquiries, contact the{" "}
 				<a
 					href="mailto:acm.feu.it@gmail.com"
 					className="underline"
@@ -13,7 +14,7 @@ const Error404: NextPage = () => {
 				>
 					FEU Tech ACM
 				</a>{" "}
-				or the{" "}
+				or their{" "}
 				<a
 					href="mailto:202211383@fit.edu.ph"
 					className="underline"
@@ -22,7 +23,7 @@ const Error404: NextPage = () => {
 					Webmaster
 				</a>
 			</p>
-		</div>
+		</CenterComponent>
 	);
 };
 
