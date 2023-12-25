@@ -5,7 +5,7 @@ import { env } from "@/server/env";
 import regexIdNumber from "@/utils/regex/schoolId";
 import { universityNameArr } from "@/utils/universityName";
 import { Button, Checkbox } from "@nextui-org/react";
-import data from "public/data/courses.json";
+import { courseJSON } from "public/data/json/export";
 import { useEffect } from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 const UndertakingForm: React.FC = () => {
@@ -213,7 +213,7 @@ const UndertakingForm: React.FC = () => {
 			<div className="w-full">
 				<label htmlFor="courses">Select Courses:</label>
 				<div className="max-h-[500px] overflow-y-auto border-b-2 border-accents w-full">
-					{data.map((course, index) => {
+					{courseJSON.map((course, index) => {
 						return (
 							<Controller
 								control={control}
