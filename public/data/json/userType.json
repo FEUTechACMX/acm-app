@@ -1,0 +1,14 @@
+[
+	{
+		"user_type": "Admin"
+	},
+	{
+		"user_type": "Student"
+	},
+	{
+		"user_type": "Faculty"
+	},
+	{
+		"user_type": "Guest"
+	}
+]
