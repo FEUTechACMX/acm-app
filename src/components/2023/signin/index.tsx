@@ -49,12 +49,13 @@ const SigninForm: React.FC = () => {
 				<button
 					className="px-2 py-1 sm:px-4 border-2 w-full border-accents rounded-md hover:bg-accents"
 					type="submit"
-					onClick={async () =>
+					onClick={async (e) => {
+						e.preventDefault();
 						await signIn("email", {
 							email,
 							callbackUrl: "/app/dashboard",
-						})
-					}
+						});
+					}}
 				>
 					<InlineFont>
 						<FaRegEnvelope />
