@@ -18,6 +18,7 @@ export const authOptions: NextAuthOptions = {
 		signIn: "/2023/signin",
 		verifyRequest: "/2023/verify-request",
 		error: "/2023/error",
+		signOut: "/2023/signout",
 	},
 	providers: [
 		EmailProvider({
