@@ -1,15 +1,13 @@
 import { env } from "@/server/env";
 import { PrismaAdapter } from "@auth/prisma-adapter";
-import { PrismaClient } from "@prisma/client";
 import { getServerSession, type NextAuthOptions } from "next-auth";
 import type { Adapter } from "next-auth/adapters";
 import EmailProvider from "next-auth/providers/email";
 import GoogleProvider from "next-auth/providers/google";
 import Mailer, { mailerOptions, serverDetails } from "./mailer/mailer";
 import emailSignin from "./mailer/template/signin";
+import { prisma } from "./prisman";
 import regexSchoolEmail from "./regex/schoolEmail";
-
-const prisma = new PrismaClient();
 
 export const authOptions: NextAuthOptions = {
 	// https://stackoverflow.com/a/76585568
