@@ -9,12 +9,12 @@ const Signout: NextPage = () => {
 			<h1>ACM-X Signout</h1>
 			<p>Thank you for supporting project ACM-X</p>
 			<Button
-				onClick={async () =>
+				onClick={async () => {
 					await signOut({
-						redirect: false,
+						redirect: true,
 						callbackUrl: "/",
-					})
-				}
+					});
+				}}
 			>
 				Signout
 			</Button>

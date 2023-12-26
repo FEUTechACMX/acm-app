@@ -3,6 +3,7 @@ import ACMImage from "@/components/2023/_gen/image/ACMImage";
 import InlineFont from "@/utils/font/InlineFont";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
 import { toggleNav } from "@/utils/redux/slices/(app)/nav";
+import { useSession } from "next-auth/react";
 import {
 	Avatar,
 	Dropdown,
@@ -58,6 +59,7 @@ const links: LinkProps[] = [
 const AppLayoutNav = () => {
 	const isOpen = useAppSelector((state) => state.navReducer.isNavOpen);
 	const dispatch = useAppDispatch();
+	const { data: session } = useSession();
 
 	return (
 		<Navbar
@@ -130,15 +132,15 @@ const AppLayoutNav = () => {
 							as="button"
 							className="transition-transform"
 							color="secondary"
-							name="Jason Hughes"
+							name={session?.user?.name!}
 							size="sm"
-							src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+							src={session?.user?.image!}
 						/>
 					</DropdownTrigger>
 					<DropdownMenu aria-label="Profile Actions" variant="flat">
 						<DropdownItem key="profile" className="h-14 gap-2">
 							<p className="font-semibold">Signed in as</p>
-							<p className="font-semibold">zoey@example.com</p>
+							<p className="font-semibold">{session?.user?.email}</p>
 						</DropdownItem>
 						<DropdownItem key="settings">My Settings</DropdownItem>
 						<DropdownItem key="team_settings">Team Settings</DropdownItem>
@@ -146,8 +148,10 @@ const AppLayoutNav = () => {
 						<DropdownItem key="system">System</DropdownItem>
 						<DropdownItem key="configurations">Configurations</DropdownItem>
 						<DropdownItem key="help_and_feedback">Help & Feedback</DropdownItem>
-						<DropdownItem key="logout" color="danger">
-							Log Out
+						<DropdownItem key="logout">
+							<Link href="/2023/signout" color="foreground">
+								Signout
+							</Link>
 						</DropdownItem>
 					</DropdownMenu>
 				</Dropdown>
