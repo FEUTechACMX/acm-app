@@ -1,12 +1,13 @@
-import ACMImage from "../_gen/image/ACMImage";
+"use client";
 import InlineFont from "@/utils/font/InlineFont";
-import regexToString from "@/utils/regex/_toString";
-import regexSchoolEmail from "@/utils/regex/schoolEmail";
 import { getCsrfToken, signIn } from "next-auth/react";
+import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FaRegEnvelope } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
+import ACMImage from "../_gen/image/ACMImage";
 const SigninForm: React.FC = () => {
+	const searchParams = useSearchParams();
 	const [email, setEmail] = useState<string>("");
 	const [csrfToken, setCsrfToken] = useState<string | undefined>(undefined);
 
@@ -40,9 +41,6 @@ const SigninForm: React.FC = () => {
 					autoFocus
 					autoSave="on"
 					autoCorrect="off"
-					pattern={regexToString(regexSchoolEmail)}
-					minLength={20}
-					maxLength={20}
 					spellCheck="false"
 					className="px-2 py-2 valid:bg-accents sm:px-4 sm:py-4 w-full border-2 border-accents rounded-md"
 				/>
@@ -53,7 +51,7 @@ const SigninForm: React.FC = () => {
 						e.preventDefault();
 						await signIn("email", {
 							email,
-							callbackUrl: "/app/dashboard",
+							callbackUrl: searchParams.get("callbackUrl") || "/app/dashboard",
 						});
 					}}
 				>
@@ -66,9 +64,12 @@ const SigninForm: React.FC = () => {
 			</form>
 			<button
 				className="px-2 py-1 sm:px-4 border-2 w-full border-accents rounded-md hover:bg-accents"
-				onClick={async () =>
-					await signIn("google", { callbackUrl: "/app/dashboard" })
-				}
+				onClick={async (e) => {
+					e.preventDefault();
+					await signIn("google", {
+						callbackUrl: searchParams.get("callbackUrl") || "/app/dashboard",
+					});
+				}}
 			>
 				<InlineFont>
 					<FcGoogle />
