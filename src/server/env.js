@@ -18,6 +18,7 @@ export const env = createEnv({
 	},
 	emptyStringAsUndefined: true,
 	runtimeEnv: {
+		AUTH_URL: process.env.AUTH_URL,
 		DATABASE_URL: process.env.DATABASE_URL,
 		EMAIL_SERVER_HOST: process.env.EMAIL_SERVER_HOST,
 		EMAIL_SERVER_PASSWORD: process.env.EMAIL_SERVER_PASSWORD,
@@ -39,6 +40,7 @@ export const env = createEnv({
 		POSTGRES_USER: process.env.POSTGRES_USER,
 	},
 	server: {
+		AUTH_URL: stringTrim().min(1).max(50).url(),
 		DATABASE_URL: stringTrim().min(1).max(400).url(),
 		EMAIL_SERVER_HOST: stringTrim().min(1).max(100),
 		EMAIL_SERVER_PASSWORD: stringTrim().min(1).max(100),

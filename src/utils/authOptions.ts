@@ -1,8 +1,8 @@
 import { env } from "@/server/env";
 import { PrismaAdapter } from "@auth/prisma-adapter";
-import type { Adapter } from "next-auth/adapters";
 import { PrismaClient } from "@prisma/client";
 import { getServerSession, type NextAuthOptions } from "next-auth";
+import type { Adapter } from "next-auth/adapters";
 import EmailProvider from "next-auth/providers/email";
 import GoogleProvider from "next-auth/providers/google";
 import Mailer, { mailerOptions, serverDetails } from "./mailer/mailer";
@@ -47,11 +47,14 @@ export const authOptions: NextAuthOptions = {
 		async signIn({ user }) {
 			const email = user.email;
 			if (!email) return false;
-			if (!regexSchoolEmail.test(email)) return false;
+			if (regexSchoolEmail.test(email)) user.userTypeId = 4;
+			else user.userTypeId = 2;
 			return true;
 		},
 	},
-	secret: process.env.NEXTAUTH_SECRET,
+	session: { strategy: "jwt" },
+	debug: process.env.NODE_ENV === "development",
+	secret: env.NEXTAUTH_SECRET,
 };
 
 /**
