@@ -2,6 +2,23 @@
 	"name": "feu-tech-acm",
 	"version": "0.1.0",
 	"private": true,
+	"description": "The FEU Tech ACM's official and premier cross-platform application.",
+	"keywords": [
+		"FEU Tech",
+		"ACM",
+		"Student Chapter",
+		"FEU Tech ACM",
+		"FEU Tech ACM Student Chapte",
+		"Application",
+		"Web Application",
+		"FEU Tech ACM-X",
+		"FEU Tech ACM-X Application",
+		"FEU Tech ACM-X Web Application",
+		"FEU Tech ACM-X Web Application",
+		"Official Application",
+		"Google Play Store",
+		"Website"
+	],
 	"scripts": {
 		"dev": "next dev",
 		"devx": "next dev --turbo",
@@ -56,7 +73,7 @@
 	},
 	"main": "next.config.js",
 	"repository": "git@github.com:FEU-Tech-ACM-Student-Chapter/acm-app.git",
-	"author": "Alpha Romer Coma <alpha.coma.ict@gmail.com>",
+	"author": "Alpha Romer Coma <alpha.coma.ict@gmail.com> (https://linkedin.com/in/alpharomercoma)",
 	"license": "Apache-2.0",
 	"devDependencies": {
 		"@commitlint/cli": "^18.4.3",
