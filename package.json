@@ -8,7 +8,7 @@
 		"ACM",
 		"Student Chapter",
 		"FEU Tech ACM",
-		"FEU Tech ACM Student Chapte",
+		"FEU Tech ACM Student Chapter",
 		"Application",
 		"Web Application",
 		"FEU Tech ACM-X",
@@ -78,6 +78,8 @@
 	"devDependencies": {
 		"@commitlint/cli": "^18.4.3",
 		"@commitlint/config-conventional": "^18.4.3",
+		"@semantic-release/changelog": "^6.0.3",
+		"@semantic-release/git": "^10.0.1",
 		"@tsparticles/engine": "^3.0.2",
 		"@tsparticles/react": "^3.0.0",
 		"@types/adm-zip": "^0.5.5",
@@ -98,6 +100,7 @@
 		"prettier": "^3.1.1",
 		"prisma": "^5.7.1",
 		"react-icons": "^4.12.0",
+		"semantic-release": "^22.0.12",
 		"stylelint": "^16.0.2",
 		"stylelint-config-prettier": "^9.0.5",
 		"stylelint-config-recommended": "^14.0.0",
@@ -154,6 +157,29 @@
 		},
 		"ignoreFiles": [
 			"public/2023/media/icons/**/*"
+		]
+	},
+	"plugins": [
+		"@semantic-release/commit-analyzer",
+		"@semantic-release/release-notes-generator",
+		"@semantic-release/changelog",
+		"@semantic-release/github",
+		"@semantic-release/npm",
+		"@semantic-release/git"
+	],
+	"release": {
+		"prepare": [
+			"@semantic-release/changelog",
+			"@semantic-release/npm",
+			{
+				"path": "@semantic-release/git",
+				"assets": [
+					"package.json",
+					"package-lock.json",
+					"CHANGELOG.md"
+				],
+				"message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+			}
 		]
 	}
 }
