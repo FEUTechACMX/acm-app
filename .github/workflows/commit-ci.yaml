@@ -7,21 +7,18 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Install required dependencies
-        run: |
-          sudo apt --only-upgrade install nodejs yarn
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Print versions
-        run: |
-          node --version
-          yarn --version
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20"
+          cache: "yarn"
+
       - name: Install commitlint
         run: |
-          yarn add conventional-changelog-conventionalcommits
-          yarn add commitlint@latest
+          yarn add conventional-changelog-conventionalcommits commitlint@latest
 
       - name: Validate current commit (last commit) with commitlint
         if: github.event_name == 'push'
