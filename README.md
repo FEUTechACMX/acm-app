@@ -14,9 +14,9 @@ The app is being developed to serve as the central platform for communication, c
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [NextUI](https://nextui.org/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Prisma](https://www.prisma.io/)
-- [Redis](https://redis.io/)
 - [Vercel](https://vercel.com/)
 
 ## 🛠️ Development
@@ -27,16 +27,20 @@ The app is being developed to serve as the central platform for communication, c
 - [Yarn](https://yarnpkg.com/)
 - [npm](https://www.npmjs.com/)
 - [Git](https://git-scm.com/)
+- [Git LFS](https://git-lfs.github.com/)
 - [Visual Studio Code](https://code.visualstudio.com/)
+- [Docker](https://www.docker.com/)
 
 ### Getting Started
 
-1. Clone the repository.
+1. Clone the repository and change directory.
 
    ```bash
     git clone https://github.com/FEUTechACM/acm-app.git acm-app
     # or
     git clone git@github.com:FEUTechACM/acm-app.git acm-app
+
+    cd acm-app
    ```
 
 2. Switch to the `develop` branch or target branch.
@@ -106,7 +110,7 @@ We adopt the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.
 [optional footer(s)]
 ```
 
-**Note**: An (\*) asterisk before the commit description indicates that there is more information written in the commit message description.
+**Note**: An (\*) asterisk before the commit description indicates that there is more information written in the commit message body.
 
 #### Commit Message Example
 
@@ -125,26 +129,25 @@ We adopt the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.
 
 ## 🔗 App Links
 
-1. Web - [FEU Tech ACM-X](https://acmx.vercel.app/)
-2. Google Play Store - Coming Soon
+1. [Web](https://acmx.vercel.app/)
+2. [Google Play Store](https://play.google.com/store/apps/details?id=app.vercel.acmx.twa)
 3. Microsoft Store - Coming Soon
 4. Apple App Store - Coming Soon
+5. Samsung Galaxy Store - Coming Soon
+6. Huawei AppGallery - Coming Soon
+7. Amazon App Store - Coming Soon
+8. Meta Oculus - Coming Soon
 
 ## 👥 Contributors
 
 1. [Sir Abraham Magpantay](https://www.linkedin.com/in/aber-magpantay/) - Adviser
 2. [Guennevere Rito](https://www.linkedin.com/in/guennevere-rito-990256255/) - Project Manager
 3. [Alpha Romer Coma](https://www.linkedin.com/in/alpha-coma/) - Webmaster
-4. Emily Tan Sanchez - UI/UX Designer
-
-**Important**: Only authorized officers of the FEU Tech ACM Organization are allowed to view and contribute to this project repository.
-
-**Note**: Contributors/collaborators will be added accordingly.
-
-For more information, please contact the project manager or the webmaster.
+4. Emily Tan Sanchez - Branding Officer
+5. Francis Chuegan - Branding Officer
 
 ## 📄 License
 
-Copyright (&#169;) FEU Tech ACM Student Chapter. All rights reserved.
+Copyright FEU Tech ACM Student Chapter. All rights reserved.
 
 Licensed under the [Apache-2.0](./LICENSE) license.
