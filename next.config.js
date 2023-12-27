@@ -66,6 +66,7 @@ module.exports = withPWA({
   experimental: {
     nextScriptWorkers: true,
   },
+  output: 'standalone',
   async headers () {
     return [
       {

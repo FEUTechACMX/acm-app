@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+.yarn/install-state.gz
 
 # testing
 /coverage
@@ -57,7 +58,8 @@ next-env.d.ts
 .unlighthouse
 
 # sitemap
-**/public/sitemap-0.xml
+**/public/sitemap-*.xml
+**/public/sitemap.xml
 
 ## PWA deployments
 /pwa/playstore/**/*
