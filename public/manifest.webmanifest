@@ -16,7 +16,7 @@
 		"social networking",
 		"utilities"
 	],
-	"description": "The FEU Tech ACM Organization's official cross-platform application developed to serve as the central platform for communication, collaboration, and promotion of every ACM member and officer in education, opportunities, and beyond.",
+	"description": "The FEU Tech ACM Organization's official and premier cross-platform application developed to serve as the central platform for communication, collaboration, and promotion of every ACM member and officer in education, opportunities, and beyond.",
 	"dir": "ltr",
 	"display": "standalone",
 	"display_override": [
@@ -26,6 +26,24 @@
 		"window-controls-overlay",
 		"browser"
 	],
+	"related_applications": [
+		{
+			"platform": "play",
+			"url": "https://play.google.com/store/apps/details?id=app.vercel.acmx.twa",
+			"id": "app.vercel.acmx.twa"
+		},
+		{
+			"platform": "webapp",
+			"url": "https://acmx.vercel.app",
+			"id": "https://acmx.vercel.app"
+		},
+		{
+			"platform": "windows",
+			"url": "https://apps.microsoft.com/detail/9NN45TR81J26?launch=true&mode=mini",
+			"id": "9NN45TR81J26"
+		}
+	],
+
 	"edge_side_panel": {
 		"preferred_width": 400
 	},
@@ -85,6 +103,7 @@
 		}
 	],
 	"id": "/",
+	"iarc_rating_id": "cca659cf-ecd0-4f34-92d6-079021194da5",
 	"lang": "en",
 	"launch_handler": {
 		"client_mode": ["auto", "navigate-existing"]
@@ -92,18 +111,357 @@
 	"name": "FEU Tech ACM-X",
 	"orientation": "natural",
 	"scope": "/",
-	"scope_extensions": {
-		"origin": "https://acmx.vercel.app"
-	},
-	"screenshots":  [
+	"scope_extensions": [
 		{
-			"src": "/2023/media/img/screenshots/homepage.png",
-			"sizes": "1440x900",
-			"label": "ACM-X Homepage"
+			"origin": "https://acmx.vercel.app"
 		}
 	],
+	"prefer_related_applications": false,
 	"short_name": "FIT ACM-X",
-	"shortcuts": [],
+	"shortcuts": [
+		{
+			"name": "Home",
+			"short_name": "Home",
+			"url": "/",
+			"description": "ACM-X Home",
+			"icons": [
+				{ "src": "/android-chrome-36x36.png", "sizes": "36x36" },
+				{ "src": "/android-chrome-48x48.png", "sizes": "48x48" },
+				{ "src": "/android-chrome-72x72.png", "sizes": "72x72" },
+				{ "src": "/android-chrome-96x96.png", "sizes": "96x96" },
+				{ "src": "/android-chrome-144x144.png", "sizes": "144x144" },
+				{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }
+			]
+		},
+		{
+			"name": "Dashboard",
+			"short_name": "Dashboard",
+			"url": "/app/dashboard",
+			"description": "ACM-X Dashboard",
+			"icons": [
+				{ "src": "/android-chrome-36x36.png", "sizes": "36x36" },
+				{ "src": "/android-chrome-48x48.png", "sizes": "48x48" },
+				{ "src": "/android-chrome-72x72.png", "sizes": "72x72" },
+				{ "src": "/android-chrome-96x96.png", "sizes": "96x96" },
+				{ "src": "/android-chrome-144x144.png", "sizes": "144x144" },
+				{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }
+			]
+		},
+		{
+			"name": "Forum",
+			"short_name": "Forum",
+			"url": "/app/forum",
+			"description": "ACM-X Forum",
+			"icons": [
+				{ "src": "/android-chrome-36x36.png", "sizes": "36x36" },
+				{ "src": "/android-chrome-48x48.png", "sizes": "48x48" },
+				{ "src": "/android-chrome-72x72.png", "sizes": "72x72" },
+				{ "src": "/android-chrome-96x96.png", "sizes": "96x96" },
+				{ "src": "/android-chrome-144x144.png", "sizes": "144x144" },
+				{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }
+			]
+		},
+		{
+			"name": "Events",
+			"short_name": "Events",
+			"url": "/app/events",
+			"description": "ACM-X Events",
+			"icons": [
+				{ "src": "/android-chrome-36x36.png", "sizes": "36x36" },
+				{ "src": "/android-chrome-48x48.png", "sizes": "48x48" },
+				{ "src": "/android-chrome-72x72.png", "sizes": "72x72" },
+				{ "src": "/android-chrome-96x96.png", "sizes": "96x96" },
+				{ "src": "/android-chrome-144x144.png", "sizes": "144x144" },
+				{ "src": "/android-chrome-192x192.png", "sizes": "192x192" }
+			]
+		}
+	],
 	"start_url": "https://acmx.vercel.app",
-	"theme_color": "#0b001a"
+	"theme_color": "#0b001a",
+	"screenshots": [
+		{
+			"src": "/media/screenshots/desktop/home.png",
+			"sizes": "1366x768",
+			"label": "ACM-X Home"
+		},
+		{
+			"src": "/media/screenshots/desktop/about.png",
+			"sizes": "1366x768",
+			"label": "ACM-X About"
+		},
+		{
+			"src": "/media/screenshots/desktop/signin.png",
+			"sizes": "1366x768",
+			"label": "ACM-X Sign In"
+		},
+		{
+			"src": "/media/screenshots/desktop/generator.png",
+			"sizes": "1366x768",
+			"label": "ACM-X Generator"
+		},
+		{
+			"src": "/media/screenshots/mobile/home.png",
+			"sizes": "480x800",
+			"platform": "android",
+			"label": "ACM-X Home"
+		},
+		{
+			"src": "/media/screenshots/mobile/about.png",
+			"sizes": "480x800",
+			"platform": "android",
+			"label": "ACM-X About"
+		},
+		{
+			"src": "/media/screenshots/mobile/signin.png",
+			"sizes": "480x800",
+			"platform": "android",
+			"label": "ACM-X Sign In"
+		},
+		{
+			"src": "/media/screenshots/mobile/generator.png",
+			"sizes": "480x800",
+			"platform": "android",
+			"label": "ACM-X Generator"
+		},
+		{
+			"src": "/media/screenshots/desktop/home.png",
+			"sizes": "1366x768",
+			"platform": "chromeos",
+			"label": "ACM-X Home"
+		},
+		{
+			"src": "/media/screenshots/desktop/about.png",
+			"sizes": "1366x768",
+			"platform": "chromeos",
+			"label": "ACM-X About"
+		},
+		{
+			"src": "/media/screenshots/desktop/signin.png",
+			"sizes": "1366x768",
+			"platform": "chromeos",
+			"label": "ACM-X Sign In"
+		},
+		{
+			"src": "/media/screenshots/desktop/generator.png",
+			"sizes": "1366x768",
+			"platform": "chromeos",
+			"label": "ACM-X Generator"
+		},
+		{
+			"src": "/media/screenshots/holo/home.png",
+			"sizes": "1268x720",
+			"platform": "ipados",
+			"label": "ACM-X Home"
+		},
+		{
+			"src": "/media/screenshots/holo/about.png",
+			"sizes": "1268x720",
+			"platform": "ipados",
+			"label": "ACM-X About"
+		},
+		{
+			"src": "/media/screenshots/holo/signin.png",
+			"sizes": "1268x720",
+			"platform": "ipados",
+			"label": "ACM-X Sign In"
+		},
+		{
+			"src": "/media/screenshots/holo/generator.png",
+			"sizes": "1268x720",
+			"platform": "ipados",
+			"label": "ACM-X Generator"
+		},
+		{
+			"src": "/media/screenshots/holo/home.png",
+			"sizes": "1268x720",
+			"platform": "ios",
+			"label": "ACM-X Home"
+		},
+		{
+			"src": "/media/screenshots/holo/about.png",
+			"sizes": "1268x720",
+			"platform": "ios",
+			"label": "ACM-X About"
+		},
+		{
+			"src": "/media/screenshots/holo/signin.png",
+			"sizes": "1268x720",
+			"platform": "ios",
+			"label": "ACM-X Signin"
+		},
+		{
+			"src": "/media/screenshots/holo/generator.png",
+			"sizes": "1268x720",
+			"platform": "ios",
+			"label": "ACM-X Generator"
+		},
+		{
+			"src": "/media/screenshots/holo/home.png",
+			"sizes": "1268x720",
+			"platform": "kaios",
+			"label": "ACM-X Home"
+		},
+		{
+			"src": "/media/screenshots/holo/about.png",
+			"sizes": "1268x720",
+			"platform": "kaios",
+			"label": "ACM-X About"
+		},
+		{
+			"src": "/media/screenshots/holo/signin.png",
+			"sizes": "1268x720",
+			"platform": "kaios",
+			"label": "ACM-X Signin"
+		},
+		{
+			"src": "/media/screenshots/holo/generator.png",
+			"sizes": "1268x720",
+			"platform": "kaios",
+			"label": "ACM-X Generator"
+		},
+		{
+			"src": "/media/screenshots/holo/home.png",
+			"sizes": "1268x720",
+			"platform": "chrome_web_store",
+			"label": "ACM-X Home"
+		},
+		{
+			"src": "/media/screenshots/holo/about.png",
+			"sizes": "1268x720",
+			"platform": "chrome_web_store",
+			"label": "ACM-X About"
+		},
+		{
+			"src": "/media/screenshots/holo/signin.png",
+			"sizes": "1268x720",
+			"platform": "chrome_web_store",
+			"label": "ACM-X Signin"
+		},
+		{
+			"src": "/media/screenshots/holo/generator.png",
+			"sizes": "1268x720",
+			"platform": "chrome_web_store",
+			"label": "ACM-X Generator"
+		},
+		{
+			"src": "/media/screenshots/mobile/home.png",
+			"sizes": "480x800",
+			"platform": "play",
+			"label": "ACM-X Home"
+		},
+		{
+			"src": "/media/screenshots/mobile/about.png",
+			"sizes": "480x800",
+			"platform": "play",
+			"label": "ACM-X About"
+		},
+		{
+			"src": "/media/screenshots/mobile/signin.png",
+			"sizes": "480x800",
+			"platform": "play",
+			"label": "ACM-X Signin"
+		},
+		{
+			"src": "/media/screenshots/mobile/generator.png",
+			"sizes": "480x800",
+			"platform": "play",
+			"label": "ACM-X Generator"
+		},
+		{
+			"src": "/media/screenshots/mobile/home.png",
+			"sizes": "480x800",
+			"platform": "itunes",
+			"label": "ACM-X Home"
+		},
+		{
+			"src": "/media/screenshots/mobile/about.png",
+			"sizes": "480x800",
+			"platform": "itunes",
+			"label": "ACM-X About"
+		},
+		{
+			"src": "/media/screenshots/mobile/signin.png",
+			"sizes": "480x800",
+			"platform": "itunes",
+			"label": "ACM-X Signin"
+		},
+		{
+			"src": "/media/screenshots/mobile/generator.png",
+			"sizes": "480x800",
+			"platform": "itunes",
+			"label": "ACM-X Generator"
+		},
+		{
+			"src": "/media/screenshots/desktop/home.png",
+			"sizes": "1366x768",
+			"platform": "microsoft-store",
+			"label": "ACM-X Home"
+		},
+		{
+			"src": "/media/screenshots/desktop/about.png",
+			"sizes": "1366x768",
+			"platform": "microsoft-store",
+			"label": "ACM-X About"
+		},
+		{
+			"src": "/media/screenshots/desktop/signin.png",
+			"sizes": "1366x768",
+			"platform": "microsoft-store",
+			"label": "ACM-X Signin"
+		},
+		{
+			"src": "/media/screenshots/desktop/generator.png",
+			"sizes": "1366x768",
+			"platform": "microsoft-store",
+			"label": "ACM-X Generator"
+		},
+		{
+			"src": "/media/screenshots/desktop/home.png",
+			"sizes": "1366x768",
+			"platform": "windows",
+			"label": "ACM-X Home"
+		},
+		{
+			"src": "/media/screenshots/desktop/about.png",
+			"sizes": "1366x768",
+			"platform": "windows",
+			"label": "ACM-X About"
+		},
+		{
+			"src": "/media/screenshots/desktop/signin.png",
+			"sizes": "1366x768",
+			"platform": "windows",
+			"label": "ACM-X Signin"
+		},
+		{
+			"src": "/media/screenshots/desktop/generator.png",
+			"sizes": "1366x768",
+			"platform": "windows",
+			"label": "ACM-X Generator"
+		},
+		{
+			"src": "/media/screenshots/xbox/home.png",
+			"sizes": "1920x1080",
+			"platform": "xbox",
+			"label": "ACM-X Home"
+		},
+		{
+			"src": "/media/screenshots/xbox/about.png",
+			"sizes": "1920x1080",
+			"platform": "xbox",
+			"label": "ACM-X About"
+		},
+		{
+			"src": "/media/screenshots/xbox/signin.png",
+			"sizes": "1920x1080",
+			"platform": "xbox",
+			"label": "ACM-X Signin"
+		},
+		{
+			"src": "/media/screenshots/xbox/generator.png",
+			"sizes": "1920x1080",
+			"platform": "xbox",
+			"label": "ACM-X Generator"
+		}
+	]
 }
