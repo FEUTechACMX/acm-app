@@ -10,19 +10,30 @@ const HomePlayStore: React.FC = () => {
 	&mode=mini"
 			>
 				<Image
-					src="https://get.microsoft.com/images/en-us%20dark.svg"
+					src={"/media/badge/amazon-appstore.png"}
 					width={176}
 					height={96}
-					alt="Microsoft Store Badge"
+					alt="Amazon App Badge"
 				/>
 			</a>
 			<a href="https://play.google.com/store/apps/details?id=app.vercel.acmx.twa">
 				<Image
-					src={"/media/google-play-badge.png"}
+					src={"/media/badge/google-play.png"}
 					alt="Google Play Badge"
 					height={96}
 					width={200}
 				></Image>
+			</a>
+			<a
+				href="https://apps.microsoft.com/detail/9NN45TR81J26?launch=true
+	&mode=mini"
+			>
+				<Image
+					src={"/media/badge/microsoft-store.svg"}
+					width={176}
+					height={96}
+					alt="Microsoft Store Badge"
+				/>
 			</a>
 		</section>
 	);
