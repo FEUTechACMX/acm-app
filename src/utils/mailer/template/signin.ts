@@ -34,7 +34,7 @@ export default function emailSignin({ url }: Params) {
 				Helvetica Neue,
 				sans-serif;
 		">
-		<img src="${env.HOST_URL}/2023/media/img/logo/FIT_ACM.png" alt="FEU Tech ACM-X Logo" height="48"
+		<img src="${env.HOST_URL}/2023/media/img/logo/FIT_ACM_min.png" alt="FEU Tech ACM-X Logo" height="48"
 			style="display: block; border-radius: 0.4rem; margin: 0.2rem auto" />
 		<h1 style="padding: 0; margin: 0; text-align: center; color: #833fe0; font-size:1.4rem;">
 			FEU Tech ACM-X Sign In
