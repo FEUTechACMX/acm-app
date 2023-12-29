@@ -1,3 +1,4 @@
+"use client";
 import { useAppSelector } from "@/utils/redux/hooks";
 import { Button, Link } from "@nextui-org/react";
 import { motion } from "framer-motion";

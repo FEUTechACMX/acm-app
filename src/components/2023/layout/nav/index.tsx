@@ -13,6 +13,7 @@ import {
 	NavbarMenuItem,
 	NavbarMenuToggle,
 } from "@nextui-org/react";
+import { useSession } from "next-auth/react";
 import {
 	FaFirstOrder,
 	FaHouseChimney,
@@ -62,6 +63,7 @@ const links: LinkProps[] = [
 	},
 ];
 const Site2023LayoutNav: React.FC = () => {
+	const { data: session, status } = useSession();
 	const isOpen = useAppSelector((state) => state.navReducer.isNavOpen);
 	const dispatch = useAppDispatch();
 
@@ -130,14 +132,27 @@ const Site2023LayoutNav: React.FC = () => {
 			</NavbarMenu>
 			<NavbarContent justify="end">
 				<NavbarItem>
-					<Button
-						as={Link}
-						color="primary"
-						href="/2023/signin"
-						variant="shadow"
-					>
-						Sign In
-					</Button>
+					{status === "loading" ? (
+						<p>Loading...</p>
+					) : session ? (
+						<Button
+							as={Link}
+							color="primary"
+							href="/app/dashboard"
+							variant="shadow"
+						>
+							Dashboard
+						</Button>
+					) : (
+						<Button
+							as={Link}
+							color="primary"
+							href="/2023/signin"
+							variant="shadow"
+						>
+							Sign In
+						</Button>
+					)}
 				</NavbarItem>
 			</NavbarContent>
 		</Navbar>
