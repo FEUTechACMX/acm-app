@@ -42,6 +42,17 @@ export const authOptions: NextAuthOptions = {
 		buttonText: "#6661ff",
 	},
 	callbacks: {
+		jwt({ user, token }) {
+			if (user) token.user = user;
+
+			return token;
+		},
+		session({ session, token }) {
+			if (token && session.user)
+				session.user.userTypeId = token.user.userTypeId;
+
+			return session;
+		},
 		async signIn({ user }) {
 			const email = user.email;
 			if (!email) return false;
@@ -49,6 +60,10 @@ export const authOptions: NextAuthOptions = {
 			else user.userTypeId = 2;
 			return true;
 		},
+		// async session({user, session}) {
+		// 	session.user.userTypeId = user.userTypeId;
+		// 	return session;
+		// },
 	},
 	session: { strategy: "jwt" },
 	debug: process.env.NODE_ENV === "development",
