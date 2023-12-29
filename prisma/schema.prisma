@@ -57,7 +57,7 @@ model User {
   image             String?
   accounts          Account[]
   sessions          Session[]
-  userTypeId        Int
+  userTypeId        Int                 @default(2)
   userType          UserType?           @relation(fields: [userTypeId], references: [id])
   guest             Guest?
   faculty           Faculty?
