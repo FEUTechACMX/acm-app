@@ -18,15 +18,7 @@ const Site2023LayoutSide: React.FC = () => {
 			className="flex flex-col fixed justify-center items-center bottom-0 md:bottom-1/4 right-0 z-10"
 		>
 			<button>
-				<LayoutSound
-					events={{
-						onClick: {
-							path: "/2023/media/music/dynasty.mp3",
-							isLooped: true,
-						},
-					}}
-					autoPlay={isSoundAllowed}
-				>
+				<LayoutSound path="/2023/media/music/dynasty.mp3">
 					{isSoundAllowed ? (
 						<FaVolumeHigh size={40} />
 					) : (
