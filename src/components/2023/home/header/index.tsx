@@ -1,11 +1,16 @@
 "use client";
-import { useAppSelector } from "@/utils/redux/hooks";
 import { Button, Link } from "@nextui-org/react";
 import { motion } from "framer-motion";
 import LinkProps from "types/LinkProps";
-import ACMImage from "../../_gen/image/ACMImage";
-import ParticleAmongUs from "./particles";
+import Loading from "@/app/2023/loading";
+import dynamic from "next/dynamic";
 import HomePlayStore from "./playstore";
+const ParticleAmongUs = dynamic(() => import("./particles"), {
+	loading: () => <Loading />,
+});
+const ACMImage = dynamic(() => import("../../_gen/image/ACMImage"), {
+	loading: () => <Loading />,
+});
 const links: LinkProps[] = [
 	{
 		name: "CS EXPO 2023",
@@ -26,27 +31,20 @@ const animationVariants = {
 	visible: { opacity: 1, scale: 1 },
 };
 const HomeHeader: React.FC = () => {
-	const { isFeaturedShown } = useAppSelector(
-		(state) => state.initialPromptReducer,
-	);
-
-	function getAnimate() {
-		return isFeaturedShown ? "hidden" : "visible";
-	}
-
 	const getDelay = (index: number) => {
 		return index * 0.5;
 	};
 
 	return (
 		<header id="home">
-			<div className="h-screen w-screen fixed top-0 left-0">
+			<div className="h-svh w-svw fixed top-0 left-0">
 				<ParticleAmongUs />
+
 				<div className="flex justify-center items-center h-full relative">
 					<div className="w-11/12 flex gap-4 flex-col justify-center items-center">
 						<motion.div
 							initial="hidden"
-							animate={getAnimate()}
+							animate={"visible"}
 							variants={animationVariants}
 							transition={{ duration: 1 }}
 							className="h-28 w-64 relative"
@@ -55,7 +53,7 @@ const HomeHeader: React.FC = () => {
 						</motion.div>
 						<motion.h1
 							initial="hidden"
-							animate={getAnimate()}
+							animate={"visible"}
 							variants={animationVariants}
 							transition={{ duration: 1 }}
 							className="text-center drop-shadow-[0_4px_2px_rgba(255,255,255,0.3)]"
@@ -64,7 +62,7 @@ const HomeHeader: React.FC = () => {
 						</motion.h1>
 						<motion.q
 							initial="hidden"
-							animate={getAnimate()}
+							animate={"visible"}
 							variants={animationVariants}
 							transition={{ duration: 1 }}
 							className="font-hae text-4xl font-semibold"
@@ -73,7 +71,7 @@ const HomeHeader: React.FC = () => {
 						</motion.q>
 						<motion.p
 							initial="hidden"
-							animate={getAnimate()}
+							animate={"visible"}
 							variants={animationVariants}
 							transition={{ duration: 1 }}
 							className="flex  w-7/12 sm:w-5/12  flex-col md:flex-row gap-2 items-stretch"
@@ -83,7 +81,7 @@ const HomeHeader: React.FC = () => {
 									<motion.span
 										key={index}
 										initial="hidden"
-										animate={getAnimate()}
+										animate={"visible"}
 										variants={animationVariants}
 										transition={{ duration: 1, delay: getDelay(index) }}
 										className="w-full flex"
