@@ -2,7 +2,7 @@
 import FadeIn from "../_framer/FadeIn";
 const AboutComponent: React.FC = () => {
 	return (
-		<div className="w-screen h-auto p-8  md:p-24">
+		<div className="w-svw h-auto p-8 md:p-24">
 			<div className="flex justify-center items-center gap-6 flex-col h-full lg:w-9/12 m-auto">
 				<FadeIn props={{ delay: 0.5 }}>
 					<h2 className="font-ot text-panelColor">Who Are We</h2>
