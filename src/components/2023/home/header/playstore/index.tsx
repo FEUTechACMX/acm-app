@@ -1,8 +1,16 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 const HomePlayStore: React.FC = () => {
 	return (
-		<section
+		<motion.section
 			id="playstore"
+			animate={{
+				opacity: [0, 1],
+				transition: {
+					duration: 1,
+					delay: 2,
+				},
+			}}
 			className="flex flex-col justify-center align-middle items-center fixed bottom-0 left-0"
 		>
 			<a
@@ -35,7 +43,7 @@ const HomePlayStore: React.FC = () => {
 					alt="Microsoft Store Badge"
 				/>
 			</a>
-		</section>
+		</motion.section>
 	);
 };
 
