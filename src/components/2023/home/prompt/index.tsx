@@ -1,3 +1,4 @@
+"use client";
 import Loading from "@/app/2023/loading";
 import { toggleSound } from "../../_gen/sound";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";

@@ -87,7 +87,7 @@ const AppLayoutNav = () => {
 				<NavbarMenuToggle aria-label={isOpen ? "Close menu" : "Open menu"} />
 			</NavbarContent>
 			<NavbarBrand className="flex justify-center sm:justify-start">
-				<Link href="/dashboard" color="foreground">
+				<Link href="/" color="foreground">
 					<div className="relative h-8 w-16">
 						<ACMImage />
 					</div>
