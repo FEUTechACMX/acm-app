@@ -92,6 +92,11 @@ module.exports = withPWA({
         source: '/404',
         destination: '/2023/404',
         permanent: false,
+      },
+      {
+        source: '/dashboard',
+        destination: '/app/dashboard',
+        permanent: false,
       }
     ];
   },
