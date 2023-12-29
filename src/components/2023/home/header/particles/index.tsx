@@ -26,132 +26,18 @@ const ParticleAmongUs = () => {
 					className="absolute top-0 left-0 w-full h-full"
 					id="tsparticles"
 					options={{
-						autoPlay: true,
-						background: {
-							color: {
-								value: "#0b001a",
-							},
-							image: "",
-							position: "",
-							repeat: "",
-							size: "",
-							opacity: 1,
-						},
-						backgroundMask: {
-							composite: "destination-out",
-							cover: {
-								color: {
-									value: "#c505f5",
-								},
-								opacity: 1,
-							},
-							enable: false,
-						},
-						clear: true,
-						defaultThemes: {},
-						delay: 0,
 						fullScreen: {
 							enable: true,
-							zIndex: 0,
 						},
-						detectRetina: true,
-						duration: 0,
-						fpsLimit: 120,
-						interactivity: {
-							detectsOn: "window",
-							events: {
-								onClick: {
-									enable: false,
-								},
-
-								onHover: {
-									enable: false,
-									parallax: {
-										enable: false,
-										force: 2,
-										smooth: 10,
-									},
-								},
-								resize: {
-									delay: 0.5,
-									enable: true,
-								},
-							},
-							modes: {},
-						},
+						fpsLimit: 60,
 						particles: {
-							bounce: {
-								horizontal: {
-									value: 1,
-								},
-								vertical: {
-									value: 1,
-								},
-							},
-							collisions: {
-								absorb: {
-									speed: 2,
-								},
-								bounce: {
-									horizontal: {
-										value: 1,
-									},
-									vertical: {
-										value: 1,
-									},
-								},
-								enable: false,
-								maxSpeed: 50,
-								mode: "bounce",
-								overlap: {
-									enable: true,
-									retries: 0,
-								},
-							},
-							color: {
-								value: "#c505f5",
-								animation: {
-									h: {
-										count: 0,
-										enable: false,
-										speed: 20,
-										decay: 0,
-										delay: 0,
-										sync: true,
-										offset: 0,
-									},
-									s: {
-										count: 0,
-										enable: false,
-										speed: 1,
-										decay: 0,
-										delay: 0,
-										sync: true,
-										offset: 0,
-									},
-									l: {
-										count: 0,
-										enable: false,
-										speed: 1,
-										decay: 0,
-										delay: 0,
-										sync: true,
-										offset: 0,
-									},
-								},
-							},
-							effect: {
-								close: true,
-								fill: true,
-								options: {},
-							},
 							groups: {
 								z5000: {
 									number: {
 										value: 70,
 									},
 									zIndex: {
-										value: 50,
+										value: 5000,
 									},
 								},
 								z7500: {
@@ -179,301 +65,177 @@ const ParticleAmongUs = () => {
 									},
 								},
 							},
-							move: {
-								angle: {
-									offset: 0,
-									value: 10,
-								},
-								attract: {
-									distance: 200,
-									enable: false,
-									rotate: {
-										x: 3000,
-										y: 3000,
-									},
-								},
-								center: {
-									x: 50,
-									y: 50,
-									mode: "percent",
-									radius: 0,
-								},
-								decay: 0,
-								distance: {},
-								direction: "right",
-								drift: 0,
-								enable: true,
-								gravity: {
-									acceleration: 9.81,
-									enable: false,
-									inverse: false,
-									maxSpeed: 50,
-								},
-								path: {
-									clamp: true,
-									delay: {
-										value: 0,
-									},
-									enable: false,
-									options: {},
-								},
-								outModes: {
-									default: "out",
-								},
-								random: false,
-								size: false,
-								speed: 5,
-								spin: {
-									acceleration: 0,
-									enable: false,
-								},
-								straight: false,
-								trail: {
-									enable: false,
-									length: 10,
-									fill: {},
-								},
-								vibrate: false,
-								warp: false,
-							},
 							number: {
+								value: 200,
 								density: {
 									enable: false,
-									width: 1920,
-									height: 1080,
+									width: 800,
+									height: 800,
 								},
-								limit: {
-									mode: "delete",
-									value: 0,
+							},
+							color: {
+								value: "#fff",
+								animation: {
+									enable: false,
+									speed: 20,
+									sync: true,
 								},
-								value: 200,
+							},
+							shape: {
+								type: "circle",
 							},
 							opacity: {
 								value: 1,
 								animation: {
-									count: 0,
 									enable: false,
-									speed: 2,
-									decay: 0,
-									delay: 0,
+									speed: 3,
+									destroy: "min",
 									sync: false,
-									mode: "auto",
-									startValue: "random",
-									destroy: "none",
 								},
-							},
-							reduceDuplicates: false,
-							shadow: {
-								blur: 0,
-								color: {
-									value: "#c505f5",
-								},
-								enable: false,
-								offset: {
-									x: 0,
-									y: 0,
-								},
-							},
-							shape: {
-								close: true,
-								fill: true,
-								options: {},
-								type: "circle",
 							},
 							size: {
 								value: 3,
-								animation: {
-									count: 0,
-									enable: false,
-									speed: 5,
-									decay: 0,
-									delay: 0,
-									sync: false,
-									mode: "auto",
-									startValue: "random",
-									destroy: "none",
-								},
 							},
-							stroke: {
-								width: 0,
+							links: {
+								enable: false,
+								distance: 100,
+								color: "#ffffff",
+								opacity: 0.4,
+								width: 1,
+							},
+							move: {
+								angle: {
+									value: 10,
+									offset: 0,
+								},
+								enable: true,
+								speed: 5,
+								direction: "right",
+								random: false,
+								straight: true,
+								outModes: {
+									default: "out",
+								},
+								attract: {
+									enable: false,
+									rotate: {
+										x: 600,
+										y: 1200,
+									},
+								},
 							},
 							zIndex: {
 								value: 5,
 								opacityRate: 0.5,
-								sizeRate: 1,
-								velocityRate: 1,
-							},
-							destroy: {
-								bounds: {},
-								mode: "none",
-								split: {
-									count: 1,
-									factor: {
-										value: 3,
-									},
-									rate: {
-										value: {
-											min: 4,
-											max: 9,
-										},
-									},
-									sizeOffset: true,
-								},
-							},
-							roll: {
-								darken: {
-									enable: false,
-									value: 0,
-								},
-								enable: false,
-								enlighten: {
-									enable: false,
-									value: 0,
-								},
-								mode: "vertical",
-								speed: 25,
-							},
-							tilt: {
-								value: 0,
-								animation: {
-									enable: false,
-									speed: 0,
-									decay: 0,
-									sync: false,
-								},
-								direction: "clockwise",
-								enable: false,
-							},
-							twinkle: {
-								lines: {
-									enable: false,
-									frequency: 0.05,
-									opacity: 1,
-								},
-								particles: {
-									enable: false,
-									frequency: 0.05,
-									opacity: 1,
-								},
-							},
-							wobble: {
-								distance: 5,
-								enable: false,
-								speed: {
-									angle: 50,
-									move: 10,
-								},
-							},
-							life: {
-								count: 0,
-								delay: {
-									value: 0,
-									sync: false,
-								},
-								duration: {
-									value: 0,
-									sync: false,
-								},
-							},
-							rotate: {
-								value: 0,
-								animation: {
-									enable: false,
-									speed: 0,
-									decay: 0,
-									sync: false,
-								},
-								direction: "clockwise",
-								path: false,
-							},
-							orbit: {
-								animation: {
-									count: 0,
-									enable: false,
-									speed: 1,
-									decay: 0,
-									delay: 0,
-									sync: false,
-								},
-								enable: false,
-								opacity: 1,
-								rotation: {
-									value: 45,
-								},
-								width: 1,
-							},
-							links: {
-								blink: false,
-								color: {
-									value: "#c505f5",
-								},
-								consent: false,
-								distance: 100,
-								enable: false,
-								frequency: 1,
-								opacity: 1,
-								shadow: {
-									blur: 5,
-									color: {
-										value: "#c505f5",
-									},
-									enable: false,
-								},
-								triangles: {
-									enable: false,
-									frequency: 1,
-								},
-								width: 1,
-								warp: false,
-							},
-							repulse: {
-								value: 0,
-								enabled: false,
-								distance: 1,
-								duration: 1,
-								factor: 1,
-								speed: 1,
 							},
 						},
-						pauseOnBlur: true,
-						pauseOnOutsideViewport: true,
-						smooth: false,
-						style: {},
-						zLayers: 100,
-						name: "Among Us",
+						interactivity: {
+							detectsOn: "canvas",
+							events: {
+								onHover: {
+									enable: false,
+									mode: "repulse",
+								},
+								onClick: {
+									enable: true,
+									mode: "push",
+								},
+								resize: {
+									enable: true,
+								},
+							},
+							modes: {
+								grab: {
+									distance: 400,
+									links: {
+										opacity: 1,
+									},
+								},
+								bubble: {
+									distance: 400,
+									size: 40,
+									duration: 2,
+									opacity: 0.8,
+								},
+								repulse: {
+									distance: 200,
+								},
+								push: {
+									quantity: 4,
+									groups: ["z5000", "z7500", "z2500", "z1000"],
+								},
+								remove: {
+									quantity: 2,
+								},
+							},
+						},
+						detectRetina: true,
+						background: {
+							color: "#0b001a",
+							image: "",
+							position: "50% 50%",
+							repeat: "no-repeat",
+							size: "cover",
+						},
 						emitters: {
-							autoPlay: true,
-							fill: true,
-							life: {
-								wait: false,
+							position: {
+								y: 55,
+								x: -30,
 							},
 							rate: {
-								quantity: 1,
 								delay: 7,
+								quantity: 1,
 							},
-							shape: {
-								options: {},
-								replace: {
-									color: false,
-									opacity: false,
-								},
-								type: "square",
-							},
-							startCount: 0,
 							size: {
-								mode: "percent",
-								height: 0,
 								width: 0,
+								height: 0,
 							},
 							particles: {
 								shape: {
 									type: "images",
 									options: {
-										images: {
-											src: "https://particles.js.org/images/cyan_amongus.png",
-											width: 500,
-											height: 634,
-										},
+										images: [
+											{
+												src: "/media/amongus/blue.png",
+												width: 205,
+												height: 267,
+											},
+											{
+												src: "/media/amongus/cyan.png",
+												width: 207,
+												height: 265,
+											},
+											{
+												src: "/media/amongus/green.png",
+												width: 204,
+												height: 266,
+											},
+											{
+												src: "/media/amongus/lime.png",
+												width: 206,
+												height: 267,
+											},
+											{
+												src: "/media/amongus/orange.png",
+												width: 205,
+												height: 265,
+											},
+											{
+												src: "/media/amongus/pink.png",
+												width: 205,
+												height: 265,
+											},
+											{
+												src: "/media/amongus/red.png",
+												width: 204,
+												height: 267,
+											},
+											{
+												src: "/media/amongus/white.png",
+												width: 205,
+												height: 267,
+											},
+										],
 									},
 								},
 								size: {
@@ -482,8 +244,8 @@ const ParticleAmongUs = () => {
 								move: {
 									speed: 10,
 									outModes: {
-										default: "none",
-										right: "destroy",
+										default: "destroy",
+										left: "none",
 									},
 									straight: true,
 								},
@@ -502,17 +264,6 @@ const ParticleAmongUs = () => {
 									},
 								},
 							},
-							position: {
-								x: -5,
-								y: 55,
-							},
-						},
-						motion: {
-							disable: false,
-							reduce: {
-								factor: 4,
-								value: true,
-							},
 						},
 					}}
 				/>
@@ -522,3 +273,5 @@ const ParticleAmongUs = () => {
 };
 
 export default ParticleAmongUs;
+
+// Credits: https://codepen.io/matteobruni/pen/rNmMVEx
