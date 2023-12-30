@@ -1,7 +1,10 @@
 "use client";
-import SigninForm from "@/components/2023/signin";
-import ParticlePolygon from "@/components/2023/signin/particles";
 import { NextPage } from "next";
+import dynamic from "next/dynamic";
+const SigninForm = dynamic(() => import("@/components/2023/signin"));
+const ParticlePolygon = dynamic(
+	() => import("@/components/2023/signin/particles"),
+);
 const Signin: NextPage = () => {
 	return (
 		<section>
