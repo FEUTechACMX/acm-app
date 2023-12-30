@@ -35,6 +35,7 @@ const HomePlayStore: React.FC = () => {
 			<a
 				href="https://apps.microsoft.com/detail/9NN45TR81J26?launch=true
 	&mode=mini"
+				className="hidden sm:block"
 			>
 				<Image
 					src={"/media/badge/microsoft-store.svg"}

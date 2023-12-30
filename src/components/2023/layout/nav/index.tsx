@@ -1,7 +1,7 @@
 "use client";
 import InlineFont from "@/utils/font/InlineFont";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
-import { toggleNav, closeNav } from "@/utils/redux/slices/(website)/nav";
+import { closeNav, toggleNav } from "@/utils/redux/slices/(website)/nav";
 import {
 	Button,
 	Link,
@@ -107,7 +107,7 @@ const Site2023LayoutNav: React.FC = () => {
 						<NavbarItem key={link.name}>
 							<Link color="foreground" href={link.href}>
 								<InlineFont>
-									{link.icon}
+									{link.icon as React.ReactNode}
 									{link.name}
 								</InlineFont>
 							</Link>
@@ -127,7 +127,7 @@ const Site2023LayoutNav: React.FC = () => {
 								onClick={() => dispatch(toggleNav())}
 							>
 								<InlineFont>
-									{link.icon}
+									{link.icon as React.ReactNode}
 									{link.name}
 								</InlineFont>
 							</Link>
