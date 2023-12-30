@@ -2,12 +2,12 @@
 import FadeIn from "../_framer/FadeIn";
 const AboutComponent: React.FC = () => {
 	return (
-		<div className="w-svw h-auto p-8 md:p-24">
-			<div className="flex justify-center items-center gap-6 flex-col h-full lg:w-9/12 m-auto">
-				<FadeIn props={{ delay: 0.5 }}>
+		<div className="w-svw h-auto p-8 md:p-12">
+			<div className="flex text-xl  md:text-2xl text-justify justify-center items-center gap-6 flex-col h-full lg:w-9/12 m-auto">
+				<FadeIn props={{ delay: 0 }}>
 					<h2 className="font-ot text-panelColor">Who Are We</h2>
 				</FadeIn>
-				<FadeIn props={{ delay: 1 }}>
+				<FadeIn props={{ delay: 0.5 }}>
 					<p>
 						<span className="font-bold text-panelColor">
 							FEU Tech ACM Student Chapter
@@ -17,7 +17,7 @@ const AboutComponent: React.FC = () => {
 						Science students.
 					</p>
 				</FadeIn>
-				<FadeIn props={{ delay: 1.5 }}>
+				<FadeIn props={{ delay: 1 }}>
 					<p>
 						Our organization operates exclusively for educational and scientific
 						purposes in order to promote to increased knowledge and greater
@@ -26,10 +26,10 @@ const AboutComponent: React.FC = () => {
 						persons having an interest in computing.
 					</p>
 				</FadeIn>
-				<FadeIn props={{ delay: 2 }}>
+				<FadeIn props={{ delay: 1.5 }}>
 					<h3 className="font-ot text-panelColor">Mission</h3>
 				</FadeIn>
-				<FadeIn props={{ delay: 2.5 }}>
+				<FadeIn props={{ delay: 2.0 }}>
 					<p>
 						Our <span className="text-panelColor">mission </span>for the
 						incoming school year is to become a better version of ourselves, to
@@ -47,10 +47,10 @@ const AboutComponent: React.FC = () => {
 						</span>
 					</p>
 				</FadeIn>
-				<FadeIn props={{ delay: 3 }}>
+				<FadeIn props={{ delay: 2.5 }}>
 					<h3 className="font-ot text-panelColor">Vision</h3>
 				</FadeIn>
-				<FadeIn props={{ delay: 3.5 }}>
+				<FadeIn props={{ delay: 3.0 }}>
 					<p>
 						The officers envision the organization as being a{" "}
 						<span className="text-panelColor">
