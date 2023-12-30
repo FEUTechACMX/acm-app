@@ -56,9 +56,9 @@ const HomeHeader: React.FC = () => {
 							animate={"visible"}
 							variants={animationVariants}
 							transition={{ duration: 1 }}
-							className="text-center drop-shadow-[0_4px_2px_rgba(255,255,255,0.3)]"
+							className="text-center drop-shadow-[0_4px_2px_rgba(255,255,255,0.3)] text-balance"
 						>
-							FEU Tech ACM Student&nbsp;Chapter
+							FEU Tech ACM Student Chapter
 						</motion.h1>
 						<motion.q
 							initial="hidden"

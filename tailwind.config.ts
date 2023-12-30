@@ -28,6 +28,7 @@ const config: Config = {
 			borderColor: {
 				panelBg: "var(--panel-bg)",
 			},
+			textBalance: "text-wrap: balance",
 		},
 	},
 	darkMode: "class",
