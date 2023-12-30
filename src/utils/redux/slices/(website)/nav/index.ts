@@ -12,8 +12,11 @@ export const Site23Nav = createSlice({
 		toggleNav: (state) => {
 			state.isNavOpen = !state.isNavOpen;
 		},
+		closeNav: (state) => {
+			state.isNavOpen = false;
+		},
 	},
 });
 
-export const { toggleNav } = Site23Nav.actions;
+export const { toggleNav, closeNav } = Site23Nav.actions;
 export default Site23Nav.reducer;

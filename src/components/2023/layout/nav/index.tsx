@@ -1,7 +1,7 @@
 "use client";
 import InlineFont from "@/utils/font/InlineFont";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
-import { toggleNav } from "@/utils/redux/slices/(website)/nav";
+import { toggleNav, closeNav } from "@/utils/redux/slices/(website)/nav";
 import {
 	Button,
 	Link,
@@ -93,7 +93,7 @@ const Site2023LayoutNav: React.FC = () => {
 				<NavbarMenuToggle aria-label={isOpen ? "Close menu" : "Open menu"} />
 			</NavbarContent>
 			<NavbarBrand className="flex justify-center sm:justify-start">
-				<Link href="/" color="foreground">
+				<Link href="/" color="foreground" onClick={() => dispatch(closeNav())}>
 					<div className="relative h-8 w-16">
 						<ACMImage />
 					</div>
@@ -120,7 +120,12 @@ const Site2023LayoutNav: React.FC = () => {
 				{links.map((link) => {
 					return (
 						<NavbarMenuItem key={link.name}>
-							<Link href={link.href} className="text-2xl" color="foreground">
+							<Link
+								href={link.href}
+								className="text-2xl w-full"
+								color="foreground"
+								onClick={() => dispatch(toggleNav())}
+							>
 								<InlineFont>
 									{link.icon}
 									{link.name}
