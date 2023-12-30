@@ -101,7 +101,7 @@ const AppLayoutNav = () => {
 						<NavbarItem key={link.name}>
 							<Link color="foreground" href={link.href}>
 								<InlineFont>
-									{link.icon}
+									{link.icon as React.ReactNode}
 									{link.name}
 								</InlineFont>
 							</Link>
@@ -120,7 +120,7 @@ const AppLayoutNav = () => {
 								onClick={() => dispatch(toggleNav())}
 							>
 								<InlineFont>
-									{link.icon}
+									{link.icon as React.ReactNode}
 									{link.name}
 								</InlineFont>
 							</Link>
