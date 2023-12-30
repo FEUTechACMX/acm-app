@@ -1,9 +1,9 @@
 "use client";
+import Loading from "@/app/2023/loading";
 import { Button, Link } from "@nextui-org/react";
 import { motion } from "framer-motion";
-import LinkProps from "types/LinkProps";
-import Loading from "@/app/2023/loading";
 import dynamic from "next/dynamic";
+import { LinkPropsNode } from "types/LinkProps";
 import HomePlayStore from "./playstore";
 const ParticleAmongUs = dynamic(() => import("./particles"), {
 	loading: () => <Loading />,
@@ -11,7 +11,7 @@ const ParticleAmongUs = dynamic(() => import("./particles"), {
 const ACMImage = dynamic(() => import("../../_gen/image/ACMImage"), {
 	loading: () => <Loading />,
 });
-const links: LinkProps[] = [
+const links: LinkPropsNode[] = [
 	{
 		name: "CS EXPO 2023",
 		href: "https://cs-expo-2023.vercel.app/",

@@ -30,7 +30,7 @@ export function displayShareSocial(
 	iconSize: number = 50,
 ): JSX.Element {
 	const social = getSocial(name, socialShare);
-	const IconComponent = social.icon as React.ElementType;
+	const IconComponent = social.icon;
 	if (!IconComponent) throw new Error(`Icon for ${name} does not exist`);
 	return (
 		<a href={social.href} target="_blank" rel="noopener noreferrer" key={name}>

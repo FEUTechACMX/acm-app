@@ -2,8 +2,7 @@
 import ACMImage from "@/components/2023/_gen/image/ACMImage";
 import InlineFont from "@/utils/font/InlineFont";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
-import { toggleNav, closeNav } from "@/utils/redux/slices/(app)/nav";
-import { useSession } from "next-auth/react";
+import { closeNav, toggleNav } from "@/utils/redux/slices/(app)/nav";
 import {
 	Avatar,
 	Dropdown,
@@ -19,6 +18,7 @@ import {
 	NavbarMenuItem,
 	NavbarMenuToggle,
 } from "@nextui-org/react";
+import { useSession } from "next-auth/react";
 import {
 	FaBell,
 	FaCalendarDays,
@@ -26,9 +26,9 @@ import {
 	FaGlobe,
 	FaInbox,
 } from "react-icons/fa6";
-import LinkProps from "types/LinkProps";
+import { LinkPropsNode } from "types/LinkProps";
 
-const links: LinkProps[] = [
+const links: LinkPropsNode[] = [
 	{
 		name: "Dashboard",
 		href: "/app/dashboard",
@@ -101,7 +101,7 @@ const AppLayoutNav = () => {
 						<NavbarItem key={link.name}>
 							<Link color="foreground" href={link.href}>
 								<InlineFont>
-									{link.icon as React.ReactNode}
+									{link.icon}
 									{link.name}
 								</InlineFont>
 							</Link>
@@ -120,7 +120,7 @@ const AppLayoutNav = () => {
 								onClick={() => dispatch(toggleNav())}
 							>
 								<InlineFont>
-									{link.icon as React.ReactNode}
+									{link.icon}
 									{link.name}
 								</InlineFont>
 							</Link>
