@@ -5,7 +5,14 @@ const socialShare = new Map<socialName, Social>([
 		"Facebook",
 		{
 			...getSocial("Facebook"),
-			href: "https://www.facebook.com/sharer/sharer.php?u=https%3A//acmx.vercel.app",
+			href: "https://www.facebook.com/feutechACM",
+		},
+	],
+	[
+		"LinkedIn",
+		{
+			...getSocial("LinkedIn"),
+			href: "https://www.linkedin.com/company/feutechacm/",
 		},
 	],
 	[
@@ -13,13 +20,6 @@ const socialShare = new Map<socialName, Social>([
 		{
 			...getSocial("YouTube"),
 			href: "https://www.youtube.com/@ACMFIT",
-		},
-	],
-	[
-		"LinkedIn",
-		{
-			...getSocial("LinkedIn"),
-			href: "https://www.linkedin.com/shareArticle?mini=true&url=https%3A//feutech.acm.org",
 		},
 	],
 	[
@@ -44,13 +44,6 @@ const socialShare = new Map<socialName, Social>([
 		},
 	],
 	[
-		"LinkedIn",
-		{
-			...getSocial("LinkedIn"),
-			href: "https://www.linkedin.com/company/feutechacm/",
-		},
-	],
-	[
 		"GitHub",
 		{
 			...getSocial("GitHub"),
@@ -70,7 +63,7 @@ export function displayLinkSocial(
 	iconSize: number = 50,
 ): JSX.Element {
 	const social = getSocial(name, socialShare);
-	const IconComponent = social.icon as React.ElementType;
+	const IconComponent = social.icon;
 	if (!IconComponent) throw new Error(`Icon for ${name} does not exist`);
 	return (
 		<a href={social.href} target="_blank" rel="noopener noreferrer" key={name}>

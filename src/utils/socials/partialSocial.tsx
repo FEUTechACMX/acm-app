@@ -1,7 +1,7 @@
-import LinkProps from "types/LinkProps";
-
+// import LinkProps from "types/LinkProps";
 import {
 	FaGithub,
+	FaGlobe,
 	FaInstagram,
 	FaLinkedin,
 	FaLinkedinIn,
@@ -9,10 +9,10 @@ import {
 	FaSquareYoutube,
 	FaTiktok,
 	FaTwitter,
-	FaGlobe,
 } from "react-icons/fa6";
+import { LinkPropsElement } from "types/LinkProps";
 
-export interface Social extends LinkProps {
+export interface Social extends LinkPropsElement {
 	name: socialName;
 }
 
