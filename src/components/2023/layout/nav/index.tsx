@@ -23,9 +23,9 @@ import {
 	FaRegCalendarDays,
 	FaShop,
 } from "react-icons/fa6";
-import LinkProps from "types/LinkProps";
+import { LinkPropsNode } from "types/LinkProps";
 import ACMImage from "../../_gen/image/ACMImage";
-const links: LinkProps[] = [
+const links: LinkPropsNode[] = [
 	{
 		name: "Home",
 		href: "/",
@@ -107,7 +107,7 @@ const Site2023LayoutNav: React.FC = () => {
 						<NavbarItem key={link.name}>
 							<Link color="foreground" href={link.href}>
 								<InlineFont>
-									{link.icon as React.ReactNode}
+									{link.icon}
 									{link.name}
 								</InlineFont>
 							</Link>
@@ -127,7 +127,7 @@ const Site2023LayoutNav: React.FC = () => {
 								onClick={() => dispatch(toggleNav())}
 							>
 								<InlineFont>
-									{link.icon as React.ReactNode}
+									{link.icon}
 									{link.name}
 								</InlineFont>
 							</Link>

@@ -1,7 +1,11 @@
 interface LinkProps {
 	name: string;
 	href: string;
-	icon?: React.ElementType | React.ReactNode;
+	icon?: React.ReactNode | React.ElementType;
 }
-
-export default LinkProps;
+export interface LinkPropsElement extends LinkProps {
+	icon?: React.ElementType;
+}
+export interface LinkPropsNode extends LinkProps {
+	icon?: React.ReactNode;
+}
