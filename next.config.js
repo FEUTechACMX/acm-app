@@ -8,7 +8,6 @@ if (nextDataIndex !== -1) {
   throw new Error('Failed to find next-data object in runtime caching');
 }
 
-/** @type {import('next').NextConfig} */
 const withPWA = require('next-pwa')({
   dest: 'public',
   runtimeCaching,
@@ -22,6 +21,7 @@ const withPWA = require('next-pwa')({
   },
   skipWaiting: true,
   scope: '/',
+  maximumFileSizeToCacheInBytes: 5_000_000,
   dynamicStartUrl: true,
   disable: process.env.NODE_ENV === 'development',
 });
