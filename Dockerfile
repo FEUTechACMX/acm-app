@@ -15,11 +15,19 @@ RUN \
   else echo "Lockfile not found." && exit 1; \
   fi
 
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+
+#Enables Hot Reloading Check https://github.com/vercel/next.js/issues/36774 for more information
+ENV CHOKIDAR_USEPOLLING=true
+ENV WATCHPACK_POLLING=true
 
 # Rebuild the source code only when needed
 FROM base AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
+COPY --from=deps /root/.yarn /root/.yarn
 COPY . .
 
 # Next.js collects completely anonymous telemetry data about general usage.
@@ -27,7 +35,7 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN yarn prisma generate
+RUN yarn prisma generate --no-engine
 RUN yarn build
 
 # Production image, copy all the files and run next
@@ -35,6 +43,7 @@ FROM base AS runner
 WORKDIR /app
 
 ENV NODE_ENV production
+ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
@@ -49,6 +58,9 @@ RUN chown nextjs:nodejs .next
 # https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+# Uncomment this if you're using prisma, copies prisma files for linting
+COPY --from=builder --chown=nextjs:nodejs /app/prisma ./prisma
 
 USER nextjs
 
