@@ -21,9 +21,9 @@ const withPWA = require('next-pwa')({
   },
   skipWaiting: true,
   scope: '/',
-maximumFileSizeToCacheInBytes: 5_000_000,
+  maximumFileSizeToCacheInBytes: 5_000_000,
   dynamicStartUrl: true,
-    disable: process.env.NODE_ENV === 'development',
+  disable: process.env.NODE_ENV === 'development',
 });
 ;
 
@@ -63,7 +63,6 @@ module.exports = withPWA({
       },
     ],
   },
-  
   experimental: {
     optimizeCss: true,
     optimizeServerReact: true,
@@ -71,19 +70,14 @@ module.exports = withPWA({
     workerThreads: true,
     // ppr: true,
     memoryBasedWorkersCount: true,
-    adjustFontFallbacks: true,
-    swcMinify: true,
     // typedRoutes: true,
     optimisticClientCache: true,
     optimizePackageImports: ["@nextui-org/react", "react-icons"],
-    adjustFontFallbacksWithSizeAdjust: true,
     scrollRestoration: true,
     serverMinification: true,
     clientRouterFilter: true,
-    fullySpecified: true,
     // craCompat: true,
     webpackBuildWorker: true,
-    bundlePagesExternals: true,
     isrFlushToDisk: true,
     strictNextHead: true,
     nextScriptWorkers: true,
