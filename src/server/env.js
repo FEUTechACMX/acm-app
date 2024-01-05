@@ -19,6 +19,9 @@ export const env = createEnv({
 	emptyStringAsUndefined: true,
 	runtimeEnv: {
 		AUTH_URL: process.env.AUTH_URL,
+		AUTH0_CLIENT_ID: process.env.AUTH0_CLIENT_ID,
+		AUTH0_CLIENT_SECRET: process.env.AUTH0_CLIENT_SECRET,
+		AUTH0_ISSUER: process.env.AUTH0_ISSUER,
 		DATABASE_URL: process.env.DATABASE_URL,
 		EMAIL_SERVER_HOST: process.env.EMAIL_SERVER_HOST,
 		EMAIL_SERVER_PASSWORD: process.env.EMAIL_SERVER_PASSWORD,
@@ -41,6 +44,9 @@ export const env = createEnv({
 	},
 	server: {
 		AUTH_URL: stringTrim().min(1).max(50).url(),
+		AUTH0_CLIENT_ID: stringTrim().min(1).max(100),
+		AUTH0_CLIENT_SECRET: stringTrim().min(1).max(100),
+		AUTH0_ISSUER: stringTrim().min(1).max(100),
 		DATABASE_URL: stringTrim().min(1).max(400).url(),
 		EMAIL_SERVER_HOST: stringTrim().min(1).max(100),
 		EMAIL_SERVER_PASSWORD: stringTrim().min(1).max(100),
