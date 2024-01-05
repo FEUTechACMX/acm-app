@@ -4,9 +4,11 @@ import { getServerSession, type NextAuthOptions } from "next-auth";
 import type { Adapter } from "next-auth/adapters";
 import EmailProvider from "next-auth/providers/email";
 import GoogleProvider from "next-auth/providers/google";
+import Auth0Provider from "next-auth/providers/auth0";
 import Mailer, { mailerOptions, serverDetails } from "./mailer/mailer";
 import emailSignin from "./mailer/template/signin";
 import { prisma } from "./prisman";
+
 import regexSchoolEmail from "./regex/schoolEmail";
 
 export const authOptions: NextAuthOptions = {
@@ -19,6 +21,11 @@ export const authOptions: NextAuthOptions = {
 		signOut: "/2023/signout",
 	},
 	providers: [
+		Auth0Provider({
+			clientId: env.AUTH0_CLIENT_ID,
+			clientSecret: env.AUTH0_CLIENT_SECRET,
+			issuer: env.AUTH0_ISSUER,
+		}),
 		EmailProvider({
 			server: mailerOptions,
 			from: serverDetails.from,
