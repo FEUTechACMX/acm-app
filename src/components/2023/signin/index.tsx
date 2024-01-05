@@ -5,9 +5,14 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { FaRegEnvelope } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
+import { SiAuth0 } from "react-icons/si";
 import ACMImage from "../_gen/image/ACMImage";
+
 const SigninForm: React.FC = () => {
 	const searchParams = useSearchParams();
+	function getCallbackUrl() {
+		return searchParams.get("callbackUrl") || "/app/dashboard";
+	}
 	const [email, setEmail] = useState<string>("");
 	const [csrfToken, setCsrfToken] = useState<string | undefined>(undefined);
 
@@ -19,7 +24,7 @@ const SigninForm: React.FC = () => {
 		fetchCsrfToken();
 	}, []);
 	return (
-		<span className="w-full p-4">
+		<span className="w-full p-4 flex flex-col gap-2">
 			<form
 				action="/api/auth/signin/email"
 				method="post"
@@ -51,7 +56,7 @@ const SigninForm: React.FC = () => {
 						e.preventDefault();
 						await signIn("email", {
 							email,
-							callbackUrl: searchParams.get("callbackUrl") || "/app/dashboard",
+							callbackUrl: getCallbackUrl(),
 						});
 					}}
 				>
@@ -67,13 +72,27 @@ const SigninForm: React.FC = () => {
 				onClick={async (e) => {
 					e.preventDefault();
 					await signIn("google", {
-						callbackUrl: searchParams.get("callbackUrl") || "/app/dashboard",
+						callbackUrl: getCallbackUrl(),
 					});
 				}}
 			>
 				<InlineFont>
 					<FcGoogle />
 					Sign in with Google
+				</InlineFont>
+			</button>
+			<button
+				className="px-2 py-1 sm:px-4 border-2 w-full border-accents rounded-md hover:bg-accents"
+				onClick={async (e) => {
+					e.preventDefault();
+					await signIn("auth0", {
+						callbackUrl: getCallbackUrl(),
+					});
+				}}
+			>
+				<InlineFont>
+					<SiAuth0 />
+					Sign in with Auth0
 				</InlineFont>
 			</button>
 		</span>
