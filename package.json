@@ -97,7 +97,7 @@
 		"kill-port": "^2.0.1",
 		"lint-staged": "^15.2.0",
 		"pdf-lib": "1.17.1",
-		"postcss": "^8.4.32",
+		"postcss": "^8.4.33",
 		"prettier": "^3.1.1",
 		"prisma": "^5.7.1",
 		"react-icons": "^4.12.0",
