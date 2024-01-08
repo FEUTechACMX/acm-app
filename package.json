@@ -76,7 +76,7 @@
 	"author": "Alpha Romer Coma <alpha.coma.ict@gmail.com> (https://linkedin.com/in/alpharomercoma)",
 	"license": "Apache-2.0",
 	"devDependencies": {
-		"@commitlint/cli": "^18.4.3",
+		"@commitlint/cli": "^18.4.4",
 		"@commitlint/config-conventional": "^18.4.3",
 		"@semantic-release/changelog": "^6.0.3",
 		"@semantic-release/git": "^10.0.1",
