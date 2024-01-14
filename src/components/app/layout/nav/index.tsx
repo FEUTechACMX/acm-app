@@ -3,6 +3,7 @@ import ACMImage from "@/components/2023/_gen/image/ACMImage";
 import InlineFont from "@/utils/font/InlineFont";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
 import { closeNav, toggleNav } from "@/utils/redux/slices/(app)/nav";
+import { usePathname } from "next/navigation";
 import {
 	Avatar,
 	Dropdown,
@@ -19,6 +20,7 @@ import {
 	NavbarMenuToggle,
 } from "@nextui-org/react";
 import { useSession } from "next-auth/react";
+import isActive from "@/components/nav/isActive";
 import {
 	FaBell,
 	FaCalendarDays,
@@ -60,6 +62,7 @@ const AppLayoutNav = () => {
 	const isOpen = useAppSelector((state) => state.navReducer.isNavOpen);
 	const dispatch = useAppDispatch();
 	const { data: session } = useSession();
+	const pathname = usePathname();
 
 	return (
 		<Navbar
@@ -98,7 +101,13 @@ const AppLayoutNav = () => {
 			<NavbarContent className="hidden sm:flex gap-4" justify="center">
 				{links.map((link) => {
 					return (
-						<NavbarItem key={link.name}>
+						<NavbarItem
+							key={link.name}
+							isActive={isActive({
+								href: link.href,
+								path: pathname,
+							})}
+						>
 							<Link color="foreground" href={link.href}>
 								<InlineFont>
 									{link.icon}
@@ -112,7 +121,13 @@ const AppLayoutNav = () => {
 			<NavbarMenu>
 				{links.map((link) => {
 					return (
-						<NavbarMenuItem key={link.name}>
+						<NavbarMenuItem
+							isActive={isActive({
+								href: link.href,
+								path: pathname,
+							})}
+							key={link.name}
+						>
 							<Link
 								href={link.href}
 								className="text-2xl w-full"
@@ -145,7 +160,7 @@ const AppLayoutNav = () => {
 					<DropdownMenu aria-label="Profile Actions" variant="flat">
 						<DropdownItem key="profile" className="h-14 gap-2">
 							<p className="font-semibold">Signed in as</p>
-							<p className="font-semibold">{session?.user?.userTypeId}</p>
+							<p className="font-semibold">{session?.user?.email}</p>
 						</DropdownItem>
 						<DropdownItem key="settings">My Settings</DropdownItem>
 						<DropdownItem key="team_settings">Team Settings</DropdownItem>
