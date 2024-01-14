@@ -1,4 +1,5 @@
 "use client";
+import isActive from "@/components/nav/isActive";
 import InlineFont from "@/utils/font/InlineFont";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
 import { closeNav, toggleNav } from "@/utils/redux/slices/(website)/nav";
@@ -14,6 +15,7 @@ import {
 	NavbarMenuToggle,
 } from "@nextui-org/react";
 import { useSession } from "next-auth/react";
+import { usePathname } from "next/navigation";
 import {
 	FaFirstOrder,
 	FaHouseChimney,
@@ -28,7 +30,7 @@ import ACMImage from "../../_gen/image/ACMImage";
 const links: LinkPropsNode[] = [
 	{
 		name: "Home",
-		href: "/",
+		href: "/2023",
 		icon: <FaHouseChimney />,
 	},
 	{
@@ -66,6 +68,7 @@ const Site2023LayoutNav: React.FC = () => {
 	const { data: session, status } = useSession();
 	const isOpen = useAppSelector((state) => state.navReducer.isNavOpen);
 	const dispatch = useAppDispatch();
+	const pathname = usePathname();
 
 	return (
 		<Navbar
@@ -104,7 +107,13 @@ const Site2023LayoutNav: React.FC = () => {
 			<NavbarContent className="hidden sm:flex gap-4" justify="center">
 				{links.map((link) => {
 					return (
-						<NavbarItem key={link.name}>
+						<NavbarItem
+							isActive={isActive({
+								href: link.href,
+								path: pathname,
+							})}
+							key={link.name}
+						>
 							<Link color="foreground" href={link.href}>
 								<InlineFont>
 									{link.icon}
@@ -119,7 +128,13 @@ const Site2023LayoutNav: React.FC = () => {
 			<NavbarMenu>
 				{links.map((link) => {
 					return (
-						<NavbarMenuItem key={link.name}>
+						<NavbarMenuItem
+							isActive={isActive({
+								href: link.href,
+								path: pathname,
+							})}
+							key={link.name}
+						>
 							<Link
 								href={link.href}
 								className="text-2xl w-full"
