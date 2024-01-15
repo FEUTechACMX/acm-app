@@ -48,7 +48,7 @@
 		"@prisma/client": "^5.8.0",
 		"@prisma/extension-accelerate": "^0.6.2",
 		"@reduxjs/toolkit": "^2.0.1",
-		"@t3-oss/env-nextjs": "^0.7.2",
+		"@t3-oss/env-nextjs": "^0.7.3",
 		"@types/node": "20.11.0",
 		"@types/react": "18.2.47",
 		"@types/react-dom": "18.2.18",
