@@ -14,6 +14,7 @@ const font_f1s = localFont({
 		},
 	],
 	variable: "--font-f1s",
+	display: "swap",
 });
 const font_hae = localFont({
 	src: [
@@ -23,6 +24,7 @@ const font_hae = localFont({
 		},
 	],
 	variable: "--font-hae",
+	display: "swap",
 });
 
 const font_ot = localFont({
@@ -33,6 +35,7 @@ const font_ot = localFont({
 		},
 	],
 	variable: "--font-ot",
+	display: "swap",
 });
 
 import "src/styles/2023/style.css"; // <- Notice this for the next year's website
@@ -42,7 +45,7 @@ import NextUIProv from "./provider";
 const metaData = {
 	app_name: "FEU Tech ACM-X",
 	title: "FEU Tech ACM-X | Coding Chaos In Digital Dystopia",
-	url: env.HOST_URL,
+	url: env.NEXT_PUBLIC_HOST_URL,
 	description:
 		"The FEU Tech ACM Organization's official cross-platform application developed to serve as the central platform for communication, collaboration, and promotion of every ACM member and officer in education, opportunities, and beyond.",
 	iconURL: "https://acmx.vercel.app/android-chrome-512x512.png",

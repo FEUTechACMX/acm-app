@@ -1,4 +1,7 @@
+const withPlugins = require('next-compose-plugins');
 const runtimeCaching = require('next-pwa/cache');
+const withPWA = require('next-pwa');
+
 const nextDataIndex = runtimeCaching.findIndex(
   (entry) => entry.options.cacheName === 'next-data'
 );
@@ -8,24 +11,32 @@ if (nextDataIndex !== -1) {
   throw new Error('Failed to find next-data object in runtime caching');
 }
 
-const withPWA = require('next-pwa')({
-  dest: 'public',
-  runtimeCaching,
+
+const pwaConfig = {
+  dest: "public",
   cacheOnFrontEndNav: process.env.NODE_ENV === 'production',
+  dynamicStartUrlRedirect: '/2023',
   fallbacks: {
     image: '/android-chrome-512x512.png',
     document: '/2023/offline',
-    // font: '',
-    // audio: '',
-    // video: ''
+    font: '',
+    audio: '',
+    video: ''
   },
+  cacheStartUrl: true,
   skipWaiting: true,
   scope: '/',
+  cacheId: 'acmx',
+  cleanupOutdatedCaches: true,
+  clientsClaim: true,
+  navigateFallback: '/2023/offline',
+  navigationPreload: true,
+  runtimeCaching,
   maximumFileSizeToCacheInBytes: 5_000_000,
   dynamicStartUrl: true,
   disable: process.env.NODE_ENV === 'development',
-});
-;
+};
+
 
 // https://nextjs.org/docs/advanced-features/security-headers
 const securityHeaders = [
@@ -51,8 +62,13 @@ const securityHeaders = [
   }
 ];
 
-module.exports = withPWA({
-  // reactStrictMode: true,
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+});
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  poweredByHeader: false,
   swcMinify: true,
   images: {
     remotePatterns: [
@@ -81,6 +97,7 @@ module.exports = withPWA({
     isrFlushToDisk: true,
     strictNextHead: true,
     nextScriptWorkers: true,
+    webVitalsAttribution: ['CLS', 'LCP'],
   },
   output: 'standalone',
   async headers () {
@@ -116,4 +133,13 @@ module.exports = withPWA({
       }
     ];
   },
-});
+};
+
+
+module.exports = withPlugins(
+  [
+    [withPWA, pwaConfig],
+    [withBundleAnalyzer],
+  ],
+  nextConfig
+);
