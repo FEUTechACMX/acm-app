@@ -1,12 +1,16 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 const ACMImage: React.FC = () => {
 	return (
 		<Image
 			src="/2023/media/img/logo/FIT_ACM_min.png"
 			alt="FEU Tech ACM Logo"
-			layout={"fill"}
-			objectFit={"contain"}
+			fill
+			style={{
+				objectFit: "contain",
+			}}
 			className="m-auto"
+			quality={15}
+			priority
 		></Image>
 	);
 };
