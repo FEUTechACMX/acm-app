@@ -27,7 +27,9 @@ const Committees = () => {
 							width={400}
 							height={400}
 							src={grp.src}
+							quality={25}
 							className="aspect-auto"
+							priority
 						/>
 					</a>
 				))}
@@ -42,6 +44,7 @@ const Committees = () => {
 							isBlurred
 							width={300}
 							height={300}
+							quality={25}
 							src={exec.src}
 						/>
 					</a>
@@ -57,6 +60,7 @@ const Committees = () => {
 							isBlurred
 							width={300}
 							height={300}
+							quality={25}
 							src={pgr.src}
 						/>
 					</a>
@@ -72,6 +76,7 @@ const Committees = () => {
 							isBlurred
 							width={300}
 							height={300}
+							quality={25}
 							src={mkt.src}
 						/>
 					</a>
