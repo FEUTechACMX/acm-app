@@ -116,8 +116,10 @@ const Site2023LayoutNav: React.FC = () => {
 						>
 							<Link color="foreground" href={link.href}>
 								<InlineFont>
-									{link.icon}
-									{link.name}
+									<span className=" lg:text-inherit sm:text-2xl">
+										{link.icon}
+									</span>
+									<span className="lg:inline sm:hidden">{link.name}</span>
 								</InlineFont>
 							</Link>
 						</NavbarItem>

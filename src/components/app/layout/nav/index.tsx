@@ -1,9 +1,9 @@
 "use client";
 import ACMImage from "@/components/2023/_gen/image/ACMImage";
+import isActive from "@/components/nav/isActive";
 import InlineFont from "@/utils/font/InlineFont";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
 import { closeNav, toggleNav } from "@/utils/redux/slices/(app)/nav";
-import { usePathname } from "next/navigation";
 import {
 	Avatar,
 	Dropdown,
@@ -20,7 +20,8 @@ import {
 	NavbarMenuToggle,
 } from "@nextui-org/react";
 import { useSession } from "next-auth/react";
-import isActive from "@/components/nav/isActive";
+import { usePathname } from "next/navigation";
+import { FaBlog } from "react-icons/fa";
 import {
 	FaBell,
 	FaCalendarDays,
@@ -28,6 +29,7 @@ import {
 	FaGlobe,
 	FaInbox,
 } from "react-icons/fa6";
+import { MdForum } from "react-icons/md";
 import { LinkPropsNode } from "types/LinkProps";
 
 const links: LinkPropsNode[] = [
@@ -39,12 +41,22 @@ const links: LinkPropsNode[] = [
 	{
 		name: "Forum",
 		href: "/app/forum",
+		icon: <MdForum />,
+	},
+	{
+		name: "Global Chat",
+		href: "/app/global-chat",
 		icon: <FaGlobe />,
 	},
 	{
 		name: "Events",
 		href: "/app/events",
 		icon: <FaCalendarDays />,
+	},
+	{
+		name: "Blog",
+		href: "/app/blog",
+		icon: <FaBlog />,
 	},
 	{
 		name: "Notifications",
@@ -94,7 +106,7 @@ const AppLayoutNav = () => {
 					<div className="relative h-8 w-16">
 						<ACMImage />
 					</div>
-					<p className="font-bold text-xl hidden sm:block">FEU Tech ACM</p>
+					<p className="font-bold text-xl hidden md:block">FEU Tech ACM</p>
 				</Link>
 			</NavbarBrand>
 
@@ -110,8 +122,8 @@ const AppLayoutNav = () => {
 						>
 							<Link color="foreground" href={link.href}>
 								<InlineFont>
-									{link.icon}
-									{link.name}
+									<span className=" lg:text-base sm:text-2xl">{link.icon}</span>
+									<span className="lg:inline sm:hidden">{link.name}</span>
 								</InlineFont>
 							</Link>
 						</NavbarItem>
@@ -162,8 +174,7 @@ const AppLayoutNav = () => {
 							<p className="font-semibold">Signed in as</p>
 							<p className="font-semibold">{session?.user?.email}</p>
 						</DropdownItem>
-						<DropdownItem key="settings">My Settings</DropdownItem>
-						<DropdownItem key="team_settings">Team Settings</DropdownItem>
+						<DropdownItem key="my-certificates">My Certificates</DropdownItem>
 						<DropdownItem key="analytics">Analytics</DropdownItem>
 						<DropdownItem key="system">System</DropdownItem>
 						<DropdownItem key="configurations">Configurations</DropdownItem>
