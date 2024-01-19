@@ -9,13 +9,13 @@ import {
 	Marketing,
 	Programs,
 } from "public/2023/media/img/officers";
-const ParticlesSnow = dynamic(
-	() => import("@/components/2023/committees/particles"),
+const ParticleSnow = dynamic(
+	() => import("@/components/particles/ParticleSnow"),
 );
 const Committees = () => {
 	return (
 		<HomeWide>
-			<ParticlesSnow />
+			<ParticleSnow />
 			<h2 className="z-10 text-center text-balance">FEU Tech ACM 23-24</h2>
 			<div className="flex flex-wrap gap-2 justify-center">
 				{Groups.map((grp, index) => (
