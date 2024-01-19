@@ -2,7 +2,7 @@
 import isActive from "@/components/nav/isActive";
 import InlineFont from "@/utils/font/InlineFont";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
-import { closeNav, toggleNav } from "@/utils/redux/slices/(website)/nav";
+import { closeNav, toggleNav } from "@/utils/redux/slices/2023/nav";
 import {
 	Button,
 	Link,

@@ -3,7 +3,7 @@ import ACMImage from "@/components/2023/_gen/image/ACMImage";
 import isActive from "@/components/nav/isActive";
 import InlineFont from "@/utils/font/InlineFont";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
-import { closeNav, toggleNav } from "@/utils/redux/slices/(app)/nav";
+import { closeNav, toggleNav } from "@/utils/redux/slices/app/nav";
 import {
 	Avatar,
 	Dropdown,
@@ -180,7 +180,7 @@ const AppLayoutNav = () => {
 						<DropdownItem key="configurations">Configurations</DropdownItem>
 						<DropdownItem key="help_and_feedback">Help & Feedback</DropdownItem>
 						<DropdownItem key="logout">
-							<Link href="/2023/signout" color="foreground">
+							<Link href="/2023/signout" color="foreground" className="w-full">
 								Signout
 							</Link>
 						</DropdownItem>
