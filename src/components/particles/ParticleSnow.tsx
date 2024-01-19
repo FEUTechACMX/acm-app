@@ -1,8 +1,9 @@
+"use client";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useState } from "react";
 
-const ParticlesSnow = () => {
+const ParticleSnow = () => {
 	const [init, setInit] = useState(false);
 
 	// this should be run only once per application lifetime
@@ -424,4 +425,4 @@ const ParticlesSnow = () => {
 	);
 };
 
-export default ParticlesSnow;
+export default ParticleSnow;
