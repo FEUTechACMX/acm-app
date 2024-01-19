@@ -5,9 +5,12 @@ import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import { LinkPropsNode } from "types/LinkProps";
 import HomePlayStore from "./playstore";
-const ParticleAmongUs = dynamic(() => import("./particles"), {
-	loading: () => <Loading />,
-});
+const ParticleAmongUs = dynamic(
+	() => import("@/components/particles/ParticleAmongUs"),
+	{
+		loading: () => <Loading />,
+	},
+);
 const ACMImage = dynamic(() => import("../../_gen/image/ACMImage"), {
 	loading: () => <Loading />,
 });

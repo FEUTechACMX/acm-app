@@ -1,8 +1,15 @@
+"use client";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { useEffect, useState } from "react";
 
-const ParticlePolygon = () => {
+interface Props {
+	props: {
+		canClick: boolean;
+	};
+}
+
+const ParticlePolygon: React.FC<Props> = ({ props: { canClick } }) => {
 	const [init, setInit] = useState(false);
 
 	// this should be run only once per application lifetime
@@ -39,7 +46,7 @@ const ParticlePolygon = () => {
 						interactivity: {
 							events: {
 								onClick: {
-									enable: true,
+									enable: canClick,
 									mode: "push",
 								},
 								onHover: {
@@ -82,7 +89,7 @@ const ParticlePolygon = () => {
 								density: {
 									enable: true,
 								},
-								value: 80,
+								value: 100,
 							},
 							opacity: {
 								value: 0.5,
