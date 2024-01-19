@@ -1,15 +1,15 @@
 "use client";
 import Loading from "@/app/2023/loading";
-import { toggleSound } from "../../_gen/sound";
 import { useAppDispatch, useAppSelector } from "@/utils/redux/hooks";
 import {
 	toggleFeatured,
 	toggleSoundPrompt,
-} from "@/utils/redux/slices/(website)/prompt";
+} from "@/utils/redux/slices/2023/prompt";
 import { motion } from "framer-motion";
 import { Suspense } from "react";
 import FadeIn from "../../_framer/FadeIn";
 import ACMImage from "../../_gen/image/ACMImage";
+import { toggleSound } from "../../_gen/sound";
 
 const HomePrompt: React.FC = () => {
 	const { isSoundPromptShown, isFeaturedShown } = useAppSelector(
