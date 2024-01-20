@@ -1,14 +1,19 @@
-// const ParticlePolygon = dynamic(
-// 	() => import("@/components/particles/ParticlePolygon"),
-// );
+"use client";
+import dynamic from "next/dynamic";
+const ParticlePolygon = dynamic(
+	() => import("@/components/particles/ParticlePolygon"),
+);
 import CenterComponent from "@/components/wrapper/CenterComponent";
 import UndertakingForm from "@/components/utils/undertaking-generator/UndertakingForm";
 import { NextPage } from "next";
-const UndertakingPage: NextPage = async () => {
+const UndertakingPage: NextPage = () => {
 	return (
-		<CenterComponent>
-			<UndertakingForm />
-		</CenterComponent>
+		<>
+			<ParticlePolygon props={{ canClick: false }} />
+			<CenterComponent>
+				<UndertakingForm />
+			</CenterComponent>
+		</>
 	);
 };
 
