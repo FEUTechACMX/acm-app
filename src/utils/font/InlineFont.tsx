@@ -1,5 +1,3 @@
-import React from "react";
-
 import ChildrenProps from "types/ChildrenProps";
 const InlineFont: React.FC<ChildrenProps> = ({ children }) => {
 	return (
