@@ -1,5 +1,5 @@
 "use client";
-import CenterComponent from "@/components/2023/_gen/center/HomeCenter";
+import CenterComponent from "@/components/wrapper/CenterComponent";
 import { Button } from "@nextui-org/react";
 import { NextPage } from "next";
 import { signOut } from "next-auth/react";
