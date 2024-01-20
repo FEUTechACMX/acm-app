@@ -1,21 +1,13 @@
 "use client";
 import { UndertakingBody } from "@/app/api/utils/undertaking-generator/route";
-import ACMImage from "@/components/2023/_gen/image/ACMImage";
 import { env } from "@/server/env";
-import regexIdNumber from "@/utils/regex/schoolId";
-import { universityNameArr } from "@/utils/universityName";
-import { Button, Checkbox } from "@nextui-org/react";
-import { courseJSON } from "public/data/json/export";
 import { useEffect } from "react";
-import { Controller, SubmitHandler, useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
+import UndertakingGenerator from "./UndertakingTabs";
+
 const UndertakingForm: React.FC = () => {
-	const {
-		register,
-		handleSubmit,
-		formState: { isSubmitting },
-		control,
-		setValue,
-	} = useForm<UndertakingBody>();
+	const { register, handleSubmit, control, setValue } =
+		useForm<UndertakingBody>();
 	const onSubmit: SubmitHandler<UndertakingBody> = async (data) => {
 		const {
 			fullName,
@@ -88,9 +80,17 @@ const UndertakingForm: React.FC = () => {
 	return (
 		<form
 			onSubmit={handleSubmit(onSubmit)}
-			className="flex flex-col w-full justify-center items-center gap-2 p-4"
+			className="flex flex-col w-full justify-center items-center gap-2"
 		>
-			<div className="w-32 h-12 relative">
+			<h1 className="text-center">Undertaking Generator</h1>
+			<UndertakingGenerator
+				props={{
+					register,
+					control,
+					setValue,
+				}}
+			/>
+			{/* <div className="w-32 h-12 relative">
 				<ACMImage />
 			</div>
 			<h1 className="text-center">Undertaking Generator</h1>
@@ -254,7 +254,7 @@ const UndertakingForm: React.FC = () => {
 				>
 					-- Generate and Download --
 				</Button>
-			</div>
+			</div> */}
 		</form>
 	);
 };
