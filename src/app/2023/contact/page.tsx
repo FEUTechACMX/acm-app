@@ -1,4 +1,4 @@
-import CenterComponent from "@/components/2023/_gen/center/HomeCenter";
+import CenterComponent from "@/components/wrapper/CenterComponent";
 import { displaySocials } from "@/utils/socials/linkSocial";
 const Contact2023 = () => {
 	return (

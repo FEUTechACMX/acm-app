@@ -1,11 +1,11 @@
-import CenterComponent from "@/components/2023/_gen/center/HomeCenter";
+import CenterComponent from "@/components/wrapper/CenterComponent";
 import { NextPage } from "next";
 const Error404: NextPage = () => {
 	return (
 		<CenterComponent>
-			<h1>Error 404: Not&nbsp;Found</h1>
-			<p>🚧 The application is under development 🚧</p>
-			<p>
+			<h1 className="text-balance">Error 404: Not Found</h1>
+			<p className="text-balance">🚧 The application is under development 🚧</p>
+			<p className="text-balance">
 				For site inquiries, contact the{" "}
 				<a
 					href="mailto:acm.feu.it@gmail.com"
