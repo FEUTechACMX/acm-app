@@ -30,6 +30,7 @@ const Committees = () => {
 							quality={25}
 							className="aspect-auto"
 							priority
+							alt="FEU Tech ACM 23-24"
 						/>
 					</a>
 				))}
@@ -46,6 +47,7 @@ const Committees = () => {
 							height={300}
 							quality={25}
 							src={exec.src}
+							alt="FEU Tech ACM 23-24 Executives"
 						/>
 					</a>
 				))}
@@ -62,6 +64,7 @@ const Committees = () => {
 							height={300}
 							quality={25}
 							src={pgr.src}
+							alt="FEU Tech ACM 23-24 Programs"
 						/>
 					</a>
 				))}
@@ -78,6 +81,7 @@ const Committees = () => {
 							height={300}
 							quality={25}
 							src={mkt.src}
+							alt="FEU Tech ACM 23-24 Marketing"
 						/>
 					</a>
 				))}

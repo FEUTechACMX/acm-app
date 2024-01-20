@@ -34,7 +34,7 @@ const UndertakingGenerator: React.FC<UndertakingGeneratorProps> = ({
 				>
 					<Card radius="sm">
 						<CardBody>
-							<UndertakingStage2 />
+							<UndertakingStage2 props={props} />
 						</CardBody>
 					</Card>
 				</Tab>

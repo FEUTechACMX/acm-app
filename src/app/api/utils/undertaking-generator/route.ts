@@ -8,14 +8,10 @@ import undertakingCredits from "./credits";
 import undertakingEmbedImage from "./image";
 import undertakingImgType from "./validImage";
 
-function isFile(obj: File | FileList): obj is File {
-	return (obj as File).name !== undefined;
-}
-
 export interface UndertakingBody {
 	fullName: string;
-	idImg: File | FileList;
-	signatureImg: File | FileList;
+	idImg: File;
+	signatureImg: File;
 	enrollmentFormat: string;
 	studentNumber: string;
 	year: string;
@@ -165,14 +161,14 @@ const POST = serverWrapper(async (req) => {
 		signatureImg,
 		enrollmentFormat,
 	} = body;
-	const coursesArray = JSON.parse(courses as any);
-
-	if (!(isFile(idImg) && isFile(signatureImg))) {
-		throw new Error("Invalid file");
-	}
-	if (idImg.size > MAX_FILE_SIZE || signatureImg.size > MAX_FILE_SIZE) {
-		throw new Error("Image too large");
-	}
+	console.log(body);
+	const coursesArray: string[] = JSON.parse(`${courses}`);
+	if (coursesArray.length > 10)
+		throw new Error("Too many courses selected (max 10)");
+	if (idImg.size > MAX_FILE_SIZE || signatureImg.size > MAX_FILE_SIZE)
+		throw new Error(
+			"Images must be < 3MB. If issues persist, change image to upload",
+		);
 	const [signature, id] = await Promise.all([
 		signatureImg.arrayBuffer(),
 		idImg.arrayBuffer(),
