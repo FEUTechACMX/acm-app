@@ -27,9 +27,7 @@ const Dashboard = () => {
 								<p className="text-md text-panelColor font-bold">
 									FEU Tech ACM
 								</p>
-								<p className="text-small font-bold">
-									2024/01/12
-								</p>
+								<p className="text-small font-bold">2024/01/12</p>
 							</div>
 						</span>
 						<span className="text-3xl text-assets">
@@ -38,7 +36,7 @@ const Dashboard = () => {
 					</CardHeader>
 					<CardBody>
 						<p>
-							I'm 👁 super shy, 🙊🙊 super 💙💢 shy But 🤔 wait a 👌 minute ⏰⏰
+							{/* I'm 👁 super shy, 🙊🙊 super 💙💢 shy But 🤔 wait a 👌 minute ⏰⏰
 							while 🕗 I 🙂💁 make 💆☝ you 😵💁 mine, 🔟 make 💆 you 😀 mine 😡
 							Tteollineun jigeumdo, you're 😎👈 on my 💩👭 mind 💭 all the time
 							I 👀 wanna tell 😇🔉 you 👉🤣 but, 🍑 I'm super shy, 🙊🙊 super
@@ -51,7 +49,8 @@ const Dashboard = () => {
 							🎂 to 💦 our 🌈 treasured Treasurer, JANEEE!!! Sana masarap ang
 							mga handa mo lalo na ung shanghai mo, dala ka na rin bukas ahhh!!
 							Once again, ❌❌ FEU Tech ACM wishes 😘 you 😂 the 🍆👏 happiest
-							🤗 of 💦👮 happy 🎇😁 birthdays!!!!!
+							🤗 of 💦👮 happy 🎇😁 birthdays!!!!! */}
+							Hello World
 						</p>
 					</CardBody>
 					<CardFooter>
