@@ -14,11 +14,13 @@ import {
 	TableColumn,
 	TableHeader,
 	TableRow,
+	getKeyValue,
 } from "@nextui-org/react";
 import { courseJSON } from "public/data/json/export";
 import { useCallback, useMemo, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa6";
+import { UndertakingGeneratorProps } from "./UndertakingStage1";
 
 const INITIAL_VISIBLE_COLUMNS = ["code", "name"];
 
@@ -45,7 +47,8 @@ const columns = [
 	},
 ];
 type Course = (typeof courseJSON)[0];
-export default function UndertakingStage2() {
+const UndertakingStage2: React.FC<UndertakingGeneratorProps> = ({ props }) => {
+	const { setValue } = props;
 	const [filterValue, setFilterValue] = useState("");
 	const [selectedKeys, setSelectedKeys] = useState<Selection>(new Set());
 	const [visibleColumns, setVisibleColumns] = useState<Selection>(
@@ -80,7 +83,7 @@ export default function UndertakingStage2() {
 		}
 
 		return filteredUsers;
-	}, [courseJSON, filterValue]);
+	}, [filterValue, hasSearchFilter]);
 
 	const items = useMemo(() => {
 		const start = (page - 1) * rowsPerPage;
@@ -228,42 +231,54 @@ export default function UndertakingStage2() {
 	);
 
 	return (
-		<Table
-			isCompact
-			removeWrapper
-			aria-label="Example table with custom cells, pagination and sorting"
-			bottomContent={bottomContent}
-			bottomContentPlacement="outside"
-			checkboxesProps={{
-				classNames: {
-					wrapper: "after:bg-assets after:text-background text-background",
-				},
-			}}
-			classNames={classNames}
-			selectedKeys={selectedKeys}
-			selectionMode="multiple"
-			sortDescriptor={sortDescriptor}
-			topContent={topContent}
-			topContentPlacement="outside"
-			onSelectionChange={setSelectedKeys}
-			onSortChange={setSortDescriptor}
-		>
-			<TableHeader columns={headerColumns}>
-				{(column) => (
-					<TableColumn key={column.key} allowsSorting={true}>
-						{column.label}
-					</TableColumn>
-				)}
-			</TableHeader>
-			<TableBody emptyContent={"No courses found"} items={sortedItems}>
-				{(item) => (
-					<TableRow key={item.code}>
-						{(columnKey) => (
-							<TableCell>{item[columnKey as keyof Course]}</TableCell>
-						)}
-					</TableRow>
-				)}
-			</TableBody>
-		</Table>
+		<>
+			<Table
+				isCompact
+				removeWrapper
+				aria-label="Undertaking generator courses table"
+				bottomContent={bottomContent}
+				bottomContentPlacement="outside"
+				checkboxesProps={{
+					classNames: {
+						wrapper: "after:bg-assets after:text-background text-background",
+					},
+				}}
+				classNames={classNames}
+				selectedKeys={selectedKeys}
+				selectionMode="multiple"
+				sortDescriptor={sortDescriptor}
+				topContent={topContent}
+				topContentPlacement="outside"
+				onSelectionChange={(e) => {
+					setSelectedKeys(e);
+					if (e === "all") return;
+					setValue("courses", Array.from(e) as string[]);
+				}}
+				onSortChange={setSortDescriptor}
+			>
+				<TableHeader columns={headerColumns}>
+					{(column) => (
+						<TableColumn key={column.key} allowsSorting={true}>
+							{column.label}
+						</TableColumn>
+					)}
+				</TableHeader>
+				<TableBody emptyContent={"No courses found"} items={sortedItems}>
+					{(item) => (
+						<TableRow key={item.code}>
+							{(columnKey) => (
+								<TableCell>{getKeyValue(item, columnKey)}</TableCell>
+							)}
+						</TableRow>
+					)}
+				</TableBody>
+			</Table>
+			{/* {typeof selectedKeys === "object" &&
+				Array.from(selectedKeys).map((key) => {
+					return <p>{key}</p>;
+				})} */}
+		</>
 	);
-}
+};
+
+export default UndertakingStage2;
