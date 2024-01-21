@@ -26,6 +26,7 @@
 		"postbuild": "next-sitemap",
 		"partytown": "partytown copylib public/~partytown",
 		"start": "next start",
+		"analyze": "ANALYZE=true yarn build",
 		"lint": "next lint && stylelint \"**/*.css\"",
 		"prepare": "husky install",
 		"bubblewrap": "npx bubblewrap init --manifest=https://acmx.vercel.app/manifest.webmanifest",
