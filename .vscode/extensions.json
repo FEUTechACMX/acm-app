@@ -5,14 +5,20 @@
 		"davidanson.vscode-markdownlint",
 		"redhat.vscode-yaml",
 		"dbaeumer.vscode-eslint",
-		"stylelint.vscode-stylelint",
 		"formulahendry.auto-rename-tag",
 		"deque-systems.vscode-axe-linter",
 		"usernamehw.errorlens",
-		"github.copilot",
-		"eamodio.gitlens",
 		"wix.vscode-import-cost",
 		"ms-vscode.vscode-typescript-next",
-		"znck.grammarly"
+		"znck.grammarly",
+		"github.copilot-chat",
+		"eamodio.gitlens",
+		"visualstudioexptteam.vscodeintellicode",
+		"yzhang.markdown-all-in-one",
+		"esbenp.prettier-vscode",
+		"yoavbls.pretty-ts-errors",
+		"prisma.prisma",
+		"bradlc.vscode-tailwindcss",
+		"austenc.tailwind-docs"
 	]
 }
