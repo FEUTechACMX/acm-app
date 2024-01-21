@@ -47,7 +47,7 @@
 		"@builder.io/partytown": "^0.8.1",
 		"@next/bundle-analyzer": "^14.0.4",
 		"@nextui-org/react": "^2.2.9",
-		"@prisma/client": "^5.7.1",
+		"@prisma/client": "^5.8.1",
 		"@prisma/extension-accelerate": "^0.6.2",
 		"@reduxjs/toolkit": "^2.0.1",
 		"@t3-oss/env-nextjs": "^0.7.1",
