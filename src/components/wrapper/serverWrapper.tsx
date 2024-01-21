@@ -10,7 +10,12 @@ const serverWrapper = (
 		try {
 			return await fn(req, res);
 		} catch (e) {
-			console.error(e);
+			return new NextResponse(e?.toString(), {
+				status: 422,
+				headers: {
+					"Content-Type": "application/json",
+				},
+			});
 		}
 	};
 };
