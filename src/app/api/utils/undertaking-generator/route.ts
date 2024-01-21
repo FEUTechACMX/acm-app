@@ -146,7 +146,6 @@ const createTemplate = async (
 };
 const MAX_FILE_SIZE = 3_000_000;
 const POST = serverWrapper(async (req) => {
-	console.log("Request received");
 	const formData = await req.formData();
 	const body = Object.fromEntries(
 		formData.entries(),
@@ -161,7 +160,6 @@ const POST = serverWrapper(async (req) => {
 		signatureImg,
 		enrollmentFormat,
 	} = body;
-	console.log(body);
 	const coursesArray: string[] = JSON.parse(`${courses}`);
 	if (coursesArray.length > 10)
 		throw new Error("Too many courses selected (max 10)");

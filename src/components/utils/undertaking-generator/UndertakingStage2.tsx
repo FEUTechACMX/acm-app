@@ -121,7 +121,7 @@ const UndertakingStage2: React.FC<UndertakingGeneratorProps> = ({ props }) => {
 
 	const topContent = useMemo(() => {
 		return (
-			<div className="flex flex-col gap-4">
+			<div className="flex flex-col gap-2">
 				<div className="flex justify-between gap-3 items-center">
 					<Input
 						isClearable
@@ -258,7 +258,11 @@ const UndertakingStage2: React.FC<UndertakingGeneratorProps> = ({ props }) => {
 			>
 				<TableHeader columns={headerColumns}>
 					{(column) => (
-						<TableColumn key={column.key} allowsSorting={true}>
+						<TableColumn
+							key={column.key}
+							allowsSorting={true}
+							className="text-base"
+						>
 							{column.label}
 						</TableColumn>
 					)}
@@ -267,16 +271,14 @@ const UndertakingStage2: React.FC<UndertakingGeneratorProps> = ({ props }) => {
 					{(item) => (
 						<TableRow key={item.code}>
 							{(columnKey) => (
-								<TableCell>{getKeyValue(item, columnKey)}</TableCell>
+								<TableCell className="text-base text-balance">
+									{getKeyValue(item, columnKey)}
+								</TableCell>
 							)}
 						</TableRow>
 					)}
 				</TableBody>
 			</Table>
-			{/* {typeof selectedKeys === "object" &&
-				Array.from(selectedKeys).map((key) => {
-					return <p>{key}</p>;
-				})} */}
 		</>
 	);
 };

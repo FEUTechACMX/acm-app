@@ -12,6 +12,7 @@ export interface UndertakingGeneratorProps {
 		register: UseFormRegister<UndertakingBody>;
 		control: Control<UndertakingBody, any>;
 		setValue: UseFormSetValue<UndertakingBody>;
+		isSubmitting: boolean;
 	};
 }
 
@@ -58,6 +59,7 @@ const UndertakingStage1: React.FC<UndertakingGeneratorProps> = ({ props }) => {
 					<Select
 						placeholder="Select Year"
 						variant="underlined"
+						label="Year"
 						radius="sm"
 						{...register("year", {
 							required: true,
@@ -77,6 +79,7 @@ const UndertakingStage1: React.FC<UndertakingGeneratorProps> = ({ props }) => {
 					<Select
 						placeholder="Select Program"
 						variant="underlined"
+						label="Program"
 						radius="sm"
 						{...register("program", {
 							required: true,
@@ -96,6 +99,7 @@ const UndertakingStage1: React.FC<UndertakingGeneratorProps> = ({ props }) => {
 				<Select
 					placeholder="Select Enrollment Format"
 					variant="underlined"
+					label="Enrollment Format"
 					radius="sm"
 					{...register("enrollmentFormat", {
 						required: true,
@@ -111,45 +115,56 @@ const UndertakingStage1: React.FC<UndertakingGeneratorProps> = ({ props }) => {
 					</SelectItem>
 				</Select>
 
-				<Controller
-					name="signatureImg"
-					control={control}
-					render={({ field: { ref, name, onBlur, onChange } }) => (
-						<Input
-							type="file"
-							variant={"underlined"}
-							radius="sm"
-							ref={ref}
-							accept="image/png,image/jpeg,image/jpg"
-							isRequired
-							name={name}
-							onBlur={onBlur}
-							onChange={(e) => {
-								onChange(e.currentTarget.files?.[0]);
-							}}
-						/>
-					)}
-				/>
-
-				<Controller
-					name="idImg"
-					control={control}
-					render={({ field: { ref, name, onBlur, onChange } }) => (
-						<Input
-							type="file"
-							variant={"underlined"}
-							radius="sm"
-							ref={ref}
-							accept="image/png,image/jpeg,image/jpg"
-							isRequired
-							name={name}
-							onBlur={onBlur}
-							onChange={(e) => {
-								onChange(e.currentTarget.files?.[0]);
-							}}
-						/>
-					)}
-				/>
+				<span className="text-xs flex flex-col gap-1">
+					<label
+						htmlFor="signatureImg"
+						className="after:content-['*'] after:text-danger"
+					>
+						Signature Upload
+					</label>
+					<Controller
+						name="signatureImg"
+						control={control}
+						render={({ field: { ref, name, onBlur, onChange } }) => (
+							<input
+								type="file"
+								ref={ref}
+								required
+								accept="image/png,image/jpeg,image/jpg"
+								className="w-full border-b-medium border-default-200 pb-1"
+								name={name}
+								onBlur={onBlur}
+								onChange={(e) => {
+									onChange(e.currentTarget.files?.[0]);
+								}}
+							/>
+						)}
+					/>
+					<label
+						htmlFor="idImg"
+						className="after:content-['*'] after:text-danger"
+					>
+						ID Upload
+					</label>
+					<Controller
+						name="idImg"
+						control={control}
+						render={({ field: { ref, name, onBlur, onChange } }) => (
+							<input
+								type="file"
+								ref={ref}
+								required
+								accept="image/png,image/jpeg,image/jpg"
+								className="w-full border-b-medium border-default-200 pb-1"
+								name={name}
+								onBlur={onBlur}
+								onChange={(e) => {
+									onChange(e.currentTarget.files?.[0]);
+								}}
+							/>
+						)}
+					/>
+				</span>
 			</div>
 		</>
 	);

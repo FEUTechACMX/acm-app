@@ -5,8 +5,13 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import UndertakingGenerator from "./UndertakingTabs";
 
 const UndertakingForm: React.FC = () => {
-	const { register, handleSubmit, control, setValue } =
-		useForm<UndertakingBody>();
+	const {
+		register,
+		handleSubmit,
+		control,
+		setValue,
+		formState: { isSubmitting },
+	} = useForm<UndertakingBody>();
 	const onSubmit: SubmitHandler<UndertakingBody> = async (data) => {
 		const {
 			fullName,
@@ -34,7 +39,10 @@ const UndertakingForm: React.FC = () => {
 				body: formData,
 			},
 		);
-		if (!res.ok) return alert(`Error: ${await res.text()}`);
+		if (!res.ok) {
+			alert(await res.text());
+			return;
+		}
 		console.log("Downloading");
 		const blob = await res.blob();
 		const url = window.URL.createObjectURL(blob);
@@ -61,6 +69,7 @@ const UndertakingForm: React.FC = () => {
 					register,
 					control,
 					setValue,
+					isSubmitting,
 				}}
 			/>
 		</form>
