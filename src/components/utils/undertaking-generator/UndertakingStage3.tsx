@@ -1,6 +1,9 @@
 import { Button, Checkbox } from "@nextui-org/react";
 import { useState } from "react";
-const UndertakingStage3 = () => {
+import { UndertakingGeneratorProps } from "./UndertakingStage1";
+const UndertakingStage3: React.FC<UndertakingGeneratorProps> = ({
+	props: { isSubmitting },
+}) => {
 	const [isRegulationChecked, setIsRegulationChecked] = useState(false);
 	const [isEULAChecked, setIsEULAChecked] = useState(false);
 
@@ -32,7 +35,7 @@ const UndertakingStage3 = () => {
 					size="lg"
 					radius="sm"
 					className="w-full"
-					disabled={!isRegulationChecked || !isEULAChecked}
+					disabled={!isRegulationChecked || !isEULAChecked || isSubmitting}
 				>
 					-- Generate and Download --
 				</Button>

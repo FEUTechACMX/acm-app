@@ -39,13 +39,13 @@ const UndertakingGenerator: React.FC<UndertakingGeneratorProps> = ({
 					</Card>
 				</Tab>
 				<Tab
-					key="Verify"
-					title="Verify & Validate"
+					key="Compliance Check"
+					title="Compliance Check"
 					className="w-full text-center"
 				>
 					<Card radius="sm">
 						<CardBody>
-							<UndertakingStage3 />
+							<UndertakingStage3 props={props} />
 						</CardBody>
 					</Card>
 				</Tab>
