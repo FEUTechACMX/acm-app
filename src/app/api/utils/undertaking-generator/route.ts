@@ -23,8 +23,7 @@ interface ImgTypes {
 	signatureImgType: number;
 }
 
-const source =
-	process.cwd() + "/public/data/CONFIDENTIALITY-UNDERTAKING-original.pdf";
+const source = process.cwd() + "/public/data/CONFIDENTIALITY-UNDERTAKING.pdf";
 
 const reg = 10;
 const fontSize = new Map([

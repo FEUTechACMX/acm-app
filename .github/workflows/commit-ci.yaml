@@ -1,14 +1,13 @@
-name: Commitlint
-
-on: [push, pull_request]
-
 jobs:
   commitlint:
     runs-on: ubuntu-latest
-    timeout-minutes: 2
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Commitlint
         uses: wagoid/commitlint-github-action@v5
+    timeout-minutes: 2
+
+name: Commitlint
+on: [push, pull_request]
