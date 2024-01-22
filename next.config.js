@@ -94,7 +94,7 @@ const nextConfig = {
     middlewarePrefetch: "strict",
     instrumentationHook: true,
     // staticWorkerRequestDeduping: true,
-    forceSwcTransforms: true,
+    // forceSwcTransforms: true,
     // fullySpecified: true,
     // bundlePagesExternals: true,
     scrollRestoration: true,
