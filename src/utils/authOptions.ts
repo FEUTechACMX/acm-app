@@ -29,9 +29,9 @@ export const authOptions: NextAuthOptions = {
 		EmailProvider({
 			server: mailerOptions,
 			from: serverDetails.from,
-			async sendVerificationRequest({ identifier: emailAddr, url }) {
+			async sendVerificationRequest({ identifier, url }) {
 				await Mailer({
-					recipient: emailAddr,
+					recipient: identifier,
 					subject: "Sign in to FEU Tech ACM-X",
 					html: emailSignin({ url }),
 				});
