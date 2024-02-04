@@ -66,3 +66,7 @@ next-env.d.ts
 /pwa/microsoft/**/*
 /pwa/playstore/*
 /pwa/microsoft/*
+.env*
+.flaskenv*
+!.env.project
+!.env.vault

@@ -33,7 +33,9 @@ The app is being developed to serve as the central platform for communication, c
 
 ### Getting Started
 
-1. Clone the repository and change directory.
+1. For development, you must have secret sharing access for the environment variables. Do contact the [Webmaster](mailto:alpha.coma.ict@gmail.com) for access.
+
+2. Clone the repository and change directory.
 
    ```bash
     git clone https://github.com/FEUTechACM/acm-app.git acm-app
@@ -43,7 +45,7 @@ The app is being developed to serve as the central platform for communication, c
     cd acm-app
    ```
 
-2. Switch to the `develop` branch or target branch.
+3. Switch to the `develop` branch or target branch.
 
    ```bash
     git checkout develop
@@ -51,25 +53,25 @@ The app is being developed to serve as the central platform for communication, c
     git checkout <branch-name>
    ```
 
-3. Branch out from `develop` if not on target branch.
+4. Branch out from `develop` if not on target branch.
 
    ```bash
     git checkout -b <branch-name>
    ```
 
-4. Install the dependencies.
+5. Install the dependencies.
 
    ```bash
     yarn install
    ```
 
-5. Run the development server.
+6. Run the development server.
 
    ```bash
     yarn dev
    ```
 
-6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+7. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ### Project Standards
 
