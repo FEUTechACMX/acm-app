@@ -4362,10 +4362,10 @@
     "@tsparticles/updater-out-modes" "^3.1.0"
     "@tsparticles/updater-size" "^3.1.0"
 
-"@tsparticles/engine@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@tsparticles/engine/-/engine-3.1.0.tgz#8778c49ee5ca2e729316a45c0bd0d981b2e1207c"
-  integrity sha512-sQR79T76Y+0bdwMOQgJxA5jC+Na2XGJ8wABS4NsS3oYqD/Bdh7pwHFdoMkQu86uRrsvH5jdpqlHCMmZb7laXIQ==
+"@tsparticles/engine@^3.1.0", "@tsparticles/engine@^3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@tsparticles/engine/-/engine-3.2.1.tgz#f2c7a96e9314bab6ecdb559a9e60a72bff97ee8b"
+  integrity sha512-mVzdwkOtRdT6/UOS0+GPGcKJsdvYCkqTTwg7df43TfXixsdZedpUkuVg30rwtNhTgPMH2nimOXqx2wmgL7bAZw==
 
 "@tsparticles/interaction-external-attract@^3.1.0":
   version "3.1.0"
@@ -12570,6 +12570,7 @@ workbox-window@6.6.1, workbox-window@^6.5.4:
     workbox-core "6.6.1"
 
 "wrap-ansi-cjs@npm:wrap-ansi@^7.0.0", wrap-ansi@^7.0.0:
+  name wrap-ansi-cjs
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/wrap-ansi/-/wrap-ansi-7.0.0.tgz#67e145cff510a6a6984bdf1152911d69d2eb9e43"
   integrity sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==
