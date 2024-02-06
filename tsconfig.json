@@ -30,7 +30,7 @@
 		"**/*.ts",
 		"**/*.tsx",
 		".next/types/**/*.ts",
-		"src/server/env.js"
+		"src/env.mjs"
 	],
 	"exclude": ["node_modules"]
 }

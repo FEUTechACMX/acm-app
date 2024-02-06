@@ -1,4 +1,4 @@
-import { env } from "@/server/env";
+import env from "@/env.mjs";
 
 interface Params {
 	url: string;
