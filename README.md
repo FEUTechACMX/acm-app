@@ -27,11 +27,31 @@ The app is being developed to serve as the central platform for communication, c
 - [Yarn](https://yarnpkg.com/)
 - [npm](https://www.npmjs.com/)
 - [Git](https://git-scm.com/)
-- [Git LFS](https://git-lfs.github.com/)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Docker](https://www.docker.com/)
+- [Doppler CLI](https://docs.doppler.com/docs/cli)
 
 ### Getting Started
+
+0. You must have the pre-requisites installed.
+
+   ```bash
+    # Check if Node.js is installed
+    node -v
+
+    # Check if Yarn is installed
+    yarn -v
+
+    # Check if Git is installed
+    git --version
+
+    # Check if Docker is installed
+    docker -v
+
+    # Check if Doppler CLI is installed (Environment variables are injected at runtime)
+    doppler -v
+    /
+   ```
 
 1. Clone the repository and change directory.
 
@@ -66,7 +86,7 @@ The app is being developed to serve as the central platform for communication, c
 5. Run the development server.
 
    ```bash
-    yarn dev
+    yarn devx
    ```
 
 6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
