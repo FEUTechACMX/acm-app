@@ -1,5 +1,5 @@
 import NextAuthProvider from "@/components/app/NextAuthProvider";
-import { env } from "@/server/env";
+import env from "@/env.mjs";
 import { ReduxProviders } from "@/utils/redux/provider";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";

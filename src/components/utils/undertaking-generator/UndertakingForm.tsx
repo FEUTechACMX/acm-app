@@ -1,7 +1,7 @@
 "use client";
 import Loading from "@/app/2023/loading";
 import { UndertakingBody } from "@/app/api/utils/undertaking-generator/route";
-import { env } from "@/server/env";
+import env from "@/env.mjs";
 import { SubmitHandler, useForm } from "react-hook-form";
 import UndertakingGenerator from "./UndertakingTabs";
 const UndertakingForm: React.FC = () => {

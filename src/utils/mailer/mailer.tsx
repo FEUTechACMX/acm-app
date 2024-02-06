@@ -1,5 +1,5 @@
+import env from "@/env.mjs";
 import { createTransport } from "nodemailer";
-import { env } from "@/server/env";
 interface MailerOptions {
 	recipient: string;
 	subject: string;
