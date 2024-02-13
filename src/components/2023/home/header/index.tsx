@@ -34,7 +34,7 @@ const HomeHeader: React.FC = () => {
 
 	return (
 		<header id="home">
-			<div className="h-svh w-svw fixed top-0 left-0">
+			<div className="h-svh w-full fixed top-0 left-0">
 				<ParticleAmongUs />
 
 				<div className="flex justify-center items-center h-full relative">
