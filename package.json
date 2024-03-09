@@ -189,5 +189,6 @@
 	},
 	"browser": {
 		"original-fs": false
-	}
+	},
+	"packageManager": "yarn@4.1.1"
 }
