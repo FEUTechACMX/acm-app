@@ -20,8 +20,8 @@
 		"Website"
 	],
 	"scripts": {
-		"dev": "doppler run --command='next dev'",
-		"devx": "doppler run --command='next dev --turbo'",
+		"dev": "next dev",
+		"devx": "next dev --turbo",
 		"build": "yarn run partytown && next build",
 		"postbuild": "next-sitemap",
 		"partytown": "partytown copylib public/~partytown",
