@@ -36,7 +36,10 @@
 		"prisma-reset": "npx prisma db push --force-reset && yarn prisma db seed"
 	},
 	"lint-staged": {
-		"**/*": "prettier --write --ignore-unknown"
+		"**/*": [
+			"prettier --write --ignore-unknown",
+			"git add"
+		]
 	},
 	"prisma": {
 		"seed": "tsx prisma/seed.ts"
@@ -95,6 +98,7 @@
 		"critters": "^0.0.22",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-prettier": "^5.1.3",
+		"eslint-plugin-unused-imports": "^3.1.0",
 		"husky": "^9.0.11",
 		"kill-port": "^2.0.1",
 		"lint-staged": "^15.2.2",
