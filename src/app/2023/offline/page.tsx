@@ -1,5 +1,5 @@
-import { NextPage } from "next";
 import CenterComponent from "@/components/wrapper/CenterComponent";
+import { NextPage } from "next";
 const Offline: NextPage = () => {
 	return (
 		<CenterComponent>

@@ -1,10 +1,3 @@
-import { env } from "@/server/env";
-
-interface Params {
-	url: string;
-}
-export default function emailSignin({ url }: Params) {
-	return `
 <body style="
 		padding: 0;
 		margin: 0;
@@ -34,9 +27,9 @@ export default function emailSignin({ url }: Params) {
 				Helvetica Neue,
 				sans-serif;
 		">
-		<img src="${env.HOST_URL}/2023/media/img/logo/FIT_ACM_min.png" alt="FEU Tech ACM-X Logo" height="48"
-			style="display: block; border-radius: 0.4rem; margin: 0.2rem auto" />
-		<h1 style="padding: 0; margin: 0; text-align: center; color: #833fe0; font-size:1.4rem;">
+		<img src="${process.env.NEXTAUTH_URL}/android-chrome-512x512.png" alt="FEU Tech ACM-X Logo" height="64"
+			width="64" style="display: block; margin: auto; border-radius: 0.4rem" />
+		<h1 style="padding: 0; margin: 0; text-align: center; color: #833fe0; font-size:1.6rem;">
 			FEU Tech ACM-X Sign In
 		</h1>
 		<hr style="background: #fff; color: #fff; margin: 1rem auto; width: 70%" />
@@ -65,7 +58,7 @@ export default function emailSignin({ url }: Params) {
 		</p>
 		<p style="padding: 0; margin: 0;">&gt; From the ACM-X team.</p>
 		<hr style="background: #fff; color: #fff; margin: 1rem auto; width: 70%" />
-		<p style="text-align: center; font-weight: bold;">Explore the digital dystopia below!</p>
+		<p style="text-align: center; font-weight: bold;">Explore our digital dystopia below!</p>
 		<div style="font-weight: bold; text-align: center;">
 			<a href="https://youtube.com/@ACMFIT" alt="ACM-X YouTube" target="_blank" style="padding: 0 0.2rem; color: #833fe0;">
 				YouTube
@@ -81,5 +74,3 @@ export default function emailSignin({ url }: Params) {
 		</div>
 	</div>
 </body>
-`;
-}

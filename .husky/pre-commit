@@ -3,7 +3,7 @@
 
 yarn run killport
 yarn run removeNext
-npx lint-staged
+yarn lint-staged
 yarn run lint
 yarn run build
 yarn run removeNext
