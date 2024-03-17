@@ -10,7 +10,7 @@ const UndertakingPage: NextPage = () => {
 	return (
 		<>
 			<ParticlePolygon props={{ canClick: false }} />
-			<CenterComponent>
+			<CenterComponent isNotFixed>
 				<UndertakingForm />
 			</CenterComponent>
 		</>

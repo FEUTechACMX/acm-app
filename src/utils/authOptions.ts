@@ -1,10 +1,10 @@
-import env from "@/env.mjs";
+import { env } from "@/server/env";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { getServerSession, type NextAuthOptions } from "next-auth";
 import type { Adapter } from "next-auth/adapters";
-import Auth0Provider from "next-auth/providers/auth0";
 import EmailProvider from "next-auth/providers/email";
 import GoogleProvider from "next-auth/providers/google";
+import Auth0Provider from "next-auth/providers/auth0";
 import Mailer, { mailerOptions, serverDetails } from "./mailer/mailer";
 import emailSignin from "./mailer/template/signin";
 import { prisma } from "./prisman";
