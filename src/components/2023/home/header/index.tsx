@@ -7,7 +7,7 @@ import HomePlayStore from "./playstore";
 const ParticleAmongUs = dynamic(
 	() => import("@/components/particles/ParticleAmongUs"),
 );
-const ACMImage = dynamic(() => import("../../_gen/image/ACMImage"));
+import ACMImage from "../../_gen/image/ACMImage";
 const links: LinkPropsNode[] = [
 	{
 		name: "CS EXPO 2023",
