@@ -90,7 +90,7 @@ const UndertakingStage1: React.FC<UndertakingGeneratorProps> = ({ props }) => {
 						<SelectItem key="BSCSSE" value="BSCSSE">
 							BSCSSE
 						</SelectItem>
-						<SelectItem key="BSCSSE" value="BSCSDS">
+						<SelectItem key="BSCSDS" value="BSCSDS">
 							BSCSDS
 						</SelectItem>
 					</Select>
