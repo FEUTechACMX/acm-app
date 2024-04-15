@@ -1,7 +1,7 @@
 [
 	{
 		"code": "CCS0001",
-		"name": " Introduction to Computing (Lec)",
+		"name": "Introduction to Computing (Lec)",
 		"departmentId": 1,
 		"courseTypeId": 1,
 		"yearLevelId": 1,
@@ -646,5 +646,29 @@
 		"courseTypeId": 1,
 		"yearLevelId": 4,
 		"termId": 2
+	},
+	{
+		"code": "CS0071",
+		"name": "CS Specialization 1 lec (Data Visualization and Storytelling)",
+		"departmentId": 1,
+		"courseTypeId": 1,
+		"yearLevelId": 2,
+		"termId": 3
+	},
+	{
+		"code": "CS0071L",
+		"name": "CS Specialization 1 lab (Data Visualization and Storytelling)",
+		"departmentId": 1,
+		"courseTypeId": 2,
+		"yearLevelId": 2,
+		"termId": 3
+	},
+	{
+		"code": "CS0079",
+		"name": "CS Specialization 2 lec (Data Science)",
+		"departmentId": 1,
+		"courseTypeId": 1,
+		"yearLevelId": 2,
+		"termId": 3
 	}
 ]
