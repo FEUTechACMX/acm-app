@@ -2,7 +2,7 @@ import Image from "next/image";
 const ACMImage: React.FC = () => {
 	return (
 		<Image
-			src="/2023/media/img/logo/FIT_ACM_min.png"
+			src="/media/logo/FIT_ACM_min.png"
 			alt="FEU Tech ACM Logo"
 			fill
 			style={{
