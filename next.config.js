@@ -138,6 +138,11 @@ const nextConfig = {
         source: '/dashboard',
         destination: '/app/dashboard',
         permanent: false,
+      },
+      {
+        source: '/utils/undertaking-generator',
+        destination: 'https://acmx-beta.vercel.app/utils/undertaking-generator',
+        permanent: false,
       }
     ];
   },
